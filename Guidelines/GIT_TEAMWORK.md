@@ -1,53 +1,54 @@
-# Гайд з роботи з Git та GitHub в команді
+# Guide to Working with Git and GitHub in a Team
 
-Основні принципи роботи з Git та GitHub для вирішення типових проблем
-та конфліктів при спільній роботі над проектом.
+Key principles for using Git and GitHub to address typical issues
+and conflicts in collaborative project work.
 
-## Основні принципи 
+## Core Principles 
 
-### Синхронізація з віддаленим репозиторієм
-Перед початком роботи завжди синхронізуйте локальний репозиторій з віддаленим,
-використовуючи:
+### Syncing with the Remote Repository
+Always start by syncing your local repository with the remote repository using:
 
 ```bash
 git pull origin main
 ```
 
-Ця команда забезпечить, що ваш локальний код актуальний і не має конфліктів
-з останніми змінами.
+This command ensures your local code is up-to-date and avoids conflicts
+with the latest changes.
 
-### Створення нових гілок
+### Creating New Branches
 
-Для кожної нової функції або зміни створюйте нову гілку, 
-щоб зберегти стабільність main гілки. Використовуйте:
+For each new feature or change, create a new branch
+to keep the main branch stable. Use:
 
 ```bash
 git checkout -b branch-name
 ```
-### Внесення змін та коміти
+### Making Changes and Committing
 
-Внесіть зміни на новій гілці, додайте їх до стадії перед комітом і закомітьте:
+Make changes on the new branch, stage them, and commit:
 
 ```bash
 git add .
 git commit -m "Fixed memory leaks in function_name."
 ```
 
-**Результат:**
+**Result:**
 
 ```bash
 [branch-name 1a2b3c4] Fixed memory leaks in function_name.
 1 file changed, 10 insertions(+), 0 deletions(-)
 ```
 
-### Пуш змін у віддалений репозиторій
-Після внесення змін у вашій локальній гілці, потрібно надіслати ці зміни 
-в попередньо створену гілку для поточної зміни у віддалений репозиторій.
+### Pushing Changes to the Remote Repository
+
+After making changes in your local branch, push them to the pre-existing branch
+in the remote repository for the current change.
 
 ```bash
 git push origin branch-name
 ```
-Успішне виконання:
+
+Successful output:
 
 ```bash
 user@maschine:~/path/UCODE_UCHAT$ git push origin feature-1
@@ -61,19 +62,19 @@ To github.com:username/repo.git
 a1b2c3d..e4f5g6h  feature-1 -> feature-1
 ```
 
-### Перейдіть на GitHub і створіть пул реквест
+### Go to GitHub and Create a Pull Request
 
-Натисніть кнопку "Compare & pull request" на головній сторінці 
+Click the "Compare & pull request" button on the main page.
 
-**!!! Зверніть увагу на назву гілки. Робіть pull request лише власних гілок**
+**!!! Pay attention to the branch name. Only create pull requests for your own branches**
 
-![Скріншот з розтащуванням кнопки](Assets/main_page_pull_request_btn.jpg)
+![Screenshot showing button location](Assets/main_page_pull_request_btn.jpg)
 
-Або зменіть гілку з main на власну і натисніть кнопку "pull request" 
-в повідомленні у власній гілці
+Or, switch from main to your own branch and click "pull request"
+in the prompt in your branch.
 
-![Скріншот з розтащуванням кнопки](Assets/pull_request_btn.jpg)
+![Screenshot showing button location](Assets/pull_request_btn.jpg)
 
-Відкриття пул реквесту
+Opening a pull request:
 
-![Скріншот з меню відкриття пул реквесту](Assets/pull_request_comment.jpg)
+![Screenshot of pullrequest menu](Assets/pull_request_comment.jpg)
