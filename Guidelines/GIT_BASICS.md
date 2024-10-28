@@ -104,6 +104,14 @@ git push origin your_branch
 Example Output:
 
 ```bash
-new info
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 4.10 KiB | 1.02 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+To github.com:username/repo.git
 ```
 After pushing, your changes will be visible on GitHub in your branch.
+
+Testing the aility to merge with old date
