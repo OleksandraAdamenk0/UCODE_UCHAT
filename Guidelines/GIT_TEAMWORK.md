@@ -3,6 +3,29 @@
 Key principles for using Git and GitHub to address typical issues
 and conflicts in collaborative project work.
 
+---
+
+## Summary
+
+* Check the current branch - `git branch`
+
+* Switch to a different branch - `git checkout branch-name`
+
+* Sync with the remote repository - `git pull origin main`
+
+* Create a new branch for a feature or change - `git checkout -b branch-name`
+
+* Stage changes - `git add .`
+
+* Commit changes with a message -` git commit -m "Descriptive message about changes"`
+
+* Push changes to the remote repository - `git push origin branch-name`
+
+Note: Do **NOT** push to the main branch
+
+
+---
+
 ## Core Principles 
 
 ### Syncing with the Remote Repository
