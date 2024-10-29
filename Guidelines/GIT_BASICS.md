@@ -5,6 +5,25 @@ adding changes, committing, pushing, and checking the status of your work.
 These steps will help you start contributing to the project 
 after being added as a collaborator. 
 
+---
+
+## Summary
+
+* Clone a repository - `git clone <repository-URL>`
+
+* Check status - `git status` 
+(current state of your working directory and staged changes)
+
+* Stage changes - `git add .` ( "." represents current directory)
+
+* Commit changes - `git commit -m "Descriptive message about changes"`
+
+* Push changes to GitHub - `git push origin your_branch`
+
+Note: Do **NOT** push to the main branch
+
+---
+
 ## Steps to Get Started
 ### 1. Cloning the Repository
 
