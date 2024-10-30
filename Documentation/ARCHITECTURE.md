@@ -79,11 +79,17 @@ and maintenance.
 *    Responding to user actions (sending messages, creating new chats).
 *    Updating the interface upon changes in connection status or new data arrival.
 
-### 5. Encryption
+### 5. Security
 
 *    Encrypting messages before sending them to the server.
 *    Decrypting incoming data.
 *    Securely storing local data (tokens, configurations).
+
+### 5. Data Exchange
+*   Formatting structured JSON requests for server interactions.
+*   Parsing JSON responses from the server into usable data objects.
+*   Validating JSON data for integrity and correctness before and after transmission.
+*   Managing JSON format adjustments to adapt to evolving data requirements.
 
 ---
 
