@@ -8,6 +8,9 @@ a clear separation of concerns, facilitating easier development, testing,
 and maintenance.
 
 ---
+![Screenshot showing client server architecture](Assets/ClientServerDiagram.drawio.png)
+
+---
 
 ## Server Modules
 
