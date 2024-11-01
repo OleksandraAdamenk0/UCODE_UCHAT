@@ -20,10 +20,14 @@ $(CLIENT):
 	@$(MAKE) -C $(CNTDIR)
 
 uninstall: clean
+	@$(MAKE) uninstall -C $(CNTDIR)
+	@$(MAKE) uninstall -C $(SVRDIR)
 	rm $(CLIENT)
 	rm $(SERVER)
 
 clean:
+	@$(MAKE) clean -C $(CNTDIR)
+	@$(MAKE) clean -C $(SVRDIR)
 
 reinstall: uninstall all
 
