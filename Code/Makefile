@@ -9,21 +9,21 @@ CLIENT = uchat
 SVRDIR = server
 SERVER = uchat_server
 
-all: $(SERVER) $(CLIENT)
-	mv $(CNTDIR)/$(CLIENT) .
-	mv $(SVRDIR)/$(SERVER) .
+all: $(SVRDIR)/(SERVER) $(CNTDIR)/$(CLIENT)
+	@mv $(CNTDIR)/$(CLIENT) .
+	@mv $(SVRDIR)/$(SERVER) .
 
-$(SERVER):
+$(SVRDIR)/(SERVER):
 	@$(MAKE) -C $(SVRDIR)
 
-$(CLIENT):
+$(CNTDIR)/$(CLIENT):
 	@$(MAKE) -C $(CNTDIR)
 
 uninstall: clean
 	@$(MAKE) uninstall -C $(CNTDIR)
 	@$(MAKE) uninstall -C $(SVRDIR)
-	rm $(CLIENT)
-	rm $(SERVER)
+	@if [ -f $(CLIENT) ]; then rm $(CLIENT); fi
+	@if [ -f $(SERVER) ]; then rm $(SERVER); fi
 
 clean:
 	@$(MAKE) clean -C $(CNTDIR)
