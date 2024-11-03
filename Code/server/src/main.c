@@ -1,6 +1,7 @@
-#include <stdio.h>
+#include "server.h"
 
-int main(void) {
-    printf("Hello, World!\n");
-    return 0;
+int main(int argc, const char * argv[]) {
+    if (mx_init_server(argc, argv) == -1) {
+      mx_printerr("Usage: ./uchat_server <port>\n");
+    }
 }
