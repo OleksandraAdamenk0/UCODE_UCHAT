@@ -79,6 +79,24 @@ If email or phone number has an invalid format:
 }
 ```
 
+If email is already registered:
+
+```json
+{
+"status": "-4",
+"message": "Email is already registered."
+}
+```
+
+If phone number is already registered:
+
+```json
+{
+"status": "-5",
+"message": "Phone number is already registered."
+}
+```
+
 ## User Login
 
 **Description**: A request to authenticate an existing user using their username and password. Upon successful authentication, the server will issue an access token and a refresh token.

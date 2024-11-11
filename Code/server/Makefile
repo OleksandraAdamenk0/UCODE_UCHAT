@@ -20,6 +20,12 @@ LOGGER_DIR := $(LIBS_DIR)/logger
 LOGGER_INCDIR := $(LOGGER_DIR)/inc
 LOGGER := $(LOGGER_DIR)/liblogger.a
 
+# CJSON
+
+CJSON_DIR := $(LIBS_DIR)/cjson
+CJSON_INCDIR := $(CJSON_DIR)/inc
+CJSON := $(CJSON_DIR)/libcjson.a
+
 # ==============================================================================
 
 SRCFILES = $(wildcard $(SRCDIR)/**/*.c) $(SRCDIR)/main.c
@@ -27,11 +33,11 @@ OBJFILES = $(patsubst $(SRCDIR)/%/%.c, $(OBJDIR)/%.o, $(SRCFILES))
 
 all: $(NAME)
 
-$(NAME): $(LIBMX) $(LOGGER) $(OBJFILES)
-	@$(CC) $(OBJFILES) -o $(NAME) -I $(INCDIR) -I $(LOGGER_INCDIR) -L$(LOGGER_DIR) -llogger -I $(LIBMX_INCDIR) -L$(LIBMX_DIR) -lmx
+$(NAME): $(LIBMX) $(LOGGER) $(CJSON) $(OBJFILES)
+	@$(CC) $(OBJFILES) -o $(NAME) -I $(INCDIR) -I $(LOGGER_INCDIR) -L$(LOGGER_DIR) -llogger -I $(LIBMX_INCDIR) -L$(LIBMX_DIR) -lmx -I $(CJSON_INCDIR) -L$(CJSON_DIR) -lcjson
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c  | $(OBJDIR)
-	@$(CC) $(СFLAGS) -c -I $(INCDIR) -I $(LIBMX_INCDIR) -I $(LOGGER_INCDIR) $< -o $@
+	@$(CC) $(СFLAGS) -c -I $(INCDIR) -I $(LIBMX_INCDIR) -I $(LOGGER_INCDIR) -I $(CJSON_INCDIR) $< -o $@
 
 $(OBJDIR):
 	@mkdir -p $(OBJDIR)
@@ -42,15 +48,20 @@ $(LIBMX):
 $(LOGGER):
 	@$(MAKE) -C $(LOGGER_DIR)
 
+$(CJSON):
+	@$(MAKE) -C $(CJSON_DIR)
+
 uninstall: clean
 	@if [ -f $(NAME) ]; then rm $(NAME); fi
 	@$(MAKE) uninstall -C $(LIBMX_DIR)
 	@$(MAKE) uninstall -C $(LOGGER_DIR)
+	@$(MAKE) uninstall -C $(CJSON_DIR)
 
 clean:
 	@rm -rf $(OBJDIR)
 	@$(MAKE) clean -C $(LIBMX_DIR)
 	@$(MAKE) clean -C $(LOGGER_DIR)
+	@$(MAKE) clean -C $(CJSON_DIR)
 
 reinstall: uninstall all
 
