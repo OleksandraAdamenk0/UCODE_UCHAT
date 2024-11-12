@@ -98,11 +98,9 @@ static int validate_phone(const char *phone) {
     }
 
     // check if sanitized string contains only digits
-    for (int i = 0; i < mx_strlen(sanitized_phone); ++i) {
-        if (!mx_is_numeric(sanitized_phone[i])) {
-            free(sanitized_phone);
-            return -1;
-        }
+    if (!mx_is_numeric(sanitized_phone)) {
+        free(sanitized_phone);
+        return -1;
     }
 
     // check length

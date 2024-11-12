@@ -41,7 +41,7 @@
  * }
  */
 char *handle_request(const char *request_str) {
-    cJSON *request = cJSON_Parse(json_request);
+    cJSON *request = cJSON_Parse(request_str);
     if (!request) {
         logger_error("Invalid JSON format.\n");
         return NULL;
@@ -64,6 +64,7 @@ char *handle_request(const char *request_str) {
             logger_error("Error during forming a response.\n");
             return NULL;
         }
+        return response;
     } else if (mx_strcmp(action->valuestring, "login") == 0) {
         // login request handler
     }
