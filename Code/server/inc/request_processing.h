@@ -9,4 +9,8 @@
 #include "libmx.h"
 #include "cJSON.h"
 
+int mx_registration_request(const cJSON *request);
+char *mx_registration_response(const int status);
+
+
 #endif //UCODE_UCHAT_REQUEST_PROCESSING_H

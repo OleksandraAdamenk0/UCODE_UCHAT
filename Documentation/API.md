@@ -52,30 +52,65 @@ Note: either email or phone should be sent
 
 **Error Responses:**
 
-If username is already taken:
+If no username was provided:
 
 ```json
 {
 "status": "-1",
+"message": "Empty Username field."
+}
+```
+
+If username is already taken:
+
+```json
+{
+"status": "-2",
 "message": "Username already taken."
 }
 ```
 
 If password does not meet security requirements:
 
+Password must meet the following requirements:
+- At least 8 characters
+- At least one uppercase letter
+- At least one lowercase letter
+- At least one digit 
+- At least one of the following special characters: !@#$*-_?.
+- Only these special characters are allowed: !@#$*-_?.
+
 ```json
 {
-"status": "-2",
-"message": "Password does not meet security requirements."
+  "status": "-3",
+  "message": "Password doesn't meet requirements."
 }
 ```
 
-If email or phone number has an invalid format:
+If no Phone number and no Email was provided:
 
 ```json
 {
-"status": "-3",
-"message": "Invalid email or phone format."
+"status": "-4",
+"message": "Either a phone number or an email has to be provided."
+}
+```
+
+If Phone number has an invalid format:
+
+```json
+{
+"status": "-5",
+"message": "Invalid phone format."
+}
+```
+
+If Email has an invalid format:
+
+```json
+{
+"status": "-6",
+"message": "Invalid email format."
 }
 ```
 
@@ -83,7 +118,7 @@ If email is already registered:
 
 ```json
 {
-"status": "-4",
+"status": "-7",
 "message": "Email is already registered."
 }
 ```
@@ -92,7 +127,7 @@ If phone number is already registered:
 
 ```json
 {
-"status": "-5",
+"status": "-8",
 "message": "Phone number is already registered."
 }
 ```

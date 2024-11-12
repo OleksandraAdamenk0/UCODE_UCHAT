@@ -12,6 +12,6 @@
 
 int mx_init_server(int argc, const char * argv[]);
 
-int handle_request(const char *request_str);
+char *handle_request(const char *request_str);
 
 #endif //SERVER_H
