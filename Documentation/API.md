@@ -180,18 +180,9 @@ If username or password is incorrect:
 "status": "-1",
 "message": "Invalid username or password."
 }
-``` 
-
-If the account is locked or inactive:
-
-``` json
-{
-"status": "-2",
-"message": "Account is locked or inactive."
-}
 ```
 
-## Token Refresh
+## Token Refresh (For the future development)
 
 Description: A request to refresh the access token using the refresh token. This is used to obtain a new access token without requiring the user to log in again.
 
