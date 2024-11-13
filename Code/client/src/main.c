@@ -1,27 +1,47 @@
 #include <stdio.h>
 #include <sqlite3.h>
 #include <string.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
 
+#define PORT 8082
 #define BUFFER_SIZE 1024
 
-void create_tables(sqlite3 *db);
-
 int main(void) {
-    sqlite3 *db;
-    int rc;
+    int sock = 0;
+    struct sockaddr_in serv_addr;
+    char *message = "Hello from client!";
+    char buffer[BUFFER_SIZE] = {0};
 
-    rc = sqlite3_open("messenger.db", &db);
-    if (rc) {
-        fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
-        return(0);
-    } else {
-        fprintf(stderr, "Opened database successfully\n");
+    if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
+        printf("\n Socket creation error \n");
+        return -1;
     }
 
-    // Create tables
-    create_tables(db);
+    serv_addr.sin_family = AF_INET;
+    serv_addr.sin_port = htons(PORT);
 
-    sqlite3_close(db);
+    // Convert IPv4 and IPv6 addresses from text to binary form
+    if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0) {
+        printf("\nInvalid address/ Address not supported \n");
+        return -1;
+    }
+
+    int connection_status = connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
+    if (connection_status < 0) {
+        printf("\nConnection Failed \n");
+        return -1;
+    }
+
+    send(sock, message, strlen(message), 0);
+    printf("Message sent to server\n");
+
+    read(sock, buffer, BUFFER_SIZE);
+    printf("Response from server: %s\n", buffer);
+
+    close(sock);
     return 0;
 }
 
@@ -32,6 +52,7 @@ void create_tables(sqlite3 *db) {
         "chat_id INTEGER PRIMARY KEY AUTOINCREMENT," \
         "chat_name TEXT NOT NULL," \
         "last_message TEXT," \
+        "status INTEGER NOT NULL DEFAULT 0," \
         "last_timestamp DATETIME);";
 
     const char *sql_messages =
@@ -40,6 +61,7 @@ void create_tables(sqlite3 *db) {
         "chat_id INTEGER," \
         "sender TEXT NOT NULL," \
         "content TEXT NOT NULL," \
+        "status INTEGER NOT NULL DEFAULT 0," \
         "timestamp DATETIME DEFAULT CURRENT_TIMESTAMP," \
         "FOREIGN KEY(chat_id) REFERENCES Chats(chat_id));";
 
@@ -47,9 +69,9 @@ void create_tables(sqlite3 *db) {
        "CREATE TABLE IF NOT EXISTS Contacts (" \
        "contact_id INTEGER PRIMARY KEY AUTOINCREMENT," \
        "name TEXT NOT NULL," \
+       "status INTEGER NOT NULL DEFAULT 0," \
        "phone TEXT UNIQUE);";
 
-    // Execute SQL statements
     if (sqlite3_exec(db, sql_chats, 0, 0, &errMsg) != SQLITE_OK) {
         fprintf(stderr, "SQL error: %s\n", errMsg);
         sqlite3_free(errMsg);
@@ -72,11 +94,11 @@ void create_tables(sqlite3 *db) {
     }
 }
 
-void insert_chat(sqlite3 *db, const char *chat_name) {
+void insert_chat(sqlite3 *db, const char *chat_name, int connection_status) {
     char *errMsg = 0;
     char sql[256];
 
-    snprintf(sql, sizeof(sql), "INSERT INTO Chats (chat_name) VALUES ('%s');", chat_name);
+    snprintf(sql, sizeof(sql), "INSERT INTO Chats (chat_name, status) VALUES ('%s', %d);", chat_name, connection_status);
 
     if (sqlite3_exec(db, sql, 0, 0, &errMsg) != SQLITE_OK) {
         fprintf(stderr, "SQL error: %s\n", errMsg);
@@ -86,11 +108,11 @@ void insert_chat(sqlite3 *db, const char *chat_name) {
     }
 }
 
-void insert_message(sqlite3 *db, int chat_id, const char *sender, const char *content) {
+void insert_message(sqlite3 *db, int chat_id, const char *sender, const char *content, int connection_status) {
     char *errMsg = 0;
     char sql[512];
 
-    snprintf(sql, sizeof(sql), "INSERT INTO Messages (chat_id, sender, content) VALUES (%d, '%s', '%s');", chat_id, sender, content);
+    snprintf(sql, sizeof(sql), "INSERT INTO Messages (chat_id, sender, content, status) VALUES (%d, '%s', '%s', %d);", chat_id, sender, content, connection_status);
 
     if (sqlite3_exec(db, sql, 0, 0, &errMsg) != SQLITE_OK) {
         fprintf(stderr, "SQL error: %s\n", errMsg);
@@ -144,11 +166,11 @@ void read_chat(sqlite3 *db, int chat_id, char *response) {
     sqlite3_finalize(stmt);
 }
 
-void insert_contact(sqlite3 *db, const char *name, const char *phone) {
+void insert_contact(sqlite3 *db, const char *name, const char *phone, int connection_status) {
     char *errMsg = 0;
     char sql[512];
 
-    snprintf(sql, sizeof(sql), "INSERT INTO Contacts (name, phone) VALUES ('%s', '%s');", name, phone);
+    snprintf(sql, sizeof(sql), "INSERT INTO Contacts (name, phone, status) VALUES ('%s', '%s', %d);", name, phone, connection_status);
 
     if (sqlite3_exec(db, sql, 0, 0, &errMsg) != SQLITE_OK) {
         if (sqlite3_errcode(db) == SQLITE_CONSTRAINT) {
