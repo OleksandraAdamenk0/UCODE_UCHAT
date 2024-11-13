@@ -12,5 +12,7 @@
 int mx_registration_request(const cJSON *request);
 char *mx_registration_response(const int status);
 
+int mx_login_request(cJSON *request);
+
 
 #endif //UCODE_UCHAT_REQUEST_PROCESSING_H
