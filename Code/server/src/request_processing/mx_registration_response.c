@@ -15,7 +15,10 @@ char *mx_registration_response(const int status) {
         cJSON_AddStringToObject(response, "message",
                                 "Account created successfully.");
         cJSON *tokens = cJSON_CreateObject();
-        cJSON_AddStringToObject(tokens, "access_token", "0");
+
+        char *access_token = "get user id from db";
+        cJSON_AddStringToObject(tokens, "access_token", access_token);
+
         cJSON_AddStringToObject(tokens, "refresh_token", "0");
         cJSON_AddItemToObject(response, "tokens", tokens);
     } else if (status == -1) {
