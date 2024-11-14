@@ -8,11 +8,22 @@
 
 #include "libmx.h"
 #include "cJSON.h"
+#include "cencode.h"
+#include "cdecode.h"
 
+char *mx_registration_handler(cJSON *request);
 int mx_registration_request(const cJSON *request);
-char *mx_registration_response(const int status);
+cJSON *mx_registration_logic(const cJSON *request);
+char *mx_registration_response(const int status, cJSON *response);
 
+char *mx_login_handler(cJSON *request);
 int mx_login_request(cJSON *request);
+cJSON *mx_login_logic(cJSON *request);
+char *mx_login_response(const int status, cJSON *response);
 
+char *mx_get_all_contacts_handler(cJSON *request);
+int mx_get_all_contacts_request(cJSON *request);
+cJSON *mx_get_all_contacts_logic(cJSON *request);
+char *mx_get_all_contacts_response(const int status, cJSON *response);
 
 #endif //UCODE_UCHAT_REQUEST_PROCESSING_H

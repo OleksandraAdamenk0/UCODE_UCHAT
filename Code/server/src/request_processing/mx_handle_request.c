@@ -54,21 +54,14 @@ char *handle_request(const char *request_str) {
     }
 
     // specify handler
-    int result;
     char *response;
     if (mx_strcmp(action->valuestring, "register") == 0) {
-        result = mx_registration_request(request);
-        response = mx_registration_response(result);
-        if (response == NULL) {
-            // log error during forming a response
-            logger_error("Error during forming a response.\n");
-            return NULL;
-        }
-        return response;
+        response = mx_registration_handler(request);
     } else if (mx_strcmp(action->valuestring, "login") == 0) {
-        // login request handler
+        response = mx_login_handler(request);
     }
     // ...
 
     cJSON_Delete(request);
+    return response;
 }

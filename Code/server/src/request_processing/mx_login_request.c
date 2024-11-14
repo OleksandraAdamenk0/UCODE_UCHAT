@@ -17,9 +17,8 @@ int mx_login_request(cJSON *request) {
     //    return -1;
     // }
 
-    // if (password provided bu client doesn't match passowrd from the DB') {
+    // if (password provided by client doesn't match password from the DB') {
     //    return -1;
     //}
-
-
+    return 0;
 }

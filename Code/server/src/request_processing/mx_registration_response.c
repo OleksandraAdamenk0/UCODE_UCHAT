@@ -4,23 +4,12 @@
 
 #include "request_processing.h"
 
-char *mx_registration_response(const int status) {
-    if (status < -8) return NULL;
-    cJSON *response = cJSON_CreateObject();
-    if (!response) return NULL;
-
+char *mx_registration_response(const int status, cJSON *response) {
     cJSON_AddStringToObject(response, "status", mx_itoa(status));
 
     if (status == 0) {
         cJSON_AddStringToObject(response, "message",
                                 "Account created successfully.");
-        cJSON *tokens = cJSON_CreateObject();
-
-        char *access_token = "get user id from db";
-        cJSON_AddStringToObject(tokens, "access_token", access_token);
-
-        cJSON_AddStringToObject(tokens, "refresh_token", "0");
-        cJSON_AddItemToObject(response, "tokens", tokens);
     } else if (status == -1) {
         cJSON_AddStringToObject(response, "message",
                                 "Empty Username field.");
@@ -46,6 +35,11 @@ char *mx_registration_response(const int status) {
     } else if (status == -8) {
         cJSON_AddStringToObject(response, "message",
                                 "Phone number is already registered.");
+    } else {
+        cJSON_ReplaceItemInObject(response, "status",
+                                  cJSON_CreateString("-9"));
+        cJSON_AddStringToObject(response, "message",
+                                "Internal server error. Please try again later.");
     }
 
     char *response_str = cJSON_Print(response);

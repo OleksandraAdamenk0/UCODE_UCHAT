@@ -132,6 +132,15 @@ If phone number is already registered:
 }
 ```
 
+If there is a server error while processing the request:
+
+``` json
+{
+"status": "-9",
+"message": "Internal server error. Please try again later."
+}
+```
+
 ## User Login
 
 **Description**: A request to authenticate an existing user using their username and password. Upon successful authentication, the server will issue an access token and a refresh token.
@@ -182,6 +191,15 @@ If username or password is incorrect:
 }
 ```
 
+If phone number is already registered:
+
+``` json
+{
+"status": "-2",
+"message": "Internal server error. Please try again later."
+}
+```
+
 ## Token Refresh (For the future development)
 
 Description: A request to refresh the access token using the refresh token. This is used to obtain a new access token without requiring the user to log in again.
@@ -229,7 +247,16 @@ If the refresh token is invalid or expired:
 }
 ``` 
 
-## Fetch All Contacts
+If phone number is already registered:
+
+``` json
+{
+"status": "-2",
+"message": "Internal server error. Please try again later."
+}
+```
+
+## Get All Contacts
 
 **Description:** A request to retrieve the list of all contacts associated with the authenticated user. 
 Each contact will include a unique ID, name, and profile photo URL for display purposes.
@@ -238,17 +265,19 @@ Each contact will include a unique ID, name, and profile photo URL for display p
 
 The client sends a JSON object with the following fields:
 
-| Field  |    Type    |	 Required  | Description |
-|--------| ---------- | ---------- | ----------- |
-| action |	string	  | yes        | Specifies the action type; for fetching contacts, use "get_contacts" |
-| token  |	string    |	yes	       | The access token for authentication |
+| Field   |    Type    |	 Required  | Description |
+|---------| ---------- | ---------- | ----------- |
+| action  |	string	  | yes        | Specifies the action type; for fetching contacts, use "get_contacts" |
+| user_id |	string	  | yes        | The unique identifier of the user |
+| token   |	string    |	yes	       | The access token for authentication |
 
 ### Sample Request
 
 ```json
 {
-"action": "get_contacts",
-"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  "action": "get_contacts",
+  "user_id": "12345",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
 }
 ``` 
 
@@ -278,12 +307,30 @@ The client sends a JSON object with the following fields:
 
 **Error Responses:**
 
-If the token is missing or invalid:
+If the user id is missing or invalid:
 
 ```  json
 {
 "status": "-1",
+"message": "Invalid or missing user_id."
+}
+```
+
+If the token is missing or invalid:
+
+```  json
+{
+"status": "-2",
 "message": "Invalid or missing token."
+}
+```
+
+If phone number is already registered:
+
+``` json
+{
+"status": "-3",
+"message": "Internal server error. Please try again later."
 }
 ```
 
@@ -346,6 +393,14 @@ If the token is missing or invalid:
 }
 ```
 
+If phone number is already registered:
+
+``` json
+{
+"status": "-2",
+"message": "Internal server error. Please try again later."
+}
+```
 
 ## Fetch Messages from a Chat
 
@@ -418,6 +473,15 @@ If the chat ID is invalid or not found:
 {
 "status": "-2",
 "message": "Chat not found."
+}
+```
+
+If phone number is already registered:
+
+``` json
+{
+"status": "-3",
+"message": "Internal server error. Please try again later."
 }
 ```
 
