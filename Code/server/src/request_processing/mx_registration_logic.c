@@ -5,6 +5,8 @@
 #include "request_processing.h"
 
 cJSON *mx_registration_logic(const cJSON *request) {
+    // write username, password, email and/or phone to the db
+
     cJSON *result = cJSON_CreateObject();
     cJSON *tokens = cJSON_CreateObject();
 

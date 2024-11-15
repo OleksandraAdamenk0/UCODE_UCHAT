@@ -5,6 +5,47 @@
 #include "request_processing.h"
 #include "server.h"
 
+typedef int (*RequestFunction)(const cJSON *);
+typedef cJSON *(*LogicFunction)(const cJSON *);
+typedef char *(*ResponseFunction)(int, cJSON *);
+
+static char *handler(cJSON *request,
+                         RequestFunction request_func,
+                         LogicFunction logic_func,
+                         ResponseFunction response_func,
+                         char *action) {
+    int status = request_func(request);
+    char *response = NULL;
+
+    if (status == 0) {
+        cJSON *result = logic_func(request);
+        if (!result) {
+            char *msg = "Internal server error during processing the \"";
+            char *msg1 = mx_strjoin(msg, action);
+            msg = mx_strjoin(msg1, "\" request.\n");
+            logger_error(msg);
+            free(msg);
+            free(msg1);
+            status = -9;
+        }
+        response = response_func(status, result);
+    } else {
+        response = response_func(status, NULL);
+    }
+
+    if (response == NULL) {
+        char *msg = "Error during forming a response to the ";
+        char *msg1 = mx_strjoin(msg, action);
+        msg = mx_strjoin(msg1, " request.\n");
+        logger_error(msg);
+        free(msg);
+        free(msg1);
+        return NULL;
+    }
+    return response;
+}
+
+
 /**
  * @brief Handles incoming JSON-encoded requests, determines the action type,
  *        and delegates to the appropriate request handler. Constructs a JSON
@@ -56,9 +97,29 @@ char *handle_request(const char *request_str) {
     // specify handler
     char *response;
     if (mx_strcmp(action->valuestring, "register") == 0) {
-        response = mx_registration_handler(request);
+        response = handler(request,
+                           mx_registration_request,
+                           mx_registration_logic,
+                           mx_registration_response,
+                           "register");
     } else if (mx_strcmp(action->valuestring, "login") == 0) {
-        response = mx_login_handler(request);
+        response = handler(request,
+                           mx_login_request,
+                           mx_login_logic,
+                           mx_login_response,
+                           "login");
+    } else if (mx_strcmp(action->valuestring, "get_contacts") == 0) {
+        response = handler(request,
+                           mx_get_all_contacts_request,
+                           mx_get_all_contacts_logic,
+                           mx_get_all_contacts_response,
+                           "get_contacts");
+    } else if (mx_strcmp(action->valuestring, "get_chats") == 0) {
+        response = handler(request,
+                           mx_get_all_chats_request,
+                           mx_get_all_chats_logic,
+                           mx_get_all_chats_response,
+                           "get_chats");
     }
     // ...
 

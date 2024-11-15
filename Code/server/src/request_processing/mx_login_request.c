@@ -4,7 +4,7 @@
 
 #include "request_processing.h"
 
-int mx_login_request(cJSON *request) {
+int mx_login_request(const cJSON *request) {
     cJSON *username = cJSON_GetObjectItemCaseSensitive(request, "username");
     cJSON *password = cJSON_GetObjectItemCaseSensitive(request, "password");
 

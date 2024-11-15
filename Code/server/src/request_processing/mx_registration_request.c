@@ -180,11 +180,6 @@ static int validate_request(const cJSON *request) {
 
 int mx_registration_request(const cJSON *request) {
     int validation_result = validate_request(request);
-
     if (validation_result < 0) return validation_result;
-
-    // registration logic
-    // write username, password, email and/or phone to the db
-
     return 0;
 }

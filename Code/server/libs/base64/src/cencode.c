@@ -5,7 +5,7 @@ This is part of the libb64 project, and has been placed in the public domain.
 For details, see http://sourceforge.net/projects/libb64
 */
 
-#include <b64/cencode.h>
+#include "cencode.h"
 
 const int CHARS_PER_LINE = 72;
 
@@ -105,5 +105,20 @@ int base64_encode_blockend(char* code_out, base64_encodestate* state_in)
 	*codechar++ = '\n';
 	
 	return codechar - code_out;
+}
+
+char *base64_encode(const unsigned char *data, size_t input_length) {
+    size_t output_length = 4 * ((input_length + 2) / 3);
+    char *encoded_data = (char *)malloc(output_length + 1);
+    if (encoded_data == NULL) return NULL;
+
+    base64_encodestate state;
+    base64_init_encodestate(&state);
+
+    int encoded_size = base64_encode_block((const char *)data, input_length, encoded_data, &state);
+    encoded_size += base64_encode_blockend(encoded_data + encoded_size, &state);
+
+    encoded_data[encoded_size] = '\0';
+    return encoded_data;
 }
 

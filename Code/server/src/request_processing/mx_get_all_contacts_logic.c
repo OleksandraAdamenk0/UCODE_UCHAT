@@ -4,7 +4,7 @@
 
 #include "request_processing.h"
 
-cJSON *mx_get_all_contacts_logic(cJSON *request) {
+cJSON *mx_get_all_contacts_logic(const cJSON *request) {
     cJSON *result = cJSON_CreateObject();
 
     cJSON *user_id_json = cJSON_GetObjectItem(request, "user_id");
@@ -16,6 +16,12 @@ cJSON *mx_get_all_contacts_logic(cJSON *request) {
     const char *user_id = user_id_json->valuestring;
 
     // GET FRON DB
+    char *binary_data_1 = "photo";
+    char *size_of_data_1 = mx_itoa(mx_strlen(binary_data_1));
+
+    char *binary_data_2 = "photo";
+    char *size_of_data_2 = mx_itoa(mx_strlen(binary_data_2));
+
     const char *db_contacts[][4] = {
             {"12345", "Alice Smith", (const char *)binary_data_1, (const char *)size_of_data_1},
             {"67890", "Bob Johnson", (const char *)binary_data_2, (const char *)size_of_data_2}
