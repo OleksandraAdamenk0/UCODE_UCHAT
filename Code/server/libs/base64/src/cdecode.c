@@ -86,3 +86,24 @@ int base64_decode_block(const char* code_in, const int length_in, char* plaintex
 	return plainchar - plaintext_out;
 }
 
+unsigned char *base64_decode(const char *data, size_t input_length, size_t *output_length) {
+    base64_decodestate state;
+    base64_init_decodestate(&state);
+
+    *output_length = (input_length / 4) * 3;
+    if (data[input_length - 1] == '=') (*output_length)--;
+    if (data[input_length - 2] == '=') (*output_length)--;
+
+    unsigned char *decoded_data = (unsigned char *)malloc(*output_length);
+    if (decoded_data == NULL) return NULL;
+
+    int decoded_size = base64_decode_block(data, input_length, (char *)decoded_data, &state);
+
+    if (decoded_size < 0) {
+        free(decoded_data);
+        return NULL;
+    }
+
+    return decoded_data;
+}
+

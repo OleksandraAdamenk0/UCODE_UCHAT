@@ -1,4 +1,4 @@
-NAME = sqlite.a
+NAME = libsqlite.a
 
 CC = clang
 FLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
