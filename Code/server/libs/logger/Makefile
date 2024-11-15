@@ -21,7 +21,7 @@ $(NAME): $(LIBMX) $(OBJ)
 	@ar rcs $@ $^
 
 $(OBJ_DIR)/%.o: src/%.c | $(OBJ_DIR)
-	$(CC) $(CFLAGS) -I$(INC_DIR) -I$(LIBMX_INCDIR) -c $< -o $@
+	@$(CC) $(CFLAGS) -I$(INC_DIR) -I$(LIBMX_INCDIR) -c $< -o $@
 
 $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
