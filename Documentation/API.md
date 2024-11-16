@@ -180,18 +180,9 @@ If username or password is incorrect:
 "status": "-1",
 "message": "Invalid username or password."
 }
-``` 
-
-If the account is locked or inactive:
-
-``` json
-{
-"status": "-2",
-"message": "Account is locked or inactive."
-}
 ```
 
-## Token Refresh
+## Token Refresh (For the future development)
 
 Description: A request to refresh the access token using the refresh token. This is used to obtain a new access token without requiring the user to log in again.
 
@@ -237,5 +228,359 @@ If the refresh token is invalid or expired:
     "message": "Invalid or expired refresh token."
 }
 ``` 
+
+## Fetch All Contacts
+
+**Description:** A request to retrieve the list of all contacts associated with the authenticated user. 
+Each contact will include a unique ID, name, and profile photo URL for display purposes.
+
+### Request Data
+
+The client sends a JSON object with the following fields:
+
+| Field  |    Type    |	 Required  | Description |
+|--------| ---------- | ---------- | ----------- |
+| action |	string	  | yes        | Specifies the action type; for fetching contacts, use "get_contacts" |
+| token  |	string    |	yes	       | The access token for authentication |
+
+### Sample Request
+
+```json
+{
+"action": "get_contacts",
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+``` 
+
+### Server Responses
+
+**Successful Response:**
+
+```json
+{
+  "status": "0",
+  "message": "Contacts retrieved successfully.",
+  "count": 2,
+  "contacts": [
+    {
+      "id": "12345",
+      "name": "Alice Smith",
+      "photo": "https://example.com/photos/alice.jpg"
+    },
+    {
+      "id": "67890",
+      "name": "Bob Johnson",
+      "photo": "https://example.com/photos/bob.jpg"
+    }
+  ]
+}
+``` 
+
+**Error Responses:**
+
+If the token is missing or invalid:
+
+```  json
+{
+"status": "-1",
+"message": "Invalid or missing token."
+}
+```
+
+## Fetch All Chats
+
+**Description:** A request to retrieve the list of all chats for the authenticated user. Each chat will have a unique ID, 
+a name (e.g., the name of a group or contact), and a profile photo URL for display.
+
+### Request Data
+
+The client sends a JSON object with the following fields:
+
+
+| Field  |    Type    |	 Required  | Description                                                       |
+|--------| ---------- | ---------- |-------------------------------------------------------------------|
+| action |	string	  | yes        | Specifies the action type; for fetching contacts, use "get_chats" |
+| token  |	string    |	yes	       | The access token for authentication                               |
+
+### Sample Request:
+
+```json
+{
+"action": "get_chats",
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+``` 
+
+### Server Responses
+
+**Successful Response:**
+
+``` json 
+{
+"status": "0",
+"message": "Chats retrieved successfully.",
+"count": 2,
+"chats": [
+{
+"id": "54321",
+"name": "Project Team",
+"photo": "https://example.com/photos/project.jpg"
+},
+{
+"id": "98765",
+"name": "John Doe",
+"photo": "https://example.com/photos/john.jpg"
+}
+]
+}
+``` 
+
+**Error Responses:**
+
+If the token is missing or invalid:
+
+```  json
+{
+"status": "-1",
+"message": "Invalid or missing token."
+}
+```
+
+
+## Fetch Messages from a Chat
+
+**Description**: A request to fetch all messages from a specific chat. Each message will include a unique ID, 
+the chat ID it belongs to, the sender's ID, the message content, and the time of sending.
+
+### Request Data
+
+The client sends a JSON object with the following fields:
+
+
+| Field   |    Type    |	 Required  | Description                                                  |
+|---------| ---------- | ---------- |--------------------------------------------------------------|
+| action  |	string	  | yes        | Specifies the action type; for fetching contacts, use "get_messages" |
+| chat_id |	string	  | yes        | The unique ID of the chat from which to fetch messages |
+| token   |	string    |	yes	       | The access token for authentication                          |
+
+### Sample Request:
+
+``` json
+{
+"action": "get_messages",
+"chat_id": "54321",
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+```
+
+### Server Responses
+
+**Successful Response:**
+
+``` json
+{
+"status": "0",
+"message": "Messages retrieved successfully.",
+"count": 2,
+"messages": [
+{
+"id": "1",
+"chat_id": "54321",
+"sender_id": "12345",
+"content": "Hello everyone!",
+"timestamp": "2024-11-12T08:30:00Z"
+},
+{
+"id": "2",
+"chat_id": "54321",
+"sender_id": "67890",
+"content": "Hi Alice, how are you?",
+"timestamp": "2024-11-12T08:35:00Z"
+}
+]
+}
+```
+
+**Error Responses:**
+
+If the token is missing or invalid:
+
+``` json
+{
+"status": "-1",
+"message": "Invalid or missing token."
+}
+```
+
+If the chat ID is invalid or not found:
+
+``` json
+{
+"status": "-2",
+"message": "Chat not found."
+}
+```
+
+## User Profile Request
+
+**Description:** A request to retrieve user profile information. The server will return key profile data, including settings and contact details.
+
+### Request Data
+
+| Field   |    Type    |	 Required  | Description                                                         |
+|---------| ---------- | ---------- |---------------------------------------------------------------------|
+| action  |	string	  | yes        | Specifies the action type; for fetching contacts, use "get_profile" |
+| user_id |	string	  | yes        | The unique identifier of the user             |
+| token   |	string    |	yes	       | The access token for authentication                                 |
+
+### Sample Request:
+
+``` json
+{
+"action": "get_profile",
+"user_id": "unique_user_id"
+}
+```
+
+### Server Responses
+
+**Successful Response:**
+
+``` json
+{
+"status": "0",
+"message": "Profile retrieved successfully.",
+"profile": {
+"username": "user123",
+"phone": "+1234567890",
+"email": "user@example.com",
+"notifications_enabled": true,
+"theme": "light" // Possible values: "light" or "dark"
+}
+}
+```
+
+**Error Responses:**
+
+If the user ID is not found:
+
+``` json
+{
+"status": "-1",
+"message": "User not found."
+}
+```
+
+If the request is missing required fields:
+
+``` json
+{
+"status": "-2",
+"message": "Missing or invalid request data."
+}
+```
+
+If there is a server error while retrieving the profile:
+
+``` json
+{
+"status": "-3",
+"message": "Internal server error. Please try again later."
+}
+```
+
+## Message Sending Request
+
+**Description:** A request to send a message in a specified chat. 
+The server processes the message and delivers it to the recipient(s) in the chat.
+
+### Request Data
+
+The client sends a JSON object with the following fields:
+
+
+| Field     |    Type    |	 Required  | Description                                                         |
+|-----------| ---------- | ---------- |---------------------------------------------------------------------|
+| action    |	string	  | yes        | Specifies the action type; for fetching contacts, use "send_message" |
+| chat_id   |	string	  | yes        | The unique ID of the chat to which the message is being sent             |
+| sender_id |	string	  | yes        | The unique ID of the user sending the message           |
+| content   |	string	  | yes        | The content of the message            |
+| token     |	string    |	yes	       | The access token for authentication                                 |
+
+### Sample Request:
+
+``` json
+{
+"action": "send_message",
+"chat_id": "chat12345",
+"sender_id": "user123",
+"content": "Hello, how are you?"
+}
+```
+
+### Server Responses
+
+**Successful Response:**
+
+``` json
+{
+"status": "0",
+"message": "Message sent successfully.",
+"message_id": "msg7890",
+"timestamp": "2024-11-12T14:45:00Z"
+}
+```
+
+**Error Responses:**
+
+If the chat ID is invalid or not found:
+
+``` json
+{
+"status": "-1",
+"message": "Chat not found."
+}
+```
+
+If the sender ID is invalid or does not have permission to send messages in this chat:
+
+``` json
+{
+"status": "-2",
+"message": "Permission denied. Unable to send message."
+}
+```
+
+If the content is empty or exceeds the allowed length:
+
+``` json
+{
+"status": "-3",
+"message": "Invalid message content."
+}
+```
+
+If there is a server error while processing the message:
+
+``` json
+{
+"status": "-4",
+"message": "Internal server error. Please try again later."
+}
+```
+
+# Next to develop
+
+* Add user to the contacts
+* Create chat
+* Add user to the chat
+* Remove user from the chat
+* Leave chat
+* Delete account
+* Update password
+* Update login
+* Update Email
+* Update Phone
+* ...
 
 

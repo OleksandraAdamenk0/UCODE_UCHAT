@@ -2,7 +2,7 @@
 #define CLIENT_H
 
 #include "libmx.h"
-// #include "logger.h"
+#include "logger.h"
 #include "sqlite3.h"
 
 #include <stdio.h>

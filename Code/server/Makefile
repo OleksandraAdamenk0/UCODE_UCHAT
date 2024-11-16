@@ -2,7 +2,6 @@ NAME := uchat_server
 
 CC := clang
 СFLAGS := -std=c11 -Wall -Wextra -Werror -Wpedantic
-LDFLAGS = -pthread
 
 SRCDIR := src
 INCDIR := inc
@@ -23,17 +22,16 @@ LOGGER := $(LOGGER_DIR)/liblogger.a
 
 # ==============================================================================
 
-# SRCFILES = $(wildcard $(SRCDIR)/**/*.c) $(SRCDIR)/main.c
-SRCFILES = $(wildcard $(SRCDIR)/**/*.c) $(SRCDIR)/server.c $(SRCDIR)/main.c
+SRCFILES = $(wildcard $(SRCDIR)/**/*.c) $(SRCDIR)/main.c
 OBJFILES = $(patsubst $(SRCDIR)/%/%.c, $(OBJDIR)/%.o, $(SRCFILES))
 
 all: $(NAME)
 
 $(NAME): $(LIBMX) $(LOGGER) $(OBJFILES)
-	@$(CC) $(OBJFILES) -o $(NAME) $(CFLAGS) $(LDFLAGS) -I $(INCDIR) -I $(LOGGER_INCDIR) -L$(LOGGER_DIR) -llogger -I $(LIBMX_INCDIR) -L$(LIBMX_DIR) -lmx
+	@$(CC) $(OBJFILES) -o $(NAME) -I $(INCDIR) -I $(LOGGER_INCDIR) -L$(LOGGER_DIR) -llogger -I $(LIBMX_INCDIR) -L$(LIBMX_DIR) -lmx
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c  | $(OBJDIR)
-	@$(CC) $(СFLAGS) $(LDFLAGS) -c -I $(INCDIR) -I $(LIBMX_INCDIR) -I $(LOGGER_INCDIR) $< -o $@
+	@$(CC) $(СFLAGS) -c -I $(INCDIR) -I $(LIBMX_INCDIR) -I $(LOGGER_INCDIR) $< -o $@
 
 $(OBJDIR):
 	@mkdir -p $(OBJDIR)
