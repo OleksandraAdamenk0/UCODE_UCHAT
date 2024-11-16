@@ -43,7 +43,7 @@ OBJFILES = $(patsubst $(SRCDIR)/%/%.c, $(OBJDIR)/%.o, $(SRCFILES))
 all: $(NAME)
 
 $(NAME): $(LIBMX) $(LOGGER) $(CJSON) $(BASE64) $(OBJFILES)
-	@$(CC) $(OBJFILES) -o $(NAME) -I $(INCDIR) -I $(LOGGER_INCDIR) -L$(LOGGER_DIR) -llogger -I $(LIBMX_INCDIR) -L$(LIBMX_DIR) -lmx -I $(CJSON_INCDIR) -L$(CJSON_DIR) -lcjson -I $(BASE64_INCDIR) -L$(BASE64_DIR) -lbase64 -I $(SQLITE_INCDIR) -L$(SQLITE_DIR) -lsqlite3
+	@$(CC) $(OBJFILES) -o $(NAME) -I $(INCDIR) -I $(LOGGER_INCDIR) -L$(LOGGER_DIR) -pthread -llogger -I $(LIBMX_INCDIR) -L$(LIBMX_DIR) -lmx -I $(CJSON_INCDIR) -L$(CJSON_DIR) -lcjson -I $(BASE64_INCDIR) -L$(BASE64_DIR) -lbase64 -I $(SQLITE_INCDIR) -L$(SQLITE_DIR) -lsqlite3
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c  | $(OBJDIR)
 	@$(CC) $(СFLAGS) -c -I $(INCDIR) -I $(LIBMX_INCDIR) -I $(LOGGER_INCDIR) -I $(CJSON_INCDIR) -I $(BASE64_INCDIR) $< -o $@
