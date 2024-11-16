@@ -1,19 +1,42 @@
 #include <stdio.h>
 #include <sqlite3.h>
+#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <sys/socket.h>
+#include <cjson/cJSON.h>
 
-#define PORT 8082
+#define PORT 8080
 #define BUFFER_SIZE 1024
 
-int main(void) {
+void create_tables(sqlite3 *db);
+void create_chat(sqlite3 *db, const char *chat_name, int connection_status, int socket);
+void send_message(sqlite3 *db, int chat_id, const char *sender, const char *content, int connection_status, int socket);
+void add_contact(sqlite3 *db, const char *name, const char *phone, int connection_status, int socket);
+void read_chat(sqlite3 *db, int chat_id);
+void read_contacts(sqlite3 *db);
+void send_message_to_server(cJSON *json, int socket);
+void send_chat_to_server(cJSON *json, int socket);
+
+int main(int argc, char *argv[]) {
+    sqlite3 *db = NULL;
+
+    int rc = sqlite3_open("messenger.db", &db);
+    if (rc) {
+        fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+        return(0);
+    } else {
+        fprintf(stderr, "Opened database successfully\n");
+    }
+
+    create_tables(db);
+
     int sock = 0;
     struct sockaddr_in serv_addr;
-    char *message = "Hello from client!";
-    char buffer[BUFFER_SIZE] = {0};
+    // char *message = "Hello from client!";
+    // char buffer[BUFFER_SIZE] = {0};
 
     if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
         printf("\n Socket creation error \n");
@@ -35,12 +58,48 @@ int main(void) {
         return -1;
     }
 
-    send(sock, message, strlen(message), 0);
-    printf("Message sent to server\n");
+    if (strcmp(argv[1], "create_chat") == 0) {
+        if (argc != 3) {
+            printf("Wrong number of arguments\n");
+            sqlite3_close(db);
+            close(sock);
+            exit(1);
+        }
+        create_chat(db, argv[2], connection_status < 0 ? 0 : 1, sock);
+    } else if (strcmp(argv[1], "send_message") == 0) {
+        if (argc != 5) {
+            printf("Wrong number of arguments\n");
+            sqlite3_close(db);
+            close(sock);
+            exit(1);
+        }
+        send_message(db, atoi(argv[2]), argv[3], argv[4], connection_status < 0 ? 0 : 1, sock);
+    } else if (strcmp(argv[1], "add_contact") == 0) {
+        if (argc != 4) {
+            printf("Wrong number of arguments\n");
+            sqlite3_close(db);
+            close(sock);
+            exit(1);
+        }
+        add_contact(db, argv[2], argv[3], connection_status < 0 ? 0 : 1, sock);
+    } else if (strcmp(argv[1], "read_chat") == 0) {
+        if (argc != 3) {
+            printf("Wrong number of arguments\n");
+            sqlite3_close(db);
+            close(sock);
+            exit(1);
+        }
+        read_chat(db, atoi(argv[2]));
+    } else if (strcmp(argv[1], "contacts_list") == 0) {
+        read_contacts(db);
+    } else {
+        printf("Unknown command");
+        sqlite3_close(db);
+        close(sock);
+        exit(1);
+    }
 
-    read(sock, buffer, BUFFER_SIZE);
-    printf("Response from server: %s\n", buffer);
-
+    sqlite3_close(db);
     close(sock);
     return 0;
 }
@@ -70,7 +129,9 @@ void create_tables(sqlite3 *db) {
        "contact_id INTEGER PRIMARY KEY AUTOINCREMENT," \
        "name TEXT NOT NULL," \
        "status INTEGER NOT NULL DEFAULT 0," \
-       "phone TEXT UNIQUE);";
+       "phone TEXT UNIQUE," \
+       "chat_id INTEGER," \
+       "FOREIGN KEY(chat_id) REFERENCES Chats(chat_id));";
 
     if (sqlite3_exec(db, sql_chats, 0, 0, &errMsg) != SQLITE_OK) {
         fprintf(stderr, "SQL error: %s\n", errMsg);
@@ -94,7 +155,7 @@ void create_tables(sqlite3 *db) {
     }
 }
 
-void insert_chat(sqlite3 *db, const char *chat_name, int connection_status) {
+void create_chat(sqlite3 *db, const char *chat_name, int connection_status, int socket) {
     char *errMsg = 0;
     char sql[256];
 
@@ -103,12 +164,36 @@ void insert_chat(sqlite3 *db, const char *chat_name, int connection_status) {
     if (sqlite3_exec(db, sql, 0, 0, &errMsg) != SQLITE_OK) {
         fprintf(stderr, "SQL error: %s\n", errMsg);
         sqlite3_free(errMsg);
+
     } else {
         printf("Chat '%s' inserted successfully.\n", chat_name);
     }
+
+    int chat_id = sqlite3_last_insert_rowid(db);
+    cJSON *json = cJSON_CreateObject();
+    cJSON_AddStringToObject(json, "action", "create_chat");
+    cJSON_AddNumberToObject(json, "chat_id", chat_id);
+    cJSON_AddStringToObject(json, "chat_name", chat_name);
+
+    send_chat_to_server(json, socket);
 }
 
-void insert_message(sqlite3 *db, int chat_id, const char *sender, const char *content, int connection_status) {
+void send_chat_to_server(cJSON *json, int socket) {
+    char *json_str = cJSON_Print(json);
+    char buffer[BUFFER_SIZE] = {""};
+
+    send(socket, json_str, strlen(json_str), 0);
+    printf("Message sent to server\n");
+
+    read(socket, buffer, BUFFER_SIZE);
+    printf("Response from server: %s\n", buffer);
+    cJSON *response = cJSON_Parse(buffer);
+    cJSON *status = cJSON_GetObjectItemCaseSensitive(response, "status");
+    cJSON *message = cJSON_GetObjectItemCaseSensitive(response, "message");
+    printf("server response:\nstatus - %s\nmessage - %s", status->valuestring, message->valuestring);
+}
+
+void send_message(sqlite3 *db, int chat_id, const char *sender, const char *content, int connection_status, int socket) {
     char *errMsg = 0;
     char sql[512];
 
@@ -120,6 +205,31 @@ void insert_message(sqlite3 *db, int chat_id, const char *sender, const char *co
     } else {
         printf("Message from '%s' inserted successfully.\n", sender);
     }
+
+    cJSON *json = cJSON_CreateObject();
+    cJSON_AddStringToObject(json, "action", "send_message");
+    cJSON_AddNumberToObject(json, "chat_id", chat_id);
+    cJSON_AddStringToObject(json, "sender_id", sender);
+    cJSON_AddStringToObject(json, "content", content);
+
+    send_message_to_server(json, socket);
+
+    cJSON_Delete(json);
+}
+
+void send_message_to_server(cJSON *json, int socket) {
+    char *json_str = cJSON_Print(json);
+    char buffer[BUFFER_SIZE] = {""};
+
+    send(socket, json_str, strlen(json_str), 0);
+    printf("Message sent to server\n");
+
+    read(socket, buffer, BUFFER_SIZE);
+    printf("Response from server: %s\n", buffer);
+    cJSON *response = cJSON_Parse(buffer);
+    cJSON *status = cJSON_GetObjectItemCaseSensitive(response, "status");
+    cJSON *message = cJSON_GetObjectItemCaseSensitive(response, "message");
+    printf("server response:\nstatus - %s\nmessage - %s", status->valuestring, message->valuestring);
 }
 
 void delete_table(sqlite3 *db, const char *table_name) {
@@ -136,8 +246,9 @@ void delete_table(sqlite3 *db, const char *table_name) {
     }
 }
 
-void read_chat(sqlite3 *db, int chat_id, char *response) {
+void read_chat(sqlite3 *db, int chat_id) {
     char sql[256];
+    char *response = NULL;
     sqlite3_stmt *stmt;
 
     // Prepare the SQL statement to select messages for the given chat_id
@@ -166,7 +277,7 @@ void read_chat(sqlite3 *db, int chat_id, char *response) {
     sqlite3_finalize(stmt);
 }
 
-void insert_contact(sqlite3 *db, const char *name, const char *phone, int connection_status) {
+void add_contact(sqlite3 *db, const char *name, const char *phone, int connection_status, int socket) {
     char *errMsg = 0;
     char sql[512];
 
@@ -180,12 +291,16 @@ void insert_contact(sqlite3 *db, const char *name, const char *phone, int connec
         }
         sqlite3_free(errMsg);
     } else {
+        create_chat(db, name, connection_status, socket);
         printf("Contact '%s' added successfully.\n", name);
     }
+
+
 }
 
-void read_contacts(sqlite3 *db, char *response) {
+void read_contacts(sqlite3 *db) {
     const char *sql = "SELECT * FROM Contacts;";
+    char *response = NULL;
     sqlite3_stmt *stmt;
 
     // Prepare the SQL statement

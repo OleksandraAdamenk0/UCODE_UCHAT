@@ -20,9 +20,15 @@ LOGGER_DIR := $(LIBS_DIR)/logger
 LOGGER_INCDIR := $(LOGGER_DIR)/inc
 LOGGER := $(LOGGER_DIR)/liblogger.a
 
+#SQLITE
 SQLITE_DIR = $(LIBS_DIR)/sqlite
 SQLITE_INCDIR = $(SQLITE_DIR)/inc
 SQLITE = $(SQLITE_DIR)/sqlite.a
+
+#C_JSON
+C_JSON_DIR = $(LIBS_DIR)/cjson
+C_JSON_INCDIR = $(C_JSON_DIR)/inc
+C_JSON = $(C_JSON_DIR)/cjson.a
 
 # ==============================================================================
 
@@ -31,8 +37,8 @@ OBJFILES = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCFILES))
 
 all: $(NAME)
 
-$(NAME): $(LIBMX) $(LOGGER) $(SQLITE) $(OBJFILES)
-	@$(CC) $(OBJFILES) -o $(NAME) -I $(INCDIR) -I $(LOGGER_INCDIR) -L$(LOGGER_DIR) -llogger -I $(LIBMX_INCDIR) -L$(LIBMX_DIR) -lmx -I $(SQLITE_INCDIR) -L$(SQLITE_DIR) -lsqlite3
+$(NAME): $(LIBMX) $(LOGGER) $(SQLITE) $(C_JSON) $(OBJFILES)
+	@$(CC) $(OBJFILES) -o $(NAME) -I $(INCDIR) -I $(LOGGER_INCDIR) -L$(LOGGER_DIR) -llogger -I $(LIBMX_INCDIR) -L$(LIBMX_DIR) -lmx -I $(SQLITE_INCDIR) -L$(SQLITE_DIR) -lsqlite3 -I $(C_JSON_INCDIR) -L$(C_JSON_DIR) -lcjson
 $(OBJDIR)/%.o: $(SRCDIR)/%.c  | $(OBJDIR)
 	@$(CC) $(FLAGS) -c -I $(INCDIR) -I $(LIBMX_INCDIR) $< -o $@
 
@@ -48,11 +54,15 @@ $(LOGGER):
 $(SQLITE):
 	@$(MAKE) -C $(SQLITE_DIR)
 
+$(C_JSON):
+	@$(MAKE) -C $(C_JSON_DIR)
+
 uninstall: clean
 	@if [ -f $(NAME) ]; then rm $(NAME); fi
 	@$(MAKE) uninstall -C $(LIBMX_DIR)
 	@$(MAKE) uninstall -C $(LOGGER_DIR)
 	@$(MAKE) uninstall -C $(SQLITE_DIR)
+	@$(MAKE) uninstall -C $(C_JSON_DIR)
 
 
 clean:
@@ -60,6 +70,7 @@ clean:
 	@$(MAKE) clean -C $(LIBMX_DIR)
 	@$(MAKE) clean -C $(LOGGER_DIR)
 	@$(MAKE) clean -C $(SQLITE_DIR)
+	@$(MAKE) clean -C $(C_JSON_DIR)
 
 reinstall: uninstall all
 
