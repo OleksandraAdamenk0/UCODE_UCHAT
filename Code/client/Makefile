@@ -27,7 +27,9 @@ SQLITE = $(SQLITE_DIR)/sqlite.a
 
 # ==============================================================================
 
-SRCFILES = $(wildcard $(SRCDIR)/**/*.c) $(SRCDIR)/main.c
+# SRCFILES = $(wildcard $(SRCDIR)/**/*.c) $(SRCDIR)/main.c
+SRCFILES = $(wildcard $(SRCDIR)/**/*.c) $(SRCDIR)/client.c $(SRCDIR)/main.c
+# SRCFILES = $(SRCDIR)/*.c
 OBJFILES = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCFILES))
 
 all: $(NAME)

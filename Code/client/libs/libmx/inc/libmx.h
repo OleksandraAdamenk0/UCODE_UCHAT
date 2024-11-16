@@ -20,8 +20,19 @@ typedef struct s_list {
 // Additional functions
 // ==================================================================
 
+bool mx_is_numeric(const char *str);
+
 /**
-* @NAME Additional function
+ * @NAME mx_printerr
+ * @DESCRIPTION Create a function that
+ * outputs a string of characters to the error output.
+ * @note \n
+ */
+void mx_printerr(const char *s);
+
+
+/**
+* @NAME mx_atoi
 * @DESCRIPTION The `mx_atoi` function takes a string containing digits
 * and converts it into an integer (`int`).
 * It accounts for an optional leading sign (`+` or `-`) at the beginning

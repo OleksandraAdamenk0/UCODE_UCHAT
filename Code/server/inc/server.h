@@ -6,11 +6,14 @@
 #define SERVER_H
 
 #include <stdlib.h>
+#include <arpa/inet.h>
+#include <pthread.h>
 
 #include "libmx.h"
 #include "logger.h"
 
 int mx_init_server(int argc, const char * argv[]);
+void *handle_client(void *client_socket);
 
 
 #endif //SERVER_H
