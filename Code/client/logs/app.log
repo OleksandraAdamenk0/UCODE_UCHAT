@@ -1,0 +1,33 @@
+[2024-11-17 14:57:56] [INFO] logger initialized
+[2024-11-17 14:57:56] [INFO] Socket was created successfully
+[2024-11-17 14:58:06] [ERROR] Error connecting to server
+[2024-11-17 14:58:06] [INFO] connection opened
+[2024-11-17 14:58:06] [INFO] connection closed
+[2024-11-17 15:19:22] [INFO] logger initialized
+[2024-11-17 15:19:22] [INFO] socket was created successfully
+[2024-11-17 15:19:27] [FATAL] connection attempt to server timed out
+[2024-11-17 15:19:27] [INFO] connection opened
+[2024-11-17 15:19:27] [INFO] connection closed
+[2024-11-17 15:26:39] [INFO] logger initialized
+[2024-11-17 15:26:39] [INFO] socket was created successfully
+[2024-11-17 15:26:44] [FATAL] connection attempt to server timed out
+[2024-11-17 15:26:44] [ERROR] connection failed
+[2024-11-17 15:26:44] [WARN] the app is running in offline mode
+[2024-11-17 15:26:44] [INFO] connection closed
+[2024-11-17 16:51:09] [INFO] logger initialized
+[2024-11-17 16:51:09] [INFO] socket was created successfully
+[2024-11-17 16:51:09] [INFO] connection opened
+[2024-11-17 16:51:09] [INFO] connection closed
+[2024-11-17 16:55:47] [INFO] logger initialized
+[2024-11-17 16:55:47] [INFO] socket was created successfully
+[2024-11-17 16:55:47] [INFO] connection opened
+[2024-11-17 16:55:47] [INFO] connection closed
+[2024-11-17 16:56:55] [INFO] logger initialized
+[2024-11-17 16:56:55] [INFO] socket was created successfully
+[2024-11-17 16:56:55] [INFO] connection opened
+[2024-11-17 16:56:55] [ERROR] error sending message
+[2024-11-17 16:56:55] [INFO] connection closed
+[2024-11-17 16:59:23] [INFO] logger initialized
+[2024-11-17 16:59:23] [INFO] socket was created successfully
+[2024-11-17 16:59:23] [INFO] connection opened
+[2024-11-17 16:59:23] [INFO] connection closed

@@ -81,11 +81,12 @@ static char *handler(cJSON *request,
  *          free(response); \n
  * }
  */
-char *handle_request(const char *request_str) {
+char *mx_handle_request(const char *request_str) {
     cJSON *request = cJSON_Parse(request_str);
     if (!request) {
         logger_error("Invalid JSON format.\n");
-        return NULL;
+        // return NULL;
+        return "a string for debugging purpose";
     }
 
     cJSON *action = cJSON_GetObjectItemCaseSensitive(request, "action");
