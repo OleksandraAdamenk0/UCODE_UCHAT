@@ -13,7 +13,7 @@
 #include "logger.h"
 
 int mx_init_server(int argc, const char * argv[]);
-void *handle_client(void *client_socket);
+void *mx_handle_client(void *client_socket);
 
 
 #endif //SERVER_H

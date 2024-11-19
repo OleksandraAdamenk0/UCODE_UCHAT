@@ -1,29 +1,6 @@
 #include "server.h"
 
-// void *handle_client(void *client_socket) {
-//     int sock = *(int *)client_socket;
-//     free(client_socket);
-
-//     char buffer[1024];
-//     while (1) {
-//         int bytes_received = recv(sock, buffer, sizeof(buffer) - 1, 0);
-//         if (bytes_received > 0) {
-//             buffer[bytes_received] = '\0';
-//             printf("Message from client: %s\n", buffer);
-//         } else if (bytes_received == 0) {
-//             mx_printstr("Client disconnected.\n");
-//             break;
-//         } else {
-//             mx_printerr("Error receiving data");
-//             break;
-//         }
-//     }
-
-//     close(sock);
-//     return NULL;
-// }
-
-void *handle_client(void *socket_ptr) {
+void *mx_handle_client(void *socket_ptr) {
     int client_socket = *(int *)socket_ptr;
     free(socket_ptr);
 
