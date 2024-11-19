@@ -22,5 +22,8 @@ int mx_init(int argc, const char * argv[]) {
     if (logger_init(LOGGER_CONFIG) < 0) return -1;
     logger_info("logger initialized\n");
 
+    // gtk init
+    gtk_init(&argc, &argv);
+
     return 0;
 }

@@ -101,3 +101,16 @@ a messaging application by providing clear responsibilities for each component.
 This organization will enhance the team's ability to work concurrently
 on different parts of the application while maintaining high quality
 and security standards.
+
+# Server Data Base Architecture
+
+* [server db json file](Assets/server.json)
+
+![Screenshot showing server database](Assets/server.jpg)
+
+
+# Client Data Base Architecture
+
+* [client db json file](Assets/client.json)
+
+![Screenshot showing client database](Assets/client.jpg)
