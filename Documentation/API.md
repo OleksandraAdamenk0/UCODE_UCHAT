@@ -61,6 +61,15 @@ If no username was provided:
 }
 ```
 
+If no username was provided:
+
+```json
+{
+"status": "-1",
+"message": "Empty Username field."
+}
+```
+
 If username is already taken:
 
 ```json
@@ -79,6 +88,7 @@ Password must meet the following requirements:
 - At least one digit 
 - At least one of the following special characters: !@#$*-_?.
 - Only these special characters are allowed: !@#$*-_?.
+If phone number is already registered:
 
 ```json
 {
@@ -132,6 +142,15 @@ If phone number is already registered:
 }
 ```
 
+If there is a server error while processing the request:
+
+``` json
+{
+"status": "-9",
+"message": "Internal server error. Please try again later."
+}
+```
+
 ## User Login
 
 **Description**: A request to authenticate an existing user using their username and password. Upon successful authentication, the server will issue an access token and a refresh token.
@@ -179,6 +198,15 @@ If username or password is incorrect:
 {
 "status": "-1",
 "message": "Invalid username or password."
+}
+```
+
+If phone number is already registered:
+
+``` json
+{
+"status": "-2",
+"message": "Internal server error. Please try again later."
 }
 ```
 
