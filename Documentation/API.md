@@ -61,15 +61,6 @@ If no username was provided:
 }
 ```
 
-If no username was provided:
-
-```json
-{
-"status": "-1",
-"message": "Empty Username field."
-}
-```
-
 If username is already taken:
 
 ```json
@@ -88,6 +79,7 @@ Password must meet the following requirements:
 - At least one digit 
 - At least one of the following special characters: !@#$*-_?.
 - Only these special characters are allowed: !@#$*-_?.
+
 If phone number is already registered:
 
 ```json
@@ -257,7 +249,16 @@ If the refresh token is invalid or expired:
 }
 ``` 
 
-## Fetch All Contacts
+If phone number is already registered:
+
+``` json
+{
+"status": "-2",
+"message": "Internal server error. Please try again later."
+}
+```
+
+## Get All Contacts
 
 **Description:** A request to retrieve the list of all contacts associated with the authenticated user. 
 Each contact will include a unique ID, name, and profile photo URL for display purposes.
@@ -266,17 +267,19 @@ Each contact will include a unique ID, name, and profile photo URL for display p
 
 The client sends a JSON object with the following fields:
 
-| Field  |    Type    |	 Required  | Description |
-|--------| ---------- | ---------- | ----------- |
-| action |	string	  | yes        | Specifies the action type; for fetching contacts, use "get_contacts" |
-| token  |	string    |	yes	       | The access token for authentication |
+| Field   |    Type    |	 Required  | Description |
+|---------| ---------- | ---------- | ----------- |
+| action  |	string	  | yes        | Specifies the action type; for fetching contacts, use "get_contacts" |
+| user_id |	string	  | yes        | The unique identifier of the user |
+| token   |	string    |	yes	       | The access token for authentication |
 
 ### Sample Request
 
 ```json
 {
-"action": "get_contacts",
-"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  "action": "get_contacts",
+  "user_id": "12345",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
 }
 ``` 
 
@@ -306,16 +309,33 @@ The client sends a JSON object with the following fields:
 
 **Error Responses:**
 
-If the token is missing or invalid:
+If the user id is missing or invalid:
 
 ```  json
 {
 "status": "-1",
+"message": "Invalid or missing user_id."
+}
+
+If the token is missing or invalid:
+
+```  json
+{
+"status": "-2",
 "message": "Invalid or missing token."
 }
 ```
 
-## Fetch All Chats
+If an internal server error occurred:
+
+``` json
+{
+"status": "-3",
+"message": "Internal server error. Please try again later."
+}
+```
+
+## Get All Chats
 
 **Description:** A request to retrieve the list of all chats for the authenticated user. Each chat will have a unique ID, 
 a name (e.g., the name of a group or contact), and a profile photo URL for display.
@@ -324,18 +344,19 @@ a name (e.g., the name of a group or contact), and a profile photo URL for displ
 
 The client sends a JSON object with the following fields:
 
-
-| Field  |    Type    |	 Required  | Description                                                       |
-|--------| ---------- | ---------- |-------------------------------------------------------------------|
-| action |	string	  | yes        | Specifies the action type; for fetching contacts, use "get_chats" |
-| token  |	string    |	yes	       | The access token for authentication                               |
+| Field   |    Type    |	 Required  | Description |
+|---------| ---------- | ---------- | ----------- |
+| action  |	string	  | yes        | Specifies the action type; for fetching contacts, use "get_contacts" |
+| user_id |	string	  | yes        | The unique identifier of the user |
+| token   |	string    |	yes	       | The access token for authentication |
 
 ### Sample Request:
 
 ```json
 {
-"action": "get_chats",
-"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  "action": "get_chats",
+  "user_id": "12345",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
 }
 ``` 
 
@@ -365,17 +386,35 @@ The client sends a JSON object with the following fields:
 
 **Error Responses:**
 
-If the token is missing or invalid:
+If the user id is missing or invalid:
 
 ```  json
 {
 "status": "-1",
+"message": "Invalid or missing user_id."
+}
+```
+
+If the token is missing or invalid:
+
+```  json
+{
+"status": "-2",
 "message": "Invalid or missing token."
 }
 ```
 
+If an internal server error occurred:
 
-## Fetch Messages from a Chat
+``` json
+{
+"status": "-3",
+"message": "Internal server error. Please try again later."
+}
+```
+
+## Get Messages from a Chat
+
 
 **Description**: A request to fetch all messages from a specific chat. Each message will include a unique ID, 
 the chat ID it belongs to, the sender's ID, the message content, and the time of sending.
@@ -446,6 +485,15 @@ If the chat ID is invalid or not found:
 {
 "status": "-2",
 "message": "Chat not found."
+}
+```
+
+If phone number is already registered:
+
+``` json
+{
+"status": "-3",
+"message": "Internal server error. Please try again later."
 }
 ```
 
