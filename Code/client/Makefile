@@ -4,7 +4,7 @@ CC := clang
 FLAGS := -std=c11 -Wall -Wextra -Werror -Wpedantic
 
 SRCDIR := src
-INCDIR := inc
+INCDIR = inc
 OBJDIR := obj
 
 # LIBS
@@ -35,18 +35,31 @@ BASE64_DIR := $(LIBS_DIR)/base64
 BASE64_INCDIR := $(BASE64_DIR)/inc
 BASE64 := $(BASE64_DIR)/libbase64.a
 
+# BASE64
+BASE64_DIR := $(LIBS_DIR)/base64
+BASE64_INCDIR := $(BASE64_DIR)/inc
+BASE64 := $(BASE64_DIR)/libbase64.a
+
 # ==============================================================================
 
-SRCFILES = $(wildcard $(SRCDIR)/**/*.c) $(SRCDIR)/main.c
-OBJFILES = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCFILES))
+SRCFILES = $(shell find $(SRCDIR) -name "*.c")
+OBJFILES = $(patsubst %.c, $(OBJDIR)/%.o, $(notdir $(SRCFILES)))
 
 all: $(NAME)
 
 $(NAME): $(LIBMX) $(LOGGER) $(CJSON) $(BASE64) $(OBJFILES)
-	@$(CC) $(OBJFILES) -o $(NAME) -I $(INCDIR) -I $(LOGGER_INCDIR) -L$(LOGGER_DIR) -pthread -llogger -I $(LIBMX_INCDIR) -L$(LIBMX_DIR) -lmx -I $(CJSON_INCDIR) -L$(CJSON_DIR) -lcjson -I $(BASE64_INCDIR) -L$(BASE64_DIR) -lbase64 -I $(SQLITE_INCDIR) -L$(SQLITE_DIR) -lsqlite3
+
+	@$(CC) $(OBJFILES) -o $(NAME) -I $(INCDIR) -pthread -I $(LOGGER_INCDIR) -L$(LOGGER_DIR) -llogger -I $(LIBMX_INCDIR) -L$(LIBMX_DIR) -lmx -I $(CJSON_INCDIR) -L$(CJSON_DIR) -lcjson -I $(BASE64_INCDIR) -L$(BASE64_DIR) -lbase64 -I $(SQLITE_INCDIR) -L$(SQLITE_DIR) -lsqlite3
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c  | $(OBJDIR)
-	@$(CC) $(СFLAGS) -c -I $(INCDIR) -I $(LIBMX_INCDIR) -I $(LOGGER_INCDIR) -I $(CJSON_INCDIR) -I $(BASE64_INCDIR) $< -o $@
+	@$(CC) $(CFLAGS) -c -I $(INCDIR) -I $(LIBMX_INCDIR) -I $(LOGGER_INCDIR) -I $(CJSON_INCDIR) -I $(BASE64_INCDIR) $< -o $@
+
+$(OBJDIR)/%.o: $(SRCDIR)/initialization/%.c  | $(OBJDIR)
+	@$(CC) $(CFLAGS) -c -I $(INCDIR) -I $(LIBMX_INCDIR) -I $(LOGGER_INCDIR) -I $(CJSON_INCDIR) -I $(BASE64_INCDIR) $< -o $@
+
+
+$(OBJDIR)/%.o: $(SRCDIR)/*/%.c  | $(OBJDIR)
+	@$(CC) $(CFLAGS) -c -I $(INCDIR) -I $(LIBMX_INCDIR) -I $(LOGGER_INCDIR) -I $(CJSON_INCDIR) -I $(BASE64_INCDIR) $< -o $@
 
 $(OBJDIR):
 	@mkdir -p $(OBJDIR)

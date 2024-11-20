@@ -1,86 +1,24 @@
 #include "client.h"
 
-int main(void) {
-    printf("Hello, World!\n");
+int main(int argc, const char * argv[]) {
+    if (mx_init(argc, argv) < 0) {
+        mx_printerr("Usage: ./uchat <ip_address> <port>\n");
+        return -1;
+    }
+    int fd = mx_open_connection();
+    if (fd == -1) return -1;
+    if (fd == -2) {
+        logger_error("connection failed\n");
+        logger_warn("the app is running in offline mode\n");
 
-    // int sockfd = create_socket();
-    // if (sockfd < 0)
-    // {
-    //     mx_printerr("Error creating socket\n");
-    //     return -1;
-    // }
-    // else
-    // {
-    //     mx_printstr("Socket was createt successfully\n");
-    // }
+        // transition to offline mode logic here
 
+    } else logger_info("connection opened\n");
 
-    // if (connect_to_server(sockfd, "127.0.0.1", 8000) < 0) {
-    //     mx_printerr("Error connecting to server\n");
-    //     close_connection(sockfd);
-    //     return 1;
-    // }
+    // ...
+    debug_send(fd, "test string\n");
 
-    // mx_printstr("Connected to server\n\n\n");
-
-    // char message[1024];
-    //  while (1) {
-    //     mx_printstr("Enter message (or 'exit' to quit): ");
-    //     fgets(message, sizeof(message), stdin);
-
-    //     for (size_t i = 0; i < sizeof(message); i++) {
-    //         if (message[i] == '\n') {
-    //             message[i] = '\0';
-    //             break;
-    //         }
-    //     }
-
-    //     if (mx_strcmp(message, "exit") == 0) {
-    //         break; 
-    //     }
-
-    //     // Send a message to the server
-    //     if (send_data(sockfd, message) < 0) {
-    //         mx_printerr("Error sending data\n");
-    //         break;
-    //     }
-
-    //     printf("Message sent: %s\n", message);
-    // }
-
-
-    // char client_id[50];
-    // // Getting ID from the server
-    // recv(sockfd, client_id, sizeof(client_id), 0);
-    // printf("Connected to server as: %s\n", client_id);
-
-    // char message[1024];
-    // while (1) {
-    //     mx_printstr("Enter message (or 'exit' to quit): ");
-    //     fgets(message, sizeof(message), stdin);
-
-    //     for (size_t i = 0; i < sizeof(message); i++) {
-    //         if (message[i] == '\n') {
-    //             message[i] = '\0';
-    //             break;
-    //         }
-    //     }
-
-    //     if (mx_strcmp(message, "exit") == 0) {
-    //         break; 
-    //     }
-
-    //     if (send_data(sockfd, message) < 0) {
-    //         mx_printerr("Error sending data\n");
-    //         break;
-    //     }
-
-    //     printf("[%s] Message sent: %s\n", client_id, message);
-    // }
-
-    // close_connection(sockfd);
-    // mx_printstr("Connection closed.\n");
-    
-
+    mx_close_connection(fd);
+    logger_info("connection closed\n");
     return 0;
 }

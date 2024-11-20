@@ -1,14 +1,21 @@
-#ifndef CLIENT_H
-#define CLIENT_H
+//
+// Created by oleksandra on 17/11/24.
+//
+
+#ifndef UCODE_UCHAT_MAIN_CLIENT_H
+#define UCODE_UCHAT_MAIN_CLIENT_H
 
 #include "libmx.h"
 #include "logger.h"
-#include "sqlite3.h"
-#include "connection_handling.h"
 
-#include <stdio.h>
+extern int port;
+extern char *ip;
 
-// #define SERVER_IP "127.0.0.1"
-// #define SERVER_PORT 8080
+int mx_init(int argc, const char * argv[]);
 
-#endif
+int mx_open_connection();
+void mx_close_connection(int sockfd);
+
+void debug_send(int fd, char *str);
+
+#endif //UCODE_UCHAT_MAIN_CLIENT_H
