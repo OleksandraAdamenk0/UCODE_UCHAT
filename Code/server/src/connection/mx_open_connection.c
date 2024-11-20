@@ -35,6 +35,8 @@ int mx_open_connection() {
 
     if (bind(svr_fd, (struct sockaddr *)&svr_addr, sizeof(svr_addr)) < 0) {
         logger_fatal("attempt to bind server socket to the address failed\n");
+        logger_debug(strerror(errno));
+
         return -1;
     }
 
