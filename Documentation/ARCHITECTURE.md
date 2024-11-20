@@ -106,6 +106,10 @@ and security standards.
 
 * [server db json file](Assets/server.json)
 
+Notes:
+* table contacts (client) also should be present in server db
+* in server db should be table settings
+
 ![Screenshot showing server database](Assets/server.jpg)
 
 

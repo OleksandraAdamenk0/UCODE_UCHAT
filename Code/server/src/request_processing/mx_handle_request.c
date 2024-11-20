@@ -121,6 +121,12 @@ char *mx_handle_request(const char *request_str) {
                            mx_get_all_chats_logic,
                            mx_get_all_chats_response,
                            "get_chats");
+    } else if (mx_strcmp(action->valuestring, "get_messages") == 0) {
+        response = handler(request,
+                           mx_get_msgs_request,
+                           mx_get_msgs_logic,
+                           mx_get_msgs_response,
+                           "get_messages");
     }
     // ...
 

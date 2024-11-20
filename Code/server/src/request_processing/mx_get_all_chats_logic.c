@@ -8,7 +8,7 @@ cJSON *mx_get_all_chats_logic(const cJSON *request) {
     cJSON *result = cJSON_CreateObject();
 
     cJSON *user_id_json = cJSON_GetObjectItem(request, "user_id");
-    if (!user_id_json || !cJSON_IsString(user_id_json)) {
+    if (!user_id_json || !user_id_json->valuestring) {
         // [add] log error
         cJSON_Delete(result);
         return NULL;

@@ -412,6 +412,79 @@ If an internal server error occurred:
 }
 ```
 
+## Get Settings
+**Description**: 
+
+### Request Data
+
+The client sends a JSON object with the following fields:
+
+
+| Field    |    Type    |	 Required  | Description                                                          |
+|----------| ---------- | ---------- |----------------------------------------------------------------------|
+| action   |	string	  | yes        | Specifies the action type; for fetching contacts, use "get_settings" |
+| username |	string	  | yes        | The unique ID of the user                                            |
+| token    |	string    |	yes	       | The access token for authentication                                  |
+
+
+### Sample Request:
+
+``` json
+{
+"action": "get_settings",
+"username": "@debil",
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+```
+
+### Server Responses
+
+**Successful Response:**
+
+``` json
+{
+"status": "0",
+"message": "Settings retrieved successfully.",
+"email": "email@example.com"
+"phone": "+000 000 00 00"
+"photo": "something encoded "
+"photo_size": "1024"
+"theme": "theme"
+}
+```
+
+**Error Responses:**
+
+If the token is missing or invalid:
+
+``` json
+{
+"status": "-1",
+"message": "Invalid or missing token."
+}
+```
+
+If the user id is missing or invalid:
+
+
+```  json
+{
+"status": "-2",
+"message": "Invalid or missing user_id."
+}
+```
+
+If an internal server error occurred:
+
+``` json
+{
+"status": "-3",
+"message": "Internal server error. Please try again later."
+}
+```
+
+
+
 ## Get Messages from a Chat
 
 **Description**: A request to fetch all messages from a specific chat. Each message will include a unique ID, 
