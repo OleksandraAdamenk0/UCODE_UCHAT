@@ -80,6 +80,8 @@ Password must meet the following requirements:
 - At least one of the following special characters: !@#$*-_?.
 - Only these special characters are allowed: !@#$*-_?.
 
+If phone number is already registered:
+
 ```json
 {
   "status": "-3",
@@ -314,7 +316,6 @@ If the user id is missing or invalid:
 "status": "-1",
 "message": "Invalid or missing user_id."
 }
-```
 
 If the token is missing or invalid:
 
@@ -413,6 +414,7 @@ If an internal server error occurred:
 ```
 
 ## Get Messages from a Chat
+
 
 **Description**: A request to fetch all messages from a specific chat. Each message will include a unique ID, 
 the chat ID it belongs to, the sender's ID, the message content, and the time of sending.

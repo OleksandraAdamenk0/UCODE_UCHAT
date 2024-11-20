@@ -11,9 +11,9 @@ OBJDIR := obj
 LIBS_DIR := libs
 # ==============================================================================
 # LIBMX
-LIBMX_DIR = $(LIBS_DIR)/libmx
-LIBMX_INCDIR = $(LIBMX_DIR)/inc
-LIBMX = $(LIBMX_DIR)/libmx.a
+LIBMX_DIR := $(LIBS_DIR)/libmx
+LIBMX_INCDIR := $(LIBMX_DIR)/inc
+LIBMX := $(LIBMX_DIR)/libmx.a
 
 # LOGGER
 LOGGER_DIR := $(LIBS_DIR)/logger
@@ -26,9 +26,14 @@ CJSON_INCDIR := $(CJSON_DIR)/inc
 CJSON := $(CJSON_DIR)/libcjson.a
 
 # SQLITE
-SQLITE_DIR = $(LIBS_DIR)/sqlite
-SQLITE_INCDIR = $(SQLITE_DIR)/inc
-SQLITE = $(SQLITE_DIR)/sqlite.a
+SQLITE_DIR := $(LIBS_DIR)/sqlite
+SQLITE_INCDIR := $(SQLITE_DIR)/inc
+SQLITE := $(SQLITE_DIR)/libsqlite.a
+
+# BASE64
+BASE64_DIR := $(LIBS_DIR)/base64
+BASE64_INCDIR := $(BASE64_DIR)/inc
+BASE64 := $(BASE64_DIR)/libbase64.a
 
 # BASE64
 BASE64_DIR := $(LIBS_DIR)/base64
@@ -43,6 +48,7 @@ OBJFILES = $(patsubst %.c, $(OBJDIR)/%.o, $(notdir $(SRCFILES)))
 all: $(NAME)
 
 $(NAME): $(LIBMX) $(LOGGER) $(CJSON) $(BASE64) $(OBJFILES)
+
 	@$(CC) $(OBJFILES) -o $(NAME) -I $(INCDIR) -pthread -I $(LOGGER_INCDIR) -L$(LOGGER_DIR) -llogger -I $(LIBMX_INCDIR) -L$(LIBMX_DIR) -lmx -I $(CJSON_INCDIR) -L$(CJSON_DIR) -lcjson -I $(BASE64_INCDIR) -L$(BASE64_DIR) -lbase64 -I $(SQLITE_INCDIR) -L$(SQLITE_DIR) -lsqlite3
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c  | $(OBJDIR)
@@ -80,7 +86,6 @@ uninstall: clean
 	@$(MAKE) uninstall -C $(CJSON_DIR)
 	@$(MAKE) uninstall -C $(BASE64_DIR)
 	@$(MAKE) uninstall -C $(SQLITE_DIR)
-
 
 clean:
 	@rm -rf $(OBJDIR)
