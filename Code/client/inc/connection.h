@@ -17,4 +17,6 @@
 #include <errno.h>
 #include <sys/select.h>
 
+extern int fd;
+
 #endif //UCODE_UCHAT_MAIN_CONNECTION_H

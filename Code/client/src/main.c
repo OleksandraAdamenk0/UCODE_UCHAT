@@ -5,18 +5,22 @@ int main(int argc, const char * argv[]) {
         mx_printerr("Usage: ./uchat <ip_address> <port>\n");
         return -1;
     }
-    int fd = mx_open_connection();
-    if (fd == -1) return -1;
-    if (fd == -2) {
+    int status = mx_open_connection();
+    if (status == -1) return -1;
+    if (status == -2) {
         logger_error("connection failed\n");
         logger_warn("the app is running in offline mode\n");
+        // check if local db exists and not empty,
+        // to know that data for the offline mode can be loaded
+        // if so - load data and pop up window with warning about offline mode
+        // otherwise load static page showing error
+    } else {
+        logger_info("connection opened\n");
+        // ...
+        debug_send(fd, "test string\n");
+    }
 
-        // transition to offline mode logic here
-
-    } else logger_info("connection opened\n");
-
-    // ...
-    debug_send(fd, "test string\n");
+    mx_gui_network_error();
 
     mx_close_connection(fd);
     logger_info("connection closed\n");

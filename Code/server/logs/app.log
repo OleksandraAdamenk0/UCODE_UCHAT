@@ -1,0 +1,8 @@
+[2024-11-21 00:54:22] [INFO] Logger initialized
+[2024-11-21 00:54:22] [INFO] connection opened
+[2024-11-21 00:54:56] [INFO] connection accepted.
+[2024-11-21 00:54:56] [DEBUG] received data from connection on the socket 5
+[2024-11-21 00:54:56] [ERROR] Invalid JSON format.
+[2024-11-21 00:54:56] [INFO] connection on the socket 5 disconnected
+[2024-11-21 00:55:08] [DEBUG] kill signal received
+[2024-11-21 00:55:08] [INFO] server stopped receiving connections

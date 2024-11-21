@@ -5,6 +5,8 @@
 #include "client.h"
 #include "connection.h"
 
+int fd;
+
 static int create_socket() {
     int sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if (sockfd < 0) return -1;
@@ -89,17 +91,17 @@ static int connection(int sockfd) {
 }
 
 int mx_open_connection() {
-    int sockfd = create_socket();
-    if (sockfd < 0) {
+    fd = create_socket();
+    if (fd < 0) {
         logger_error("error occurred while creating socket\n");
         return -1;
     }
     else logger_info("socket was created successfully\n");
 
-    int status = connection(sockfd);
+    int status = connection(fd);
     if (status < 0){
-        mx_close_connection(sockfd);
+        mx_close_connection(fd);
         return status;
     }
-    return sockfd;
+    return 0;
 }

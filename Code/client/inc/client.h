@@ -18,4 +18,7 @@ void mx_close_connection(int sockfd);
 
 void debug_send(int fd, char *str);
 
+int mx_gui_network_error();
+
+
 #endif //UCODE_UCHAT_MAIN_CLIENT_H
