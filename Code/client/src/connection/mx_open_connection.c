@@ -6,6 +6,7 @@
 #include "connection.h"
 
 int fd;
+bool online_mode;
 
 static int create_socket() {
     int sockfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -56,7 +57,7 @@ static int connection(int sockfd) {
                     "for the connection to the server failed\n");
 
         if (connect(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
-            logger_fatal("an internal client error occurred "
+            logger_fatal("an internal error occurred "
                          "while trying to connect to the server\n");
             return -1;
         }
@@ -67,7 +68,7 @@ static int connection(int sockfd) {
         // if errno == EINPROGRESS then there is no error occurred
         // but client is still trying to connect to the server
         if (errno != EINPROGRESS) {
-            logger_fatal("an internal client error occurred "
+            logger_fatal("an internal error occurred "
                          "while trying to connect to the server\n");
             return -1;
         }
@@ -101,7 +102,9 @@ int mx_open_connection() {
     int status = connection(fd);
     if (status < 0){
         mx_close_connection(fd);
+        online_mode = false;
         return status;
     }
+    online_mode = true;
     return fd;
 }
