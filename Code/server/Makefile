@@ -26,9 +26,10 @@ CJSON_INCDIR := $(CJSON_DIR)/inc
 CJSON := $(CJSON_DIR)/libcjson.a
 
 # SQLITE
-SQLITE_DIR = $(LIBS_DIR)/sqlite
-SQLITE_INCDIR = $(SQLITE_DIR)/inc
-SQLITE = $(SQLITE_DIR)/libsqlite.a
+
+SQLITE_DIR := $(LIBS_DIR)/sqlite
+SQLITE_INCDIR := $(SQLITE_DIR)/inc
+SQLITE := $(SQLITE_DIR)/libsqlite.a
 
 # BASE64
 BASE64_DIR := $(LIBS_DIR)/base64
@@ -43,6 +44,7 @@ OBJFILES = $(patsubst %.c, $(OBJDIR)/%.o, $(notdir $(SRCFILES)))
 all: $(NAME)
 
 $(NAME): $(LIBMX) $(LOGGER) $(CJSON) $(BASE64) $(OBJFILES)
+
 	@$(CC) $(OBJFILES) -o $(NAME) -I $(INCDIR) -pthread -I $(LOGGER_INCDIR) -L$(LOGGER_DIR) -llogger -I $(LIBMX_INCDIR) -L$(LIBMX_DIR) -lmx -I $(CJSON_INCDIR) -L$(CJSON_DIR) -lcjson -I $(BASE64_INCDIR) -L$(BASE64_DIR) -lbase64 -I $(SQLITE_INCDIR) -L$(SQLITE_DIR) -lsqlite3
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c  | $(OBJDIR)
@@ -84,7 +86,6 @@ clean:
 	@$(MAKE) clean -C $(CJSON_DIR)
 	@$(MAKE) clean -C $(BASE64_DIR)
 	@$(MAKE) clean -C $(SQLITE_DIR)
-
 
 reinstall: uninstall all
 

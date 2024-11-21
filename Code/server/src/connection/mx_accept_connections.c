@@ -6,11 +6,23 @@
 #include "connection.h"
 
 int mx_accept_connections() {
+    // non-blocking mode for server socket
+    int flags = fcntl(svr_fd, F_GETFL, 0);
+    fcntl(svr_fd, F_SETFL, flags | O_NONBLOCK);
+
     while (server_running) {
         int *cnt_fd = malloc(sizeof(int));
         socklen_t addrlen = sizeof(svr_addr);
 
-        if ((*cnt_fd = accept(svr_fd, (struct sockaddr *)&svr_addr, (socklen_t *)&addrlen)) < 0) {
+        *cnt_fd = accept(svr_fd, (struct sockaddr *)&svr_addr, (socklen_t *)&addrlen);
+        if ((*cnt_fd) < 0) {
+            // not an error (no connections)
+            if (errno == EAGAIN || errno == EWOULDBLOCK) {
+                if (server_running == 0) break;
+                free(cnt_fd);
+                usleep(100000);  // small delay to save server resources
+                continue;
+            }
             logger_warn("attempt to accept an incoming connection failed\n");
             free(cnt_fd);
             continue;
@@ -28,5 +40,6 @@ int mx_accept_connections() {
         // Separate the thread so that it terminates on its own
         pthread_detach(client_thread);
     }
+    logger_info("server stopped receiving connections\n");
     return 0;
 }
