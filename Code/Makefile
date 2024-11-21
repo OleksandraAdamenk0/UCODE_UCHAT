@@ -1,3 +1,4 @@
+MAKEFLAGS += --no-print-directory
 CC = clang
 FLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 

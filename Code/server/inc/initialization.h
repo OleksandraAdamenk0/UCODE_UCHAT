@@ -11,7 +11,6 @@
 #include <unistd.h>
 #include <sys/stat.h>
 
-
 #include "libmx.h"
 
 int mx_parse_args(int argc, const char * argv[]);

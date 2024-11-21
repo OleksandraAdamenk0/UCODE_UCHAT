@@ -20,6 +20,10 @@ typedef struct s_list {
 // Additional functions
 // ==================================================================
 
+bool mx_is_numeric(const char *str);
+
+void mx_printerr(const char *s);
+
 /**
 * @NAME Additional function
 * @DESCRIPTION The `mx_atoi` function takes a string containing digits
