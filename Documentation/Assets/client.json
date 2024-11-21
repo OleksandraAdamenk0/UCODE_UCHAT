@@ -1,0 +1,268 @@
+{
+  "id": "0",
+  "name": "Diagram 3",
+  "createdAt": "2024-11-18T18:45:48.748Z",
+  "updatedAt": "2024-11-18T18:45:48.748Z",
+  "databaseType": "sqlite",
+  "tables": [
+    {
+      "id": "1",
+      "name": "chats",
+      "x": -536.1776202779546,
+      "y": -379.2628127513616,
+      "fields": [
+        {
+          "id": "2",
+          "name": "chat_id",
+          "type": {
+            "id": "integer",
+            "name": "integer"
+          },
+          "unique": true,
+          "nullable": false,
+          "primaryKey": true,
+          "createdAt": 1731952330299
+        },
+        {
+          "id": "3",
+          "name": "chat_name",
+          "type": {
+            "name": "text",
+            "id": "text"
+          },
+          "unique": false,
+          "nullable": true,
+          "primaryKey": false,
+          "createdAt": 1731952367817
+        },
+        {
+          "id": "4",
+          "name": "last_message",
+          "type": {
+            "name": "text",
+            "id": "text"
+          },
+          "unique": false,
+          "nullable": true,
+          "primaryKey": false,
+          "createdAt": 1731952423130
+        },
+        {
+          "id": "5",
+          "name": "photo",
+          "type": {
+            "name": "blob",
+            "id": "blob"
+          },
+          "unique": false,
+          "nullable": true,
+          "primaryKey": false,
+          "createdAt": 1731953556677
+        }
+      ],
+      "indexes": [],
+      "color": "#8a61f5",
+      "createdAt": 1731952330299,
+      "isView": false,
+      "diagramId": "ms81gge9515u"
+    },
+    {
+      "id": "6",
+      "name": "contacts",
+      "x": -254.23621402795447,
+      "y": -376.8721877513616,
+      "fields": [
+        {
+          "id": "7",
+          "name": "username",
+          "type": {
+            "name": "text",
+            "id": "text"
+          },
+          "unique": true,
+          "nullable": false,
+          "primaryKey": true,
+          "createdAt": 1731952683464
+        },
+        {
+          "id": "8",
+          "name": "photo",
+          "type": {
+            "name": "blob",
+            "id": "blob"
+          },
+          "unique": false,
+          "nullable": true,
+          "primaryKey": false,
+          "createdAt": 1731953537965
+        }
+      ],
+      "indexes": [],
+      "color": "#b067e9",
+      "createdAt": 1731952683464,
+      "isView": false,
+      "diagramId": "ms81gge9515u"
+    },
+    {
+      "id": "9",
+      "name": "messages",
+      "x": -254.64637027795447,
+      "y": -178.1221877513616,
+      "fields": [
+        {
+          "id": "10",
+          "name": "id",
+          "type": {
+            "id": "integer",
+            "name": "integer"
+          },
+          "unique": true,
+          "nullable": false,
+          "primaryKey": true,
+          "createdAt": 1731954007700
+        },
+        {
+          "id": "11",
+          "name": "receiver",
+          "type": {
+            "name": "integer",
+            "id": "integer"
+          },
+          "unique": false,
+          "nullable": true,
+          "primaryKey": false,
+          "createdAt": 1731954234002
+        },
+        {
+          "id": "12",
+          "name": "sender",
+          "type": {
+            "name": "text",
+            "id": "text"
+          },
+          "unique": false,
+          "nullable": true,
+          "primaryKey": false,
+          "createdAt": 1731954455229
+        },
+        {
+          "id": "13",
+          "name": "timestamp",
+          "type": {
+            "name": "datetime",
+            "id": "datetime"
+          },
+          "unique": false,
+          "nullable": true,
+          "primaryKey": false,
+          "createdAt": 1731954472698
+        },
+        {
+          "id": "14",
+          "name": "binary",
+          "type": {
+            "name": "blob",
+            "id": "blob"
+          },
+          "unique": false,
+          "nullable": true,
+          "primaryKey": false,
+          "createdAt": 1731954525475
+        },
+        {
+          "id": "15",
+          "name": "message",
+          "type": {
+            "name": "text",
+            "id": "text"
+          },
+          "unique": false,
+          "nullable": true,
+          "primaryKey": false,
+          "createdAt": 1731954535876
+        }
+      ],
+      "indexes": [],
+      "color": "#9ef07a",
+      "createdAt": 1731954007700,
+      "isView": false,
+      "diagramId": "ms81gge9515u"
+    },
+    {
+      "id": "16",
+      "name": "settings",
+      "x": 20.353629722045525,
+      "y": -374.3721877513616,
+      "fields": [
+        {
+          "id": "17",
+          "name": "email",
+          "type": {
+            "name": "text",
+            "id": "text"
+          },
+          "unique": true,
+          "nullable": false,
+          "primaryKey": true,
+          "createdAt": 1731953687254
+        },
+        {
+          "id": "18",
+          "name": "phone",
+          "type": {
+            "name": "text",
+            "id": "text"
+          },
+          "unique": false,
+          "nullable": true,
+          "primaryKey": false,
+          "createdAt": 1731953714253
+        },
+        {
+          "id": "19",
+          "name": "photo",
+          "type": {
+            "name": "blob",
+            "id": "blob"
+          },
+          "unique": false,
+          "nullable": true,
+          "primaryKey": false,
+          "createdAt": 1731953809943
+        },
+        {
+          "id": "20",
+          "name": "theme",
+          "type": {
+            "name": "text",
+            "id": "text"
+          },
+          "unique": false,
+          "nullable": true,
+          "primaryKey": false,
+          "createdAt": 1731953821633
+        }
+      ],
+      "indexes": [],
+      "color": "#8eb7ff",
+      "createdAt": 1731953687254,
+      "isView": false,
+      "diagramId": "ms81gge9515u"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "21",
+      "name": "messages_receiver_fk",
+      "sourceTableId": "9",
+      "targetTableId": "1",
+      "sourceFieldId": "11",
+      "targetFieldId": "2",
+      "sourceCardinality": "one",
+      "targetCardinality": "one",
+      "createdAt": 1731954566046,
+      "diagramId": "ms81gge9515u"
+    }
+  ],
+  "dependencies": []
+}

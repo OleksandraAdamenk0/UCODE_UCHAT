@@ -4,43 +4,82 @@ CC := clang
 FLAGS := -std=c11 -Wall -Wextra -Werror -Wpedantic
 
 SRCDIR := src
-INCDIR := inc
+INCDIR = inc
 OBJDIR := obj
 
 # LIBS
 LIBS_DIR := libs
 # ==============================================================================
 # LIBMX
-LIBMX_DIR = $(LIBS_DIR)/libmx
-LIBMX_INCDIR = $(LIBMX_DIR)/inc
-LIBMX = $(LIBMX_DIR)/libmx.a
+LIBMX_DIR := $(LIBS_DIR)/libmx
+LIBMX_INCDIR := $(LIBMX_DIR)/inc
+LIBMX := $(LIBMX_DIR)/libmx.a
 
 # LOGGER
 LOGGER_DIR := $(LIBS_DIR)/logger
 LOGGER_INCDIR := $(LOGGER_DIR)/inc
 LOGGER := $(LOGGER_DIR)/liblogger.a
 
-#SQLITE
-SQLITE_DIR = $(LIBS_DIR)/sqlite
-SQLITE_INCDIR = $(SQLITE_DIR)/inc
-SQLITE = $(SQLITE_DIR)/sqlite.a
+# CJSON
+CJSON_DIR := $(LIBS_DIR)/cjson
+CJSON_INCDIR := $(CJSON_DIR)/inc
+CJSON := $(CJSON_DIR)/libcjson.a
 
-#C_JSON
-C_JSON_DIR = $(LIBS_DIR)/cjson
-C_JSON_INCDIR = $(C_JSON_DIR)/inc
-C_JSON = $(C_JSON_DIR)/cjson.a
+# SQLITE
+SQLITE_DIR := $(LIBS_DIR)/sqlite
+SQLITE_INCDIR := $(SQLITE_DIR)/inc
+SQLITE := $(SQLITE_DIR)/libsqlite.a
+
+# BASE64
+BASE64_DIR := $(LIBS_DIR)/base64
+BASE64_INCDIR := $(BASE64_DIR)/inc
+BASE64 := $(BASE64_DIR)/libbase64.a
+
+# BASE64
+BASE64_DIR := $(LIBS_DIR)/base64
+BASE64_INCDIR := $(BASE64_DIR)/inc
+BASE64 := $(BASE64_DIR)/libbase64.a
+# ==============================================================================
+
+# GTK should be preinstalled into the system
+# with the following commands
+# sudo apt-get install libgtk-3-dev
+
+GTK_FLAGS = $(shell pkg-config --cflags --libs gtk+-3.0)
+GTK_INC = `pkg-config --cflags gtk+-3.0`
+# ==============================================================================
 
 # ==============================================================================
 
-SRCFILES = $(wildcard $(SRCDIR)/**/*.c) $(SRCDIR)/main.c
-OBJFILES = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCFILES))
+# WEBKIT should be preinstalled into the system
+# with the following command
+# sudo apt-get install libwebkit2gtk-4.0-dev
+
+WEBKIT_FLAGS = $(shell pkg-config --cflags --libs webkit2gtk-4.0)
+WEBKIT_INC = `pkg-config --cflags webkit2gtk-4.0`
+# ==============================================================================
+
+SRCFILES = $(shell find $(SRCDIR) -name "*.c")
+OBJFILES = $(patsubst %.c, $(OBJDIR)/%.o, $(notdir $(SRCFILES)))
+
+# $(info GTK FLAGS: $(GTK_FLAGS))
+# $(info WEBKIT FLAGS: $(WEBKIT_FLAGS))
 
 all: $(NAME)
 
-$(NAME): $(LIBMX) $(LOGGER) $(SQLITE) $(C_JSON) $(OBJFILES)
-	@$(CC) $(OBJFILES) -o $(NAME) -I $(INCDIR) -I $(LOGGER_INCDIR) -L$(LOGGER_DIR) -llogger -I $(LIBMX_INCDIR) -L$(LIBMX_DIR) -lmx -I $(SQLITE_INCDIR) -L$(SQLITE_DIR) -lsqlite3 -I $(C_JSON_INCDIR) -L$(C_JSON_DIR) -lcjson
+
+$(NAME): $(LIBMX) $(LOGGER) $(CJSON) $(BASE64) $(OBJFILES)
+	@$(CC) $(OBJFILES) -o $(NAME) -I $(INCDIR) -pthread -I $(LOGGER_INCDIR) -L$(LOGGER_DIR) -llogger -I $(LIBMX_INCDIR) -L$(LIBMX_DIR) -lmx -I $(CJSON_INCDIR) -L$(CJSON_DIR) -lcjson -I $(BASE64_INCDIR) -L$(BASE64_DIR) -lbase64 -I $(SQLITE_INCDIR) -L$(SQLITE_DIR) -lsqlite3 $(GTK_FLAGS) $(WEBKIT_FLAGS)
+
 $(OBJDIR)/%.o: $(SRCDIR)/%.c  | $(OBJDIR)
-	@$(CC) $(FLAGS) -c -I $(INCDIR) -I $(LIBMX_INCDIR) $< -o $@
+	@$(CC) $(CFLAGS) -c -I $(INCDIR) -I $(LIBMX_INCDIR) -I $(LOGGER_INCDIR) -I $(CJSON_INCDIR) -I $(BASE64_INCDIR) $< -o $@ $(GTK_INC) $(WEBKIT_INC)
+
+$(OBJDIR)/%.o: $(SRCDIR)/initialization/%.c  | $(OBJDIR)
+	@$(CC) $(CFLAGS) -c -I $(INCDIR) -I $(LIBMX_INCDIR) -I $(LOGGER_INCDIR) -I $(CJSON_INCDIR) -I $(BASE64_INCDIR) $< -o $@ $(GTK_INC) $(WEBKIT_INC)
+
+
+$(OBJDIR)/%.o: $(SRCDIR)/*/%.c  | $(OBJDIR)
+	@$(CC) $(CFLAGS) -c -I $(INCDIR) -I $(LIBMX_INCDIR) -I $(LOGGER_INCDIR) -I $(CJSON_INCDIR) -I $(BASE64_INCDIR) $< -o $@ $(GTK_INC) $(WEBKIT_INC)
 
 $(OBJDIR):
 	@mkdir -p $(OBJDIR)
@@ -51,26 +90,30 @@ $(LIBMX):
 $(LOGGER):
 	@$(MAKE) -C $(LOGGER_DIR)
 
+$(CJSON):
+	@$(MAKE) -C $(CJSON_DIR)
+
+$(BASE64):
+	@$(MAKE) -C $(BASE64_DIR)
+
 $(SQLITE):
 	@$(MAKE) -C $(SQLITE_DIR)
-
-$(C_JSON):
-	@$(MAKE) -C $(C_JSON_DIR)
 
 uninstall: clean
 	@if [ -f $(NAME) ]; then rm $(NAME); fi
 	@$(MAKE) uninstall -C $(LIBMX_DIR)
 	@$(MAKE) uninstall -C $(LOGGER_DIR)
+	@$(MAKE) uninstall -C $(CJSON_DIR)
+	@$(MAKE) uninstall -C $(BASE64_DIR)
 	@$(MAKE) uninstall -C $(SQLITE_DIR)
-	@$(MAKE) uninstall -C $(C_JSON_DIR)
-
 
 clean:
 	@rm -rf $(OBJDIR)
 	@$(MAKE) clean -C $(LIBMX_DIR)
 	@$(MAKE) clean -C $(LOGGER_DIR)
+	@$(MAKE) clean -C $(CJSON_DIR)
+	@$(MAKE) clean -C $(BASE64_DIR)
 	@$(MAKE) clean -C $(SQLITE_DIR)
-	@$(MAKE) clean -C $(C_JSON_DIR)
 
 reinstall: uninstall all
 

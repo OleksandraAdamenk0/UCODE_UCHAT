@@ -1,4 +1,4 @@
-NAME = cJSON.a
+NAME = libcjson.a
 
 CC = clang
 FLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
@@ -21,8 +21,8 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c  | $(OBJDIR)
 $(OBJDIR):
 	@mkdir -p $(OBJDIR)
 
-uninstall:
-	@rm -rf $(OBJDIR) $(NAME)
+uninstall: clean
+	@if [ -f $(NAME) ]; then rm $(NAME); fi
 
 clean:
 	@rm -rf $(OBJDIR)
