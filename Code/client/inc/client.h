@@ -11,7 +11,8 @@
 extern int port;
 extern char *ip;
 
-int mx_init(int argc, const char * argv[]);
+int mx_init(int argc, char *argv[]);
+int mx_gui_init(int argc, char *argv[]);
 
 int mx_open_connection();
 void mx_close_connection(int sockfd);

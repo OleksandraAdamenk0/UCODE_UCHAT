@@ -103,5 +103,5 @@ int mx_open_connection() {
         mx_close_connection(fd);
         return status;
     }
-    return 0;
+    return fd;
 }

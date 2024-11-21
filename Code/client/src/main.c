@@ -1,13 +1,14 @@
 #include "client.h"
 
-int main(int argc, const char * argv[]) {
+int main(int argc, char *argv[]) {
+
     if (mx_init(argc, argv) < 0) {
         mx_printerr("Usage: ./uchat <ip_address> <port>\n");
         return -1;
     }
-    int status = mx_open_connection();
-    if (status == -1) return -1;
-    if (status == -2) {
+    int fd = mx_open_connection();
+    if (fd == -1) return -1;
+    if (fd == -2) {
         logger_error("connection failed\n");
         logger_warn("the app is running in offline mode\n");
         // check if local db exists and not empty,
@@ -20,7 +21,11 @@ int main(int argc, const char * argv[]) {
         debug_send(fd, "test string\n");
     }
 
-    mx_gui_network_error();
+    if (mx_gui_network_error() < 0) {
+        mx_close_connection(fd);
+        logger_info("connection closed\n");
+        return -1;
+    }
 
     mx_close_connection(fd);
     logger_info("connection closed\n");

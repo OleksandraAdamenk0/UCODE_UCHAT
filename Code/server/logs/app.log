@@ -6,3 +6,67 @@
 [2024-11-21 00:54:56] [INFO] connection on the socket 5 disconnected
 [2024-11-21 00:55:08] [DEBUG] kill signal received
 [2024-11-21 00:55:08] [INFO] server stopped receiving connections
+[2024-11-21 11:10:22] [INFO] Logger initialized
+[2024-11-21 11:10:22] [INFO] connection opened
+[2024-11-21 11:10:53] [INFO] connection accepted.
+[2024-11-21 11:10:53] [DEBUG] received data from connection on the socket 5
+[2024-11-21 11:10:53] [ERROR] Invalid JSON format.
+[2024-11-21 11:14:44] [INFO] connection on the socket 5 disconnected
+[2024-11-21 11:14:59] [DEBUG] kill signal received
+[2024-11-21 11:14:59] [INFO] server stopped receiving connections
+[2024-11-21 11:17:20] [INFO] Logger initialized
+[2024-11-21 11:17:20] [INFO] connection opened
+[2024-11-21 11:22:01] [INFO] Logger initialized
+[2024-11-21 11:22:01] [FATAL] attempt to bind server socket to the address failed
+[2024-11-21 11:22:01] [DEBUG] Address already in use[2024-11-21 11:22:15] [INFO] Logger initialized
+[2024-11-21 11:22:15] [FATAL] attempt to bind server socket to the address failed
+[2024-11-21 11:22:15] [DEBUG] Address already in use[2024-11-21 11:22:20] [INFO] connection accepted.
+[2024-11-21 11:22:20] [DEBUG] received data from connection on the socket 5
+[2024-11-21 11:22:20] [ERROR] Invalid JSON format.
+[2024-11-21 11:29:02] [INFO] connection on the socket 5 disconnected
+[2024-11-21 11:33:42] [INFO] Logger initialized
+[2024-11-21 11:33:42] [FATAL] attempt to bind server socket to the address failed
+[2024-11-21 11:33:42] [DEBUG] Address already in use[2024-11-21 11:33:54] [INFO] connection accepted.
+[2024-11-21 11:33:54] [DEBUG] received data from connection on the socket 5
+[2024-11-21 11:33:54] [ERROR] Invalid JSON format.
+[2024-11-21 11:33:54] [INFO] connection on the socket 5 disconnected
+[2024-11-21 11:34:34] [INFO] connection accepted.
+[2024-11-21 11:34:34] [DEBUG] received data from connection on the socket 5
+[2024-11-21 11:34:34] [ERROR] Invalid JSON format.
+[2024-11-21 11:34:34] [INFO] connection on the socket 5 disconnected
+[2024-11-21 11:34:37] [INFO] Logger initialized
+[2024-11-21 11:34:37] [FATAL] attempt to bind server socket to the address failed
+[2024-11-21 11:34:37] [DEBUG] Address already in use[2024-11-21 11:34:41] [INFO] connection accepted.
+[2024-11-21 11:34:41] [DEBUG] received data from connection on the socket 5
+[2024-11-21 11:34:41] [ERROR] Invalid JSON format.
+[2024-11-21 11:34:41] [INFO] connection on the socket 5 disconnected
+[2024-11-21 11:34:47] [INFO] Logger initialized
+[2024-11-21 11:34:47] [INFO] connection opened
+[2024-11-21 11:34:49] [INFO] connection accepted.
+[2024-11-21 11:34:49] [DEBUG] received data from connection on the socket 5
+[2024-11-21 11:34:49] [ERROR] Invalid JSON format.
+[2024-11-21 11:34:49] [INFO] connection on the socket 5 disconnected
+[2024-11-21 11:39:01] [INFO] connection accepted.
+[2024-11-21 11:39:01] [DEBUG] received data from connection on the socket 5
+[2024-11-21 11:39:01] [ERROR] Invalid JSON format.
+[2024-11-21 11:39:28] [INFO] connection on the socket 5 disconnected
+[2024-11-21 11:53:52] [INFO] connection accepted.
+[2024-11-21 11:53:52] [DEBUG] received data from connection on the socket 5
+[2024-11-21 11:53:52] [ERROR] Invalid JSON format.
+[2024-11-21 11:55:17] [INFO] connection on the socket 5 disconnected
+[2024-11-21 11:55:20] [INFO] connection accepted.
+[2024-11-21 11:55:20] [DEBUG] received data from connection on the socket 5
+[2024-11-21 11:55:20] [ERROR] Invalid JSON format.
+[2024-11-21 11:55:23] [INFO] connection on the socket 5 disconnected
+[2024-11-21 12:23:38] [INFO] connection accepted.
+[2024-11-21 12:23:38] [DEBUG] received data from connection on the socket 5
+[2024-11-21 12:23:38] [ERROR] Invalid JSON format.
+[2024-11-21 12:23:52] [INFO] connection on the socket 5 disconnected
+[2024-11-21 12:24:09] [INFO] connection accepted.
+[2024-11-21 12:24:09] [DEBUG] received data from connection on the socket 5
+[2024-11-21 12:24:09] [ERROR] Invalid JSON format.
+[2024-11-21 12:24:13] [INFO] connection on the socket 5 disconnected
+[2024-11-21 12:24:35] [INFO] connection accepted.
+[2024-11-21 12:24:35] [DEBUG] received data from connection on the socket 5
+[2024-11-21 12:24:35] [ERROR] Invalid JSON format.
+[2024-11-21 12:29:11] [INFO] connection on the socket 5 disconnected

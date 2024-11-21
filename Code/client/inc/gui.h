@@ -10,8 +10,13 @@
 
 #define WIDTH 720
 #define HEIGHT 512
+
 #define APP_NAME "TAZIK"
-#define NETWORK_ERROR_HTML "client/rsc/html/network_error.html"
+
+#define RSC "/client/rsc"
+#define HTML RSC "/html"
+#define NETWORK_ERROR_HTML HTML "/network_error.html"
+
 extern GtkWidget *window;
 
 int mx_create_window();

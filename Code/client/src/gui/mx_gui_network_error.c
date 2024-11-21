@@ -6,11 +6,23 @@
 #include "gui.h"
 
 int mx_gui_network_error() {
-    mx_create_window();
-    WebKitWebView *web_view = WEBKIT_WEB_VIEW(webkit_web_view_new());
-    const char *html_content = mx_file_to_str(NETWORK_ERROR_HTML)
-    webkit_web_view_load_html(web_view, html_content, NULL);
-    gtk_container_add(GTK_CONTAINER(window), GTK_WIDGET(web_view));
+    // if (window == NULL) mx_create_window();
+    if (!window) {
+        logger_fatal("application window was not created"
+                     " before trying to show screen\n");
+        return -1;
+    }
+
+    char *currdir = g_get_current_dir();
+    char *path = "file://";
+    char *path1 = mx_strjoin(path, currdir);
+    path = mx_strjoin(path1, NETWORK_ERROR_HTML);
+    free(path1);
+
+    WebKitWebView *webview = WEBKIT_WEB_VIEW(webkit_web_view_new());
+    webkit_web_view_load_uri(webview, path);
+
+    gtk_container_add(GTK_CONTAINER(window), GTK_WIDGET(webview));
     gtk_widget_show_all(window);
     g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
     gtk_main();

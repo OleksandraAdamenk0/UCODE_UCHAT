@@ -34,7 +34,7 @@ static int is_port(const char *str) {
     return 0;
 }
 
-arguments *mx_parse_args(int argc, const char *argv[]) {
+arguments *mx_parse_args(int argc, char *argv[]) {
     // program name, ip_address, port
     if (argc != 3) return NULL;
 

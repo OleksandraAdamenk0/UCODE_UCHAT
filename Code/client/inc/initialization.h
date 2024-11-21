@@ -16,7 +16,7 @@ typedef struct {
 } arguments;
 
 
-arguments *mx_parse_args(int argc, const char *argv[]);
+arguments *mx_parse_args(int argc, char *argv[]);
 
 
 #endif //UCODE_UCHAT_MAIN_INITIALIZATION_H

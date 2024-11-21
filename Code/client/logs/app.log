@@ -2,3 +2,56 @@
 [2024-11-21 00:54:56] [INFO] socket was created successfully
 [2024-11-21 00:54:56] [INFO] connection opened
 [2024-11-21 00:54:56] [INFO] connection closed
+[2024-11-21 11:10:52] [INFO] logger initialized
+[2024-11-21 11:10:53] [INFO] socket was created successfully
+[2024-11-21 11:10:53] [INFO] connection opened
+[2024-11-21 11:17:13] [INFO] logger initialized
+[2024-11-21 11:17:13] [INFO] socket was created successfully
+[2024-11-21 11:17:13] [INFO] connection opened
+[2024-11-21 11:17:13] [ERROR] error sending message
+[2024-11-21 11:22:20] [INFO] logger initialized
+[2024-11-21 11:22:20] [INFO] socket was created successfully
+[2024-11-21 11:22:20] [INFO] connection opened
+[2024-11-21 11:33:54] [INFO] logger initialized
+[2024-11-21 11:33:54] [INFO] socket was created successfully
+[2024-11-21 11:33:54] [INFO] connection opened
+[2024-11-21 11:33:54] [FATAL] application window was not created before trying to show screen
+[2024-11-21 11:33:54] [INFO] connection closed
+[2024-11-21 11:34:34] [INFO] logger initialized
+[2024-11-21 11:34:34] [INFO] socket was created successfully
+[2024-11-21 11:34:34] [INFO] connection opened
+[2024-11-21 11:34:34] [FATAL] application window was not created before trying to show screen
+[2024-11-21 11:34:34] [INFO] connection closed
+[2024-11-21 11:34:41] [INFO] logger initialized
+[2024-11-21 11:34:41] [INFO] socket was created successfully
+[2024-11-21 11:34:41] [INFO] connection opened
+[2024-11-21 11:34:41] [FATAL] application window was not created before trying to show screen
+[2024-11-21 11:34:41] [INFO] connection closed
+[2024-11-21 11:34:49] [INFO] logger initialized
+[2024-11-21 11:34:49] [INFO] socket was created successfully
+[2024-11-21 11:34:49] [INFO] connection opened
+[2024-11-21 11:34:49] [FATAL] application window was not created before trying to show screen
+[2024-11-21 11:34:49] [INFO] connection closed
+[2024-11-21 11:39:01] [INFO] logger initialized
+[2024-11-21 11:39:01] [INFO] socket was created successfully
+[2024-11-21 11:39:01] [INFO] connection opened
+[2024-11-21 11:39:28] [INFO] connection closed
+[2024-11-21 11:53:52] [INFO] logger initialized
+[2024-11-21 11:53:52] [INFO] socket was created successfully
+[2024-11-21 11:53:52] [INFO] connection opened
+[2024-11-21 11:55:19] [INFO] logger initialized
+[2024-11-21 11:55:20] [INFO] socket was created successfully
+[2024-11-21 11:55:20] [INFO] connection opened
+[2024-11-21 11:55:23] [INFO] connection closed
+[2024-11-21 12:23:38] [INFO] logger initialized
+[2024-11-21 12:23:38] [INFO] socket was created successfully
+[2024-11-21 12:23:38] [INFO] connection opened
+[2024-11-21 12:23:51] [INFO] connection closed
+[2024-11-21 12:24:09] [INFO] logger initialized
+[2024-11-21 12:24:09] [INFO] socket was created successfully
+[2024-11-21 12:24:09] [INFO] connection opened
+[2024-11-21 12:24:13] [INFO] connection closed
+[2024-11-21 12:24:35] [INFO] logger initialized
+[2024-11-21 12:24:35] [INFO] socket was created successfully
+[2024-11-21 12:24:35] [INFO] connection opened
+[2024-11-21 12:29:11] [INFO] connection closed

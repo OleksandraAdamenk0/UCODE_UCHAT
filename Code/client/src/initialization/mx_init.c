@@ -8,7 +8,7 @@
 int port;
 char *ip;
 
-int mx_init(int argc, const char * argv[]) {
+int mx_init(int argc, char *argv[]) {
 
     // arguments
     arguments *arguments = mx_parse_args(argc, argv);
@@ -23,7 +23,7 @@ int mx_init(int argc, const char * argv[]) {
     logger_info("logger initialized\n");
 
     // gtk init
-    gtk_init(&argc, &argv);
+    mx_gui_init(argc, argv);
 
     return 0;
 }
