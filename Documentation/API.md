@@ -570,7 +570,7 @@ If phone number is already registered:
 }
 ```
 
-## User Profile Request
+## User Settings Request
 
 **Description:** A request to retrieve user profile information. The server will return key profile data, including settings and contact details.
 
