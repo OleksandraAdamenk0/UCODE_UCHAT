@@ -18,4 +18,6 @@ void mx_close_connection(int sockfd);
 
 void debug_send(int fd, char *str);
 
+void receive_data_with_length(int sock, char **buffer);
+
 #endif //UCODE_UCHAT_MAIN_CLIENT_H

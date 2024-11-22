@@ -19,4 +19,6 @@ extern volatile sig_atomic_t server_running;
 void mx_handle_signal(int sig);
 void *mx_handle_connection(void *socket_ptr);
 
+void send_data_with_length(int sock, char *data, size_t data_size);
+
 #endif //UCODE_UCHAT_MAIN_CONNECTION_H

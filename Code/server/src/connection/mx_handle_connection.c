@@ -58,4 +58,3 @@ void *mx_handle_connection(void *socket_ptr) {
     close(cnt_socket);
     return NULL;
 }
-
