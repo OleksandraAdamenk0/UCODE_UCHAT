@@ -19,7 +19,8 @@
 // UTILS
 cJSON *mx_get_json_item(cJSON *object, char *string,
                         int *status, int error);
-int mx_get_tokens(cJSON *response, cJSON **access, cJSON **refresh);
+int mx_get_tokens(cJSON *response, cJSON **access,
+                  cJSON **refresh, int *status);
 
 // REQUESTS
 char *mx_get_chats_request(t_get_chats_request *data);
@@ -29,7 +30,7 @@ char *mx_login_request(t_login_request *data);
 
 // RESPONSES
 t_registration_response *mx_registration_response(char *str,int *status_ptr,
-                                                  char **msg_ptr)
+                                                  char **msg_ptr);
 t_login_response *mx_login_response(char *str, int *status_ptr, char **msg_ptr);
 
 #endif //UCODE_UCHAT_MAIN_DATA_EXCHANGE_H

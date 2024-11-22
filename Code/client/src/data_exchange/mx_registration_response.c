@@ -46,7 +46,7 @@ t_registration_response *mx_registration_response(char *str,
 
     cJSON *access = NULL;
     cJSON *refresh = NULL;
-    if (mx_get_tokens(response, &access, &refresh) < 0) {
+    if (mx_get_tokens(response, &access, &refresh, status_ptr) < 0) {
         cJSON_Delete(response);
         return result;
     }
