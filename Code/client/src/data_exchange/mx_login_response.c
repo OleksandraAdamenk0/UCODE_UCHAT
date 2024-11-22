@@ -44,7 +44,7 @@ t_login_response *mx_login_response(char *str, int *status_ptr, char **msg_ptr) 
 
     cJSON *access = NULL;
     cJSON *refresh = NULL;
-    if (mx_get_tokens(response, &access, &refresh) < 0) {
+    if (mx_get_tokens(response, &access, &refresh, status_ptr) < 0) {
         cJSON_Delete(response);
         return result;
     }
