@@ -10,6 +10,7 @@
 
 #include "libmx.h"
 #include "logger.h"
+#include "connection.h"
 
 extern int port;
 extern char *ip;

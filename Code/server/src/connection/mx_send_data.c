@@ -2,7 +2,6 @@
 // created by herman on 22/11/24.
 //
 
-#include "server.h"
 #include "connection.h"
 
 void send_data(int sock, char *data, size_t data_size)
@@ -34,9 +33,11 @@ void send_data(int sock, char *data, size_t data_size)
 void send_data_with_length(int sock, char *data, size_t data_size)
 {
     // send the data size first
+    printf("Sending data size: %zu\n", data_size);  
     send(sock, &data_size, sizeof(data_size), 0);
 
     // then send the data itself
+    printf("Sending data: %s\n", data);
     send_data(sock, data, data_size);
 }
 
