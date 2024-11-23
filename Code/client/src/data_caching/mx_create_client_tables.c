@@ -6,7 +6,7 @@ void mx_create_client_tables(sqlite3 *db) {
         "CREATE TABLE IF NOT EXISTS chats (" \
         "chat_id INTEGER PRIMARY KEY," \
         "chat_name TEXT NOT NULL," \
-        "last_message TEXT" \
+        "last_message TEXT," \
         "photo BLOB);";
 
     const char *sql_messages =
