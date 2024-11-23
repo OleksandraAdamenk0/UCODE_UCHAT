@@ -13,7 +13,7 @@
 #include "cdecode.h"
 
 int mx_registration_request(const cJSON *request);
-char *mx_registration_logic(sqlite3 *db, cJSON *request);
+cJSON *mx_registration_logic(const cJSON *request);
 char *mx_registration_response(const int status, cJSON *response);
 
 int mx_login_request(const cJSON *request);

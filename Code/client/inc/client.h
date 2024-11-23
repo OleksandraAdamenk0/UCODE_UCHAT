@@ -7,6 +7,8 @@
 
 #include "libmx.h"
 #include "logger.h"
+#include "cJSON.h"
+#include <stdlib.h>
 
 extern int port;
 extern char *ip;
