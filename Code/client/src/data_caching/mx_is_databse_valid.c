@@ -1,4 +1,4 @@
-#include "../../inc/data_caching.h"
+#include "data_caching.h"
 
 bool file_exists(const char *filename) {
     FILE *file = fopen(filename, "r");

@@ -1,12 +1,16 @@
-#include "../../inc/data_caching.h"
-#include "../../inc/client.h"
+#include <sqlite3.h>
 
-int mx_cache_chat(sqlite3 *db, t_get_settings settings) {
+#include "data_caching.h"
+#include "client.h"
+
+int mx_cache_settings(sqlite3 *db, t_get_settings settings) {
     sqlite3_stmt *stmt;
     char *sql = "INSERT INTO chats VALUES (?, ?, ?, ?)";
 
     if (sqlite3_prepare_v2(db, sql, -1, &stmt, NULL) != SQLITE_OK) {
-        fprintf(stderr, "Failed to prepare statement: %s\n", sqlite3_errmsg(db));
+        char err_msg[256];
+        snprintf(err_msg, sizeof(err_msg), "Failed to prepare statement: %s\n", sqlite3_errmsg(db))
+        logger_error(err_msg);
         sqlite3_close(db);
         return -1;
     }
@@ -16,7 +20,7 @@ int mx_cache_chat(sqlite3 *db, t_get_settings settings) {
     sqlite3_bind_text(stmt, 4, settings.theme, -1, SQLITE_STATIC);
 
     if (settings.photo != NULL) {
-        int photo_size = sizeof(settings.photo);
+        size_t photo_size = sizeof(settings.photo);
         unsigned char *photo_data = base64_decode(settings.photo, photo_size, &photo_size);
 
         if (photo_data != NULL) {
@@ -42,5 +46,6 @@ int mx_cache_chat(sqlite3 *db, t_get_settings settings) {
         logger_info("Settings saved successfully.\n");
     }
 
+    sqlite3_finalize(stmt);
     return 0;
 }

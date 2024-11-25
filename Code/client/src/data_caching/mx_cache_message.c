@@ -1,12 +1,14 @@
-#include "../../inc/data_caching.h"
-#include "../../inc/client.h"
+#include "data_caching.h"
+#include "client.h"
 
 int mx_cache_message(sqlite3 *db, t_get_msgs msg) {
     sqlite3_stmt *stmt;
     char *sql = "INSERT INTO messages VALUES (?, ?, ?, ?, ?, ?)";
 
     if (sqlite3_prepare_v2(db, sql, -1, &stmt, NULL) != SQLITE_OK) {
-        fprintf(stderr, "Failed to prepare statement: %s\n", sqlite3_errmsg(db));
+        char err_msg[256];
+        snprintf(err_msg, sizeof(err_msg), "Failed to prepare statement: %s\n", sqlite3_errmsg(db))
+        logger_error(err_msg);
         sqlite3_close(db);
         return -1;
     }
@@ -18,7 +20,7 @@ int mx_cache_message(sqlite3 *db, t_get_msgs msg) {
     sqlite3_bind_text(stmt, 6, msg.message, -1, SQLITE_STATIC);
 
     if (msg.binary != NULL) {
-        int binary_size = sizeof(msg.binary);
+        size_t binary_size = sizeof(msg.binary);
         unsigned char *photo_data = base64_decode(msg.binary, binary_size, &binary_size);
 
         if (photo_data != NULL) {
@@ -44,5 +46,6 @@ int mx_cache_message(sqlite3 *db, t_get_msgs msg) {
         logger_info("Message cached successfully.\n");
     }
 
+    sqlite3_finalize(stmt);
     return 0;
 }

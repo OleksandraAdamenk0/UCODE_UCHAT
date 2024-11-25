@@ -1,12 +1,14 @@
-#include "../../inc/data_caching.h"
-#include "../../inc/client.h"
+#include "data_caching.h"
+#include "client.h"
 
 int mx_cache_contact(sqlite3 *db, t_get_contacts contact) {
     sqlite3_stmt *stmt;
     char *sql = "INSERT INTO contacts VALUES (?, ?)";
 
     if (sqlite3_prepare_v2(db, sql, -1, &stmt, NULL) != SQLITE_OK) {
-        fprintf(stderr, "Failed to prepare statement: %s\n", sqlite3_errmsg(db));
+        char err_msg[256];
+        snprintf(err_msg, sizeof(err_msg), "Failed to prepare statement: %s\n", sqlite3_errmsg(db))
+        logger_error(err_msg);
         sqlite3_close(db);
         return -1;
     }
@@ -14,7 +16,7 @@ int mx_cache_contact(sqlite3 *db, t_get_contacts contact) {
     sqlite3_bind_text(stmt, 1, contact.username, -1, SQLITE_STATIC);
 
     if (contact.photo != NULL) {
-        int photo_size = sizeof(contact.photo);
+        size_t photo_size = sizeof(contact.photo);
         unsigned char *photo_data = base64_decode(contact.photo, photo_size, &photo_size);
 
         if (photo_data != NULL) {
@@ -40,5 +42,6 @@ int mx_cache_contact(sqlite3 *db, t_get_contacts contact) {
         logger_info("Contact saved successfully.\n");
     }
 
+    sqlite3_finalize(stmt);
     return 0;
 }
