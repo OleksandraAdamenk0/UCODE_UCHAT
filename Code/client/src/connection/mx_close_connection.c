@@ -7,4 +7,5 @@
 
 void mx_close_connection(int sockfd) {
     close(sockfd);
+    logger_info("connection closed\n");
 }

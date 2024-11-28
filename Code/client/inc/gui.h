@@ -8,17 +8,21 @@
 #include <gtk/gtk.h>
 #include <webkit2/webkit2.h>
 
-#define WIDTH 720
-#define HEIGHT 512
+#define WIDTH 1440
+#define HEIGHT 1024
 
 #define APP_NAME "TAZIK"
 
 #define RSC "/client/rsc"
 #define HTML RSC "/html"
+#define REGISTRATION_HTML HTML "/registration.html"
+#define LOGIN_HTML HTML "/login.html"
 #define NETWORK_ERROR_HTML HTML "/network_error.html"
 
 extern GtkWidget *window;
 
+// UTILS
 int mx_create_window();
+char *mx_get_cur_dir();
 
 #endif //UCODE_UCHAT_MAIN_GRAPHICAL_INTERFACE_H

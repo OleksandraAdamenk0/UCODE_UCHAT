@@ -10,9 +10,6 @@
 
 #include "cJSON.h"
 #include "libmx.h"
-#include "cencode.h"
-#include "cdecode.h"
-
 #include "requests.h"
 #include "responses.h"
 
@@ -21,6 +18,9 @@ cJSON *mx_get_json_item(cJSON *object, char *string,
                         int *status, int error);
 int mx_get_tokens(cJSON *response, cJSON **access,
                   cJSON **refresh, int *status);
+
+int mx_base64_encode(const char *input_str, char **encoded_str);
+int mx_base64_decode(const char *encoded_str, char **decoded_str);
 
 // REQUESTS
 char *mx_get_chats_request(t_get_chats_request *data);

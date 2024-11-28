@@ -33,18 +33,31 @@ typedef struct {
 } t_response;
 
 // INIT SECTION
-int mx_init(int argc, char *argv[]);
+int mx_init(int argc, const char *argv[]);
 int mx_gui_init(int argc, char *argv[]);
+int mx_db_init();
+void mx_db_finalize();
+
+// DATABASE SECTION
+bool mx_isdb_valid();
+
 
 // CONNECTION SECTION
 int mx_open_connection();
 void mx_close_connection(int sockfd);
-void debug_send(int fd, char *str);
+
+int mx_send_data(int fd, char *data);
+int mx_receive_data(int fd, char **response);
 
 // GUI SECTION
+void mx_start_gtk();
+int mx_gui_login();
+int mx_gui_registration();
 int mx_gui_network_error();
 
 // DATA EXCHANGE SECTION
 char *mx_create_request(t_request *data);
+
+
 
 #endif //UCODE_UCHAT_MAIN_CLIENT_H

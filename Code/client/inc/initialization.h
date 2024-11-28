@@ -10,13 +10,12 @@
 #include <stdlib.h>
 #include "libmx.h"
 
-typedef struct {
+typedef struct s_arguments {
     int port;
     char *ip;
-} arguments;
+} t_arguments;
 
-
-arguments *mx_parse_args(int argc, char *argv[]);
+t_arguments *mx_parse_args(int argc, const char *argv[]);
 
 
 #endif //UCODE_UCHAT_MAIN_INITIALIZATION_H

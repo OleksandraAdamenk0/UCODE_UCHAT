@@ -1,57 +1,828 @@
-[2024-11-21 00:54:56] [INFO] logger initialized
-[2024-11-21 00:54:56] [INFO] socket was created successfully
-[2024-11-21 00:54:56] [INFO] connection opened
-[2024-11-21 00:54:56] [INFO] connection closed
-[2024-11-21 11:10:52] [INFO] logger initialized
-[2024-11-21 11:10:53] [INFO] socket was created successfully
-[2024-11-21 11:10:53] [INFO] connection opened
-[2024-11-21 11:17:13] [INFO] logger initialized
-[2024-11-21 11:17:13] [INFO] socket was created successfully
-[2024-11-21 11:17:13] [INFO] connection opened
-[2024-11-21 11:17:13] [ERROR] error sending message
-[2024-11-21 11:22:20] [INFO] logger initialized
-[2024-11-21 11:22:20] [INFO] socket was created successfully
-[2024-11-21 11:22:20] [INFO] connection opened
-[2024-11-21 11:33:54] [INFO] logger initialized
-[2024-11-21 11:33:54] [INFO] socket was created successfully
-[2024-11-21 11:33:54] [INFO] connection opened
-[2024-11-21 11:33:54] [FATAL] application window was not created before trying to show screen
-[2024-11-21 11:33:54] [INFO] connection closed
-[2024-11-21 11:34:34] [INFO] logger initialized
-[2024-11-21 11:34:34] [INFO] socket was created successfully
-[2024-11-21 11:34:34] [INFO] connection opened
-[2024-11-21 11:34:34] [FATAL] application window was not created before trying to show screen
-[2024-11-21 11:34:34] [INFO] connection closed
-[2024-11-21 11:34:41] [INFO] logger initialized
-[2024-11-21 11:34:41] [INFO] socket was created successfully
-[2024-11-21 11:34:41] [INFO] connection opened
-[2024-11-21 11:34:41] [FATAL] application window was not created before trying to show screen
-[2024-11-21 11:34:41] [INFO] connection closed
-[2024-11-21 11:34:49] [INFO] logger initialized
-[2024-11-21 11:34:49] [INFO] socket was created successfully
-[2024-11-21 11:34:49] [INFO] connection opened
-[2024-11-21 11:34:49] [FATAL] application window was not created before trying to show screen
-[2024-11-21 11:34:49] [INFO] connection closed
-[2024-11-21 11:39:01] [INFO] logger initialized
-[2024-11-21 11:39:01] [INFO] socket was created successfully
-[2024-11-21 11:39:01] [INFO] connection opened
-[2024-11-21 11:39:28] [INFO] connection closed
-[2024-11-21 11:53:52] [INFO] logger initialized
-[2024-11-21 11:53:52] [INFO] socket was created successfully
-[2024-11-21 11:53:52] [INFO] connection opened
-[2024-11-21 11:55:19] [INFO] logger initialized
-[2024-11-21 11:55:20] [INFO] socket was created successfully
-[2024-11-21 11:55:20] [INFO] connection opened
-[2024-11-21 11:55:23] [INFO] connection closed
-[2024-11-21 12:23:38] [INFO] logger initialized
-[2024-11-21 12:23:38] [INFO] socket was created successfully
-[2024-11-21 12:23:38] [INFO] connection opened
-[2024-11-21 12:23:51] [INFO] connection closed
-[2024-11-21 12:24:09] [INFO] logger initialized
-[2024-11-21 12:24:09] [INFO] socket was created successfully
-[2024-11-21 12:24:09] [INFO] connection opened
-[2024-11-21 12:24:13] [INFO] connection closed
-[2024-11-21 12:24:35] [INFO] logger initialized
-[2024-11-21 12:24:35] [INFO] socket was created successfully
-[2024-11-21 12:24:35] [INFO] connection opened
-[2024-11-21 12:29:11] [INFO] connection closed
+[2024-11-23 23:28:34] [INFO] logger initialized
+[2024-11-23 23:28:34] [INFO] socket was created successfully
+[2024-11-23 23:28:34] [INFO] connection opened
+[2024-11-23 23:30:31] [INFO] logger initialized
+[2024-11-23 23:30:31] [INFO] socket was created successfully
+[2024-11-23 23:30:31] [INFO] connection opened
+[2024-11-23 23:34:31] [INFO] logger initialized
+[2024-11-23 23:34:31] [INFO] socket was created successfully
+[2024-11-23 23:34:31] [INFO] connection opened
+[2024-11-23 23:35:03] [INFO] logger initialized
+[2024-11-23 23:35:03] [INFO] socket was created successfully
+[2024-11-23 23:35:03] [INFO] connection opened
+[2024-11-23 23:35:50] [INFO] logger initialized
+[2024-11-23 23:35:50] [INFO] socket was created successfully
+[2024-11-23 23:35:50] [INFO] connection opened
+[2024-11-23 23:35:50] [ERROR] Error receiving data size[2024-11-23 23:36:59] [INFO] logger initialized
+[2024-11-23 23:36:59] [INFO] socket was created successfully
+[2024-11-23 23:36:59] [INFO] connection opened
+[2024-11-23 23:36:59] [ERROR] Error receiving data size[2024-11-23 23:37:47] [INFO] logger initialized
+[2024-11-23 23:37:47] [INFO] socket was created successfully
+[2024-11-23 23:37:47] [INFO] connection opened
+[2024-11-23 23:37:47] [ERROR] Error receiving data size[2024-11-23 23:38:34] [INFO] logger initialized
+[2024-11-23 23:38:34] [INFO] socket was created successfully
+[2024-11-23 23:38:34] [INFO] connection opened
+[2024-11-23 23:38:34] [ERROR] Error receiving data size[2024-11-23 23:41:51] [INFO] logger initialized
+[2024-11-23 23:41:51] [INFO] socket was created successfully
+[2024-11-23 23:41:51] [INFO] connection opened
+[2024-11-23 23:41:51] [ERROR] Error receiving data size[2024-11-23 23:54:18] [INFO] logger initialized
+[2024-11-23 23:54:18] [INFO] socket was created successfully
+[2024-11-23 23:54:18] [INFO] connection opened
+[2024-11-23 23:54:31] [INFO] logger initialized
+[2024-11-23 23:54:31] [INFO] socket was created successfully
+[2024-11-23 23:54:31] [INFO] connection opened
+[2024-11-23 23:54:32] [INFO] logger initialized
+[2024-11-23 23:54:32] [INFO] socket was created successfully
+[2024-11-23 23:54:32] [INFO] connection opened
+[2024-11-26 11:36:47] [INFO] logger initialized
+[2024-11-26 11:36:48] [INFO] socket was created successfully
+[2024-11-26 11:36:48] [INFO] connection opened
+[2024-11-26 11:36:48] [INFO] database closed
+[2024-11-26 16:44:53] [INFO] logger initialized
+[2024-11-26 16:44:53] [INFO] socket was created successfully
+[2024-11-26 16:44:53] [INFO] connection opened
+[2024-11-26 16:44:53] [INFO] connection closed
+[2024-11-26 16:44:53] [INFO] database closed
+[2024-11-26 16:54:07] [INFO] logger initialized
+[2024-11-26 16:54:07] [INFO] socket was created successfully
+[2024-11-26 16:54:07] [INFO] connection opened
+[2024-11-26 16:54:07] [INFO] connection closed
+[2024-11-26 16:54:07] [INFO] database closed
+[2024-11-26 16:57:16] [INFO] logger initialized
+[2024-11-26 16:57:16] [INFO] socket was created successfully
+[2024-11-26 16:57:16] [INFO] connection opened
+[2024-11-26 16:57:16] [INFO] connection closed
+[2024-11-26 16:57:16] [INFO] database closed
+[2024-11-26 16:59:29] [INFO] logger initialized
+[2024-11-26 16:59:29] [INFO] socket was created successfully
+[2024-11-26 16:59:29] [INFO] connection opened
+[2024-11-26 16:59:29] [INFO] connection closed
+[2024-11-26 16:59:29] [INFO] database closed
+[2024-11-26 17:01:20] [INFO] logger initialized
+[2024-11-26 17:01:20] [INFO] socket was created successfully
+[2024-11-26 17:01:20] [INFO] connection opened
+[2024-11-26 17:01:20] [INFO] connection closed
+[2024-11-26 17:01:20] [INFO] database closed
+[2024-11-26 17:05:17] [INFO] logger initialized
+[2024-11-26 17:05:17] [INFO] socket was created successfully
+[2024-11-26 17:05:17] [INFO] connection opened
+[2024-11-26 17:05:17] [INFO] connection closed
+[2024-11-26 17:05:17] [INFO] database closed
+[2024-11-26 17:07:20] [INFO] logger initialized
+[2024-11-26 17:07:20] [INFO] socket was created successfully
+[2024-11-26 17:07:20] [INFO] connection opened
+[2024-11-26 17:07:20] [INFO] connection closed
+[2024-11-26 17:07:20] [INFO] database closed
+[2024-11-26 17:07:54] [INFO] logger initialized
+[2024-11-26 17:07:54] [INFO] socket was created successfully
+[2024-11-26 17:07:54] [INFO] connection opened
+[2024-11-26 17:07:54] [INFO] connection closed
+[2024-11-26 17:07:54] [INFO] database closed
+[2024-11-26 17:11:35] [INFO] logger initialized
+[2024-11-26 17:11:36] [INFO] socket was created successfully
+[2024-11-26 17:11:36] [INFO] connection opened
+[2024-11-26 17:11:36] [INFO] connection closed
+[2024-11-26 17:11:36] [INFO] database closed
+[2024-11-26 17:16:39] [INFO] logger initialized
+[2024-11-26 17:16:39] [INFO] socket was created successfully
+[2024-11-26 17:16:39] [INFO] connection opened
+[2024-11-26 17:16:39] [INFO] connection closed
+[2024-11-26 17:16:39] [INFO] database closed
+[2024-11-26 17:21:01] [INFO] logger initialized
+[2024-11-26 17:21:01] [INFO] socket was created successfully
+[2024-11-26 17:21:01] [INFO] connection opened
+[2024-11-26 17:21:01] [INFO] connection closed
+[2024-11-26 17:21:01] [INFO] database closed
+[2024-11-26 17:30:49] [INFO] logger initialized
+[2024-11-26 17:30:49] [INFO] socket was created successfully
+[2024-11-26 17:30:49] [INFO] connection opened
+[2024-11-26 17:30:49] [INFO] connection closed
+[2024-11-26 17:30:49] [INFO] database closed
+[2024-11-26 17:42:30] [INFO] logger initialized
+[2024-11-26 17:42:30] [INFO] socket was created successfully
+[2024-11-26 17:42:30] [INFO] connection opened
+[2024-11-26 17:42:30] [INFO] connection closed
+[2024-11-26 17:42:30] [INFO] database closed
+[2024-11-26 17:45:04] [INFO] logger initialized
+[2024-11-26 17:45:04] [INFO] socket was created successfully
+[2024-11-26 17:45:04] [INFO] connection opened
+[2024-11-26 17:45:04] [INFO] connection closed
+[2024-11-26 17:45:04] [INFO] database closed
+[2024-11-26 17:53:01] [INFO] logger initialized
+[2024-11-26 17:53:01] [INFO] socket was created successfully
+[2024-11-26 17:53:01] [INFO] connection opened
+[2024-11-26 17:53:01] [INFO] connection closed
+[2024-11-26 17:53:01] [INFO] database closed
+[2024-11-26 18:23:57] [INFO] logger initialized
+[2024-11-26 18:23:57] [INFO] socket was created successfully
+[2024-11-26 18:23:57] [INFO] connection opened
+[2024-11-26 18:23:57] [INFO] connection closed
+[2024-11-26 18:23:57] [INFO] database closed
+[2024-11-26 18:30:54] [INFO] logger initialized
+[2024-11-26 18:30:54] [INFO] socket was created successfully
+[2024-11-26 18:30:54] [INFO] connection opened
+[2024-11-26 18:30:54] [INFO] connection closed
+[2024-11-26 18:30:54] [INFO] database closed
+[2024-11-26 19:08:48] [INFO] logger initialized
+[2024-11-26 19:08:48] [INFO] socket was created successfully
+[2024-11-26 19:08:48] [INFO] connection opened
+[2024-11-26 19:08:48] [DEBUG] error sending data to the socket 14
+[2024-11-26 19:08:48] [INFO] connection closed
+[2024-11-26 19:08:48] [INFO] database closed
+[2024-11-26 19:08:51] [INFO] logger initialized
+[2024-11-26 19:08:51] [INFO] socket was created successfully
+[2024-11-26 19:08:51] [INFO] connection opened
+[2024-11-26 19:08:51] [INFO] connection closed
+[2024-11-26 19:08:51] [INFO] database closed
+[2024-11-26 19:16:56] [INFO] logger initialized
+[2024-11-26 19:16:57] [INFO] socket was created successfully
+[2024-11-26 19:16:57] [INFO] connection opened
+[2024-11-26 19:16:57] [INFO] connection closed
+[2024-11-26 19:16:57] [INFO] database closed
+[2024-11-26 19:17:31] [INFO] logger initialized
+[2024-11-26 19:17:31] [INFO] socket was created successfully
+[2024-11-26 19:17:31] [INFO] connection opened
+[2024-11-26 19:17:31] [INFO] connection closed
+[2024-11-26 19:17:31] [INFO] database closed
+[2024-11-26 19:21:36] [INFO] logger initialized
+[2024-11-26 19:21:36] [INFO] socket was created successfully
+[2024-11-26 19:21:36] [INFO] connection opened
+[2024-11-26 19:21:36] [INFO] connection closed
+[2024-11-26 19:21:36] [INFO] database closed
+[2024-11-26 19:39:19] [INFO] logger initialized
+[2024-11-26 19:39:19] [INFO] socket was created successfully
+[2024-11-26 19:39:19] [INFO] connection opened
+[2024-11-26 19:39:19] [INFO] connection closed
+[2024-11-26 19:39:19] [INFO] database closed
+[2024-11-26 19:42:09] [INFO] logger initialized
+[2024-11-26 19:42:09] [INFO] socket was created successfully
+[2024-11-26 19:42:09] [INFO] connection opened
+[2024-11-26 19:42:09] [INFO] connection closed
+[2024-11-26 19:42:09] [INFO] database closed
+[2024-11-26 19:46:14] [INFO] logger initialized
+[2024-11-26 19:46:14] [INFO] socket was created successfully
+[2024-11-26 19:46:14] [INFO] connection opened
+[2024-11-26 19:46:14] [INFO] connection closed
+[2024-11-26 19:46:14] [INFO] database closed
+[2024-11-26 19:47:26] [INFO] logger initialized
+[2024-11-26 19:47:27] [INFO] socket was created successfully
+[2024-11-26 19:47:27] [INFO] connection opened
+[2024-11-26 19:47:27] [INFO] connection closed
+[2024-11-26 19:47:27] [INFO] database closed
+[2024-11-26 20:10:38] [INFO] logger initialized
+[2024-11-26 20:10:38] [INFO] socket was created successfully
+[2024-11-26 20:10:38] [INFO] connection opened
+[2024-11-26 20:12:30] [INFO] logger initialized
+[2024-11-26 20:12:30] [INFO] socket was created successfully
+[2024-11-26 20:12:30] [INFO] connection opened
+[2024-11-26 20:12:30] [INFO] connection closed
+[2024-11-26 20:12:30] [INFO] database closed
+[2024-11-26 20:23:03] [INFO] logger initialized
+[2024-11-26 20:23:03] [INFO] socket was created successfully
+[2024-11-26 20:23:03] [INFO] connection opened
+[2024-11-26 20:23:03] [INFO] connection closed
+[2024-11-26 20:23:03] [INFO] database closed
+[2024-11-26 20:24:30] [INFO] logger initialized
+[2024-11-26 20:24:30] [INFO] socket was created successfully
+[2024-11-26 20:24:30] [INFO] connection opened
+[2024-11-26 20:24:30] [INFO] connection closed
+[2024-11-26 20:24:30] [INFO] database closed
+[2024-11-26 20:27:26] [INFO] logger initialized
+[2024-11-26 20:27:26] [INFO] socket was created successfully
+[2024-11-26 20:27:26] [INFO] connection opened
+[2024-11-26 20:27:26] [INFO] connection closed
+[2024-11-26 20:27:26] [INFO] database closed
+[2024-11-26 20:32:51] [INFO] logger initialized
+[2024-11-26 20:32:51] [INFO] socket was created successfully
+[2024-11-26 20:32:51] [INFO] connection opened
+[2024-11-26 20:32:51] [INFO] connection closed
+[2024-11-26 20:32:51] [INFO] database closed
+[2024-11-26 20:37:50] [INFO] logger initialized
+[2024-11-26 20:37:50] [INFO] socket was created successfully
+[2024-11-26 20:37:50] [INFO] connection opened
+[2024-11-26 20:37:50] [INFO] connection closed
+[2024-11-26 20:37:50] [INFO] database closed
+[2024-11-26 20:38:04] [INFO] logger initialized
+[2024-11-26 20:38:04] [INFO] socket was created successfully
+[2024-11-26 20:38:04] [INFO] connection opened
+[2024-11-26 20:38:04] [INFO] connection closed
+[2024-11-26 20:38:04] [INFO] database closed
+[2024-11-26 20:39:22] [INFO] logger initialized
+[2024-11-26 20:39:22] [INFO] socket was created successfully
+[2024-11-26 20:39:22] [INFO] connection opened
+[2024-11-26 20:39:22] [INFO] connection closed
+[2024-11-26 20:39:22] [INFO] database closed
+[2024-11-26 20:40:09] [INFO] logger initialized
+[2024-11-26 20:40:09] [INFO] socket was created successfully
+[2024-11-26 20:40:09] [INFO] connection opened
+[2024-11-26 20:40:09] [INFO] connection closed
+[2024-11-26 20:40:09] [INFO] database closed
+[2024-11-26 20:41:38] [INFO] logger initialized
+[2024-11-26 20:41:38] [INFO] socket was created successfully
+[2024-11-26 20:41:38] [INFO] connection opened
+[2024-11-26 20:41:38] [INFO] connection closed
+[2024-11-26 20:41:38] [INFO] database closed
+[2024-11-26 20:42:50] [INFO] logger initialized
+[2024-11-26 20:42:50] [INFO] socket was created successfully
+[2024-11-26 20:42:50] [INFO] connection opened
+[2024-11-26 20:42:50] [INFO] connection closed
+[2024-11-26 20:42:50] [INFO] database closed
+[2024-11-26 20:46:48] [INFO] logger initialized
+[2024-11-26 20:46:48] [INFO] socket was created successfully
+[2024-11-26 20:46:48] [INFO] connection opened
+[2024-11-26 20:48:03] [INFO] logger initialized
+[2024-11-26 20:48:03] [INFO] socket was created successfully
+[2024-11-26 20:48:03] [INFO] connection opened
+[2024-11-26 20:48:03] [INFO] connection closed
+[2024-11-26 20:48:03] [INFO] database closed
+[2024-11-26 20:49:18] [INFO] logger initialized
+[2024-11-26 20:49:18] [INFO] socket was created successfully
+[2024-11-26 20:49:18] [INFO] connection opened
+[2024-11-26 20:49:18] [INFO] connection closed
+[2024-11-26 20:49:18] [INFO] database closed
+[2024-11-26 20:51:00] [INFO] logger initialized
+[2024-11-26 20:51:00] [INFO] socket was created successfully
+[2024-11-26 20:51:00] [INFO] connection opened
+[2024-11-26 20:51:00] [INFO] connection closed
+[2024-11-26 20:51:00] [INFO] database closed
+[2024-11-26 20:53:44] [INFO] logger initialized
+[2024-11-26 20:53:44] [INFO] socket was created successfully
+[2024-11-26 20:53:44] [INFO] connection opened
+[2024-11-26 20:53:44] [INFO] connection closed
+[2024-11-26 20:53:44] [INFO] database closed
+[2024-11-26 20:56:58] [INFO] logger initialized
+[2024-11-26 20:56:58] [INFO] socket was created successfully
+[2024-11-26 20:56:58] [INFO] connection opened
+[2024-11-26 20:56:58] [INFO] connection closed
+[2024-11-26 20:56:58] [INFO] database closed
+[2024-11-26 21:04:02] [INFO] logger initialized
+[2024-11-26 21:04:02] [INFO] socket was created successfully
+[2024-11-26 21:04:02] [INFO] connection opened
+[2024-11-26 21:04:02] [INFO] connection closed
+[2024-11-26 21:04:02] [INFO] database closed
+[2024-11-26 21:08:00] [INFO] logger initialized
+[2024-11-26 21:08:00] [INFO] socket was created successfully
+[2024-11-26 21:08:00] [INFO] connection opened
+[2024-11-26 21:08:00] [INFO] connection closed
+[2024-11-26 21:08:00] [INFO] database closed
+[2024-11-26 21:09:25] [INFO] logger initialized
+[2024-11-26 21:09:25] [INFO] socket was created successfully
+[2024-11-26 21:09:25] [INFO] connection opened
+[2024-11-26 21:09:25] [INFO] connection closed
+[2024-11-26 21:09:25] [INFO] database closed
+[2024-11-26 21:10:23] [INFO] logger initialized
+[2024-11-26 21:10:23] [INFO] socket was created successfully
+[2024-11-26 21:10:23] [INFO] connection opened
+[2024-11-26 21:10:23] [INFO] connection closed
+[2024-11-26 21:10:23] [INFO] database closed
+[2024-11-26 21:11:26] [INFO] logger initialized
+[2024-11-26 21:11:26] [INFO] socket was created successfully
+[2024-11-26 21:11:26] [INFO] connection opened
+[2024-11-26 21:11:26] [INFO] connection closed
+[2024-11-26 21:11:26] [INFO] database closed
+[2024-11-26 21:13:30] [INFO] logger initialized
+[2024-11-26 21:13:30] [INFO] socket was created successfully
+[2024-11-26 21:13:30] [INFO] connection opened
+[2024-11-26 21:13:30] [INFO] connection closed
+[2024-11-26 21:13:30] [INFO] database closed
+[2024-11-26 21:16:40] [INFO] logger initialized
+[2024-11-26 21:16:40] [INFO] socket was created successfully
+[2024-11-26 21:16:40] [INFO] connection opened
+[2024-11-26 21:16:40] [INFO] connection closed
+[2024-11-26 21:16:40] [INFO] database closed
+[2024-11-26 21:17:45] [INFO] logger initialized
+[2024-11-26 21:17:45] [INFO] socket was created successfully
+[2024-11-26 21:17:45] [INFO] connection opened
+[2024-11-26 21:17:45] [DEBUG] error sending data to the socket 14
+[2024-11-26 21:17:45] [DEBUG] error sending data to the socket 14
+[2024-11-26 21:17:45] [INFO] connection closed
+[2024-11-26 21:17:45] [INFO] database closed
+[2024-11-26 21:20:35] [INFO] logger initialized
+[2024-11-26 21:20:35] [INFO] socket was created successfully
+[2024-11-26 21:20:35] [INFO] connection opened
+[2024-11-26 21:20:35] [INFO] connection closed
+[2024-11-26 21:20:35] [INFO] database closed
+[2024-11-26 21:28:50] [INFO] logger initialized
+[2024-11-26 21:28:50] [INFO] socket was created successfully
+[2024-11-26 21:28:50] [INFO] connection opened
+[2024-11-26 21:28:50] [INFO] connection closed
+[2024-11-26 21:28:50] [INFO] database closed
+[2024-11-26 21:30:00] [INFO] logger initialized
+[2024-11-26 21:30:00] [INFO] socket was created successfully
+[2024-11-26 21:30:00] [INFO] connection opened
+[2024-11-26 21:30:00] [INFO] connection closed
+[2024-11-26 21:30:00] [INFO] database closed
+[2024-11-26 21:32:45] [INFO] logger initialized
+[2024-11-26 21:32:45] [INFO] socket was created successfully
+[2024-11-26 21:32:45] [INFO] connection opened
+[2024-11-26 21:32:45] [INFO] connection closed
+[2024-11-26 21:32:45] [INFO] database closed
+[2024-11-26 21:33:05] [INFO] logger initialized
+[2024-11-26 21:33:06] [INFO] socket was created successfully
+[2024-11-26 21:33:06] [INFO] connection opened
+[2024-11-26 21:33:06] [INFO] connection closed
+[2024-11-26 21:33:06] [INFO] database closed
+[2024-11-26 21:34:56] [INFO] logger initialized
+[2024-11-26 21:34:56] [INFO] socket was created successfully
+[2024-11-26 21:34:56] [INFO] connection opened
+[2024-11-26 21:34:56] [INFO] connection closed
+[2024-11-26 21:34:56] [INFO] database closed
+[2024-11-26 21:41:25] [INFO] logger initialized
+[2024-11-26 21:41:25] [INFO] socket was created successfully
+[2024-11-26 21:41:25] [INFO] connection opened
+[2024-11-26 21:41:25] [INFO] connection closed
+[2024-11-26 21:41:25] [INFO] database closed
+[2024-11-26 21:44:04] [INFO] logger initialized
+[2024-11-26 21:44:04] [INFO] socket was created successfully
+[2024-11-26 21:44:04] [INFO] connection opened
+[2024-11-26 21:44:04] [INFO] connection closed
+[2024-11-26 21:44:04] [INFO] database closed
+[2024-11-26 21:44:29] [INFO] logger initialized
+[2024-11-26 21:44:29] [INFO] socket was created successfully
+[2024-11-26 21:44:29] [INFO] connection opened
+[2024-11-26 21:44:29] [INFO] connection closed
+[2024-11-26 21:44:29] [INFO] database closed
+[2024-11-26 21:46:05] [INFO] logger initialized
+[2024-11-26 21:46:05] [INFO] socket was created successfully
+[2024-11-26 21:46:05] [INFO] connection opened
+[2024-11-26 21:46:05] [INFO] connection closed
+[2024-11-26 21:46:05] [INFO] database closed
+[2024-11-26 21:52:07] [INFO] logger initialized
+[2024-11-26 21:52:07] [INFO] socket was created successfully
+[2024-11-26 21:52:07] [INFO] connection opened
+[2024-11-26 21:55:26] [INFO] connection closed
+[2024-11-26 21:55:26] [INFO] database closed
+[2024-11-26 21:56:39] [INFO] logger initialized
+[2024-11-26 21:56:39] [INFO] socket was created successfully
+[2024-11-26 21:56:39] [INFO] connection opened
+[2024-11-26 21:59:54] [INFO] connection closed
+[2024-11-26 21:59:54] [INFO] database closed
+[2024-11-26 22:00:10] [INFO] logger initialized
+[2024-11-26 22:00:10] [INFO] socket was created successfully
+[2024-11-26 22:00:10] [INFO] connection opened
+[2024-11-26 22:00:10] [DEBUG] error sending data to the socket 14
+[2024-11-26 22:00:10] [DEBUG] error sending data to the socket 14
+[2024-11-26 22:00:10] [INFO] connection closed
+[2024-11-26 22:00:10] [INFO] database closed
+[2024-11-26 22:00:38] [INFO] logger initialized
+[2024-11-26 22:00:39] [INFO] socket was created successfully
+[2024-11-26 22:00:39] [INFO] connection opened
+[2024-11-26 22:00:39] [DEBUG] error sending data to the socket 14
+[2024-11-26 22:00:39] [DEBUG] error sending data to the socket 14
+[2024-11-26 22:00:39] [INFO] connection closed
+[2024-11-26 22:00:39] [INFO] database closed
+[2024-11-26 22:00:47] [INFO] logger initialized
+[2024-11-26 22:00:47] [INFO] socket was created successfully
+[2024-11-26 22:00:47] [INFO] connection opened
+[2024-11-26 22:02:41] [INFO] connection closed
+[2024-11-26 22:02:41] [INFO] database closed
+[2024-11-26 22:03:00] [INFO] logger initialized
+[2024-11-26 22:03:00] [INFO] socket was created successfully
+[2024-11-26 22:03:00] [INFO] connection opened
+[2024-11-26 22:03:00] [DEBUG] error sending data to the socket 14
+[2024-11-26 22:03:00] [DEBUG] error sending data to the socket 14
+[2024-11-26 22:03:00] [INFO] connection closed
+[2024-11-26 22:03:00] [INFO] database closed
+[2024-11-26 22:03:28] [INFO] logger initialized
+[2024-11-26 22:03:28] [INFO] socket was created successfully
+[2024-11-26 22:03:28] [INFO] connection opened
+[2024-11-26 22:04:11] [INFO] connection closed
+[2024-11-26 22:04:11] [INFO] database closed
+[2024-11-26 22:04:28] [INFO] logger initialized
+[2024-11-26 22:04:28] [INFO] socket was created successfully
+[2024-11-26 22:04:28] [INFO] connection opened
+[2024-11-26 22:04:28] [DEBUG] error sending data to the socket 14
+[2024-11-26 22:04:28] [DEBUG] error sending data to the socket 14
+[2024-11-26 22:04:28] [INFO] connection closed
+[2024-11-26 22:04:28] [INFO] database closed
+[2024-11-26 22:04:36] [INFO] logger initialized
+[2024-11-26 22:04:36] [INFO] socket was created successfully
+[2024-11-26 22:04:36] [INFO] connection opened
+[2024-11-26 22:05:51] [INFO] connection closed
+[2024-11-26 22:05:51] [INFO] database closed
+[2024-11-26 22:06:09] [INFO] logger initialized
+[2024-11-26 22:06:10] [INFO] socket was created successfully
+[2024-11-26 22:06:10] [INFO] connection opened
+[2024-11-26 22:06:10] [INFO] connection closed
+[2024-11-26 22:06:10] [INFO] database closed
+[2024-11-26 22:12:52] [INFO] logger initialized
+[2024-11-26 22:12:52] [INFO] socket was created successfully
+[2024-11-26 22:12:52] [DEBUG] Socket is now in blocking mode
+[2024-11-26 22:12:52] [INFO] connection opened
+[2024-11-26 22:12:52] [INFO] connection closed
+[2024-11-26 22:12:52] [INFO] database closed
+[2024-11-26 22:15:15] [INFO] logger initialized
+[2024-11-26 22:15:15] [INFO] socket was created successfully
+[2024-11-26 22:15:15] [DEBUG] Socket is now in blocking mode
+[2024-11-26 22:15:15] [INFO] connection opened
+[2024-11-26 22:15:15] [INFO] connection closed
+[2024-11-26 22:15:15] [INFO] database closed
+[2024-11-26 22:16:31] [INFO] logger initialized
+[2024-11-26 22:16:31] [INFO] socket was created successfully
+[2024-11-26 22:16:31] [DEBUG] Socket is now in blocking mode
+[2024-11-26 22:16:31] [INFO] connection opened
+[2024-11-26 22:16:31] [INFO] connection closed
+[2024-11-26 22:16:31] [INFO] database closed
+[2024-11-26 22:19:22] [INFO] logger initialized
+[2024-11-26 22:19:22] [INFO] socket was created successfully
+[2024-11-26 22:19:22] [DEBUG] Socket is now in blocking mode
+[2024-11-26 22:19:22] [INFO] connection opened
+[2024-11-26 22:19:22] [INFO] connection closed
+[2024-11-26 22:19:22] [INFO] database closed
+[2024-11-26 22:20:14] [INFO] logger initialized
+[2024-11-26 22:20:14] [INFO] socket was created successfully
+[2024-11-26 22:20:14] [DEBUG] Socket is now in blocking mode
+[2024-11-26 22:20:14] [INFO] connection opened
+[2024-11-26 22:20:14] [INFO] connection closed
+[2024-11-26 22:20:14] [INFO] database closed
+[2024-11-26 22:23:15] [INFO] logger initialized
+[2024-11-26 22:23:15] [INFO] socket was created successfully
+[2024-11-26 22:23:15] [DEBUG] Socket is now in blocking mode
+[2024-11-26 22:23:15] [INFO] connection opened
+[2024-11-26 22:23:15] [INFO] connection closed
+[2024-11-26 22:23:15] [INFO] database closed
+[2024-11-26 23:04:21] [INFO] logger initialized
+[2024-11-26 23:04:21] [INFO] socket was created successfully
+[2024-11-26 23:04:21] [DEBUG] Socket is now in blocking mode
+[2024-11-26 23:04:21] [INFO] connection opened
+[2024-11-26 23:04:21] [INFO] connection closed
+[2024-11-26 23:04:21] [INFO] database closed
+[2024-11-26 23:05:32] [INFO] logger initialized
+[2024-11-26 23:05:32] [INFO] socket was created successfully
+[2024-11-26 23:05:32] [DEBUG] Socket is now in blocking mode
+[2024-11-26 23:05:32] [INFO] connection opened
+[2024-11-26 23:05:32] [INFO] connection closed
+[2024-11-26 23:05:32] [INFO] database closed
+[2024-11-26 23:51:54] [INFO] logger initialized
+[2024-11-26 23:52:56] [INFO] logger initialized
+[2024-11-27 00:13:28] [INFO] logger initialized
+[2024-11-27 00:22:28] [INFO] logger initialized
+[2024-11-27 00:25:00] [INFO] logger initialized
+[2024-11-27 00:29:58] [INFO] Logger initialized
+[2024-11-27 00:32:28] [INFO] Logger initialized
+[2024-11-27 00:32:28] [DEBUG] GTK initialized
+[2024-11-27 00:32:28] [DEBUG] Window created
+[2024-11-27 00:32:28] [DEBUG] Destroy signal connected
+[2024-11-27 00:34:29] [INFO] Logger initialized
+[2024-11-27 00:34:30] [DEBUG] GTK initialized
+[2024-11-27 00:34:30] [DEBUG] Window created
+[2024-11-27 00:34:30] [DEBUG] Destroy signal connected
+[2024-11-27 00:34:30] [INFO] Gui initialized
+[2024-11-27 00:34:30] [INFO] Client initialized
+[2024-11-27 00:34:30] [INFO] socket was created successfully
+[2024-11-27 00:34:30] [DEBUG] Socket is now in blocking mode
+[2024-11-27 00:34:30] [INFO] connection opened
+[2024-11-27 00:34:30] [INFO] connection closed
+[2024-11-27 00:34:30] [INFO] database closed
+[2024-11-27 01:00:44] [INFO] Logger initialized
+[2024-11-27 01:00:44] [DEBUG] GTK initialized
+[2024-11-27 01:00:44] [DEBUG] Window created
+[2024-11-27 01:00:44] [DEBUG] Destroy signal connected
+[2024-11-27 01:00:44] [INFO] Gui initialized
+[2024-11-27 01:00:44] [INFO] Client initialized
+[2024-11-27 01:00:44] [INFO] socket was created successfully
+[2024-11-27 01:00:44] [DEBUG] Socket is now in blocking mode
+[2024-11-27 01:00:44] [INFO] connection opened
+[2024-11-27 08:19:37] [INFO] connection closed
+[2024-11-27 08:19:37] [INFO] database closed
+[2024-11-27 08:20:21] [INFO] Logger initialized
+[2024-11-27 08:20:21] [DEBUG] GTK initialized
+[2024-11-27 08:20:21] [DEBUG] Window created
+[2024-11-27 08:20:21] [DEBUG] Destroy signal connected
+[2024-11-27 08:20:21] [INFO] Gui initialized
+[2024-11-27 08:20:21] [INFO] Client initialized
+[2024-11-27 08:20:21] [INFO] socket was created successfully
+[2024-11-27 08:20:21] [DEBUG] Socket is now in blocking mode
+[2024-11-27 08:20:21] [INFO] connection opened
+[2024-11-27 08:22:09] [INFO] connection closed
+[2024-11-27 08:22:09] [INFO] database closed
+[2024-11-27 08:23:29] [INFO] Logger initialized
+[2024-11-27 08:23:29] [DEBUG] GTK initialized
+[2024-11-27 08:23:29] [DEBUG] Window created
+[2024-11-27 08:23:29] [DEBUG] Destroy signal connected
+[2024-11-27 08:23:29] [INFO] Gui initialized
+[2024-11-27 08:23:29] [INFO] Client initialized
+[2024-11-27 08:23:29] [INFO] socket was created successfully
+[2024-11-27 08:23:29] [DEBUG] Socket is now in blocking mode
+[2024-11-27 08:23:29] [INFO] connection opened
+[2024-11-27 08:23:32] [INFO] connection closed
+[2024-11-27 08:23:32] [INFO] database closed
+[2024-11-27 08:26:48] [INFO] Logger initialized
+[2024-11-27 08:26:48] [DEBUG] GTK initialized
+[2024-11-27 08:26:48] [DEBUG] Window created
+[2024-11-27 08:26:48] [DEBUG] Destroy signal connected
+[2024-11-27 08:26:48] [INFO] Gui initialized
+[2024-11-27 08:26:48] [INFO] Client initialized
+[2024-11-27 08:26:48] [INFO] socket was created successfully
+[2024-11-27 08:26:48] [DEBUG] Socket is now in blocking mode
+[2024-11-27 08:26:48] [INFO] connection opened
+[2024-11-27 08:26:51] [INFO] connection closed
+[2024-11-27 08:26:51] [INFO] database closed
+[2024-11-27 08:47:26] [INFO] Logger initialized
+[2024-11-27 08:47:26] [DEBUG] GTK initialized
+[2024-11-27 08:47:26] [DEBUG] Window created
+[2024-11-27 08:47:26] [DEBUG] Destroy signal connected
+[2024-11-27 08:47:26] [INFO] Gui initialized
+[2024-11-27 08:47:26] [INFO] Client initialized
+[2024-11-27 08:47:26] [INFO] socket was created successfully
+[2024-11-27 08:47:26] [DEBUG] Socket is now in blocking mode
+[2024-11-27 08:47:26] [INFO] connection opened
+[2024-11-27 08:47:28] [INFO] connection closed
+[2024-11-27 08:47:28] [INFO] database closed
+[2024-11-27 08:52:21] [INFO] Logger initialized
+[2024-11-27 08:52:21] [DEBUG] GTK initialized
+[2024-11-27 08:52:21] [DEBUG] Window created
+[2024-11-27 08:52:21] [DEBUG] Destroy signal connected
+[2024-11-27 08:52:21] [INFO] Gui initialized
+[2024-11-27 08:52:21] [INFO] Client initialized
+[2024-11-27 08:52:21] [INFO] socket was created successfully
+[2024-11-27 08:52:21] [DEBUG] Socket is now in blocking mode
+[2024-11-27 08:52:21] [INFO] connection opened
+[2024-11-27 08:52:23] [INFO] connection closed
+[2024-11-27 08:52:23] [INFO] database closed
+[2024-11-27 08:57:11] [INFO] Logger initialized
+[2024-11-27 08:57:11] [DEBUG] GTK initialized
+[2024-11-27 08:57:11] [DEBUG] Window created
+[2024-11-27 08:57:11] [DEBUG] Destroy signal connected
+[2024-11-27 08:57:11] [INFO] Gui initialized
+[2024-11-27 08:57:11] [INFO] Client initialized
+[2024-11-27 08:57:11] [INFO] socket was created successfully
+[2024-11-27 08:57:11] [DEBUG] Socket is now in blocking mode
+[2024-11-27 08:57:11] [INFO] connection opened
+[2024-11-27 08:57:14] [INFO] connection closed
+[2024-11-27 08:57:14] [INFO] database closed
+[2024-11-27 09:02:33] [INFO] Logger initialized
+[2024-11-27 09:02:33] [DEBUG] GTK initialized
+[2024-11-27 09:02:33] [DEBUG] Window created
+[2024-11-27 09:02:33] [DEBUG] Destroy signal connected
+[2024-11-27 09:02:33] [INFO] Gui initialized
+[2024-11-27 09:02:33] [INFO] Client initialized
+[2024-11-27 09:02:33] [INFO] socket was created successfully
+[2024-11-27 09:02:33] [DEBUG] Socket is now in blocking mode
+[2024-11-27 09:02:33] [INFO] connection opened
+[2024-11-27 09:02:36] [INFO] connection closed
+[2024-11-27 09:02:36] [INFO] database closed
+[2024-11-27 09:10:49] [INFO] Logger initialized
+[2024-11-27 09:10:50] [DEBUG] GTK initialized
+[2024-11-27 09:10:50] [DEBUG] Window created
+[2024-11-27 09:10:50] [DEBUG] Destroy signal connected
+[2024-11-27 09:10:50] [INFO] Gui initialized
+[2024-11-27 09:10:50] [INFO] Client initialized
+[2024-11-27 09:10:50] [INFO] socket was created successfully
+[2024-11-27 09:10:50] [DEBUG] Socket is now in blocking mode
+[2024-11-27 09:10:50] [INFO] connection opened
+[2024-11-27 09:10:52] [INFO] connection closed
+[2024-11-27 09:10:52] [INFO] database closed
+[2024-11-27 13:39:28] [INFO] Logger initialized
+[2024-11-27 13:39:28] [DEBUG] GTK initialized
+[2024-11-27 13:39:28] [DEBUG] Window created
+[2024-11-27 13:39:28] [DEBUG] Destroy signal connected
+[2024-11-27 13:39:28] [INFO] Gui initialized
+[2024-11-27 13:39:28] [INFO] Client initialized
+[2024-11-27 13:39:28] [INFO] socket was created successfully
+[2024-11-27 13:39:28] [DEBUG] Socket is now in blocking mode
+[2024-11-27 13:39:28] [INFO] connection opened
+[2024-11-27 13:39:31] [INFO] connection closed
+[2024-11-27 13:39:31] [INFO] database closed
+[2024-11-27 13:41:50] [INFO] Logger initialized
+[2024-11-27 13:41:50] [DEBUG] GTK initialized
+[2024-11-27 13:41:50] [DEBUG] Window created
+[2024-11-27 13:41:50] [DEBUG] Destroy signal connected
+[2024-11-27 13:41:50] [INFO] Gui initialized
+[2024-11-27 13:41:50] [INFO] Client initialized
+[2024-11-27 13:41:50] [INFO] socket was created successfully
+[2024-11-27 13:41:50] [DEBUG] Socket is now in blocking mode
+[2024-11-27 13:41:50] [INFO] connection opened
+[2024-11-27 13:41:53] [INFO] connection closed
+[2024-11-27 13:41:53] [INFO] database closed
+[2024-11-27 13:50:32] [INFO] Logger initialized
+[2024-11-27 13:50:32] [DEBUG] GTK initialized
+[2024-11-27 13:50:32] [DEBUG] Window created
+[2024-11-27 13:50:32] [DEBUG] Destroy signal connected
+[2024-11-27 13:50:32] [INFO] Gui initialized
+[2024-11-27 13:50:32] [INFO] Client initialized
+[2024-11-27 13:50:32] [INFO] socket was created successfully
+[2024-11-27 13:50:32] [DEBUG] Socket is now in blocking mode
+[2024-11-27 13:50:32] [INFO] connection opened
+[2024-11-27 13:50:34] [INFO] connection closed
+[2024-11-27 13:50:34] [INFO] database closed
+[2024-11-27 13:55:33] [INFO] Logger initialized
+[2024-11-27 13:55:33] [DEBUG] GTK initialized
+[2024-11-27 13:55:33] [DEBUG] Window created
+[2024-11-27 13:55:33] [DEBUG] Destroy signal connected
+[2024-11-27 13:55:33] [INFO] Gui initialized
+[2024-11-27 13:55:33] [INFO] Client initialized
+[2024-11-27 13:55:33] [INFO] socket was created successfully
+[2024-11-27 13:55:33] [DEBUG] Socket is now in blocking mode
+[2024-11-27 13:55:33] [INFO] connection opened
+[2024-11-27 13:55:39] [INFO] connection closed
+[2024-11-27 13:55:39] [INFO] database closed
+[2024-11-27 13:58:37] [INFO] Logger initialized
+[2024-11-27 13:58:38] [DEBUG] GTK initialized
+[2024-11-27 13:58:38] [DEBUG] Window created
+[2024-11-27 13:58:38] [DEBUG] Destroy signal connected
+[2024-11-27 13:58:38] [INFO] Gui initialized
+[2024-11-27 13:58:38] [INFO] Client initialized
+[2024-11-27 13:58:38] [INFO] socket was created successfully
+[2024-11-27 13:58:38] [DEBUG] Socket is now in blocking mode
+[2024-11-27 13:58:38] [INFO] connection opened
+[2024-11-27 13:58:40] [INFO] connection closed
+[2024-11-27 13:58:40] [INFO] database closed
+[2024-11-27 14:07:41] [INFO] Logger initialized
+[2024-11-27 14:07:41] [DEBUG] GTK initialized
+[2024-11-27 14:07:41] [DEBUG] Window created
+[2024-11-27 14:07:41] [DEBUG] Destroy signal connected
+[2024-11-27 14:07:41] [INFO] Gui initialized
+[2024-11-27 14:07:41] [INFO] Client initialized
+[2024-11-27 14:07:41] [INFO] socket was created successfully
+[2024-11-27 14:07:41] [DEBUG] Socket is now in blocking mode
+[2024-11-27 14:07:41] [INFO] connection opened
+[2024-11-27 14:07:44] [INFO] connection closed
+[2024-11-27 14:07:44] [INFO] database closed
+[2024-11-27 14:09:42] [INFO] Logger initialized
+[2024-11-27 14:09:42] [DEBUG] GTK initialized
+[2024-11-27 14:09:42] [DEBUG] Window created
+[2024-11-27 14:09:42] [DEBUG] Destroy signal connected
+[2024-11-27 14:09:42] [INFO] Gui initialized
+[2024-11-27 14:09:42] [INFO] Client initialized
+[2024-11-27 14:09:42] [INFO] socket was created successfully
+[2024-11-27 14:09:42] [DEBUG] Socket is now in blocking mode
+[2024-11-27 14:09:42] [INFO] connection opened
+[2024-11-27 14:09:45] [INFO] connection closed
+[2024-11-27 14:09:45] [INFO] database closed
+[2024-11-27 14:12:04] [INFO] Logger initialized
+[2024-11-27 14:12:04] [DEBUG] GTK initialized
+[2024-11-27 14:12:04] [DEBUG] Window created
+[2024-11-27 14:12:04] [DEBUG] Destroy signal connected
+[2024-11-27 14:12:04] [INFO] Gui initialized
+[2024-11-27 14:12:04] [INFO] Client initialized
+[2024-11-27 14:12:04] [INFO] socket was created successfully
+[2024-11-27 14:12:04] [DEBUG] Socket is now in blocking mode
+[2024-11-27 14:12:04] [INFO] connection opened
+[2024-11-27 14:12:07] [INFO] connection closed
+[2024-11-27 14:12:07] [INFO] database closed
+[2024-11-27 14:14:50] [INFO] Logger initialized
+[2024-11-27 14:14:50] [DEBUG] GTK initialized
+[2024-11-27 14:14:50] [DEBUG] Window created
+[2024-11-27 14:14:50] [DEBUG] Destroy signal connected
+[2024-11-27 14:14:50] [INFO] Gui initialized
+[2024-11-27 14:14:50] [INFO] Client initialized
+[2024-11-27 14:14:50] [INFO] socket was created successfully
+[2024-11-27 14:14:50] [DEBUG] Socket is now in blocking mode
+[2024-11-27 14:14:50] [INFO] connection opened
+[2024-11-27 14:14:52] [INFO] connection closed
+[2024-11-27 14:14:52] [INFO] database closed
+[2024-11-27 15:41:27] [INFO] Logger initialized
+[2024-11-27 15:41:27] [DEBUG] GTK initialized
+[2024-11-27 15:41:27] [DEBUG] Window created
+[2024-11-27 15:41:27] [DEBUG] Destroy signal connected
+[2024-11-27 15:41:27] [INFO] Gui initialized
+[2024-11-27 15:41:27] [INFO] Client initialized
+[2024-11-27 15:41:27] [INFO] socket was created successfully
+[2024-11-27 15:41:27] [DEBUG] Socket is now in blocking mode
+[2024-11-27 15:41:27] [INFO] connection opened
+[2024-11-27 15:41:29] [INFO] connection closed
+[2024-11-27 15:41:29] [INFO] database closed
+[2024-11-27 15:44:41] [INFO] Logger initialized
+[2024-11-27 15:44:41] [DEBUG] GTK initialized
+[2024-11-27 15:44:41] [DEBUG] Window created
+[2024-11-27 15:44:41] [DEBUG] Destroy signal connected
+[2024-11-27 15:44:41] [INFO] Gui initialized
+[2024-11-27 15:44:41] [INFO] Client initialized
+[2024-11-27 15:44:41] [INFO] socket was created successfully
+[2024-11-27 15:44:41] [DEBUG] Socket is now in blocking mode
+[2024-11-27 15:44:41] [INFO] connection opened
+[2024-11-27 15:44:43] [INFO] connection closed
+[2024-11-27 15:44:43] [INFO] database closed
+[2024-11-27 15:45:55] [INFO] Logger initialized
+[2024-11-27 15:45:55] [DEBUG] GTK initialized
+[2024-11-27 15:45:55] [DEBUG] Window created
+[2024-11-27 15:45:55] [DEBUG] Destroy signal connected
+[2024-11-27 15:45:55] [INFO] Gui initialized
+[2024-11-27 15:45:55] [INFO] Client initialized
+[2024-11-27 15:45:55] [INFO] socket was created successfully
+[2024-11-27 15:45:55] [DEBUG] Socket is now in blocking mode
+[2024-11-27 15:45:55] [INFO] connection opened
+[2024-11-27 15:45:57] [INFO] connection closed
+[2024-11-27 15:45:57] [INFO] database closed
+[2024-11-27 15:55:16] [INFO] Logger initialized
+[2024-11-27 15:55:16] [DEBUG] GTK initialized
+[2024-11-27 15:55:16] [DEBUG] Window created
+[2024-11-27 15:55:16] [DEBUG] Destroy signal connected
+[2024-11-27 15:55:16] [INFO] Gui initialized
+[2024-11-27 15:55:16] [INFO] Client initialized
+[2024-11-27 15:55:16] [INFO] socket was created successfully
+[2024-11-27 15:55:16] [DEBUG] Socket is now in blocking mode
+[2024-11-27 15:55:16] [INFO] connection opened
+[2024-11-27 15:55:18] [INFO] connection closed
+[2024-11-27 15:55:18] [INFO] database closed
+[2024-11-27 16:57:09] [INFO] Logger initialized
+[2024-11-27 16:57:10] [DEBUG] GTK initialized
+[2024-11-27 16:57:10] [DEBUG] Window created
+[2024-11-27 16:57:10] [DEBUG] Destroy signal connected
+[2024-11-27 16:57:10] [INFO] Gui initialized
+[2024-11-27 16:57:10] [INFO] Client initialized
+[2024-11-27 16:57:10] [INFO] socket was created successfully
+[2024-11-27 16:57:10] [DEBUG] Socket is now in blocking mode
+[2024-11-27 16:57:10] [INFO] connection opened
+[2024-11-27 16:57:12] [INFO] connection closed
+[2024-11-27 16:57:12] [INFO] database closed
+[2024-11-28 03:09:31] [INFO] Logger initialized
+[2024-11-28 03:09:31] [DEBUG] GTK initialized
+[2024-11-28 03:09:31] [DEBUG] Window created
+[2024-11-28 03:09:31] [DEBUG] Destroy signal connected
+[2024-11-28 03:09:31] [INFO] Gui initialized
+[2024-11-28 03:09:31] [INFO] Client initialized
+[2024-11-28 03:09:31] [INFO] socket was created successfully
+[2024-11-28 03:09:31] [DEBUG] Socket is now in blocking mode
+[2024-11-28 03:09:31] [INFO] connection opened
+[2024-11-28 03:09:59] [INFO] connection closed
+[2024-11-28 03:09:59] [INFO] database closed
+[2024-11-28 16:02:36] [INFO] Logger initialized
+[2024-11-28 16:02:36] [DEBUG] GTK initialized
+[2024-11-28 16:02:36] [DEBUG] Window created
+[2024-11-28 16:02:36] [DEBUG] Destroy signal connected
+[2024-11-28 16:02:36] [INFO] Gui initialized
+[2024-11-28 16:02:36] [INFO] Client initialized
+[2024-11-28 16:02:36] [INFO] socket was created successfully
+[2024-11-28 16:02:36] [DEBUG] Socket is now in blocking mode
+[2024-11-28 16:02:36] [INFO] connection opened
+[2024-11-28 16:02:39] [INFO] connection closed
+[2024-11-28 16:02:39] [INFO] database closed
+[2024-11-28 16:52:37] [INFO] Logger initialized
+[2024-11-28 16:52:37] [DEBUG] GTK initialized
+[2024-11-28 16:52:37] [DEBUG] Window created
+[2024-11-28 16:52:37] [DEBUG] Destroy signal connected
+[2024-11-28 16:52:37] [INFO] Gui initialized
+[2024-11-28 16:52:37] [INFO] Client initialized
+[2024-11-28 16:52:37] [INFO] socket was created successfully
+[2024-11-28 16:52:37] [DEBUG] Socket is now in blocking mode
+[2024-11-28 16:52:37] [INFO] connection opened
+[2024-11-28 16:52:40] [INFO] connection closed
+[2024-11-28 16:52:40] [INFO] database closed
+[2024-11-28 17:07:07] [INFO] Logger initialized
+[2024-11-28 17:07:07] [DEBUG] GTK initialized
+[2024-11-28 17:07:07] [DEBUG] Window created
+[2024-11-28 17:07:07] [DEBUG] Destroy signal connected
+[2024-11-28 17:07:07] [INFO] Gui initialized
+[2024-11-28 17:07:07] [INFO] Client initialized
+[2024-11-28 17:07:07] [INFO] socket was created successfully
+[2024-11-28 17:07:07] [DEBUG] Socket is now in blocking mode
+[2024-11-28 17:07:07] [INFO] connection opened
+[2024-11-28 17:07:09] [INFO] connection closed
+[2024-11-28 17:07:09] [INFO] database closed
+[2024-11-28 17:17:25] [INFO] Logger initialized
+[2024-11-28 17:17:25] [DEBUG] GTK initialized
+[2024-11-28 17:17:25] [DEBUG] Window created
+[2024-11-28 17:17:25] [DEBUG] Destroy signal connected
+[2024-11-28 17:17:25] [INFO] Gui initialized
+[2024-11-28 17:17:25] [INFO] Client initialized
+[2024-11-28 17:17:25] [INFO] socket was created successfully
+[2024-11-28 17:17:25] [DEBUG] Socket is now in blocking mode
+[2024-11-28 17:17:25] [INFO] connection opened
+[2024-11-28 17:17:27] [INFO] connection closed
+[2024-11-28 17:17:27] [INFO] database closed
+[2024-11-28 17:20:41] [INFO] Logger initialized
+[2024-11-28 17:20:41] [DEBUG] GTK initialized
+[2024-11-28 17:20:41] [DEBUG] Window created
+[2024-11-28 17:20:41] [DEBUG] Destroy signal connected
+[2024-11-28 17:20:41] [INFO] Gui initialized
+[2024-11-28 17:20:41] [INFO] Client initialized
+[2024-11-28 17:20:41] [INFO] socket was created successfully
+[2024-11-28 17:20:41] [DEBUG] Socket is now in blocking mode
+[2024-11-28 17:20:41] [INFO] connection opened
+[2024-11-28 17:20:43] [INFO] connection closed
+[2024-11-28 17:20:43] [INFO] database closed
+[2024-11-28 17:24:11] [INFO] Logger initialized
+[2024-11-28 17:24:11] [DEBUG] GTK initialized
+[2024-11-28 17:24:11] [DEBUG] Window created
+[2024-11-28 17:24:11] [DEBUG] Destroy signal connected
+[2024-11-28 17:24:11] [INFO] Gui initialized
+[2024-11-28 17:24:11] [INFO] Client initialized
+[2024-11-28 17:24:11] [INFO] socket was created successfully
+[2024-11-28 17:24:11] [DEBUG] Socket is now in blocking mode
+[2024-11-28 17:24:11] [INFO] connection opened
+[2024-11-28 17:24:13] [INFO] connection closed
+[2024-11-28 17:24:13] [INFO] database closed
+[2024-11-28 17:26:00] [INFO] Logger initialized
+[2024-11-28 17:26:00] [DEBUG] GTK initialized
+[2024-11-28 17:26:00] [DEBUG] Window created
+[2024-11-28 17:26:00] [DEBUG] Destroy signal connected
+[2024-11-28 17:26:00] [INFO] Gui initialized
+[2024-11-28 17:26:00] [INFO] Client initialized
+[2024-11-28 17:26:00] [INFO] socket was created successfully
+[2024-11-28 17:26:00] [DEBUG] Socket is now in blocking mode
+[2024-11-28 17:26:00] [INFO] connection opened
+[2024-11-28 17:26:02] [INFO] connection closed
+[2024-11-28 17:26:02] [INFO] database closed
+[2024-11-28 17:53:20] [INFO] Logger initialized
+[2024-11-28 17:53:20] [DEBUG] GTK initialized
+[2024-11-28 17:53:20] [DEBUG] Window created
+[2024-11-28 17:53:20] [DEBUG] Destroy signal connected
+[2024-11-28 17:53:20] [INFO] Gui initialized
+[2024-11-28 17:53:20] [INFO] Client initialized
+[2024-11-28 17:53:20] [INFO] socket was created successfully
+[2024-11-28 17:53:20] [DEBUG] Socket is now in blocking mode
+[2024-11-28 17:53:20] [INFO] connection opened
+[2024-11-28 17:54:51] [INFO] connection closed
+[2024-11-28 17:54:51] [INFO] database closed

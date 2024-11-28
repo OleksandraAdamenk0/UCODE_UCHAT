@@ -6,7 +6,7 @@
 #include "server.h"
 
 typedef int (*RequestFunction)(const cJSON *);
-typedef cJSON *(*LogicFunction)(const cJSON *);
+typedef cJSON *(*LogicFunction)(const cJSON *, int *status);
 typedef char *(*ResponseFunction)(int, cJSON *);
 
 static char *handler(cJSON *request,
@@ -15,10 +15,14 @@ static char *handler(cJSON *request,
                          ResponseFunction response_func,
                          char *action) {
     int status = request_func(request);
+    printf("request parsing status: %d\n", status);
     char *response = NULL;
 
     if (status == 0) {
-        cJSON *result = logic_func(request);
+        printf("going to logic function\n");
+        cJSON *result = logic_func(request, &status);
+        printf("result of logic function: %p\n", result);
+
         if (!result) {
             char *msg = "Internal server error during processing the \"";
             char *msg1 = mx_strjoin(msg, action);
@@ -42,6 +46,7 @@ static char *handler(cJSON *request,
         free(msg1);
         return NULL;
     }
+    printf("response in handler: %s\n", response);
     return response;
 }
 
@@ -82,10 +87,13 @@ static char *handler(cJSON *request,
  * }
  */
 char *mx_handle_request(const char *request_str) {
+    logger_debug("handle request\n");
+    logger_debug((char *)request_str);
+
     cJSON *request = cJSON_Parse(request_str);
     if (!request) {
         logger_error("Invalid JSON format.\n");
-        // return NULL;
+//        return NULL;
         return "a string for debugging purpose";
     }
 
@@ -129,7 +137,7 @@ char *mx_handle_request(const char *request_str) {
                            "get_messages");
     }
     // ...
-
+    printf("response in handle_request: %s\n", response);
     cJSON_Delete(request);
     return response;
 }

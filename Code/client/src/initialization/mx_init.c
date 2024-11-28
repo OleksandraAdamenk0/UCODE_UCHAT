@@ -8,10 +8,10 @@
 int port;
 char *ip;
 
-int mx_init(int argc, char *argv[]) {
+int mx_init(int argc, const char *argv[]) {
 
     // arguments
-    arguments *arguments = mx_parse_args(argc, argv);
+    t_arguments *arguments = mx_parse_args(argc, argv);
     if (!arguments) return -1;
 
     port = arguments->port;
@@ -20,10 +20,11 @@ int mx_init(int argc, char *argv[]) {
 
     // logger
     if (logger_init(LOGGER_CONFIG) < 0) return -1;
-    logger_info("logger initialized\n");
+    logger_info("Logger initialized\n");
 
     // gtk init
     mx_gui_init(argc, argv);
+    logger_info("Gui initialized\n");
 
     return 0;
 }

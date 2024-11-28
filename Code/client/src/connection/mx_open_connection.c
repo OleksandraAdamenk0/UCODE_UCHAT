@@ -31,8 +31,9 @@ static int setup_non_blocking_mode(int sockfd) {
 static int setup_blocking_mode(int sockfd) {
     int flags = fcntl(sockfd, F_GETFL, 0);
     if (flags == -1) return -1;
-    if (fcntl(sockfd, F_SETFL, flags) == -1) return -1;
-    return 0;
+
+    flags &= ~O_NONBLOCK;
+    return fcntl(sockfd, F_SETFL, flags);
 }
 
 static int check_time_out(int sockfd) {
@@ -81,9 +82,14 @@ static int connection(int sockfd) {
                                       "while trying to connect to the server\n");
 
     // set up socket back to blocking mode
-    if (setup_blocking_mode(sockfd) < 0) {
+    if (setup_blocking_mode(sockfd) != 0) {
         logger_warn("an attempt to set up a blocking mode "
                     "for the connection to the server failed\n");
+    }
+    if (fcntl(sockfd, F_GETFL, 0) & O_NONBLOCK) {
+        logger_error("Socket is still in non-blocking mode\n");
+    } else {
+        logger_debug("Socket is now in blocking mode\n");
     }
 
     if (result > 0) return 0;
@@ -96,8 +102,7 @@ int mx_open_connection() {
     if (fd < 0) {
         logger_error("error occurred while creating socket\n");
         return -1;
-    }
-    else logger_info("socket was created successfully\n");
+    } else logger_info("socket was created successfully\n");
 
     int status = connection(fd);
     if (status < 0){

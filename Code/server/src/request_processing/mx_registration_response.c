@@ -5,6 +5,8 @@
 #include "request_processing.h"
 
 char *mx_registration_response(const int status, cJSON *response) {
+    printf("forming response\n cjson response = %p\n", response);
+    if (!response) response = cJSON_CreateObject();
     cJSON_AddStringToObject(response, "status", mx_itoa(status));
 
     if (status == 0) {
@@ -44,5 +46,6 @@ char *mx_registration_response(const int status, cJSON *response) {
 
     char *response_str = cJSON_Print(response);
     cJSON_Delete(response);
+    printf("status = %d; response_str = %s\n", status, response_str);
     return response_str;
 }

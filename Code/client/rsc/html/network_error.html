@@ -2,40 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-        }
-        img {
-            max-width: 300px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        .title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .subtitle {
-            font-size: 16px;
-            font-weight: 400;
-            color: #666;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Network Error</title>
+    <link rel="stylesheet" href="../css/network_error.css">
 </head>
 <body>
-<div class="title">TAZIK</div>
-<img src="../img/white_crying_cat.png" alt="Example Image">
-<div class="subtitle">Something went wrong. Please check your internet connection</div>
+    <div class="network-error">
+        <div class="container">
+            <img src="../img/network_error.png" height="240px">
+            <div class="network-error-text">
+                <h2>TAZIK not found</h2>
+                <p>
+                    Something went wrong. Please check your internet <br>
+                    connection
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

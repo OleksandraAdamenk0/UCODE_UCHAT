@@ -34,11 +34,11 @@ static int is_port(const char *str) {
     return 0;
 }
 
-arguments *mx_parse_args(int argc, char *argv[]) {
+t_arguments *mx_parse_args(int argc, const char *argv[]) {
     // program name, ip_address, port
     if (argc != 3) return NULL;
 
-    arguments *result = malloc(sizeof(arguments));
+    t_arguments *result = malloc(sizeof(t_arguments));
     result->port = -1;
     result->ip = NULL;
 

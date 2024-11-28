@@ -13,8 +13,12 @@
 
 #include "libmx.h"
 
-int mx_parse_args(int argc, const char * argv[]);
+typedef struct s_arguments {
+    int port;
+    char *ip;
+} t_arguments;
 
+t_arguments *mx_parse_args(int argc, const char *argv[]);
 int mx_create_daemon();
 
 #endif //INITIALIZATION_H

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="../css/registration.css">
+</head>
+<body>
+    <div class="login">
+        <div class="container">
+            <img src="../img/Logo.png" height="240px">
+
+            <div class="registration-form">
+                <h2>Registration</h2>
+                
+                <form id="form-container">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter password">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Email</label>
+                        <input type="text" id="contactEmail" name="contact" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Phone</label>
+                        <input type="text" id="contactPhone" name="contact" placeholder="Enter phone">
+                    </div>
+                </form>
+
+                <div class="login-question">
+                    <p>
+                        Already have an account? <br>
+                        <a href="../html/login.html">Login</a>
+                    </p>
+                </div>
+            </div>
+            <div class="button" id="signUpButton">Confirm</div>
+        </div>
+    </div>
+
+    <script>
+        const username = document.getElementById('username');
+        const password = document.getElementById('password');
+        const contactEmail = document.getElementById('contactEmail');
+        const contactPhone = document.getElementById('contactPhone');
+        const signUpButton = document.getElementById('signUpButton');
+
+        const validateForm = () => {
+            const isUsernameValid = username.value.trim() !== '';
+            const isPasswordValid = password.value.trim() !== '';
+            const isContactEmailValid = contactEmail.value.trim() !== '';
+            const isContactPhoneValid = contactPhone.value.trim() !== '';
+
+            if (isUsernameValid && isPasswordValid && (isContactEmailValid || isContactPhoneValid)) {
+                signUpButton.classList.add('active');
+            } else {
+                signUpButton.classList.remove('active');
+            }
+        };
+
+        username.addEventListener('input', validateForm);
+        password.addEventListener('input', validateForm);
+        contactEmail.addEventListener('input', validateForm);
+        contactPhone.addEventListener('input', validateForm);
+
+        signUpButton.addEventListener('click', () => {
+            if (signUpButton.classList.contains('active')) {
+                alert('Registration successful!');
+            }
+        });
+    </script>
+</body>
+</html>

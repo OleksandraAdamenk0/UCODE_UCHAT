@@ -20,18 +20,16 @@ $(SVRDIR)/(SERVER):
 $(CNTDIR)/$(CLIENT):
 	@$(MAKE) -C $(CNTDIR)
 
+clean:
+	@$(MAKE) clean -C $(CNTDIR)
+	@$(MAKE) clean -C $(SVRDIR)
+
 uninstall: clean
 	@$(MAKE) uninstall -C $(CNTDIR)
 	@$(MAKE) uninstall -C $(SVRDIR)
 	@if [ -f $(CLIENT) ]; then rm $(CLIENT); fi
 	@if [ -f $(SERVER) ]; then rm $(SERVER); fi
 
-clean:
-	@$(MAKE) clean -C $(CNTDIR)
-	@$(MAKE) clean -C $(SVRDIR)
-
 reinstall: uninstall all
 
 .PHONY: all clean uninstall reinstall
-
-
