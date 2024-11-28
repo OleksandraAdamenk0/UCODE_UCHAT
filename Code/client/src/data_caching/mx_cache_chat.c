@@ -3,13 +3,12 @@
 
 int mx_cache_chat(sqlite3 *db, t_get_chats chat) {
     sqlite3_stmt *stmt;
-    char *sql = "INSERT INTO chats VALUES (?, ?, ?, ?)";
+    char *sql = "INSERT OR IGNORE INTO chats VALUES (?, ?, ?, ?)";
 
     if (sqlite3_prepare_v2(db, sql, -1, &stmt, NULL) != SQLITE_OK) {
         char err_msg[256];
-        snprintf(err_msg, sizeof(err_msg), "Failed to prepare statement: %s\n", sqlite3_errmsg(db))
+        snprintf(err_msg, sizeof(err_msg), "Failed to prepare statement: %s\n", sqlite3_errmsg(db));
         logger_error(err_msg);
-        sqlite3_close(db);
         return -1;
     }
 

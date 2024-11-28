@@ -1,35 +1,30 @@
-#include "database_managment.h"
+#include "../../inc/database_managment.h"
 
-int mx_register_user(sqlite3 *db, const cJSON *request) {
+int mx_register_user(sqlite3 *db, t_get_user user) {
     sqlite3_stmt *stmt;
     char *sql = "INSERT INTO users VALUES (?, ?, ?, ?, ?)";
 
     if (sqlite3_prepare_v2(db, sql, -1, &stmt, NULL) != SQLITE_OK) {
-        fprintf(stderr, "Failed to prepare statement: %s\n", sqlite3_errmsg(db));
-        sqlite3_close(db);
+        char err_msg[256];
+        snprintf(err_msg, sizeof(err_msg), "Failed to prepare statement: %s\n", sqlite3_errmsg(db));
+        logger_error(err_msg);
         return -1;
     }
 
-    cJSON *username = cJSON_GetObjectItemCaseSensitive(request, "username");
-    cJSON *password = cJSON_GetObjectItemCaseSensitive(request, "password");
-    cJSON *phone = cJSON_GetObjectItemCaseSensitive(request, "phone");
-    cJSON *email = cJSON_GetObjectItemCaseSensitive(request, "email");
-    cJSON *photo = cJSON_GetObjectItemCaseSensitive(request, "photo");
+    sqlite3_bind_text(stmt, 1, user.username, -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 2, user.password, -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 3, user.email, -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 4, user.phone, -1, SQLITE_STATIC);
 
-    sqlite3_bind_text(stmt, 1, username->valuestring, -1, SQLITE_STATIC);
-    sqlite3_bind_text(stmt, 2, password->valuestring, -1, SQLITE_STATIC);
-    sqlite3_bind_text(stmt, 3, email->valuestring, -1, SQLITE_STATIC);
-    sqlite3_bind_text(stmt, 4, phone->valuestring, -1, SQLITE_STATIC);
-
-    if (photo != NULL) {
-        size_t photo_size = sizeof(photo->valuestring);
-        unsigned char *photo_data = base64_decode(photo->valuestring, photo_size, &photo_size); // Implement this function
+    if (user.photo != NULL) {
+        size_t photo_size = sizeof(user.photo);
+        unsigned char *photo_data = base64_decode(user.photo, photo_size, &photo_size); // Implement this function
 
         if (photo_data != NULL) {
             sqlite3_bind_blob(stmt, 5, photo_data, photo_size, SQLITE_STATIC);
             free(photo_data);
         } else {
-            fprintf(stderr, "Failed to decode photo data.\n");
+            logger_error("Failed to decode photo data\n");
             sqlite3_finalize(stmt);
             return -1;
         }
@@ -39,7 +34,9 @@ int mx_register_user(sqlite3 *db, const cJSON *request) {
     }
 
     if (sqlite3_step(stmt) != SQLITE_DONE) {
-        fprintf(stderr, "Execution failed: %s\n", sqlite3_errmsg(db));
+        char err_msg[256];
+        snprintf(err_msg, sizeof(err_msg), "Execution failed: %s\n", sqlite3_errmsg(db));
+        logger_error(err_msg);
         sqlite3_finalize(stmt);
         if (mx_strcmp("UNIQUE constraint failed: users.username", sqlite3_errmsg(db)) == 0) {
             return -2;
@@ -49,7 +46,7 @@ int mx_register_user(sqlite3 *db, const cJSON *request) {
             return -8;
         }
     } else {
-        printf("User  inserted successfully.\n");
+        logger_info("User  inserted successfully.\n");
     }
 
     sqlite3_finalize(stmt);

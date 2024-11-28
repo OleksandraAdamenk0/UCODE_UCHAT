@@ -1,7 +1,7 @@
 #include "data_caching.h"
 
 void mx_create_client_tables(sqlite3 *db) {
-    char *errMsg = 0;
+    char *sqlite_error = NULL;
     const char *sql_chats =
         "CREATE TABLE IF NOT EXISTS chats (" \
         "chat_id INTEGER PRIMARY KEY," \
@@ -31,31 +31,35 @@ void mx_create_client_tables(sqlite3 *db) {
         "photo BLOB," \
         "theme TEXT);";
 
-    if (sqlite3_exec(db, sql_chats, 0, 0, &errMsg) != SQLITE_OK) {
-        fprintf(stderr, "SQL error: %s\n", errMsg);
-        sqlite3_free(errMsg);
+    if (sqlite3_exec(db, sql_chats, 0, 0, &sqlite_error) != SQLITE_OK) {
+        char err_msg[256];
+        snprintf(err_msg, sizeof(err_msg), "SQL error: %s\n", sqlite_error);
+        logger_error(err_msg);
     } else {
-        printf("chats table created successfully.\n");
+        logger_info("chats table created successfully.\n");
     }
 
-    if (sqlite3_exec(db, sql_messages, 0, 0, &errMsg) != SQLITE_OK) {
-        fprintf(stderr, "SQL error: %s\n", errMsg);
-        sqlite3_free(errMsg);
+    if (sqlite3_exec(db, sql_messages, 0, 0, &sqlite_error) != SQLITE_OK) {
+        char err_msg[256];
+        snprintf(err_msg, sizeof(err_msg), "SQL error: %s\n", sqlite_error);
+        logger_error(err_msg);
     } else {
-        printf("messages table created successfully.\n");
+        logger_info("messages table created successfully.\n");
     }
 
-    if (sqlite3_exec(db, sql_contacts, 0, 0, &errMsg) != SQLITE_OK) {
-        fprintf(stderr, "SQL error: %s\n", errMsg);
-        sqlite3_free(errMsg);
+    if (sqlite3_exec(db, sql_contacts, 0, 0, &sqlite_error) != SQLITE_OK) {
+        char err_msg[256];
+        snprintf(err_msg, sizeof(err_msg), "SQL error: %s\n", sqlite_error);
+        logger_error(err_msg);
     } else {
-        printf("contacts table created successfully.\n");
+        logger_info("contacts table created successfully.\n");
     }
 
-    if (sqlite3_exec(db, sql_settings, 0, 0, &errMsg) != SQLITE_OK) {
-        fprintf(stderr, "SQL error: %s\n", errMsg);
-        sqlite3_free(errMsg);
+    if (sqlite3_exec(db, sql_settings, 0, 0, &sqlite_error) != SQLITE_OK) {
+        char err_msg[256];
+        snprintf(err_msg, sizeof(err_msg), "SQL error: %s\n", sqlite_error);
+        logger_error(err_msg);
     } else {
-        printf("settings table created successfully.\n");
+        logger_info("settings table created successfully.\n");
     }
 }

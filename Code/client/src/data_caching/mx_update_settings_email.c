@@ -1,29 +1,27 @@
-#include "data_caching.h"
+#include "../../inc/data_caching.h"
 
-t_get_settings *mx_get_cached_settings(sqlite3 *db) {
+int mx_update_settings_email(sqlite3 *db, char *new_email, char *old_email) {
     sqlite3_stmt *stmt;
-    char *sql = "SELECT * FROM settings";
+    char *sql = "UPDATE settings SET email = ? WHERE email = ?";
 
     if (sqlite3_prepare_v2(db, sql, -1, &stmt, NULL) != SQLITE_OK) {
         char err_msg[256];
         snprintf(err_msg, sizeof(err_msg), "Failed to prepare statement: %s\n", sqlite3_errmsg(db));
         logger_error(err_msg);
-        return NULL;
+        return -1;
     }
 
-    t_get_settings *settings = NULL;
-    settings->email = (char*)sqlite3_column_text(stmt, 0);
-    settings->phone = (char*)sqlite3_column_text(stmt, 1);
-    settings->photo = (char*)sqlite3_column_blob(stmt, 2);
-    settings->theme = (char*)sqlite3_column_text(stmt, 3);
+    sqlite3_bind_text(stmt, 1, new_email, -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 2, old_email, -1, SQLITE_STATIC);
 
     if (sqlite3_step(stmt) != SQLITE_DONE) {
         char err_msg[256];
         snprintf(err_msg, sizeof(err_msg), "Execution failed: %s\n", sqlite3_errmsg(db));
         logger_error(err_msg);
+        sqlite3_finalize(stmt);
+        return -1;
     }
 
     sqlite3_finalize(stmt);
-
-    return settings;
+    return 0;
 }

@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "libmx.h"
+#include "logger.h"
 #include "cdecode.h"
 #include "cencode.h"
 
@@ -44,5 +45,8 @@ int mx_cache_contact(sqlite3 *db, t_get_contacts contact);
 int mx_cache_chat(sqlite3 *db, t_get_chats chat);
 t_list *mx_get_cached_chats(sqlite3 *db);
 t_list *mx_get_cached_contacts(sqlite3 *db);
+t_list *mx_get_cached_messages(sqlite3 *db);
+t_get_settings *mx_get_cached_settings(sqlite3 *db);
+int mx_update_settings_email(sqlite3 *db, char *new_email, char *old_email);
 
 #endif //DATA_CACHING_H
