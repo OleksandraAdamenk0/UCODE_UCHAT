@@ -26,7 +26,6 @@ CJSON_INCDIR := $(CJSON_DIR)/inc
 CJSON := $(CJSON_DIR)/libcjson.a
 
 # SQLITE
-
 SQLITE_DIR := $(LIBS_DIR)/sqlite
 SQLITE_INCDIR := $(SQLITE_DIR)/inc
 SQLITE := $(SQLITE_DIR)/libsqlite.a

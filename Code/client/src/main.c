@@ -1,34 +1,58 @@
 #include "client.h"
+#include "initialization.h"
+#include "logger.h"
+#include "gui.h"
 
-int main(int argc, char *argv[]) {
+int port;
+char *ip;
+GtkApplication *app;
 
-    if (mx_init(argc, argv) < 0) {
+int main(int argc, const char *argv[]) {
+    // arguments
+    t_arguments *arguments = mx_parse_args(argc, argv);
+    if (!arguments) {
         mx_printerr("Usage: ./uchat <ip_address> <port>\n");
         return -1;
     }
-    int fd = mx_open_connection();
-    if (fd == -1) return -1;
-    if (fd == -2) {
-        logger_error("connection failed\n");
-        logger_warn("the app is running in offline mode\n");
-        // check if local db exists and not empty,
-        // to know that data for the offline mode can be loaded
-        // if so - load data and pop up window with warning about offline mode
-        // otherwise load static page showing error
-    } else {
-        logger_info("connection opened\n");
-        // ...
-        debug_send(fd, "test string\n");
-    }
 
-    if (mx_gui_network_error() < 0) {
-        mx_close_connection(fd);
-        logger_info("connection closed\n");
+    // variables
+    port = arguments->port;
+    ip = arguments->ip;
+    free(arguments);
+
+    // logger
+    if (logger_init(LOGGER_CONFIG) < 0) return -1;
+    logger_info("Logger initialized\n");
+
+    // gtk app
+    app = gtk_application_new("com.campus.uchat", G_APPLICATION_HANDLES_COMMAND_LINE);
+    if (app == NULL) {
+        logger_fatal("Failed to create GTK app\n");
         return -1;
     }
+    g_signal_connect(app, "activate", G_CALLBACK(mx_gui_init), NULL);
+    g_signal_connect(app, "command-line", G_CALLBACK(mx_gui_init), NULL);
 
-    mx_close_connection(fd);
-    logger_info("connection closed\n");
-    return 0;
+    mx_run_app(argc, argv);
 }
 
+
+// ...
+//        t_registration_request *reg = malloc(sizeof(t_registration_request));
+//        reg->username = "admin";
+//        reg->password = "a";
+//        reg->phone = NULL;
+//        reg->email = "admin@example.com";
+////        reg->email = NULL;
+//        reg->action = "register";
+//        t_request *req = malloc(sizeof(t_request));
+//        req->data = reg;
+//        req->action = REGISTRATION;
+//        char *registration_data = mx_create_request(req);
+//        free(req);
+//        free(reg);
+//
+//        printf("send result: %d\n",mx_send_data(fd, registration_data));
+//        char *response = NULL;
+//        mx_receive_data(fd, &response);
+//        printf("response: %s\n", response);
