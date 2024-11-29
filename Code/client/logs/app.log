@@ -826,3 +826,1089 @@
 [2024-11-28 17:53:20] [INFO] connection opened
 [2024-11-28 17:54:51] [INFO] connection closed
 [2024-11-28 17:54:51] [INFO] database closed
+[2024-11-28 21:19:28] [INFO] Logger initialized
+[2024-11-28 21:19:28] [DEBUG] GTK initialized
+[2024-11-28 21:19:28] [DEBUG] Window created
+[2024-11-28 21:19:28] [DEBUG] Destroy signal connected
+[2024-11-28 21:19:28] [INFO] Gui initialized
+[2024-11-28 21:19:28] [INFO] Client initialized
+[2024-11-28 21:19:28] [INFO] socket was created successfully
+[2024-11-28 21:19:28] [DEBUG] Socket is now in blocking mode
+[2024-11-28 21:19:28] [INFO] connection opened
+[2024-11-28 21:19:31] [INFO] connection closed
+[2024-11-28 21:19:31] [INFO] database closed
+[2024-11-28 21:28:34] [INFO] Logger initialized
+[2024-11-28 21:28:34] [DEBUG] GTK initialized
+[2024-11-28 21:28:34] [DEBUG] Window created
+[2024-11-28 21:28:34] [DEBUG] Destroy signal connected
+[2024-11-28 21:28:34] [INFO] Gui initialized
+[2024-11-28 21:28:34] [INFO] Client initialized
+[2024-11-28 21:28:34] [INFO] socket was created successfully
+[2024-11-28 21:28:34] [DEBUG] Socket is now in blocking mode
+[2024-11-28 21:28:34] [INFO] connection opened
+[2024-11-28 21:28:36] [INFO] connection closed
+[2024-11-28 21:28:36] [INFO] database closed
+[2024-11-28 21:30:47] [INFO] Logger initialized
+[2024-11-28 21:30:47] [DEBUG] GTK initialized
+[2024-11-28 21:30:47] [DEBUG] Window created
+[2024-11-28 21:30:47] [DEBUG] Destroy signal connected
+[2024-11-28 21:30:47] [INFO] Gui initialized
+[2024-11-28 21:30:47] [INFO] Client initialized
+[2024-11-28 21:30:47] [INFO] socket was created successfully
+[2024-11-28 21:30:47] [DEBUG] Socket is now in blocking mode
+[2024-11-28 21:30:47] [INFO] connection opened
+[2024-11-28 21:30:50] [INFO] connection closed
+[2024-11-28 21:30:50] [INFO] database closed
+[2024-11-28 21:38:40] [INFO] Logger initialized
+[2024-11-28 21:38:40] [DEBUG] GTK initialized
+[2024-11-28 21:38:40] [DEBUG] Window created
+[2024-11-28 21:38:40] [DEBUG] Destroy signal connected
+[2024-11-28 21:38:40] [INFO] Gui initialized
+[2024-11-28 21:38:40] [INFO] Client initialized
+[2024-11-28 21:38:40] [INFO] socket was created successfully
+[2024-11-28 21:38:40] [DEBUG] Socket is now in blocking mode
+[2024-11-28 21:38:40] [INFO] connection opened
+[2024-11-28 21:38:46] [INFO] connection closed
+[2024-11-28 21:38:46] [INFO] database closed
+[2024-11-28 21:45:11] [INFO] Logger initialized
+[2024-11-28 21:45:11] [DEBUG] GTK initialized
+[2024-11-28 21:45:11] [DEBUG] Window created
+[2024-11-28 21:45:11] [DEBUG] Destroy signal connected
+[2024-11-28 21:45:11] [INFO] Gui initialized
+[2024-11-28 21:45:11] [INFO] Client initialized
+[2024-11-28 21:45:11] [INFO] socket was created successfully
+[2024-11-28 21:45:11] [DEBUG] Socket is now in blocking mode
+[2024-11-28 21:45:11] [INFO] connection opened
+[2024-11-28 21:45:13] [INFO] connection closed
+[2024-11-28 21:45:13] [INFO] database closed
+[2024-11-28 21:52:11] [INFO] Logger initialized
+[2024-11-28 21:52:11] [DEBUG] GTK initialized
+[2024-11-28 21:52:11] [DEBUG] Window created
+[2024-11-28 21:52:11] [DEBUG] Destroy signal connected
+[2024-11-28 21:52:11] [INFO] Gui initialized
+[2024-11-28 21:52:11] [INFO] Client initialized
+[2024-11-28 21:52:11] [INFO] socket was created successfully
+[2024-11-28 21:52:11] [DEBUG] Socket is now in blocking mode
+[2024-11-28 21:52:11] [INFO] connection opened
+[2024-11-28 21:52:15] [INFO] connection closed
+[2024-11-28 21:52:15] [INFO] database closed
+[2024-11-28 21:53:27] [INFO] Logger initialized
+[2024-11-28 21:53:27] [DEBUG] GTK initialized
+[2024-11-28 21:53:27] [DEBUG] Window created
+[2024-11-28 21:53:27] [DEBUG] Destroy signal connected
+[2024-11-28 21:53:27] [INFO] Gui initialized
+[2024-11-28 21:53:27] [INFO] Client initialized
+[2024-11-28 21:53:27] [INFO] socket was created successfully
+[2024-11-28 21:53:27] [DEBUG] Socket is now in blocking mode
+[2024-11-28 21:53:27] [INFO] connection opened
+[2024-11-28 21:53:48] [INFO] connection closed
+[2024-11-28 21:53:48] [INFO] database closed
+[2024-11-28 21:56:36] [INFO] Logger initialized
+[2024-11-28 21:56:36] [DEBUG] GTK initialized
+[2024-11-28 21:56:36] [DEBUG] Window created
+[2024-11-28 21:56:36] [DEBUG] Destroy signal connected
+[2024-11-28 21:56:36] [INFO] Gui initialized
+[2024-11-28 21:56:36] [INFO] Client initialized
+[2024-11-28 21:56:36] [INFO] socket was created successfully
+[2024-11-28 21:56:36] [DEBUG] Socket is now in blocking mode
+[2024-11-28 21:56:36] [INFO] connection opened
+[2024-11-28 21:56:39] [INFO] connection closed
+[2024-11-28 21:56:39] [INFO] database closed
+[2024-11-28 21:58:01] [INFO] Logger initialized
+[2024-11-28 21:58:01] [DEBUG] GTK initialized
+[2024-11-28 21:58:01] [DEBUG] Window created
+[2024-11-28 21:58:01] [DEBUG] Destroy signal connected
+[2024-11-28 21:58:01] [INFO] Gui initialized
+[2024-11-28 21:58:01] [INFO] Client initialized
+[2024-11-28 21:58:01] [INFO] socket was created successfully
+[2024-11-28 21:58:01] [DEBUG] Socket is now in blocking mode
+[2024-11-28 21:58:01] [INFO] connection opened
+[2024-11-28 21:58:03] [INFO] connection closed
+[2024-11-28 21:58:03] [INFO] database closed
+[2024-11-28 21:59:55] [INFO] Logger initialized
+[2024-11-28 21:59:55] [DEBUG] GTK initialized
+[2024-11-28 21:59:55] [DEBUG] Window created
+[2024-11-28 21:59:55] [DEBUG] Destroy signal connected
+[2024-11-28 21:59:55] [INFO] Gui initialized
+[2024-11-28 21:59:55] [INFO] Client initialized
+[2024-11-28 21:59:55] [INFO] socket was created successfully
+[2024-11-28 21:59:55] [DEBUG] Socket is now in blocking mode
+[2024-11-28 21:59:55] [INFO] connection opened
+[2024-11-28 22:00:00] [INFO] Logger initialized
+[2024-11-28 22:00:00] [DEBUG] GTK initialized
+[2024-11-28 22:00:00] [DEBUG] Window created
+[2024-11-28 22:00:00] [DEBUG] Destroy signal connected
+[2024-11-28 22:00:00] [INFO] Gui initialized
+[2024-11-28 22:00:00] [INFO] Client initialized
+[2024-11-28 22:00:00] [INFO] socket was created successfully
+[2024-11-28 22:00:00] [DEBUG] Socket is now in blocking mode
+[2024-11-28 22:00:00] [INFO] connection opened
+[2024-11-28 22:00:17] [INFO] Logger initialized
+[2024-11-28 22:00:17] [DEBUG] GTK initialized
+[2024-11-28 22:00:17] [DEBUG] Window created
+[2024-11-28 22:00:17] [DEBUG] Destroy signal connected
+[2024-11-28 22:00:17] [INFO] Gui initialized
+[2024-11-28 22:00:17] [INFO] Client initialized
+[2024-11-28 22:00:17] [INFO] socket was created successfully
+[2024-11-28 22:00:17] [DEBUG] Socket is now in blocking mode
+[2024-11-28 22:00:17] [INFO] connection opened
+[2024-11-28 22:00:22] [INFO] connection closed
+[2024-11-28 22:00:22] [INFO] database closed
+[2024-11-28 22:00:28] [INFO] connection closed
+[2024-11-28 22:00:28] [INFO] database closed
+[2024-11-28 22:00:32] [INFO] connection closed
+[2024-11-28 22:00:32] [INFO] database closed
+[2024-11-28 22:06:55] [INFO] Logger initialized
+[2024-11-28 22:06:55] [DEBUG] GTK initialized
+[2024-11-28 22:06:55] [DEBUG] Window created
+[2024-11-28 22:06:55] [DEBUG] Destroy signal connected
+[2024-11-28 22:06:55] [INFO] Gui initialized
+[2024-11-28 22:06:55] [INFO] Client initialized
+[2024-11-28 22:06:55] [INFO] socket was created successfully
+[2024-11-28 22:06:55] [DEBUG] Socket is now in blocking mode
+[2024-11-28 22:06:55] [INFO] connection opened
+[2024-11-28 22:06:58] [INFO] connection closed
+[2024-11-28 22:06:58] [INFO] database closed
+[2024-11-28 22:25:20] [INFO] Logger initialized
+[2024-11-28 22:25:20] [DEBUG] GTK initialized
+[2024-11-28 22:25:20] [DEBUG] Window created
+[2024-11-28 22:25:20] [DEBUG] Destroy signal connected
+[2024-11-28 22:25:20] [INFO] Gui initialized
+[2024-11-28 22:25:20] [INFO] Client initialized
+[2024-11-28 22:25:20] [INFO] socket was created successfully
+[2024-11-28 22:25:20] [DEBUG] Socket is now in blocking mode
+[2024-11-28 22:25:20] [INFO] connection opened
+[2024-11-28 22:26:42] [INFO] connection closed
+[2024-11-28 22:26:42] [INFO] database closed
+[2024-11-28 22:26:55] [INFO] Logger initialized
+[2024-11-28 22:26:55] [DEBUG] GTK initialized
+[2024-11-28 22:26:55] [DEBUG] Window created
+[2024-11-28 22:26:55] [DEBUG] Destroy signal connected
+[2024-11-28 22:26:55] [INFO] Gui initialized
+[2024-11-28 22:26:55] [INFO] Client initialized
+[2024-11-28 22:26:55] [INFO] socket was created successfully
+[2024-11-28 22:26:55] [DEBUG] Socket is now in blocking mode
+[2024-11-28 22:26:55] [INFO] connection opened
+[2024-11-28 22:34:34] [INFO] connection closed
+[2024-11-28 22:34:34] [INFO] database closed
+[2024-11-28 22:35:23] [INFO] Logger initialized
+[2024-11-28 22:35:23] [DEBUG] GTK initialized
+[2024-11-28 22:35:23] [DEBUG] Window created
+[2024-11-28 22:35:23] [DEBUG] Destroy signal connected
+[2024-11-28 22:35:23] [INFO] Gui initialized
+[2024-11-28 22:35:23] [INFO] Client initialized
+[2024-11-28 22:35:23] [INFO] socket was created successfully
+[2024-11-28 22:35:23] [DEBUG] Socket is now in blocking mode
+[2024-11-28 22:35:23] [INFO] connection opened
+[2024-11-28 22:35:47] [INFO] connection closed
+[2024-11-28 22:35:47] [INFO] database closed
+[2024-11-28 22:36:36] [INFO] Logger initialized
+[2024-11-28 22:36:36] [DEBUG] GTK initialized
+[2024-11-28 22:36:36] [DEBUG] Window created
+[2024-11-28 22:36:36] [DEBUG] Destroy signal connected
+[2024-11-28 22:36:36] [INFO] Gui initialized
+[2024-11-28 22:36:36] [INFO] Client initialized
+[2024-11-28 22:36:36] [INFO] socket was created successfully
+[2024-11-28 22:36:36] [DEBUG] Socket is now in blocking mode
+[2024-11-28 22:36:36] [INFO] connection opened
+[2024-11-28 22:36:59] [INFO] connection closed
+[2024-11-28 22:36:59] [INFO] database closed
+[2024-11-28 22:38:08] [INFO] Logger initialized
+[2024-11-28 22:38:08] [DEBUG] GTK initialized
+[2024-11-28 22:38:08] [DEBUG] Window created
+[2024-11-28 22:38:08] [DEBUG] Destroy signal connected
+[2024-11-28 22:38:08] [INFO] Gui initialized
+[2024-11-28 22:38:08] [INFO] Client initialized
+[2024-11-28 22:38:08] [INFO] socket was created successfully
+[2024-11-28 22:38:08] [DEBUG] Socket is now in blocking mode
+[2024-11-28 22:38:08] [INFO] connection opened
+[2024-11-28 22:38:20] [INFO] connection closed
+[2024-11-28 22:38:20] [INFO] database closed
+[2024-11-28 22:40:07] [INFO] Logger initialized
+[2024-11-28 22:40:07] [DEBUG] GTK initialized
+[2024-11-28 22:40:07] [DEBUG] Window created
+[2024-11-28 22:40:07] [DEBUG] Destroy signal connected
+[2024-11-28 22:40:07] [INFO] Gui initialized
+[2024-11-28 22:40:07] [INFO] Client initialized
+[2024-11-28 22:40:07] [INFO] socket was created successfully
+[2024-11-28 22:40:07] [DEBUG] Socket is now in blocking mode
+[2024-11-28 22:40:07] [INFO] connection opened
+[2024-11-28 22:40:20] [INFO] connection closed
+[2024-11-28 22:40:20] [INFO] database closed
+[2024-11-28 22:41:19] [INFO] Logger initialized
+[2024-11-28 22:41:19] [DEBUG] GTK initialized
+[2024-11-28 22:41:19] [DEBUG] Window created
+[2024-11-28 22:41:19] [DEBUG] Destroy signal connected
+[2024-11-28 22:41:19] [INFO] Gui initialized
+[2024-11-28 22:41:19] [INFO] Client initialized
+[2024-11-28 22:41:19] [INFO] socket was created successfully
+[2024-11-28 22:41:19] [DEBUG] Socket is now in blocking mode
+[2024-11-28 22:41:19] [INFO] connection opened
+[2024-11-28 22:45:53] [INFO] Logger initialized
+[2024-11-28 22:45:53] [DEBUG] GTK initialized
+[2024-11-28 22:45:53] [DEBUG] Window created
+[2024-11-28 22:45:53] [DEBUG] Destroy signal connected
+[2024-11-28 22:45:53] [INFO] Gui initialized
+[2024-11-28 22:45:53] [INFO] Client initialized
+[2024-11-28 22:45:53] [INFO] socket was created successfully
+[2024-11-28 22:45:53] [DEBUG] Socket is now in blocking mode
+[2024-11-28 22:45:53] [INFO] connection opened
+[2024-11-28 22:56:13] [INFO] Logger initialized
+[2024-11-28 22:56:13] [DEBUG] GTK initialized
+[2024-11-28 22:56:13] [DEBUG] Window created
+[2024-11-28 22:56:13] [DEBUG] Destroy signal connected
+[2024-11-28 22:56:13] [INFO] Gui initialized
+[2024-11-28 22:56:13] [INFO] Client initialized
+[2024-11-28 22:56:13] [INFO] socket was created successfully
+[2024-11-28 22:56:13] [DEBUG] Socket is now in blocking mode
+[2024-11-28 22:56:13] [INFO] connection opened
+[2024-11-28 23:00:12] [INFO] Logger initialized
+[2024-11-28 23:00:12] [DEBUG] GTK initialized
+[2024-11-28 23:00:12] [DEBUG] Window created
+[2024-11-28 23:00:12] [DEBUG] Destroy signal connected
+[2024-11-28 23:00:12] [INFO] Gui initialized
+[2024-11-28 23:00:12] [INFO] Client initialized
+[2024-11-28 23:00:12] [INFO] socket was created successfully
+[2024-11-28 23:00:12] [DEBUG] Socket is now in blocking mode
+[2024-11-28 23:00:12] [INFO] connection opened
+[2024-11-28 23:00:48] [INFO] Logger initialized
+[2024-11-28 23:00:48] [DEBUG] GTK initialized
+[2024-11-28 23:00:48] [DEBUG] Window created
+[2024-11-28 23:00:48] [DEBUG] Destroy signal connected
+[2024-11-28 23:00:48] [INFO] Gui initialized
+[2024-11-28 23:00:48] [INFO] Client initialized
+[2024-11-28 23:00:48] [INFO] socket was created successfully
+[2024-11-28 23:00:48] [DEBUG] Socket is now in blocking mode
+[2024-11-28 23:00:48] [INFO] connection opened
+[2024-11-28 23:04:05] [INFO] Logger initialized
+[2024-11-28 23:04:05] [DEBUG] GTK initialized
+[2024-11-28 23:04:05] [DEBUG] Window created
+[2024-11-28 23:04:05] [DEBUG] Destroy signal connected
+[2024-11-28 23:04:05] [INFO] Gui initialized
+[2024-11-28 23:04:05] [INFO] Client initialized
+[2024-11-28 23:04:05] [INFO] socket was created successfully
+[2024-11-28 23:04:05] [DEBUG] Socket is now in blocking mode
+[2024-11-28 23:04:05] [INFO] connection opened
+[2024-11-28 23:05:08] [INFO] Logger initialized
+[2024-11-28 23:05:08] [DEBUG] GTK initialized
+[2024-11-28 23:05:08] [DEBUG] Window created
+[2024-11-28 23:05:08] [DEBUG] Destroy signal connected
+[2024-11-28 23:05:08] [INFO] Gui initialized
+[2024-11-28 23:05:08] [INFO] Client initialized
+[2024-11-28 23:05:08] [INFO] socket was created successfully
+[2024-11-28 23:05:08] [DEBUG] Socket is now in blocking mode
+[2024-11-28 23:05:08] [INFO] connection opened
+[2024-11-28 23:09:17] [INFO] Logger initialized
+[2024-11-28 23:09:17] [DEBUG] GTK initialized
+[2024-11-28 23:09:17] [DEBUG] Window created
+[2024-11-28 23:09:17] [DEBUG] Destroy signal connected
+[2024-11-28 23:09:17] [INFO] Gui initialized
+[2024-11-28 23:09:17] [INFO] Client initialized
+[2024-11-28 23:09:17] [INFO] socket was created successfully
+[2024-11-28 23:09:17] [DEBUG] Socket is now in blocking mode
+[2024-11-28 23:09:17] [INFO] connection opened
+[2024-11-28 23:11:34] [INFO] Logger initialized
+[2024-11-28 23:11:34] [DEBUG] GTK initialized
+[2024-11-28 23:11:34] [DEBUG] Window created
+[2024-11-28 23:11:34] [DEBUG] Destroy signal connected
+[2024-11-28 23:11:34] [INFO] Gui initialized
+[2024-11-28 23:11:34] [INFO] Client initialized
+[2024-11-28 23:11:34] [INFO] socket was created successfully
+[2024-11-28 23:11:34] [DEBUG] Socket is now in blocking mode
+[2024-11-28 23:11:34] [INFO] connection opened
+[2024-11-28 23:18:18] [INFO] Logger initialized
+[2024-11-28 23:18:18] [DEBUG] GTK initialized
+[2024-11-28 23:18:18] [DEBUG] Window created
+[2024-11-28 23:18:18] [DEBUG] Destroy signal connected
+[2024-11-28 23:18:18] [INFO] Gui initialized
+[2024-11-28 23:18:18] [INFO] Client initialized
+[2024-11-28 23:18:18] [INFO] socket was created successfully
+[2024-11-28 23:18:18] [DEBUG] Socket is now in blocking mode
+[2024-11-28 23:18:18] [INFO] connection opened
+[2024-11-29 03:26:46] [INFO] Logger initialized
+[2024-11-29 03:26:46] [DEBUG] GTK initialized
+[2024-11-29 03:26:46] [DEBUG] Window created
+[2024-11-29 03:26:46] [DEBUG] Destroy signal connected
+[2024-11-29 03:26:46] [INFO] Gui initialized
+[2024-11-29 03:26:46] [INFO] Client initialized
+[2024-11-29 03:26:46] [INFO] socket was created successfully
+[2024-11-29 03:26:46] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:26:46] [INFO] connection opened
+[2024-11-29 03:33:01] [INFO] Logger initialized
+[2024-11-29 03:33:01] [INFO] Client initialized
+[2024-11-29 03:33:01] [INFO] socket was created successfully
+[2024-11-29 03:33:01] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:33:01] [INFO] Connection opened. Running online mode
+[2024-11-29 03:33:01] [INFO] Gui initialized
+[2024-11-29 03:33:01] [INFO] App ended with status 1
+[2024-11-29 03:33:01] [INFO] database closed
+[2024-11-29 03:35:22] [INFO] Logger initialized
+[2024-11-29 03:35:22] [INFO] Client initialized
+[2024-11-29 03:35:22] [INFO] socket was created successfully
+[2024-11-29 03:35:22] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:35:22] [INFO] Connection opened. Running online mode
+[2024-11-29 03:35:22] [INFO] Gui initialized
+[2024-11-29 03:35:22] [INFO] App ended with status 1
+[2024-11-29 03:35:22] [INFO] database closed
+[2024-11-29 03:36:13] [INFO] Logger initialized
+[2024-11-29 03:36:13] [INFO] Client initialized
+[2024-11-29 03:36:13] [INFO] socket was created successfully
+[2024-11-29 03:36:13] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:36:13] [INFO] Connection opened. Running online mode
+[2024-11-29 03:36:13] [INFO] Gui initialized
+[2024-11-29 03:36:13] [INFO] App ended with status 1
+[2024-11-29 03:36:13] [INFO] database closed
+[2024-11-29 03:38:36] [INFO] Logger initialized
+[2024-11-29 03:38:36] [INFO] Client initialized
+[2024-11-29 03:38:36] [INFO] socket was created successfully
+[2024-11-29 03:38:36] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:38:36] [INFO] Connection opened. Running online mode
+[2024-11-29 03:38:36] [INFO] Gui initialized
+[2024-11-29 03:38:36] [DEBUG] Command line args handeled by GTK
+[2024-11-29 03:38:36] [INFO] App ended with status 0
+[2024-11-29 03:38:36] [INFO] database closed
+[2024-11-29 03:40:23] [INFO] Logger initialized
+[2024-11-29 03:40:23] [INFO] Client initialized
+[2024-11-29 03:40:23] [INFO] socket was created successfully
+[2024-11-29 03:40:23] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:40:23] [INFO] Connection opened. Running online mode
+[2024-11-29 03:40:23] [INFO] Gui initialized
+[2024-11-29 03:40:23] [DEBUG] Command line args handeled by GTK
+[2024-11-29 03:40:23] [DEBUG] GTK initialized
+[2024-11-29 03:40:23] [DEBUG] Window created
+[2024-11-29 03:40:23] [DEBUG] Destroy signal connected
+[2024-11-29 03:40:23] [INFO] Loading login page
+[2024-11-29 03:40:23] [DEBUG] Handlers set for login page.
+[2024-11-29 03:40:24] [INFO] Logger initialized
+[2024-11-29 03:40:24] [INFO] Client initialized
+[2024-11-29 03:40:24] [INFO] socket was created successfully
+[2024-11-29 03:40:24] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:40:24] [INFO] Connection opened. Running online mode
+[2024-11-29 03:40:24] [INFO] Gui initialized
+[2024-11-29 03:40:24] [DEBUG] Command line args handeled by GTK
+[2024-11-29 03:40:24] [DEBUG] GTK initialized
+[2024-11-29 03:40:24] [DEBUG] Window created
+[2024-11-29 03:40:24] [DEBUG] Destroy signal connected
+[2024-11-29 03:40:24] [INFO] Loading login page
+[2024-11-29 03:40:24] [DEBUG] Handlers set for login page.
+[2024-11-29 03:42:17] [INFO] Logger initialized
+[2024-11-29 03:42:17] [INFO] Client initialized
+[2024-11-29 03:42:17] [INFO] socket was created successfully
+[2024-11-29 03:42:17] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:42:17] [INFO] Connection opened. Running online mode
+[2024-11-29 03:42:17] [INFO] Gui initialized
+[2024-11-29 03:42:17] [DEBUG] Command line args handeled by GTK
+[2024-11-29 03:42:17] [INFO] App ended with status 0
+[2024-11-29 03:42:17] [INFO] database closed
+[2024-11-29 03:43:55] [INFO] Logger initialized
+[2024-11-29 03:43:55] [INFO] Client initialized
+[2024-11-29 03:43:55] [INFO] socket was created successfully
+[2024-11-29 03:43:55] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:43:55] [INFO] Connection opened. Running online mode
+[2024-11-29 03:43:55] [INFO] Gui initialized
+[2024-11-29 03:43:56] [INFO] Gui initialization
+[2024-11-29 03:43:56] [DEBUG] GTK initialized
+[2024-11-29 03:43:56] [DEBUG] Window created
+[2024-11-29 03:43:56] [DEBUG] Destroy signal connected
+[2024-11-29 03:43:56] [FATAL] Unknown page to load
+[2024-11-29 03:43:56] [INFO] App ended with status 0
+[2024-11-29 03:43:56] [INFO] database closed
+[2024-11-29 03:45:01] [INFO] Logger initialized
+[2024-11-29 03:45:01] [INFO] Client initialized
+[2024-11-29 03:45:01] [INFO] socket was created successfully
+[2024-11-29 03:45:01] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:45:01] [INFO] Connection opened. Running online mode
+[2024-11-29 03:45:01] [INFO] Gui initialized
+[2024-11-29 03:45:01] [INFO] Gui initialization
+[2024-11-29 03:45:01] [DEBUG] Àÿ²°²_[2024-11-29 03:45:01] [DEBUG] GTK initialized
+[2024-11-29 03:45:01] [DEBUG] Window created
+[2024-11-29 03:45:01] [DEBUG] Destroy signal connected
+[2024-11-29 03:45:01] [FATAL] Unknown page to load
+[2024-11-29 03:45:01] [INFO] App ended with status 0
+[2024-11-29 03:45:01] [INFO] database closed
+[2024-11-29 03:48:06] [INFO] Logger initialized
+[2024-11-29 03:48:06] [INFO] Client initialized
+[2024-11-29 03:48:06] [INFO] socket was created successfully
+[2024-11-29 03:48:06] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:48:06] [INFO] Connection opened. Running online mode
+[2024-11-29 03:48:06] [INFO] Gui initialized
+[2024-11-29 03:48:06] [INFO] Gui initialization
+[2024-11-29 03:48:06] [DEBUG] 0¿ó-	_[2024-11-29 03:48:06] [DEBUG] GTK initialized
+[2024-11-29 03:48:06] [DEBUG] Window created
+[2024-11-29 03:48:06] [DEBUG] Destroy signal connected
+[2024-11-29 03:48:06] [FATAL] Unknown page to load
+[2024-11-29 03:48:06] [INFO] App ended with status 0
+[2024-11-29 03:48:06] [INFO] database closed
+[2024-11-29 03:51:03] [INFO] Logger initialized
+[2024-11-29 03:51:03] [INFO] Client initialized
+[2024-11-29 03:51:03] [INFO] socket was created successfully
+[2024-11-29 03:51:03] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:51:03] [INFO] Connection opened. Running online mode
+[2024-11-29 03:51:03] [INFO] Gui initialized
+[2024-11-29 03:51:03] [INFO] Gui initialization
+[2024-11-29 03:51:03] [DEBUG] Ð@b×ÌZ[2024-11-29 03:51:03] [DEBUG] GTK initialized
+[2024-11-29 03:51:03] [DEBUG] Window created
+[2024-11-29 03:51:03] [DEBUG] Destroy signal connected
+[2024-11-29 03:51:03] [FATAL] Unknown page to load
+[2024-11-29 03:51:03] [INFO] App ended with status 0
+[2024-11-29 03:51:03] [INFO] database closed
+[2024-11-29 03:51:37] [INFO] Logger initialized
+[2024-11-29 03:51:37] [INFO] Client initialized
+[2024-11-29 03:51:37] [INFO] socket was created successfully
+[2024-11-29 03:51:37] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:51:37] [INFO] Connection opened. Running online mode
+[2024-11-29 03:51:37] [INFO] Gui initialized
+[2024-11-29 03:51:37] [INFO] Gui initialization
+[2024-11-29 03:51:37] [DEBUG] [2024-11-29 03:51:37] [DEBUG] GTK initialized
+[2024-11-29 03:51:38] [DEBUG] Window created
+[2024-11-29 03:51:38] [DEBUG] Destroy signal connected
+[2024-11-29 03:51:38] [FATAL] Unknown page to load
+[2024-11-29 03:51:38] [INFO] App ended with status 0
+[2024-11-29 03:51:38] [INFO] database closed
+[2024-11-29 03:52:51] [INFO] Logger initialized
+[2024-11-29 03:52:51] [INFO] Client initialized
+[2024-11-29 03:52:51] [INFO] socket was created successfully
+[2024-11-29 03:52:51] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:52:51] [INFO] Connection opened. Running online mode
+[2024-11-29 03:52:51] [INFO] Gui initialized
+[2024-11-29 03:52:51] [INFO] Gui initialization
+[2024-11-29 03:52:51] [DEBUG] ð™Ít)b[2024-11-29 03:52:51] [DEBUG] GTK initialized
+[2024-11-29 03:52:51] [DEBUG] Window created
+[2024-11-29 03:52:51] [DEBUG] Destroy signal connected
+[2024-11-29 03:52:51] [FATAL] Unknown page to load
+[2024-11-29 03:52:51] [INFO] App ended with status 0
+[2024-11-29 03:52:51] [INFO] database closed
+[2024-11-29 03:54:51] [INFO] Logger initialized
+[2024-11-29 03:54:51] [INFO] Client initialized
+[2024-11-29 03:54:51] [INFO] socket was created successfully
+[2024-11-29 03:54:51] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:54:51] [INFO] Connection opened. Running online mode
+[2024-11-29 03:54:51] [INFO] Gui initialized
+[2024-11-29 03:54:51] [INFO] Gui initialization
+[2024-11-29 03:54:51] [DEBUG] [2024-11-29 03:54:51] [DEBUG] GTK initialized
+[2024-11-29 03:54:51] [DEBUG] Window created
+[2024-11-29 03:54:51] [DEBUG] Destroy signal connected
+[2024-11-29 03:54:51] [FATAL] Unknown page to load
+[2024-11-29 03:54:51] [INFO] App ended with status 0
+[2024-11-29 03:54:51] [INFO] database closed
+[2024-11-29 03:56:34] [INFO] Logger initialized
+[2024-11-29 03:56:34] [INFO] Client initialized
+[2024-11-29 03:56:34] [INFO] socket was created successfully
+[2024-11-29 03:56:34] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:56:34] [INFO] Connection opened. Running online mode
+[2024-11-29 03:56:34] [INFO] Gui initialized
+[2024-11-29 03:56:34] [INFO] Gui initialization
+[2024-11-29 03:56:34] [DEBUG] [2024-11-29 03:56:34] [DEBUG] GTK initialized
+[2024-11-29 03:56:34] [DEBUG] Window created
+[2024-11-29 03:56:34] [DEBUG] Destroy signal connected
+[2024-11-29 03:56:34] [FATAL] Unknown page to load
+[2024-11-29 03:56:34] [INFO] App ended with status 0
+[2024-11-29 03:56:34] [INFO] database closed
+[2024-11-29 03:57:13] [INFO] Logger initialized
+[2024-11-29 03:57:13] [INFO] Client initialized
+[2024-11-29 03:57:13] [INFO] socket was created successfully
+[2024-11-29 03:57:13] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:57:13] [INFO] Connection opened. Running online mode
+[2024-11-29 03:57:13] [INFO] Gui initialized
+[2024-11-29 03:57:13] [INFO] Gui initialization
+[2024-11-29 03:57:13] [DEBUG] [2024-11-29 03:57:13] [DEBUG] GTK initialized
+[2024-11-29 03:57:13] [DEBUG] Window created
+[2024-11-29 03:57:13] [DEBUG] Destroy signal connected
+[2024-11-29 03:57:13] [INFO] Loading login page
+[2024-11-29 03:57:13] [DEBUG] Handlers set for login page.
+[2024-11-29 03:57:25] [INFO] App ended with status -753105440
+[2024-11-29 03:57:25] [INFO] database closed
+[2024-11-29 03:58:23] [INFO] Logger initialized
+[2024-11-29 03:58:23] [INFO] Client initialized
+[2024-11-29 03:58:23] [INFO] socket was created successfully
+[2024-11-29 03:58:23] [DEBUG] Socket is now in blocking mode
+[2024-11-29 03:58:23] [INFO] Connection opened. Running online mode
+[2024-11-29 03:58:23] [INFO] Gui initialized
+[2024-11-29 03:58:23] [INFO] Gui initialization
+[2024-11-29 03:58:23] [DEBUG] [2024-11-29 03:58:23] [DEBUG] GTK initialized
+[2024-11-29 03:58:23] [DEBUG] Window created
+[2024-11-29 03:58:23] [DEBUG] Destroy signal connected
+[2024-11-29 03:58:23] [INFO] Loading login page
+[2024-11-29 03:58:23] [DEBUG] Handlers set for login page.
+[2024-11-29 03:58:29] [INFO] Login form submitted
+[2024-11-29 03:58:29] [DEBUG] Received JSON for login
+[2024-11-29 03:58:29] [DEBUG] All handlers cleared.
+[2024-11-29 03:58:29] [INFO] Loading registration page
+[2024-11-29 03:58:29] [DEBUG] Handlers set for registration page.
+[2024-11-29 03:58:40] [INFO] Login form submitted
+[2024-11-29 03:58:40] [DEBUG] Received JSON for login
+[2024-11-29 03:58:40] [DEBUG] All handlers cleared.
+[2024-11-29 03:58:40] [INFO] Loading registration page
+[2024-11-29 03:58:40] [DEBUG] Handlers set for registration page.
+[2024-11-29 03:58:40] [INFO] Registration form submitted
+[2024-11-29 03:58:40] [DEBUG] Received JSON for registration
+[2024-11-29 03:58:40] [DEBUG] All handlers cleared.
+[2024-11-29 03:58:42] [INFO] App ended with status -110512672
+[2024-11-29 03:58:42] [INFO] database closed
+[2024-11-29 08:24:59] [INFO] Logger initialized
+[2024-11-29 08:24:59] [INFO] Client initialized
+[2024-11-29 08:24:59] [INFO] socket was created successfully
+[2024-11-29 08:24:59] [DEBUG] Socket is now in blocking mode
+[2024-11-29 08:24:59] [INFO] Connection opened. Running online mode
+[2024-11-29 08:24:59] [INFO] Gui initialized
+[2024-11-29 08:25:00] [INFO] Gui initialization
+[2024-11-29 08:25:00] [DEBUG] [2024-11-29 08:25:00] [DEBUG] GTK initialized
+[2024-11-29 08:25:00] [DEBUG] Window created
+[2024-11-29 08:25:00] [DEBUG] Destroy signal connected
+[2024-11-29 08:25:00] [INFO] Loading login page
+[2024-11-29 08:25:00] [DEBUG] Handlers set for login page.
+[2024-11-29 08:25:03] [INFO] Login form submitted
+[2024-11-29 08:25:03] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:25:03] [INFO] Login form submitted
+[2024-11-29 08:25:03] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:25:04] [INFO] Login form submitted
+[2024-11-29 08:25:04] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:25:05] [INFO] Login form submitted
+[2024-11-29 08:25:05] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:25:05] [INFO] Login form submitted
+[2024-11-29 08:25:05] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:25:06] [INFO] Login form submitted
+[2024-11-29 08:25:06] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:25:06] [INFO] Login form submitted
+[2024-11-29 08:25:06] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:25:08] [INFO] Login form submitted
+[2024-11-29 08:25:08] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:25:10] [INFO] Login form submitted
+[2024-11-29 08:25:10] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:25:16] [INFO] Login form submitted
+[2024-11-29 08:25:16] [DEBUG] Received JSON for login
+[2024-11-29 08:25:16] [DEBUG] All handlers cleared.
+[2024-11-29 08:25:16] [INFO] Loading registration page
+[2024-11-29 08:25:16] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:25:20] [INFO] Registration form submitted
+[2024-11-29 08:25:20] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:25:21] [INFO] App ended with status -1321351712
+[2024-11-29 08:25:21] [INFO] database closed
+[2024-11-29 08:35:12] [INFO] Logger initialized
+[2024-11-29 08:35:12] [INFO] Client initialized
+[2024-11-29 08:35:12] [INFO] socket was created successfully
+[2024-11-29 08:35:12] [DEBUG] Socket is now in blocking mode
+[2024-11-29 08:35:12] [INFO] Connection opened. Running online mode
+[2024-11-29 08:35:12] [INFO] Gui initialized
+[2024-11-29 08:35:12] [INFO] Gui initialization
+[2024-11-29 08:35:12] [DEBUG] [2024-11-29 08:35:12] [DEBUG] GTK initialized
+[2024-11-29 08:35:12] [DEBUG] Window created
+[2024-11-29 08:35:12] [DEBUG] Destroy signal connected
+[2024-11-29 08:35:12] [INFO] Loading login page
+[2024-11-29 08:35:12] [DEBUG] Handlers set for login page.
+[2024-11-29 08:35:14] [INFO] Register link pressed
+[2024-11-29 08:35:14] [DEBUG] All handlers cleared.
+[2024-11-29 08:35:14] [INFO] Loading registration page
+[2024-11-29 08:35:14] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:35:16] [INFO] Registration form submitted
+[2024-11-29 08:35:16] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:16] [INFO] Registration form submitted
+[2024-11-29 08:35:16] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:17] [INFO] Registration form submitted
+[2024-11-29 08:35:17] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:17] [INFO] Registration form submitted
+[2024-11-29 08:35:17] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:17] [INFO] Registration form submitted
+[2024-11-29 08:35:17] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:18] [INFO] Registration form submitted
+[2024-11-29 08:35:18] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:18] [INFO] Registration form submitted
+[2024-11-29 08:35:18] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:18] [INFO] Registration form submitted
+[2024-11-29 08:35:18] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:19] [INFO] Registration form submitted
+[2024-11-29 08:35:19] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:20] [INFO] Registration form submitted
+[2024-11-29 08:35:20] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:21] [INFO] Registration form submitted
+[2024-11-29 08:35:21] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:21] [INFO] Registration form submitted
+[2024-11-29 08:35:21] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:21] [INFO] Registration form submitted
+[2024-11-29 08:35:21] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:21] [INFO] Registration form submitted
+[2024-11-29 08:35:21] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:21] [INFO] Registration form submitted
+[2024-11-29 08:35:21] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:22] [INFO] Registration form submitted
+[2024-11-29 08:35:22] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:22] [INFO] Registration form submitted
+[2024-11-29 08:35:22] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:22] [INFO] Registration form submitted
+[2024-11-29 08:35:22] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:23] [INFO] Registration form submitted
+[2024-11-29 08:35:23] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:24] [INFO] Registration form submitted
+[2024-11-29 08:35:24] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:24] [INFO] Registration form submitted
+[2024-11-29 08:35:24] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:24] [INFO] Registration form submitted
+[2024-11-29 08:35:24] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:24] [INFO] Registration form submitted
+[2024-11-29 08:35:24] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:25] [INFO] Registration form submitted
+[2024-11-29 08:35:25] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:25] [INFO] Registration form submitted
+[2024-11-29 08:35:25] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:25] [INFO] Registration form submitted
+[2024-11-29 08:35:25] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:26] [INFO] Registration form submitted
+[2024-11-29 08:35:26] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:26] [INFO] Registration form submitted
+[2024-11-29 08:35:26] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:26] [INFO] Registration form submitted
+[2024-11-29 08:35:26] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:26] [INFO] Registration form submitted
+[2024-11-29 08:35:26] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:26] [INFO] Registration form submitted
+[2024-11-29 08:35:26] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:26] [INFO] Registration form submitted
+[2024-11-29 08:35:26] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:27] [INFO] Registration form submitted
+[2024-11-29 08:35:27] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:27] [INFO] Registration form submitted
+[2024-11-29 08:35:27] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:27] [INFO] Registration form submitted
+[2024-11-29 08:35:27] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:28] [INFO] App ended with status -1679788576
+[2024-11-29 08:35:28] [INFO] database closed
+[2024-11-29 08:35:44] [INFO] Logger initialized
+[2024-11-29 08:35:44] [INFO] Client initialized
+[2024-11-29 08:35:44] [INFO] socket was created successfully
+[2024-11-29 08:35:44] [DEBUG] Socket is now in blocking mode
+[2024-11-29 08:35:44] [INFO] Connection opened. Running online mode
+[2024-11-29 08:35:44] [INFO] Gui initialized
+[2024-11-29 08:35:44] [INFO] Gui initialization
+[2024-11-29 08:35:44] [DEBUG] [2024-11-29 08:35:44] [DEBUG] GTK initialized
+[2024-11-29 08:35:44] [DEBUG] Window created
+[2024-11-29 08:35:44] [DEBUG] Destroy signal connected
+[2024-11-29 08:35:44] [INFO] Loading login page
+[2024-11-29 08:35:44] [DEBUG] Handlers set for login page.
+[2024-11-29 08:35:48] [INFO] Register link pressed
+[2024-11-29 08:35:48] [DEBUG] All handlers cleared.
+[2024-11-29 08:35:48] [INFO] Loading registration page
+[2024-11-29 08:35:48] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:35:51] [INFO] Registration form submitted
+[2024-11-29 08:35:51] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:51] [INFO] Registration form submitted
+[2024-11-29 08:35:51] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:51] [INFO] Registration form submitted
+[2024-11-29 08:35:51] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:51] [INFO] Registration form submitted
+[2024-11-29 08:35:51] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:52] [INFO] Registration form submitted
+[2024-11-29 08:35:52] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:52] [INFO] Registration form submitted
+[2024-11-29 08:35:52] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:52] [INFO] Registration form submitted
+[2024-11-29 08:35:52] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:53] [INFO] Registration form submitted
+[2024-11-29 08:35:53] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:53] [INFO] Registration form submitted
+[2024-11-29 08:35:53] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:53] [INFO] Registration form submitted
+[2024-11-29 08:35:53] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:54] [INFO] Registration form submitted
+[2024-11-29 08:35:54] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:54] [INFO] Registration form submitted
+[2024-11-29 08:35:54] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:54] [INFO] Registration form submitted
+[2024-11-29 08:35:54] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:54] [INFO] Registration form submitted
+[2024-11-29 08:35:54] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:55] [INFO] Registration form submitted
+[2024-11-29 08:35:55] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:55] [INFO] Registration form submitted
+[2024-11-29 08:35:55] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:56] [INFO] Registration form submitted
+[2024-11-29 08:35:56] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:56] [INFO] Registration form submitted
+[2024-11-29 08:35:56] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:56] [INFO] Registration form submitted
+[2024-11-29 08:35:56] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:57] [INFO] Registration form submitted
+[2024-11-29 08:35:57] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:57] [INFO] Registration form submitted
+[2024-11-29 08:35:57] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:57] [INFO] Registration form submitted
+[2024-11-29 08:35:57] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:58] [INFO] Registration form submitted
+[2024-11-29 08:35:58] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:58] [INFO] Registration form submitted
+[2024-11-29 08:35:58] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:58] [INFO] Registration form submitted
+[2024-11-29 08:35:58] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:58] [INFO] Registration form submitted
+[2024-11-29 08:35:58] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:58] [INFO] Registration form submitted
+[2024-11-29 08:35:58] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:58] [INFO] Registration form submitted
+[2024-11-29 08:35:58] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:59] [INFO] Registration form submitted
+[2024-11-29 08:35:59] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:59] [INFO] Registration form submitted
+[2024-11-29 08:35:59] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:59] [INFO] Registration form submitted
+[2024-11-29 08:35:59] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:59] [INFO] Registration form submitted
+[2024-11-29 08:35:59] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:35:59] [INFO] Registration form submitted
+[2024-11-29 08:35:59] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:36:00] [INFO] Registration form submitted
+[2024-11-29 08:36:00] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:36:00] [INFO] Registration form submitted
+[2024-11-29 08:36:00] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:36:00] [INFO] Registration form submitted
+[2024-11-29 08:36:00] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:36:01] [INFO] Registration form submitted
+[2024-11-29 08:36:01] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:36:01] [INFO] Registration form submitted
+[2024-11-29 08:36:01] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:36:01] [INFO] Registration form submitted
+[2024-11-29 08:36:01] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:36:01] [INFO] Registration form submitted
+[2024-11-29 08:36:01] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:36:01] [INFO] Registration form submitted
+[2024-11-29 08:36:01] [DEBUG] Error: Expected a JSON string from JavaScript!
+[2024-11-29 08:36:03] [INFO] App ended with status -868489760
+[2024-11-29 08:36:03] [INFO] database closed
+[2024-11-29 08:39:35] [INFO] Logger initialized
+[2024-11-29 08:39:35] [INFO] Client initialized
+[2024-11-29 08:39:35] [INFO] socket was created successfully
+[2024-11-29 08:39:35] [DEBUG] Socket is now in blocking mode
+[2024-11-29 08:39:35] [INFO] Connection opened. Running online mode
+[2024-11-29 08:39:35] [INFO] Gui initialized
+[2024-11-29 08:39:35] [INFO] Gui initialization
+[2024-11-29 08:39:35] [DEBUG] [2024-11-29 08:39:35] [DEBUG] GTK initialized
+[2024-11-29 08:39:35] [DEBUG] Window created
+[2024-11-29 08:39:35] [DEBUG] Destroy signal connected
+[2024-11-29 08:39:35] [INFO] Loading login page
+[2024-11-29 08:39:35] [DEBUG] Handlers set for login page.
+[2024-11-29 08:39:39] [INFO] Register link pressed
+[2024-11-29 08:39:39] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:39] [INFO] Loading registration page
+[2024-11-29 08:39:39] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:41] [INFO] Login link pressed
+[2024-11-29 08:39:41] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:41] [INFO] Loading login page
+[2024-11-29 08:39:41] [DEBUG] Handlers set for login page.
+[2024-11-29 08:39:42] [INFO] Register link pressed
+[2024-11-29 08:39:42] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:42] [INFO] Loading registration page
+[2024-11-29 08:39:42] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:42] [INFO] Register link pressed
+[2024-11-29 08:39:42] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:42] [INFO] Loading registration page
+[2024-11-29 08:39:42] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:43] [INFO] Login link pressed
+[2024-11-29 08:39:43] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:43] [INFO] Loading login page
+[2024-11-29 08:39:43] [DEBUG] Handlers set for login page.
+[2024-11-29 08:39:43] [INFO] Login link pressed
+[2024-11-29 08:39:43] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:43] [INFO] Loading login page
+[2024-11-29 08:39:43] [DEBUG] Handlers set for login page.
+[2024-11-29 08:39:43] [INFO] Login link pressed
+[2024-11-29 08:39:43] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:43] [INFO] Loading login page
+[2024-11-29 08:39:43] [DEBUG] Handlers set for login page.
+[2024-11-29 08:39:45] [INFO] Register link pressed
+[2024-11-29 08:39:45] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:45] [INFO] Loading registration page
+[2024-11-29 08:39:45] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:45] [INFO] Register link pressed
+[2024-11-29 08:39:45] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:45] [INFO] Loading registration page
+[2024-11-29 08:39:45] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:45] [INFO] Register link pressed
+[2024-11-29 08:39:45] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:45] [INFO] Loading registration page
+[2024-11-29 08:39:45] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:45] [INFO] Register link pressed
+[2024-11-29 08:39:45] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:45] [INFO] Loading registration page
+[2024-11-29 08:39:45] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:45] [INFO] Register link pressed
+[2024-11-29 08:39:45] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:45] [INFO] Loading registration page
+[2024-11-29 08:39:45] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:46] [INFO] Login link pressed
+[2024-11-29 08:39:46] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:46] [INFO] Loading login page
+[2024-11-29 08:39:46] [DEBUG] Handlers set for login page.
+[2024-11-29 08:39:46] [INFO] Login link pressed
+[2024-11-29 08:39:46] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:46] [INFO] Loading login page
+[2024-11-29 08:39:46] [DEBUG] Handlers set for login page.
+[2024-11-29 08:39:46] [INFO] Login link pressed
+[2024-11-29 08:39:46] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:46] [INFO] Loading login page
+[2024-11-29 08:39:46] [DEBUG] Handlers set for login page.
+[2024-11-29 08:39:46] [INFO] Login link pressed
+[2024-11-29 08:39:46] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:46] [INFO] Loading login page
+[2024-11-29 08:39:46] [DEBUG] Handlers set for login page.
+[2024-11-29 08:39:46] [INFO] Login link pressed
+[2024-11-29 08:39:46] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:46] [INFO] Loading login page
+[2024-11-29 08:39:46] [DEBUG] Handlers set for login page.
+[2024-11-29 08:39:46] [INFO] Login link pressed
+[2024-11-29 08:39:46] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:46] [INFO] Loading login page
+[2024-11-29 08:39:46] [DEBUG] Handlers set for login page.
+[2024-11-29 08:39:46] [INFO] Login link pressed
+[2024-11-29 08:39:46] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:46] [INFO] Loading login page
+[2024-11-29 08:39:46] [DEBUG] Handlers set for login page.
+[2024-11-29 08:39:46] [INFO] Login link pressed
+[2024-11-29 08:39:46] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:46] [INFO] Loading login page
+[2024-11-29 08:39:46] [DEBUG] Handlers set for login page.
+[2024-11-29 08:39:47] [INFO] Register link pressed
+[2024-11-29 08:39:47] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:47] [INFO] Loading registration page
+[2024-11-29 08:39:47] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:47] [INFO] Register link pressed
+[2024-11-29 08:39:47] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:47] [INFO] Loading registration page
+[2024-11-29 08:39:47] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:47] [INFO] Register link pressed
+[2024-11-29 08:39:47] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:47] [INFO] Loading registration page
+[2024-11-29 08:39:47] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:47] [INFO] Register link pressed
+[2024-11-29 08:39:47] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:47] [INFO] Loading registration page
+[2024-11-29 08:39:47] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:47] [INFO] Register link pressed
+[2024-11-29 08:39:47] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:47] [INFO] Loading registration page
+[2024-11-29 08:39:47] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:47] [INFO] Register link pressed
+[2024-11-29 08:39:47] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:47] [INFO] Loading registration page
+[2024-11-29 08:39:47] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:47] [INFO] Register link pressed
+[2024-11-29 08:39:47] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:47] [INFO] Loading registration page
+[2024-11-29 08:39:47] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:47] [INFO] Register link pressed
+[2024-11-29 08:39:47] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:47] [INFO] Loading registration page
+[2024-11-29 08:39:47] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:47] [INFO] Register link pressed
+[2024-11-29 08:39:47] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:47] [INFO] Loading registration page
+[2024-11-29 08:39:47] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:47] [INFO] Register link pressed
+[2024-11-29 08:39:47] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:47] [INFO] Loading registration page
+[2024-11-29 08:39:47] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:47] [INFO] Register link pressed
+[2024-11-29 08:39:47] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:47] [INFO] Loading registration page
+[2024-11-29 08:39:47] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:47] [INFO] Register link pressed
+[2024-11-29 08:39:47] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:47] [INFO] Loading registration page
+[2024-11-29 08:39:47] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:39:47] [INFO] Register link pressed
+[2024-11-29 08:39:47] [DEBUG] All handlers cleared.
+[2024-11-29 08:39:47] [INFO] Loading registration page
+[2024-11-29 08:39:47] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:46:15] [INFO] App ended with status 408503776
+[2024-11-29 08:46:15] [INFO] database closed
+[2024-11-29 08:46:18] [INFO] Logger initialized
+[2024-11-29 08:46:18] [INFO] Client initialized
+[2024-11-29 08:46:18] [INFO] socket was created successfully
+[2024-11-29 08:46:18] [DEBUG] Socket is now in blocking mode
+[2024-11-29 08:46:18] [INFO] Connection opened. Running online mode
+[2024-11-29 08:46:18] [INFO] Gui initialized
+[2024-11-29 08:46:18] [INFO] Gui initialization
+[2024-11-29 08:46:18] [DEBUG] [2024-11-29 08:46:18] [DEBUG] GTK initialized
+[2024-11-29 08:46:18] [DEBUG] Window created
+[2024-11-29 08:46:18] [DEBUG] Destroy signal connected
+[2024-11-29 08:46:18] [INFO] Loading login page
+[2024-11-29 08:46:18] [DEBUG] Handlers set for login page.
+[2024-11-29 08:46:32] [INFO] App ended with status -1478199840
+[2024-11-29 08:46:32] [INFO] database closed
+[2024-11-29 08:46:51] [INFO] Logger initialized
+[2024-11-29 08:46:51] [INFO] Client initialized
+[2024-11-29 08:46:51] [INFO] socket was created successfully
+[2024-11-29 08:46:51] [DEBUG] Socket is now in blocking mode
+[2024-11-29 08:46:51] [INFO] Connection opened. Running online mode
+[2024-11-29 08:46:51] [INFO] Gui initialized
+[2024-11-29 08:46:51] [INFO] Gui initialization
+[2024-11-29 08:46:51] [DEBUG] [2024-11-29 08:46:51] [DEBUG] GTK initialized
+[2024-11-29 08:46:51] [DEBUG] Window created
+[2024-11-29 08:46:51] [DEBUG] Destroy signal connected
+[2024-11-29 08:46:51] [INFO] Loading login page
+[2024-11-29 08:46:51] [DEBUG] Handlers set for login page.
+[2024-11-29 08:46:56] [INFO] App ended with status 593724896
+[2024-11-29 08:46:56] [INFO] database closed
+[2024-11-29 08:47:21] [INFO] Logger initialized
+[2024-11-29 08:47:21] [INFO] Client initialized
+[2024-11-29 08:47:21] [INFO] socket was created successfully
+[2024-11-29 08:47:21] [DEBUG] Socket is now in blocking mode
+[2024-11-29 08:47:21] [INFO] Connection opened. Running online mode
+[2024-11-29 08:47:21] [INFO] Gui initialized
+[2024-11-29 08:47:21] [INFO] Gui initialization
+[2024-11-29 08:47:21] [DEBUG] [2024-11-29 08:47:21] [DEBUG] GTK initialized
+[2024-11-29 08:47:21] [DEBUG] Window created
+[2024-11-29 08:47:21] [DEBUG] Destroy signal connected
+[2024-11-29 08:47:21] [INFO] Loading login page
+[2024-11-29 08:47:21] [DEBUG] Handlers set for login page.
+[2024-11-29 08:47:23] [INFO] Register link pressed
+[2024-11-29 08:47:23] [DEBUG] All handlers cleared.
+[2024-11-29 08:47:23] [INFO] Loading registration page
+[2024-11-29 08:47:23] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:47:25] [INFO] Login link pressed
+[2024-11-29 08:47:25] [DEBUG] All handlers cleared.
+[2024-11-29 08:47:25] [INFO] Loading login page
+[2024-11-29 08:47:25] [DEBUG] Handlers set for login page.
+[2024-11-29 08:47:56] [INFO] Register link pressed
+[2024-11-29 08:47:56] [DEBUG] All handlers cleared.
+[2024-11-29 08:47:56] [INFO] Loading registration page
+[2024-11-29 08:47:56] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:47:56] [INFO] Register link pressed
+[2024-11-29 08:47:56] [DEBUG] All handlers cleared.
+[2024-11-29 08:47:56] [INFO] Loading registration page
+[2024-11-29 08:47:56] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:47:58] [INFO] App ended with status -1734941216
+[2024-11-29 08:47:58] [INFO] database closed
+[2024-11-29 08:48:32] [INFO] Logger initialized
+[2024-11-29 08:48:32] [INFO] Client initialized
+[2024-11-29 08:48:32] [INFO] socket was created successfully
+[2024-11-29 08:48:32] [DEBUG] Socket is now in blocking mode
+[2024-11-29 08:48:32] [INFO] Connection opened. Running online mode
+[2024-11-29 08:48:32] [INFO] Gui initialized
+[2024-11-29 08:48:32] [INFO] Gui initialization
+[2024-11-29 08:48:32] [DEBUG] [2024-11-29 08:48:32] [DEBUG] GTK initialized
+[2024-11-29 08:48:32] [DEBUG] Window created
+[2024-11-29 08:48:32] [DEBUG] Destroy signal connected
+[2024-11-29 08:48:32] [INFO] Loading login page
+[2024-11-29 08:48:32] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:34] [INFO] Register link pressed
+[2024-11-29 08:48:34] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:34] [INFO] Loading registration page
+[2024-11-29 08:48:34] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:48:36] [INFO] Login link pressed
+[2024-11-29 08:48:36] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:36] [INFO] Loading login page
+[2024-11-29 08:48:36] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:38] [INFO] Register link pressed
+[2024-11-29 08:48:38] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:38] [INFO] Loading registration page
+[2024-11-29 08:48:38] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:48:38] [INFO] Register link pressed
+[2024-11-29 08:48:38] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:38] [INFO] Loading registration page
+[2024-11-29 08:48:38] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:48:39] [INFO] Login link pressed
+[2024-11-29 08:48:39] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:39] [INFO] Loading login page
+[2024-11-29 08:48:39] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:39] [INFO] Login link pressed
+[2024-11-29 08:48:39] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:39] [INFO] Loading login page
+[2024-11-29 08:48:39] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:39] [INFO] Login link pressed
+[2024-11-29 08:48:39] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:39] [INFO] Loading login page
+[2024-11-29 08:48:39] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:40] [INFO] App ended with status -517798432
+[2024-11-29 08:48:40] [INFO] database closed
+[2024-11-29 08:48:49] [INFO] Logger initialized
+[2024-11-29 08:48:49] [INFO] Client initialized
+[2024-11-29 08:48:49] [INFO] socket was created successfully
+[2024-11-29 08:48:49] [DEBUG] Socket is now in blocking mode
+[2024-11-29 08:48:49] [INFO] Connection opened. Running online mode
+[2024-11-29 08:48:49] [INFO] Gui initialized
+[2024-11-29 08:48:49] [INFO] Gui initialization
+[2024-11-29 08:48:49] [DEBUG] [2024-11-29 08:48:49] [DEBUG] GTK initialized
+[2024-11-29 08:48:49] [DEBUG] Window created
+[2024-11-29 08:48:49] [DEBUG] Destroy signal connected
+[2024-11-29 08:48:49] [INFO] Loading login page
+[2024-11-29 08:48:49] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:50] [INFO] Register link pressed
+[2024-11-29 08:48:50] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:50] [INFO] Loading registration page
+[2024-11-29 08:48:50] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:48:52] [INFO] Login link pressed
+[2024-11-29 08:48:52] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:52] [INFO] Loading login page
+[2024-11-29 08:48:52] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:54] [INFO] Register link pressed
+[2024-11-29 08:48:54] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:54] [INFO] Loading registration page
+[2024-11-29 08:48:54] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:48:54] [INFO] Register link pressed
+[2024-11-29 08:48:54] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:54] [INFO] Loading registration page
+[2024-11-29 08:48:54] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:48:55] [INFO] Login link pressed
+[2024-11-29 08:48:55] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:55] [INFO] Loading login page
+[2024-11-29 08:48:55] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:55] [INFO] Login link pressed
+[2024-11-29 08:48:55] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:55] [INFO] Loading login page
+[2024-11-29 08:48:55] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:55] [INFO] Login link pressed
+[2024-11-29 08:48:55] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:55] [INFO] Loading login page
+[2024-11-29 08:48:55] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:56] [INFO] Register link pressed
+[2024-11-29 08:48:56] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:56] [INFO] Loading registration page
+[2024-11-29 08:48:56] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:48:56] [INFO] Register link pressed
+[2024-11-29 08:48:56] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:56] [INFO] Loading registration page
+[2024-11-29 08:48:56] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:48:56] [INFO] Register link pressed
+[2024-11-29 08:48:56] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:56] [INFO] Loading registration page
+[2024-11-29 08:48:56] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:48:56] [INFO] Register link pressed
+[2024-11-29 08:48:56] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:56] [INFO] Loading registration page
+[2024-11-29 08:48:56] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:48:56] [INFO] Register link pressed
+[2024-11-29 08:48:56] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:56] [INFO] Loading registration page
+[2024-11-29 08:48:56] [DEBUG] Handlers set for registration page.
+[2024-11-29 08:48:57] [INFO] Login link pressed
+[2024-11-29 08:48:57] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:57] [INFO] Loading login page
+[2024-11-29 08:48:57] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:57] [INFO] Login link pressed
+[2024-11-29 08:48:57] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:57] [INFO] Loading login page
+[2024-11-29 08:48:57] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:57] [INFO] Login link pressed
+[2024-11-29 08:48:57] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:57] [INFO] Loading login page
+[2024-11-29 08:48:57] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:57] [INFO] Login link pressed
+[2024-11-29 08:48:57] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:57] [INFO] Loading login page
+[2024-11-29 08:48:57] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:57] [INFO] Login link pressed
+[2024-11-29 08:48:57] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:57] [INFO] Loading login page
+[2024-11-29 08:48:57] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:57] [INFO] Login link pressed
+[2024-11-29 08:48:57] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:57] [INFO] Loading login page
+[2024-11-29 08:48:57] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:57] [INFO] Login link pressed
+[2024-11-29 08:48:57] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:57] [INFO] Loading login page
+[2024-11-29 08:48:57] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:57] [INFO] Login link pressed
+[2024-11-29 08:48:57] [DEBUG] All handlers cleared.
+[2024-11-29 08:48:57] [INFO] Loading login page
+[2024-11-29 08:48:57] [DEBUG] Handlers set for login page.
+[2024-11-29 08:48:59] [INFO] App ended with status 1603925472
+[2024-11-29 08:48:59] [INFO] database closed

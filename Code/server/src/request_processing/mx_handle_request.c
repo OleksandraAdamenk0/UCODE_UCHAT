@@ -5,101 +5,60 @@
 #include "request_processing.h"
 #include "server.h"
 
-typedef int (*RequestFunction)(const cJSON *);
-typedef cJSON *(*LogicFunction)(const cJSON *, int *status);
-typedef char *(*ResponseFunction)(int, cJSON *);
-
-static char *handler(cJSON *request,
-                         RequestFunction request_func,
-                         LogicFunction logic_func,
-                         ResponseFunction response_func,
-                         char *action) {
-    int status = request_func(request);
-    printf("request parsing status: %d\n", status);
-    char *response = NULL;
-
-    if (status == 0) {
-        printf("going to logic function\n");
-        cJSON *result = logic_func(request, &status);
-        printf("result of logic function: %p\n", result);
-
-        if (!result) {
-            char *msg = "Internal server error during processing the \"";
-            char *msg1 = mx_strjoin(msg, action);
-            msg = mx_strjoin(msg1, "\" request.\n");
-            logger_error(msg);
-            free(msg);
-            free(msg1);
-            status = -9;
-        }
-        response = response_func(status, result);
-    } else {
-        response = response_func(status, NULL);
-    }
-
-    if (response == NULL) {
-        char *msg = "Error during forming a response to the ";
-        char *msg1 = mx_strjoin(msg, action);
-        msg = mx_strjoin(msg1, " request.\n");
-        logger_error(msg);
-        free(msg);
-        free(msg1);
-        return NULL;
-    }
-    printf("response in handler: %s\n", response);
-    return response;
+static void log_logic_error(char *action) {
+    char *msg = "Internal server error during processing the \"";
+    char *msg1 = mx_strjoin(msg, action);
+    msg = mx_strjoin(msg1, "\" request.\n");
+    logger_error(msg);
+    free(msg);
+    free(msg1);
 }
 
+static void log_response_error(char *action) {
+    char *msg = "Error during forming a response to the ";
+    char *msg1 = mx_strjoin(msg, action);
+    msg = mx_strjoin(msg1, " request.\n");
+    logger_error(msg);
+    free(msg);
+    free(msg1);
+}
 
-/**
- * @brief Handles incoming JSON-encoded requests, determines the action type,
- *        and delegates to the appropriate request handler. Constructs a JSON
- *        response based on the result and logs any errors encountered.
- *
- * @param request_str A string representing the JSON-encoded request from the client.
- * @return char* A JSON-encoded response string.
- *         - Returns a valid JSON response string if the request is handled successfully.
- *         - Returns NULL if an error occurs during parsing, validation, or response formation.
- *
- * @details
- * - The function performs the following steps:
- *   1. Parses the `request_str` using `cJSON_Parse`.
- *      - Logs an error and returns NULL if the JSON format is invalid.
- *   2. Validates the `action` field.
- *      - Logs an error and returns NULL if the `action` field is missing or invalid.
- *   3. Determines the action type:
- *      - If the `action` is "register", it calls `mx_registration_request` to handle the
- *        registration and `mx_registration_response` to form the response.
- *        - Logs an error and returns NULL if response formation fails.
- *      - Future handlers (e.g., "login") will be added as needed.
- *   4. Cleans up by deleting the parsed `cJSON` object to free memory.
- *
- * @note Logging:
- * - Logs "Invalid JSON format" if the JSON cannot be parsed.
- * - Logs "Missing or invalid action field" if the `action` field is incorrect.
- * - Logs "Error during forming a response" if response creation fails.
- *
- * @example
- * char *response = handle_request("{\"action\": \"register\", \"username\": \"user\", \"password\": \"Pass123!\"}"); \n
- * if (response) { \n
- *          // Use the response, then free it when done \n
- *          free(response); \n
- * }
- */
+typedef int (*t_request_func)(const cJSON *);
+typedef cJSON *(*t_logic_func)(const cJSON *, int *status);
+typedef char *(*t_response_func)(int, cJSON *);
+
+static char *handler(cJSON *request, t_request_func request_func,
+                     t_logic_func logic_func, t_response_func response_func,
+                     char *action) {
+    logger_debug("Handler specified\n");
+
+    int status = request_func(request);
+    char *str_response = NULL;
+    cJSON *response = NULL;
+
+    if (status == 0) {
+        if (!(response = logic_func(request, &status))) {
+            log_logic_error(action);
+            status = -9;
+        }
+    }
+    str_response = response_func(status, response);
+    if (!str_response) log_response_error(action);
+    return str_response;
+}
+
 char *mx_handle_request(const char *request_str) {
-    logger_debug("handle request\n");
-    logger_debug((char *)request_str);
-
+    logger_debug("Handling request\n");
     cJSON *request = cJSON_Parse(request_str);
     if (!request) {
         logger_error("Invalid JSON format.\n");
-//        return NULL;
-        return "a string for debugging purpose";
+        return NULL;
     }
 
     cJSON *action = cJSON_GetObjectItemCaseSensitive(request, "action");
     if (!cJSON_IsString(action) || action->valuestring == NULL) {
         logger_error("Missing or invalid action field.\n");
+        cJSON_Delete(request);
         return NULL;
     }
 
@@ -135,9 +94,10 @@ char *mx_handle_request(const char *request_str) {
                            mx_get_msgs_logic,
                            mx_get_msgs_response,
                            "get_messages");
+    } else {
+        logger_error("Unknown action requested.\n");
+        response = mx_unknown_action_response(NULL);
     }
-    // ...
-    printf("response in handle_request: %s\n", response);
     cJSON_Delete(request);
     return response;
 }

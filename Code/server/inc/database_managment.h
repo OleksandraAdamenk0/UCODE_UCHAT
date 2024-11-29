@@ -19,6 +19,6 @@ int mx_create_dir();
 //int mx_init_tables();
 
 int mx_register_user(t_registration *data);
-int mx_get_user_id(t_login *data, char **user_id);
+int mx_get_user_id_by_username(const char *username);
 
 #endif

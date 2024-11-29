@@ -113,6 +113,17 @@ body {
     color: #C50E5F;
     text-decoration: none;
     margin-right: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.register-question a:hover {
+    color: #950e4a;
+    text-shadow:
+            0 0 5px #ff4ad4,
+            0 0 8px #ff44d9,
+            0 0 12px #ff4be2,
+            0 0 20px #ff4fe1;
 }
 
 .button {

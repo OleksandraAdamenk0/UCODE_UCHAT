@@ -31,7 +31,7 @@
                 <div class="register-question">
                     <p>
                         Don't have an account? <br>
-                        <a href="../html/registration.html">Register</a>
+                        <a id="registerBtn">Register</a>
                     </p>
                 </div>
             </div>
@@ -43,6 +43,7 @@
         const username = document.getElementById('username');
         const password = document.getElementById('password');
         const signInButton = document.getElementById('signInButton');
+        const registerBtn = document.getElementById('registerBtn');
 
         const validateForm = () => {
             const isUsernameValid = username.value.trim() !== '';
@@ -55,13 +56,39 @@
             }
         };
 
+        const goToRegister = () => {
+            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.goToRegister) {
+                window.webkit.messageHandlers.goToRegister.postMessage(null);
+            } else {
+                alert('Handler "submitForm" is not registered in WebKit!');
+            }
+        };
+
+        const sendDataToC = () => {
+            const data = {
+                username: username.value.trim(),
+                password: password.value.trim(),
+            };
+
+            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.submitForm) {
+                const jsonData = JSON.stringify(data);
+                window.webkit.messageHandlers.submitForm.postMessage(jsonData);
+            } else {
+                alert('Handler "submitForm" is not registered in WebKit!');
+            }
+        };
+
         username.addEventListener('input', validateForm);
         password.addEventListener('input', validateForm);
 
         signInButton.addEventListener('click', () => {
             if (signInButton.classList.contains('active')) {
-                alert('Login successful!');
+                sendDataToC();
             }
+        });
+
+        registerBtn.addEventListener('click', () => {
+            goToRegister();
         });
     </script>
 </body>

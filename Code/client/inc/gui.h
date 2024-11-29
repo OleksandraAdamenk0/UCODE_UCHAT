@@ -6,6 +6,7 @@
 #define UCODE_UCHAT_MAIN_GRAPHICAL_INTERFACE_H
 
 #include <gtk/gtk.h>
+#include <glib.h>
 #include <webkit2/webkit2.h>
 
 #define WIDTH 1440
@@ -19,10 +20,18 @@
 #define LOGIN_HTML HTML "/login.html"
 #define NETWORK_ERROR_HTML HTML "/network_error.html"
 
+extern GtkApplication *app;
 extern GtkWidget *window;
+extern WebKitWebView *webview;
+extern WebKitUserContentManager *manager;
 
 // UTILS
-int mx_create_window();
 char *mx_get_cur_dir();
+
+void mx_gui_init(GtkApplication *app, gpointer user_data);
+
+// PAGES
+int mx_load_registration_page();
+int mx_load_login_page();
 
 #endif //UCODE_UCHAT_MAIN_GRAPHICAL_INTERFACE_H

@@ -10,6 +10,8 @@
 #include "cJSON.h"
 #include "sqlite3.h"
 
+char *mx_unknown_action_response(cJSON *response);
+
 // UTILS
 int mx_base64_decode(const char *encoded_str, char **decoded_str);
 int mx_base64_encode(const char *input_str, char **encoded_str);

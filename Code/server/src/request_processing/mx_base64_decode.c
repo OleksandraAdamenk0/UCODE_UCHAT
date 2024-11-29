@@ -20,6 +20,5 @@ int mx_base64_decode(const char *encoded_str, char **decoded_str) {
         return -2;
     }
 
-    (*decoded_str)[actual_decoded_size] = '\0';
-    return 0;
+    return actual_decoded_size;
 }

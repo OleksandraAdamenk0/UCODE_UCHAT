@@ -10,41 +10,29 @@
 #include "logger.h"
 
 
-static t_registration *create_registration(const cJSON *request) {
+static t_registration *json_to_struct(const cJSON *request) {
     t_registration *result = malloc(sizeof(t_registration));
 
-    result->username = cJSON_GetObjectItemCaseSensitive(request, "username")->valuestring;
-    result->password = cJSON_GetObjectItemCaseSensitive(request, "password")->valuestring;
+    result->username = mx_strdup(cJSON_GetObjectItemCaseSensitive(request,"username")->valuestring);
+    result->password = mx_strdup(cJSON_GetObjectItemCaseSensitive(request, "password")->valuestring);
 
     cJSON *email = cJSON_GetObjectItemCaseSensitive(request, "email");
-    if (email && email->valuestring) result->email = email->valuestring;
+    if (email && email->valuestring) result->email = mx_strdup(email->valuestring);
     else result->email = NULL;
 
     cJSON *phone = cJSON_GetObjectItemCaseSensitive(request, "phone");
-    if (phone && phone->valuestring) result->phone = phone->valuestring;
+    if (phone && phone->valuestring) result->phone = mx_strdup(phone->valuestring);
     else result->phone = NULL;
 
     // photo
+    result->photo = NULL;
     cJSON *photo = cJSON_GetObjectItemCaseSensitive(request, "photo");
     if (photo && photo->valuestring) {
         char *decoded = NULL;
-        mx_base64_decode(photo->valuestring, &decoded);
+        result->photo_size = mx_base64_decode(photo->valuestring, &decoded);
         if (decoded) result->photo = decoded;
-        else result->photo = NULL;
-    } else {
-        result->photo = NULL;
     }
     return result;
-}
-
-static int get_access_token(char *username, char *password, char **access_token) {
-    t_login *data = malloc(sizeof(t_login));
-    data->password = password;
-    data->username = username;
-    int status = mx_get_user_id(data, access_token);
-    free(data);
-    if (status < 0) return -9;
-    return 0;
 }
 
 static cJSON *add_access_token(cJSON **object, char *access_token) {
@@ -58,29 +46,24 @@ static cJSON *add_access_token(cJSON **object, char *access_token) {
 cJSON *mx_registration_logic(const cJSON *request, int *status) {
     logger_debug("mx_registration_logic started to work\n");
     cJSON *response = cJSON_CreateObject();
-    t_registration *reg = create_registration(request);
+    t_registration *data = json_to_struct(request);
     logger_debug("registration of the user started\n");
 
-    status = mx_register_user(reg);
-
-    char *msg = "registration of the user status: ";
-    char *msg2 = mx_strjoin(msg, mx_itoa(status));
-    msg = mx_strjoin(msg2, "\n");
-    logger_debug(msg);
-    free(msg);
-    free(msg2);
-
-    if (status == 0) {
-        char *access_token;
-        status = get_access_token(reg->username, reg->password, &access_token);
-        char *msg = "getting token status: ";
-        char *msg2 = mx_strjoin(msg, mx_itoa(status));
-        msg = mx_strjoin(msg2, "\n");
-        logger_debug(msg);
-        free(msg);
-        free(msg2);
-        if (status == 0) add_access_token(&response, access_token);
+    if ((*status = mx_register_user(data)) == 0) {
+        logger_debug("user was registered successfully\n");
+        int id = mx_get_user_id_by_username(data->username);
+        if (id < 1) *status = -9;
+        else {
+            char *access_token = mx_itoa(id);
+            logger_debug("successfully got access token\n");
+            add_access_token(&response, access_token);
+        }
     }
-    free(reg);
+    free(data->username);
+    free(data->password);
+    if (data->email) free(data->email);
+    if (data->phone) free(data->phone);
+    if (data->photo) free(data->photo);
+    free(data);
     return response;
 }

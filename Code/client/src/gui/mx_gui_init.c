@@ -2,24 +2,88 @@
 // Created by oleksandra on 21/11/24.
 //
 
-#include "client.h"
 #include "gui.h"
+#include "logger.h"
 
-int mx_gui_init(int argc, char *argv[]) {
-    if (gtk_init_check(&argc, &argv) == FALSE) {
+GtkWidget *window;
+WebKitWebView *webview;
+WebKitUserContentManager *manager;
+
+static int init_webview() {
+    webview = WEBKIT_WEB_VIEW(webkit_web_view_new());
+    if (webview == NULL) return -1;
+
+    WebKitSettings *settings = webkit_web_view_get_settings(webview);
+    if (settings == NULL) return -2;
+    webkit_settings_set_enable_javascript(settings, TRUE);
+
+    manager = webkit_web_view_get_user_content_manager(webview);
+    if (manager == NULL) return -1;
+
+    return 0;
+}
+
+static int init_gtk() {
+    if (gtk_init_check(NULL, NULL) == FALSE) {
         logger_fatal("Failed to initialize GUI.\n");
         logger_debug("Failed to initialize GTK.\n");
         return -1;
     } else logger_debug("GTK initialized\n");
-    if (mx_create_window() < 0) {
-        logger_fatal("Failed to initialize GUI.\n");
+    return 0;
+}
+
+static int init_window() {
+    window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+    if (!window) {
         logger_debug("Failed to create the window.\n");
         return -1;
-    } else logger_debug("Window created\n");
+    }
+    logger_debug("Window created\n");
+    gtk_window_set_title(GTK_WINDOW(window), APP_NAME);
+    gtk_window_set_default_size(GTK_WINDOW(window), WIDTH, HEIGHT);
+
     if (!g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL)) {
-        logger_fatal("Failed to initialize GUI.\n");
         logger_debug("Failed to connect the destroy signal.\n");
         return -1;
-    } else logger_debug("Destroy signal connected\n");
+    }
+    logger_debug("Destroy signal connected\n");
     return 0;
+}
+
+void mx_gui_init(GtkApplication *app, gpointer user_data) {
+    logger_info("Gui initialization\n");
+    char *screen = (char *)user_data;
+    logger_debug(window);
+    printf("screen: %s\n", screen);
+    screen = "login";
+
+    if (init_gtk() < 0) {
+        logger_fatal("Failed to initialize GUI.\n");
+        return;
+    }
+    if (init_webview() < 0) {
+        logger_fatal("Failed to initialize GUI.\n");
+        return;
+    }
+    if (init_window() < 0) {
+        logger_fatal("Failed to initialize GUI.\n");
+        return;
+    }
+    if (mx_strcmp(screen, "login") == 0) {
+        if (mx_load_login_page() < 0) {
+            logger_fatal("Failed to load login page\n");
+            return;
+        }
+    } else if (mx_strcmp(screen, "network_error") == 0) {
+        if (mx_load_error_page() < 0) {
+            logger_fatal("Failed to load error page\n");
+            return;
+        }
+    } else {
+        logger_fatal("Unknown page to load\n");
+        return;
+    }
+    gtk_container_add(GTK_CONTAINER(window), GTK_WIDGET(webview));
+    gtk_widget_show_all(window);
+    gtk_main();
 }
