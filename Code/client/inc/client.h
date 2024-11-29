@@ -12,8 +12,6 @@ extern int port;
 extern char *ip;
 extern bool online;
 
-extern bool online_mode;
-
 typedef enum {
     REGISTRATION,
     LOGIN,

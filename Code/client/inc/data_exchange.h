@@ -5,17 +5,13 @@
 #ifndef UCODE_UCHAT_MAIN_DATA_EXCHANGE_H
 #define UCODE_UCHAT_MAIN_DATA_EXCHANGE_H
 
-
-
-
 #include "cJSON.h"
 #include "libmx.h"
 #include "requests.h"
 #include "responses.h"
 
 // UTILS
-cJSON *mx_get_json_item(cJSON *object, char *string,
-                        int *status, int error);
+cJSON *mx_get_json_item(cJSON *object, char *string, int *status, int error);
 int mx_get_tokens(cJSON *response, cJSON **access,
                   cJSON **refresh, int *status);
 
@@ -29,7 +25,7 @@ char *mx_registration_request(t_registration_request *data);
 char *mx_login_request(t_login_request *data);
 
 // RESPONSES
-t_registration_response *mx_registration_response(char *str,int *status_ptr,
+t_registration_response *mx_registration_response(char *str, int *status_ptr,
                                                   char **msg_ptr);
 t_login_response *mx_login_response(char *str, int *status_ptr, char **msg_ptr);
 
