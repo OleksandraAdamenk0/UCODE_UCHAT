@@ -5071,3 +5071,188 @@
 [2024-11-29 08:48:41] [INFO] Socket: 6. Msg: Client disconnected
 [2024-11-29 08:48:49] [INFO] New incoming connection accepted.
 [2024-11-29 08:48:59] [INFO] Socket: 6. Msg: Client disconnected
+[2024-11-29 09:17:12] [DEBUG] kill signal received
+[2024-11-29 09:17:12] [INFO] Server stopped receiving connections
+[2024-11-29 09:17:15] [INFO] Logger initialized
+[2024-11-29 09:17:15] [DEBUG] Database file opened
+[2024-11-29 09:17:15] [DEBUG] SQL script read
+[2024-11-29 09:17:15] [DEBUG] SQL script executed
+[2024-11-29 09:17:15] [INFO] Database initialized
+[2024-11-29 09:17:15] [INFO] Server initialized
+[2024-11-29 09:17:15] [DEBUG] Server socket created
+[2024-11-29 09:17:15] [DEBUG] Server socket bound to address
+[2024-11-29 09:17:15] [DEBUG] Server listening to incoming connections
+[2024-11-29 09:17:15] [INFO] connection channel opened
+[2024-11-29 09:17:15] [INFO] Server starting receiving connections
+[2024-11-29 09:17:27] [INFO] New incoming connection accepted.
+[2024-11-29 09:18:39] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:19:17] [INFO] New incoming connection accepted.
+[2024-11-29 09:19:35] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:21:10] [INFO] New incoming connection accepted.
+[2024-11-29 09:21:30] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:23:17] [INFO] New incoming connection accepted.
+[2024-11-29 09:35:26] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:35:28] [INFO] New incoming connection accepted.
+[2024-11-29 09:35:46] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:36:12] [INFO] New incoming connection accepted.
+[2024-11-29 09:36:58] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:38:04] [INFO] New incoming connection accepted.
+[2024-11-29 09:38:15] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:38:45] [INFO] New incoming connection accepted.
+[2024-11-29 09:38:49] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:39:23] [INFO] New incoming connection accepted.
+[2024-11-29 09:39:33] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:40:08] [INFO] New incoming connection accepted.
+[2024-11-29 09:40:12] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:44:05] [INFO] New incoming connection accepted.
+[2024-11-29 09:44:13] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:44:27] [INFO] New incoming connection accepted.
+[2024-11-29 09:44:32] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:46:54] [INFO] New incoming connection accepted.
+[2024-11-29 09:47:01] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:50:29] [INFO] New incoming connection accepted.
+[2024-11-29 09:50:40] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:51:35] [INFO] New incoming connection accepted.
+[2024-11-29 09:52:07] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:52:39] [INFO] New incoming connection accepted.
+[2024-11-29 09:53:28] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:53:31] [INFO] New incoming connection accepted.
+[2024-11-29 09:55:49] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:55:51] [INFO] New incoming connection accepted.
+[2024-11-29 09:56:13] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 09:56:41] [INFO] New incoming connection accepted.
+[2024-11-29 09:57:04] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:04:20] [INFO] New incoming connection accepted.
+[2024-11-29 10:05:34] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:05:36] [INFO] New incoming connection accepted.
+[2024-11-29 10:06:04] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:07:41] [INFO] New incoming connection accepted.
+[2024-11-29 10:07:49] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:08:09] [INFO] New incoming connection accepted.
+[2024-11-29 10:08:41] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:08:46] [INFO] New incoming connection accepted.
+[2024-11-29 10:08:49] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:09:46] [INFO] New incoming connection accepted.
+[2024-11-29 10:10:14] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:11:26] [INFO] New incoming connection accepted.
+[2024-11-29 10:11:30] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:11:49] [INFO] New incoming connection accepted.
+[2024-11-29 10:11:53] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:16:24] [INFO] New incoming connection accepted.
+[2024-11-29 10:16:33] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:17:38] [INFO] New incoming connection accepted.
+[2024-11-29 10:17:45] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:19:15] [INFO] New incoming connection accepted.
+[2024-11-29 10:19:25] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:19:45] [INFO] New incoming connection accepted.
+[2024-11-29 10:19:51] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:20:39] [INFO] New incoming connection accepted.
+[2024-11-29 10:21:08] [INFO] New incoming connection accepted.
+[2024-11-29 10:21:40] [INFO] Socket: 6. Msg: Client disconnected
+[2024-11-29 10:21:46] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:22:16] [INFO] New incoming connection accepted.
+[2024-11-29 10:22:24] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:22:45] [INFO] New incoming connection accepted.
+[2024-11-29 10:22:56] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:23:34] [INFO] New incoming connection accepted.
+[2024-11-29 10:23:43] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:23:51] [INFO] New incoming connection accepted.
+[2024-11-29 10:24:13] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:24:15] [INFO] New incoming connection accepted.
+[2024-11-29 10:24:28] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:24:51] [INFO] New incoming connection accepted.
+[2024-11-29 10:25:13] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:25:15] [INFO] New incoming connection accepted.
+[2024-11-29 10:25:21] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:25:27] [INFO] New incoming connection accepted.
+[2024-11-29 10:25:45] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:26:02] [INFO] New incoming connection accepted.
+[2024-11-29 10:26:15] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:26:21] [INFO] New incoming connection accepted.
+[2024-11-29 10:26:34] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:27:56] [INFO] New incoming connection accepted.
+[2024-11-29 10:28:08] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:30:58] [INFO] New incoming connection accepted.
+[2024-11-29 10:31:23] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:31:27] [INFO] New incoming connection accepted.
+[2024-11-29 10:32:12] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:32:14] [INFO] New incoming connection accepted.
+[2024-11-29 10:32:22] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:33:34] [INFO] New incoming connection accepted.
+[2024-11-29 10:41:28] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:41:30] [INFO] New incoming connection accepted.
+[2024-11-29 10:41:51] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:42:33] [INFO] New incoming connection accepted.
+[2024-11-29 10:45:15] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:45:17] [INFO] New incoming connection accepted.
+[2024-11-29 10:47:30] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:47:33] [INFO] New incoming connection accepted.
+[2024-11-29 10:49:11] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:49:40] [INFO] New incoming connection accepted.
+[2024-11-29 10:49:57] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:50:00] [INFO] New incoming connection accepted.
+[2024-11-29 10:50:20] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:50:22] [INFO] New incoming connection accepted.
+[2024-11-29 10:50:35] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:50:37] [INFO] New incoming connection accepted.
+[2024-11-29 10:51:46] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:52:13] [INFO] New incoming connection accepted.
+[2024-11-29 10:52:17] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:52:42] [INFO] New incoming connection accepted.
+[2024-11-29 10:53:22] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:53:26] [INFO] New incoming connection accepted.
+[2024-11-29 10:54:35] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:54:38] [INFO] New incoming connection accepted.
+[2024-11-29 10:55:06] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:55:56] [INFO] New incoming connection accepted.
+[2024-11-29 10:56:09] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:56:30] [INFO] New incoming connection accepted.
+[2024-11-29 10:56:57] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:56:59] [INFO] New incoming connection accepted.
+[2024-11-29 10:57:13] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 10:57:23] [INFO] New incoming connection accepted.
+[2024-11-29 11:02:56] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:03:31] [INFO] New incoming connection accepted.
+[2024-11-29 11:05:34] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:05:49] [INFO] New incoming connection accepted.
+[2024-11-29 11:06:14] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:06:15] [INFO] New incoming connection accepted.
+[2024-11-29 11:07:25] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:07:27] [INFO] New incoming connection accepted.
+[2024-11-29 11:08:01] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:08:34] [INFO] New incoming connection accepted.
+[2024-11-29 11:09:10] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:11:26] [INFO] New incoming connection accepted.
+[2024-11-29 11:11:52] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:13:19] [INFO] New incoming connection accepted.
+[2024-11-29 11:13:23] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:14:04] [INFO] New incoming connection accepted.
+[2024-11-29 11:14:08] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:14:32] [INFO] New incoming connection accepted.
+[2024-11-29 11:15:26] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:16:03] [INFO] New incoming connection accepted.
+[2024-11-29 11:16:20] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:17:54] [INFO] New incoming connection accepted.
+[2024-11-29 11:18:30] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:18:44] [INFO] New incoming connection accepted.
+[2024-11-29 11:18:57] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:19:22] [INFO] New incoming connection accepted.
+[2024-11-29 11:19:41] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:20:30] [INFO] New incoming connection accepted.
+[2024-11-29 11:20:41] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:22:24] [INFO] New incoming connection accepted.
+[2024-11-29 11:22:32] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:22:38] [INFO] New incoming connection accepted.
+[2024-11-29 11:22:53] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:25:42] [INFO] New incoming connection accepted.
+[2024-11-29 11:26:48] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:26:49] [INFO] New incoming connection accepted.
+[2024-11-29 11:26:55] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:33:36] [INFO] New incoming connection accepted.
+[2024-11-29 11:33:49] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:43:57] [INFO] New incoming connection accepted.
+[2024-11-29 11:44:02] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:44:57] [INFO] New incoming connection accepted.
+[2024-11-29 11:45:26] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 11:46:39] [INFO] New incoming connection accepted.
+[2024-11-29 11:47:12] [INFO] Socket: 5. Msg: Client disconnected

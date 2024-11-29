@@ -9,8 +9,8 @@
 #include <glib.h>
 #include <webkit2/webkit2.h>
 
-#define WIDTH 1440
-#define HEIGHT 1024
+#define WIDTH 800
+#define HEIGHT 600
 
 #define APP_NAME "TAZIK"
 
