@@ -52,10 +52,6 @@ static int init_window() {
 
 void mx_gui_init(GtkApplication *app, gpointer user_data) {
     logger_info("Gui initialization\n");
-    char *screen = (char *)user_data;
-    logger_debug(window);
-    printf("screen: %s\n", screen);
-    screen = "login";
 
     if (init_gtk() < 0) {
         logger_fatal("Failed to initialize GUI.\n");
@@ -69,18 +65,8 @@ void mx_gui_init(GtkApplication *app, gpointer user_data) {
         logger_fatal("Failed to initialize GUI.\n");
         return;
     }
-    if (mx_strcmp(screen, "login") == 0) {
-        if (mx_load_login_page() < 0) {
-            logger_fatal("Failed to load login page\n");
-            return;
-        }
-    } else if (mx_strcmp(screen, "network_error") == 0) {
-        if (mx_load_error_page() < 0) {
-            logger_fatal("Failed to load error page\n");
-            return;
-        }
-    } else {
-        logger_fatal("Unknown page to load\n");
+    if (mx_load_load_page() < 0) {
+        logger_fatal("Failed to load load page\n");
         return;
     }
     gtk_container_add(GTK_CONTAINER(window), GTK_WIDGET(webview));

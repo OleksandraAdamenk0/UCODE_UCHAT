@@ -3,8 +3,10 @@
 //
 
 #include "gui.h"
+#include "logger.h"
 
 int mx_load_error_page() {
+    logger_debug("load error page\n");
     if (!window) {
         logger_fatal("application window was not created"
                      " before trying to show screen\n");

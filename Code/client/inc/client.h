@@ -8,9 +8,7 @@
 #include "libmx.h"
 #include "logger.h"
 
-extern int port;
-extern char *ip;
-extern bool online;
+extern int mode;
 
 typedef enum {
     REGISTRATION,
@@ -41,7 +39,7 @@ void mx_db_finalize();
 bool mx_isdb_valid();
 
 // CONNECTION SECTION
-int mx_open_connection();
+void *mx_connection_thread(void *arg);
 void mx_close_connection();
 
 int mx_send_data(int fd, char *data);

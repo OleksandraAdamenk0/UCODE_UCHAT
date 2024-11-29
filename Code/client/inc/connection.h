@@ -18,5 +18,7 @@
 #include <sys/select.h>
 
 extern int fd;
+extern int port;
+extern char *ip;
 
 #endif //UCODE_UCHAT_MAIN_CONNECTION_H

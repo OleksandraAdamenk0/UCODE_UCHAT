@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="../css/load.css">
+</head>
+<body>
+<div class="loading-container">
+    <div class="gear">
+        <div class="inner-circle"></div>
+    </div>
+    <p>Loading...</p>
+</div>
+
+<script>
+    const connect = () => {
+        if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.connect) {
+            window.webkit.messageHandlers.connect.postMessage(null);
+        } else {
+            alert('Handler "connect" is not registered in WebKit!');
+        }
+    };
+    window.addEventListener('load', () => {
+        setTimeout(connect, 500);
+    });
+
+    const goToLogin = () => {
+        if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.goToLogin) {
+            window.webkit.messageHandlers.goToLogin.postMessage(null);
+        } else {
+            alert('Handler "goToLogin" is not registered in WebKit!');
+        }
+    };
+
+    const goToError = () => {
+        if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.goToError) {
+            window.webkit.messageHandlers.goToError.postMessage(null);
+        } else {
+            alert('Handler "goToError" is not registered in WebKit!');
+        }
+    };
+</script>
+</body>
+</html>

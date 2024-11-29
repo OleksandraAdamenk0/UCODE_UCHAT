@@ -1,0 +1,86 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #E2F2FB;
+    font-family: Roboto, Arial, sans-serif;
+    color: #303030;
+}
+
+/* Loading container */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Gear animation */
+.gear {
+    width: 64px;
+    height: 64px;
+    border: 8px solid transparent;
+    border-top: 8px solid #388674; /* Main color of gear */
+    border-radius: 50%;
+    animation: spin 1s linear infinite; /* Keep spinning */
+    position: relative;
+    transition: border-top-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Inner gear effect */
+.gear::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    background-color: #388674;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.gear:hover {
+    border-top-color: #950e4a; /* Change border-top to red */
+    animation: pulse 1s linear infinite; /* Combine spin and pulse */
+}
+
+.gear:hover::before {
+    background-color: #950e4a; /* Change inner circle color to red */
+}
+
+/* Spinning animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pulsing animation */
+@keyframes pulse {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+/* Text below the gear */
+.loading-container p {
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 500;
+}

@@ -3,6 +3,7 @@
 //
 
 #include "initialization.h"
+#include "libmx.h"
 
 static int is_ip(const char *str) {
     int dots = mx_count_substr(str, ".");

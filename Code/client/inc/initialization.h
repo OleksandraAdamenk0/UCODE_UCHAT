@@ -7,9 +7,6 @@
 
 #define LOGGER_CONFIG "client/logger.conf"
 
-#include <stdlib.h>
-#include "libmx.h"
-
 typedef struct s_arguments {
     int port;
     char *ip;

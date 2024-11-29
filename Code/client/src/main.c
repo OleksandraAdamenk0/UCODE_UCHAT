@@ -1,53 +1,39 @@
 #include "client.h"
+#include "initialization.h"
+#include "logger.h"
+#include "gui.h"
 
-#include "data_exchange.h"
-#include "requests.h"
-
-#include <stdio.h>
-#include <unistd.h>
-
-bool online;
-
-static int to_login(int argc, const char *argv[]) {
-    if (mx_create_app("login") < 0) return -1;
-    logger_info("Gui initialized\n");
-    return mx_run_app(argc, argv);
-}
-
-static int to_error(int argc, const char *argv[]) {
-    if (mx_create_app("network_error") < 0) return -1;  // gtk init
-    logger_info("Gui initialized\n");
-    return mx_run_app(argc, argv);  // load static page showing error
-}
+int port;
+char *ip;
+GtkApplication *app;
 
 int main(int argc, const char *argv[]) {
-    if (mx_init(argc, argv) < 0) {
+    // arguments
+    t_arguments *arguments = mx_parse_args(argc, argv);
+    if (!arguments) {
         mx_printerr("Usage: ./uchat <ip_address> <port>\n");
         return -1;
-    } else logger_info("Client initialized\n");
-
-    int status;
-
-    int fd = mx_open_connection();
-    if (fd == -1) return -1;
-    if (fd == -2) {
-        logger_error("Connection failed. Running offline mode\n");
-        online = false;
-
-        if (mx_isdb_valid()) {
-            if (mx_db_init() < 0) {
-                logger_warn("Failed to load local database\n");
-                status = to_error(argc, argv);
-            }
-            status = to_login(argc, argv);
-        } else status = to_error(argc, argv);
-    } else {
-        logger_info("Connection opened. Running online mode\n");
-        online = true;
-        status = to_login(argc, argv);
-        mx_db_finalize();
     }
-    return status;
+
+    // variables
+    port = arguments->port;
+    ip = arguments->ip;
+    free(arguments);
+
+    // logger
+    if (logger_init(LOGGER_CONFIG) < 0) return -1;
+    logger_info("Logger initialized\n");
+
+    // gtk app
+    app = gtk_application_new("com.campus.uchat", G_APPLICATION_HANDLES_COMMAND_LINE);
+    if (app == NULL) {
+        logger_fatal("Failed to create GTK app\n");
+        return -1;
+    }
+    g_signal_connect(app, "activate", G_CALLBACK(mx_gui_init), NULL);
+    g_signal_connect(app, "command-line", G_CALLBACK(mx_gui_init), NULL);
+
+    mx_run_app(argc, argv);
 }
 
 

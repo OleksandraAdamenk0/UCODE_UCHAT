@@ -37,7 +37,7 @@ int mx_open_connection() {
         return -1;
     } else logger_debug("Server socket bound to address\n");
 
-    if (listen(svr_fd, 0) < 0) {
+    if (listen(svr_fd, 1) < 0) {
         logger_fatal("attempt to start to listen "
                      "incoming connections failed\n");
         return -1;
