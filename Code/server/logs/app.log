@@ -5333,3 +5333,663 @@
 [2024-11-29 16:50:25] [DEBUG] kill signal received
 [2024-11-29 16:50:25] [INFO] Server stopped receiving connections
 [2024-11-29 16:50:25] [INFO] database closed
+[2024-11-29 20:27:40] [INFO] Logger initialized
+[2024-11-29 20:27:40] [DEBUG] Database file opened
+[2024-11-29 20:27:40] [DEBUG] SQL script read
+[2024-11-29 20:27:40] [DEBUG] SQL script executed
+[2024-11-29 20:27:40] [INFO] Database initialized
+[2024-11-29 20:27:40] [INFO] Server initialized
+[2024-11-29 20:27:40] [DEBUG] Server socket created
+[2024-11-29 20:27:40] [DEBUG] Server socket bound to address
+[2024-11-29 20:27:40] [DEBUG] Server listening to incoming connections
+[2024-11-29 20:27:40] [INFO] connection channel opened
+[2024-11-29 20:27:40] [INFO] Server starting receiving connections
+[2024-11-29 20:27:45] [INFO] New incoming connection accepted.
+[2024-11-29 20:28:00] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 20:30:39] [INFO] New incoming connection accepted.
+[2024-11-29 20:30:45] [ERROR] Socket: 5. Msg: Received data from connection
+[2024-11-29 20:30:45] [DEBUG] Handling request
+[2024-11-29 20:30:45] [DEBUG] Handler specified
+[2024-11-29 20:30:45] [ERROR] Socket: 5. Msg: Wrong data size format
+[2024-11-29 20:30:54] [ERROR] Socket: 5. Msg: Error receiving data
+[2024-11-29 20:30:54] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 20:35:06] [INFO] New incoming connection accepted.
+[2024-11-29 20:35:12] [ERROR] Socket: 5. Msg: Received data from connection
+[2024-11-29 20:35:12] [DEBUG] Handling request
+[2024-11-29 20:35:12] [DEBUG] Handler specified
+[2024-11-29 20:35:12] [ERROR] Socket: 5. Msg: Wrong data size format
+[2024-11-29 20:35:17] [ERROR] Socket: 5. Msg: Error receiving data
+[2024-11-29 20:35:17] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 21:13:20] [INFO] Logger initialized
+[2024-11-29 21:13:20] [DEBUG] Database file opened
+[2024-11-29 21:13:20] [DEBUG] SQL script read
+[2024-11-29 21:13:20] [DEBUG] SQL script executed
+[2024-11-29 21:13:20] [INFO] Database initialized
+[2024-11-29 21:13:20] [INFO] Server initialized
+[2024-11-29 21:13:20] [DEBUG] Server socket created
+[2024-11-29 21:13:20] [FATAL] attempt to bind server socket to the address failed
+[2024-11-29 21:13:20] [DEBUG] Address already in use[2024-11-29 21:13:20] [INFO] database closed
+[2024-11-29 21:13:29] [INFO] New incoming connection accepted.
+[2024-11-29 21:13:35] [ERROR] Socket: 5. Msg: Received data from connection
+[2024-11-29 21:13:35] [DEBUG] Handling request
+[2024-11-29 21:13:35] [DEBUG] Handler specified
+[2024-11-29 21:13:35] [ERROR] Socket: 5. Msg: Wrong data size format
+[2024-11-29 21:13:40] [ERROR] Socket: 5. Msg: Error receiving data
+[2024-11-29 21:13:40] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 21:42:33] [INFO] Logger initialized
+[2024-11-29 21:42:33] [DEBUG] Database file opened
+[2024-11-29 21:42:33] [DEBUG] SQL script read
+[2024-11-29 21:42:33] [DEBUG] SQL script executed
+[2024-11-29 21:42:33] [INFO] Database initialized
+[2024-11-29 21:42:33] [INFO] Server initialized
+[2024-11-29 21:42:33] [DEBUG] Server socket created
+[2024-11-29 21:42:33] [FATAL] attempt to bind server socket to the address failed
+[2024-11-29 21:42:33] [DEBUG] Address already in use[2024-11-29 21:42:33] [INFO] database closed
+[2024-11-29 21:45:20] [INFO] New incoming connection accepted.
+[2024-11-29 21:45:25] [ERROR] Socket: 5. Msg: Received data from connection
+[2024-11-29 21:45:25] [DEBUG] Handling request
+[2024-11-29 21:45:25] [DEBUG] Handler specified
+[2024-11-29 21:45:25] [ERROR] Socket: 5. Msg: Wrong data size format
+[2024-11-29 21:48:34] [ERROR] Socket: 5. Msg: Error receiving data
+[2024-11-29 21:48:34] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 21:53:28] [INFO] Logger initialized
+[2024-11-29 21:53:28] [DEBUG] Database file opened
+[2024-11-29 21:53:28] [DEBUG] SQL script read
+[2024-11-29 21:53:28] [DEBUG] SQL script executed
+[2024-11-29 21:53:28] [INFO] Database initialized
+[2024-11-29 21:53:28] [INFO] Server initialized
+[2024-11-29 21:53:28] [DEBUG] Server socket created
+[2024-11-29 21:53:28] [FATAL] attempt to bind server socket to the address failed
+[2024-11-29 21:53:28] [DEBUG] Address already in use[2024-11-29 21:53:28] [INFO] database closed
+[2024-11-29 21:53:40] [INFO] New incoming connection accepted.
+[2024-11-29 21:53:47] [ERROR] Socket: 5. Msg: Received data from connection
+[2024-11-29 21:53:47] [DEBUG] Handling request
+[2024-11-29 21:53:47] [DEBUG] Handler specified
+[2024-11-29 21:53:47] [ERROR] Socket: 5. Msg: Wrong data size format
+[2024-11-29 21:53:51] [ERROR] Socket: 5. Msg: Error receiving data
+[2024-11-29 21:53:51] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 22:00:12] [INFO] Logger initialized
+[2024-11-29 22:00:12] [DEBUG] Database file opened
+[2024-11-29 22:00:12] [DEBUG] SQL script read
+[2024-11-29 22:00:12] [DEBUG] SQL script executed
+[2024-11-29 22:00:12] [INFO] Database initialized
+[2024-11-29 22:00:12] [INFO] Server initialized
+[2024-11-29 22:00:12] [DEBUG] Server socket created
+[2024-11-29 22:00:12] [FATAL] attempt to bind server socket to the address failed
+[2024-11-29 22:00:12] [DEBUG] Address already in use[2024-11-29 22:00:12] [INFO] database closed
+[2024-11-29 22:00:22] [INFO] New incoming connection accepted.
+[2024-11-29 22:00:31] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 22:07:18] [INFO] Logger initialized
+[2024-11-29 22:07:18] [DEBUG] Database file opened
+[2024-11-29 22:07:18] [DEBUG] SQL script read
+[2024-11-29 22:07:18] [DEBUG] SQL script executed
+[2024-11-29 22:07:18] [INFO] Database initialized
+[2024-11-29 22:07:18] [INFO] Server initialized
+[2024-11-29 22:07:18] [DEBUG] Server socket created
+[2024-11-29 22:07:18] [FATAL] attempt to bind server socket to the address failed
+[2024-11-29 22:07:18] [DEBUG] Address already in use[2024-11-29 22:07:18] [INFO] database closed
+[2024-11-29 22:07:30] [INFO] New incoming connection accepted.
+[2024-11-29 22:07:40] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 22:27:18] [INFO] New incoming connection accepted.
+[2024-11-29 22:27:32] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 22:29:56] [INFO] New incoming connection accepted.
+[2024-11-29 22:44:33] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 22:45:38] [INFO] New incoming connection accepted.
+[2024-11-29 22:45:54] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 22:48:19] [INFO] New incoming connection accepted.
+[2024-11-29 22:56:00] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 22:57:03] [INFO] New incoming connection accepted.
+[2024-11-29 22:57:17] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 22:58:08] [INFO] New incoming connection accepted.
+[2024-11-29 22:58:19] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:03:18] [INFO] New incoming connection accepted.
+[2024-11-29 23:03:42] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:04:12] [INFO] New incoming connection accepted.
+[2024-11-29 23:04:22] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:04:41] [INFO] New incoming connection accepted.
+[2024-11-29 23:04:52] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:05:13] [INFO] New incoming connection accepted.
+[2024-11-29 23:05:24] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:13:13] [INFO] New incoming connection accepted.
+[2024-11-29 23:14:09] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:14:12] [INFO] New incoming connection accepted.
+[2024-11-29 23:14:51] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:14:53] [INFO] New incoming connection accepted.
+[2024-11-29 23:17:45] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:17:48] [INFO] New incoming connection accepted.
+[2024-11-29 23:18:11] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:22:40] [INFO] New incoming connection accepted.
+[2024-11-29 23:22:50] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:24:18] [INFO] New incoming connection accepted.
+[2024-11-29 23:24:32] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:26:48] [INFO] New incoming connection accepted.
+[2024-11-29 23:27:15] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:27:17] [INFO] New incoming connection accepted.
+[2024-11-29 23:27:25] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:27:39] [INFO] New incoming connection accepted.
+[2024-11-29 23:27:49] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:28:07] [INFO] New incoming connection accepted.
+[2024-11-29 23:28:16] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:33:48] [INFO] New incoming connection accepted.
+[2024-11-29 23:34:02] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:34:33] [INFO] New incoming connection accepted.
+[2024-11-29 23:37:06] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:37:10] [INFO] New incoming connection accepted.
+[2024-11-29 23:37:51] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:37:54] [INFO] New incoming connection accepted.
+[2024-11-29 23:38:47] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:42:12] [INFO] New incoming connection accepted.
+[2024-11-29 23:42:19] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:42:33] [INFO] New incoming connection accepted.
+[2024-11-29 23:42:42] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:51:26] [INFO] New incoming connection accepted.
+[2024-11-29 23:52:03] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-29 23:53:24] [INFO] New incoming connection accepted.
+[2024-11-30 00:21:35] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-30 01:06:32] [INFO] New incoming connection accepted.
+[2024-11-30 01:07:13] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-30 01:07:18] [INFO] New incoming connection accepted.
+[2024-11-30 01:07:29] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-30 01:07:57] [INFO] New incoming connection accepted.
+[2024-11-30 01:08:04] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-30 02:47:13] [DEBUG] kill signal received
+[2024-11-30 02:47:13] [INFO] Server stopped receiving connections
+[2024-11-30 02:47:13] [INFO] database closed
+[2024-11-30 02:50:30] [INFO] Logger initialized
+[2024-11-30 02:50:30] [DEBUG] Database file opened
+[2024-11-30 02:50:30] [DEBUG] SQL script read
+[2024-11-30 02:50:30] [DEBUG] SQL script executed
+[2024-11-30 02:50:30] [INFO] Database initialized
+[2024-11-30 02:50:30] [INFO] Server initialized
+[2024-11-30 02:50:30] [DEBUG] Server socket created
+[2024-11-30 02:50:30] [DEBUG] Server socket bound to address
+[2024-11-30 02:50:30] [DEBUG] Server listening to incoming connections
+[2024-11-30 02:50:30] [INFO] connection channel opened
+[2024-11-30 02:50:30] [INFO] Server starting receiving connections
+[2024-11-30 02:50:44] [INFO] New incoming connection accepted.
+[2024-11-30 02:58:17] [ERROR] Socket: 5. Msg: Received data from connection
+[2024-11-30 02:58:17] [DEBUG] Handling request
+[2024-11-30 02:58:17] [DEBUG] Handler specified
+[2024-11-30 02:58:17] [DEBUG] mx_registration_logic started to work
+[2024-11-30 02:58:17] [DEBUG] registration of the user started
+[2024-11-30 02:58:17] [ERROR] Socket: 5. Msg: Wrong data size format
+[2024-11-30 02:58:18] [ERROR] Socket: 5. Msg: Error receiving data
+[2024-11-30 02:58:18] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-30 15:38:01] [INFO] New incoming connection accepted.
+[2024-11-30 15:38:35] [ERROR] Socket: 5. Msg: Received data from connection
+[2024-11-30 15:38:35] [DEBUG] Handling request
+[2024-11-30 15:38:35] [DEBUG] Handler specified
+[2024-11-30 15:38:35] [DEBUG] mx_registration_logic started to work
+[2024-11-30 15:38:35] [DEBUG] registration of the user started
+[2024-11-30 15:38:35] [ERROR] Socket: 5. Msg: Wrong data size format
+[2024-11-30 15:38:35] [ERROR] Socket: 5. Msg: Error receiving data
+[2024-11-30 15:38:35] [INFO] Socket: 5. Msg: Client disconnected
+[2024-11-30 15:41:50] [DEBUG] kill signal received
+[2024-11-30 15:41:50] [INFO] Server stopped receiving connections
+[2024-11-30 15:41:50] [INFO] database closed
+[2024-11-30 15:42:16] [INFO] Logger initialized
+[2024-11-30 15:42:16] [DEBUG] Database file opened
+[2024-11-30 15:42:16] [DEBUG] SQL script read
+[2024-11-30 15:42:16] [DEBUG] SQL script executed
+[2024-11-30 15:42:16] [INFO] Database initialized
+[2024-11-30 15:42:16] [INFO] Server initialized
+[2024-11-30 15:42:16] [DEBUG] Server socket created
+[2024-11-30 15:42:16] [DEBUG] Server socket bound to address
+[2024-11-30 15:42:16] [DEBUG] Server listening to incoming connections
+[2024-11-30 15:42:16] [INFO] connection channel opened
+[2024-11-30 15:42:16] [INFO] Server starting receiving connections
+[2024-11-30 15:42:21] [INFO] New incoming connection accepted.
+[2024-11-30 15:42:50] [ERROR] Socket: 6. Msg: Received data from connection
+[2024-11-30 15:42:50] [DEBUG] Handling request
+[2024-11-30 15:42:50] [DEBUG] Handler specified
+[2024-11-30 15:42:50] [DEBUG] mx_registration_logic started to work
+[2024-11-30 15:42:50] [DEBUG] registration of the user started
+[2024-11-30 15:42:50] [ERROR] Socket: 6. Msg: Wrong data size format
+[2024-11-30 15:42:50] [ERROR] Socket: 6. Msg: Error receiving data
+[2024-11-30 15:42:50] [INFO] Socket: 6. Msg: Client disconnected
+[2024-11-30 16:04:24] [DEBUG] kill signal received
+[2024-11-30 16:04:24] [INFO] Server stopped receiving connections
+[2024-11-30 16:07:29] [INFO] Logger initialized
+[2024-11-30 16:07:29] [DEBUG] Database file opened
+[2024-11-30 16:07:29] [DEBUG] SQL script read
+[2024-11-30 16:07:29] [DEBUG] SQL script executed
+[2024-11-30 16:07:29] [INFO] Database initialized
+[2024-11-30 16:07:29] [INFO] Server initialized
+[2024-11-30 16:07:29] [DEBUG] Server socket created
+[2024-11-30 16:07:29] [DEBUG] Server socket bound to address
+[2024-11-30 16:07:29] [DEBUG] Server listening to incoming connections
+[2024-11-30 16:07:29] [INFO] connection channel opened
+[2024-11-30 16:07:29] [INFO] Server starting receiving connections
+[2024-11-30 16:07:34] [INFO] New incoming connection accepted.
+[2024-11-30 16:07:50] [INFO] Socket: 6. Msg: Client disconnected
+[2024-11-30 16:07:56] [INFO] New incoming connection accepted.
+[2024-11-30 16:08:22] [ERROR] Socket: 6. Msg: Received data from connection
+[2024-11-30 16:08:22] [DEBUG] Handling request
+[2024-11-30 16:08:22] [DEBUG] Handler specified
+[2024-11-30 16:08:22] [ERROR] Socket: 6. Msg: Wrong data size format
+[2024-11-30 16:08:22] [ERROR] Socket: 6. Msg: Error receiving data
+[2024-11-30 16:08:22] [INFO] Socket: 6. Msg: Client disconnected
+[2024-11-30 16:09:11] [INFO] New incoming connection accepted.
+[2024-11-30 16:09:33] [ERROR] Socket: 6. Msg: Received data from connection
+[2024-11-30 16:09:33] [DEBUG] Handling request
+[2024-11-30 16:09:33] [DEBUG] Handler specified
+[2024-11-30 16:09:33] [ERROR] Socket: 6. Msg: Wrong data size format
+[2024-11-30 16:09:33] [ERROR] Socket: 6. Msg: Error receiving data
+[2024-11-30 16:09:33] [INFO] Socket: 6. Msg: Client disconnected
+[2024-11-30 16:11:01] [INFO] New incoming connection accepted.
+[2024-11-30 16:11:26] [ERROR] Socket: 6. Msg: Received data from connection
+[2024-11-30 16:11:26] [DEBUG] Handling request
+[2024-11-30 16:11:26] [DEBUG] Handler specified
+[2024-11-30 16:11:26] [ERROR] Socket: 6. Msg: Wrong data size format
+[2024-11-30 16:11:26] [ERROR] Socket: 6. Msg: Error receiving data
+[2024-11-30 16:11:26] [INFO] Socket: 6. Msg: Client disconnected
+[2024-11-30 16:14:04] [DEBUG] kill signal received
+[2024-11-30 16:14:04] [INFO] Server stopped receiving connections
+[2024-11-30 16:14:12] [INFO] Logger initialized
+[2024-11-30 16:14:12] [DEBUG] Database file opened
+[2024-11-30 16:14:12] [DEBUG] SQL script read
+[2024-11-30 16:14:12] [DEBUG] SQL script executed
+[2024-11-30 16:14:12] [INFO] Database initialized
+[2024-11-30 16:14:12] [INFO] Server initialized
+[2024-11-30 16:14:12] [DEBUG] Server socket created
+[2024-11-30 16:14:12] [DEBUG] Server socket bound to address
+[2024-11-30 16:14:12] [DEBUG] Server listening to incoming connections
+[2024-11-30 16:14:12] [INFO] connection channel opened
+[2024-11-30 16:14:12] [INFO] Server starting receiving connections
+[2024-11-30 16:14:19] [INFO] New incoming connection accepted.
+[2024-11-30 16:14:44] [ERROR] Socket: 6. Msg: Received data from connection
+[2024-11-30 16:14:44] [DEBUG] Handling request
+[2024-11-30 16:14:44] [DEBUG] Handler specified
+[2024-11-30 16:14:44] [DEBUG] got response to send[2024-11-30 16:14:44] [ERROR] Socket: 6. Msg: Wrong data size format
+[2024-11-30 16:14:45] [ERROR] Socket: 6. Msg: Error receiving data
+[2024-11-30 16:14:45] [INFO] Socket: 6. Msg: Client disconnected
+[2024-11-30 16:17:46] [DEBUG] kill signal received
+[2024-11-30 16:17:46] [INFO] Server stopped receiving connections
+[2024-11-30 16:17:49] [INFO] Logger initialized
+[2024-11-30 16:17:49] [DEBUG] Database file opened
+[2024-11-30 16:17:49] [DEBUG] SQL script read
+[2024-11-30 16:17:49] [DEBUG] SQL script executed
+[2024-11-30 16:17:49] [INFO] Database initialized
+[2024-11-30 16:17:49] [INFO] Server initialized
+[2024-11-30 16:17:49] [DEBUG] Server socket created
+[2024-11-30 16:17:49] [DEBUG] Server socket bound to address
+[2024-11-30 16:17:49] [DEBUG] Server listening to incoming connections
+[2024-11-30 16:17:49] [INFO] connection channel opened
+[2024-11-30 16:17:49] [INFO] Server starting receiving connections
+[2024-11-30 16:17:54] [INFO] New incoming connection accepted.
+[2024-11-30 16:18:15] [ERROR] Socket: 6. Msg: Received data from connection
+[2024-11-30 16:18:15] [DEBUG] Handling request
+[2024-11-30 16:18:15] [DEBUG] Handler specified
+[2024-11-30 16:18:15] [DEBUG] -2
+[2024-11-30 16:18:15] [DEBUG] got response to send
+[2024-11-30 16:18:15] [ERROR] Socket: 6. Msg: Wrong data size format
+[2024-11-30 16:18:15] [ERROR] Socket: 6. Msg: Error receiving data
+[2024-11-30 16:18:15] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 20:07:20] [DEBUG] kill signal received
+[2024-12-01 20:07:20] [INFO] Server stopped receiving connections
+[2024-12-01 20:07:25] [INFO] Logger initialized
+[2024-12-01 20:07:25] [DEBUG] Database file opened
+[2024-12-01 20:07:25] [DEBUG] SQL script read
+[2024-12-01 20:07:25] [DEBUG] SQL script executed
+[2024-12-01 20:07:25] [INFO] Database initialized
+[2024-12-01 20:07:25] [INFO] Server initialized
+[2024-12-01 20:07:25] [DEBUG] Server socket created
+[2024-12-01 20:07:25] [DEBUG] Server socket bound to address
+[2024-12-01 20:07:25] [DEBUG] Server listening to incoming connections
+[2024-12-01 20:07:25] [INFO] connection channel opened
+[2024-12-01 20:07:25] [INFO] Server starting receiving connections
+[2024-12-01 20:07:31] [INFO] New incoming connection accepted.
+[2024-12-01 20:07:45] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 20:07:53] [INFO] New incoming connection accepted.
+[2024-12-01 20:12:47] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 20:13:05] [INFO] New incoming connection accepted.
+[2024-12-01 20:14:05] [ERROR] Socket: 6. Msg: Received data from connection
+[2024-12-01 20:14:05] [DEBUG] Handling request
+[2024-12-01 20:14:05] [DEBUG] Handler specified
+[2024-12-01 20:14:05] [DEBUG] mx_registration_logic started to work
+[2024-12-01 20:14:05] [DEBUG] registration of the user started
+[2024-12-01 20:14:05] [DEBUG] user was registered successfully
+[2024-12-01 20:14:05] [DEBUG] successfully got access token
+[2024-12-01 20:14:05] [DEBUG] 0
+[2024-12-01 20:14:05] [DEBUG] got response to send
+[2024-12-01 20:14:05] [ERROR] Socket: 6. Msg: Wrong data size format
+[2024-12-01 20:14:05] [ERROR] Socket: 6. Msg: Error receiving data
+[2024-12-01 20:14:05] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 20:28:00] [DEBUG] kill signal received
+[2024-12-01 20:28:00] [INFO] Server stopped receiving connections
+[2024-12-01 20:28:43] [INFO] Logger initialized
+[2024-12-01 20:28:43] [DEBUG] Database file opened
+[2024-12-01 20:28:43] [DEBUG] SQL script read
+[2024-12-01 20:28:43] [DEBUG] SQL script executed
+[2024-12-01 20:28:43] [INFO] Database initialized
+[2024-12-01 20:28:43] [INFO] Server initialized
+[2024-12-01 20:28:43] [DEBUG] Server socket created
+[2024-12-01 20:28:43] [DEBUG] Server socket bound to address
+[2024-12-01 20:28:43] [DEBUG] Server listening to incoming connections
+[2024-12-01 20:28:43] [INFO] connection channel opened
+[2024-12-01 20:28:43] [INFO] Server starting receiving connections
+[2024-12-01 20:29:17] [INFO] New incoming connection accepted.
+[2024-12-01 20:31:08] [ERROR] Socket: 6. Msg: Received data from connection
+[2024-12-01 20:31:08] [DEBUG] Handling request
+[2024-12-01 20:31:08] [DEBUG] Handler specified
+[2024-12-01 20:31:08] [DEBUG] mx_registration_logic started to work
+[2024-12-01 20:31:08] [DEBUG] registration of the user started
+[2024-12-01 20:31:08] [DEBUG] -8
+[2024-12-01 20:31:08] [DEBUG] got response to send
+[2024-12-01 20:31:08] [ERROR] Socket: 6. Msg: Wrong data size format
+[2024-12-01 20:31:09] [ERROR] Socket: 6. Msg: Error receiving data
+[2024-12-01 20:31:09] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 20:47:18] [INFO] Logger initialized
+[2024-12-01 20:47:18] [DEBUG] Database file opened
+[2024-12-01 20:47:18] [DEBUG] SQL script read
+[2024-12-01 20:47:18] [DEBUG] SQL script executed
+[2024-12-01 20:47:18] [INFO] Database initialized
+[2024-12-01 20:47:18] [INFO] Server initialized
+[2024-12-01 20:47:18] [DEBUG] Server socket created
+[2024-12-01 20:47:18] [FATAL] attempt to bind server socket to the address failed
+[2024-12-01 20:47:18] [DEBUG] Address already in use
+[2024-12-01 20:47:22] [INFO] New incoming connection accepted.
+[2024-12-01 20:49:08] [ERROR] Socket: 6. Msg: Received data from connection
+[2024-12-01 20:49:08] [DEBUG] Handling request
+[2024-12-01 20:49:08] [DEBUG] Handler specified
+[2024-12-01 20:49:08] [DEBUG] mx_registration_logic started to work
+[2024-12-01 20:49:08] [DEBUG] registration of the user started
+[2024-12-01 20:49:08] [DEBUG] -8
+[2024-12-01 20:49:08] [DEBUG] got response to send
+[2024-12-01 20:49:08] [ERROR] Socket: 6. Msg: Wrong data size format
+[2024-12-01 20:49:09] [ERROR] Socket: 6. Msg: Error receiving data
+[2024-12-01 20:49:09] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 20:55:36] [INFO] Logger initialized
+[2024-12-01 20:55:36] [DEBUG] Database file opened
+[2024-12-01 20:55:36] [DEBUG] SQL script read
+[2024-12-01 20:55:36] [DEBUG] SQL script executed
+[2024-12-01 20:55:36] [INFO] Database initialized
+[2024-12-01 20:55:36] [INFO] Server initialized
+[2024-12-01 20:55:36] [DEBUG] Server socket created
+[2024-12-01 20:55:36] [FATAL] attempt to bind server socket to the address failed
+[2024-12-01 20:55:36] [DEBUG] Address already in use
+[2024-12-01 20:56:15] [INFO] New incoming connection accepted.
+[2024-12-01 20:56:32] [ERROR] Socket: 6. Msg: Received data from connection
+[2024-12-01 20:56:32] [DEBUG] Handling request
+[2024-12-01 20:56:32] [DEBUG] Handler specified
+[2024-12-01 20:56:32] [DEBUG] mx_registration_logic started to work
+[2024-12-01 20:56:32] [DEBUG] registration of the user started
+[2024-12-01 20:56:32] [DEBUG] user was registered successfully
+[2024-12-01 20:56:32] [DEBUG] successfully got access token
+[2024-12-01 20:56:32] [DEBUG] 0
+[2024-12-01 20:56:32] [DEBUG] got response to send
+[2024-12-01 20:56:32] [ERROR] Socket: 6. Msg: Wrong data size format
+[2024-12-01 20:56:32] [ERROR] Socket: 6. Msg: Error receiving data
+[2024-12-01 20:56:32] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 21:01:15] [INFO] New incoming connection accepted.
+[2024-12-01 21:01:38] [ERROR] Socket: 6. Msg: Received data from connection
+[2024-12-01 21:01:38] [DEBUG] Handling request
+[2024-12-01 21:01:38] [DEBUG] Handler specified
+[2024-12-01 21:01:38] [DEBUG] mx_registration_logic started to work
+[2024-12-01 21:01:38] [DEBUG] registration of the user started
+[2024-12-01 21:01:38] [DEBUG] user was registered successfully
+[2024-12-01 21:01:38] [DEBUG] successfully got access token
+[2024-12-01 21:01:38] [DEBUG] 0
+[2024-12-01 21:01:38] [DEBUG] got response to send
+[2024-12-01 21:01:38] [ERROR] Socket: 6. Msg: Wrong data size format
+[2024-12-01 21:01:38] [ERROR] Socket: 6. Msg: Error receiving data
+[2024-12-01 21:01:38] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 21:07:59] [INFO] Logger initialized
+[2024-12-01 21:07:59] [DEBUG] Database file opened
+[2024-12-01 21:07:59] [DEBUG] SQL script read
+[2024-12-01 21:07:59] [DEBUG] SQL script executed
+[2024-12-01 21:07:59] [INFO] Database initialized
+[2024-12-01 21:07:59] [INFO] Server initialized
+[2024-12-01 21:07:59] [DEBUG] Server socket created
+[2024-12-01 21:07:59] [FATAL] attempt to bind server socket to the address failed
+[2024-12-01 21:07:59] [DEBUG] Address already in use
+[2024-12-01 21:08:04] [INFO] New incoming connection accepted.
+[2024-12-01 21:08:26] [ERROR] Socket: 6. Msg: Received data from connection
+[2024-12-01 21:08:26] [DEBUG] Handling request
+[2024-12-01 21:08:26] [DEBUG] Handler specified
+[2024-12-01 21:08:26] [DEBUG] mx_registration_logic started to work
+[2024-12-01 21:08:26] [DEBUG] registration of the user started
+[2024-12-01 21:08:26] [DEBUG] user was registered successfully
+[2024-12-01 21:08:26] [DEBUG] successfully got access token
+[2024-12-01 21:08:26] [DEBUG] 0
+[2024-12-01 21:08:26] [DEBUG] got response to send
+[2024-12-01 21:08:26] [ERROR] Socket: 6. Msg: Wrong data size format
+[2024-12-01 21:12:48] [ERROR] Socket: 6. Msg: Error receiving data
+[2024-12-01 21:12:48] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 22:31:29] [INFO] Logger initialized
+[2024-12-01 22:31:29] [DEBUG] Database file opened
+[2024-12-01 22:31:29] [DEBUG] SQL script read
+[2024-12-01 22:31:29] [DEBUG] SQL script executed
+[2024-12-01 22:31:29] [INFO] Database initialized
+[2024-12-01 22:31:29] [INFO] Server initialized
+[2024-12-01 22:31:29] [DEBUG] Server socket created
+[2024-12-01 22:31:29] [FATAL] attempt to bind server socket to the address failed
+[2024-12-01 22:31:29] [DEBUG] Address already in use
+[2024-12-01 22:31:35] [INFO] New incoming connection accepted.
+[2024-12-01 22:31:52] [ERROR] Socket: 6. Msg: Received data from connection
+[2024-12-01 22:31:52] [DEBUG] Handling request
+[2024-12-01 22:31:52] [DEBUG] Handler specified
+[2024-12-01 22:31:52] [DEBUG] mx_registration_logic started to work
+[2024-12-01 22:31:52] [DEBUG] registration of the user started
+[2024-12-01 22:31:52] [DEBUG] user was registered successfully
+[2024-12-01 22:31:52] [DEBUG] successfully got access token
+[2024-12-01 22:31:52] [DEBUG] 0
+[2024-12-01 22:31:52] [DEBUG] got response to send
+[2024-12-01 22:31:52] [ERROR] Socket: 6. Msg: Wrong data size format
+[2024-12-01 22:51:11] [ERROR] Socket: 6. Msg: Error receiving data
+[2024-12-01 22:51:11] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 23:38:19] [DEBUG] kill signal received
+[2024-12-01 23:38:19] [INFO] Server stopped receiving connections
+[2024-12-01 23:38:28] [INFO] Logger initialized
+[2024-12-01 23:38:28] [DEBUG] Database file opened
+[2024-12-01 23:38:28] [DEBUG] SQL script read
+[2024-12-01 23:38:28] [DEBUG] SQL script executed
+[2024-12-01 23:38:28] [INFO] Database initialized
+[2024-12-01 23:38:28] [INFO] Server initialized
+[2024-12-01 23:38:28] [DEBUG] Server socket created
+[2024-12-01 23:38:28] [DEBUG] Server socket bound to address
+[2024-12-01 23:38:28] [DEBUG] Server listening to incoming connections
+[2024-12-01 23:38:28] [INFO] connection channel opened
+[2024-12-01 23:38:28] [INFO] Server starting receiving connections
+[2024-12-01 23:38:32] [INFO] New incoming connection accepted.
+[2024-12-01 23:38:37] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 23:41:42] [INFO] Logger initialized
+[2024-12-01 23:41:42] [DEBUG] Database file opened
+[2024-12-01 23:41:42] [DEBUG] SQL script read
+[2024-12-01 23:41:42] [DEBUG] SQL script executed
+[2024-12-01 23:41:42] [INFO] Database initialized
+[2024-12-01 23:41:42] [INFO] Server initialized
+[2024-12-01 23:41:42] [DEBUG] Server socket created
+[2024-12-01 23:41:42] [FATAL] attempt to bind server socket to the address failed
+[2024-12-01 23:41:42] [DEBUG] Address already in use
+[2024-12-01 23:41:45] [INFO] New incoming connection accepted.
+[2024-12-01 23:41:48] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 23:46:39] [INFO] New incoming connection accepted.
+[2024-12-01 23:46:43] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 23:47:28] [INFO] New incoming connection accepted.
+[2024-12-01 23:47:31] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 23:48:37] [INFO] New incoming connection accepted.
+[2024-12-01 23:48:40] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 23:49:27] [DEBUG] kill signal received
+[2024-12-01 23:49:27] [INFO] Server stopped receiving connections
+[2024-12-01 23:49:29] [INFO] Logger initialized
+[2024-12-01 23:49:29] [DEBUG] Database file opened
+[2024-12-01 23:49:29] [DEBUG] SQL script read
+[2024-12-01 23:49:29] [DEBUG] SQL script executed
+[2024-12-01 23:49:29] [INFO] Database initialized
+[2024-12-01 23:49:29] [INFO] Server initialized
+[2024-12-01 23:49:29] [DEBUG] Server socket created
+[2024-12-01 23:49:29] [DEBUG] Server socket bound to address
+[2024-12-01 23:49:29] [DEBUG] Server listening to incoming connections
+[2024-12-01 23:49:29] [INFO] connection channel opened
+[2024-12-01 23:49:29] [INFO] Server starting receiving connections
+[2024-12-01 23:49:33] [INFO] New incoming connection accepted.
+[2024-12-01 23:49:36] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 23:51:07] [INFO] New incoming connection accepted.
+[2024-12-01 23:51:10] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 23:52:51] [INFO] Logger initialized
+[2024-12-01 23:52:51] [DEBUG] Database file opened
+[2024-12-01 23:52:51] [DEBUG] SQL script read
+[2024-12-01 23:52:51] [DEBUG] SQL script executed
+[2024-12-01 23:52:51] [INFO] Database initialized
+[2024-12-01 23:52:51] [INFO] Server initialized
+[2024-12-01 23:52:51] [DEBUG] Server socket created
+[2024-12-01 23:52:51] [FATAL] attempt to bind server socket to the address failed
+[2024-12-01 23:52:51] [DEBUG] Address already in use
+[2024-12-01 23:52:56] [INFO] New incoming connection accepted.
+[2024-12-01 23:53:00] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 23:54:32] [INFO] New incoming connection accepted.
+[2024-12-01 23:54:39] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-01 23:57:40] [INFO] New incoming connection accepted.
+[2024-12-01 23:57:44] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:03:13] [INFO] New incoming connection accepted.
+[2024-12-02 00:03:17] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:03:53] [INFO] New incoming connection accepted.
+[2024-12-02 00:03:57] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:05:01] [INFO] New incoming connection accepted.
+[2024-12-02 00:05:04] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:06:38] [INFO] New incoming connection accepted.
+[2024-12-02 00:06:41] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:07:48] [INFO] New incoming connection accepted.
+[2024-12-02 00:07:51] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:10:05] [INFO] New incoming connection accepted.
+[2024-12-02 00:10:24] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:13:05] [INFO] New incoming connection accepted.
+[2024-12-02 00:13:08] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:16:15] [INFO] New incoming connection accepted.
+[2024-12-02 00:16:18] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:17:25] [INFO] New incoming connection accepted.
+[2024-12-02 00:17:38] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:36:34] [INFO] New incoming connection accepted.
+[2024-12-02 00:36:41] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:38:00] [INFO] New incoming connection accepted.
+[2024-12-02 00:38:05] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:42:55] [INFO] New incoming connection accepted.
+[2024-12-02 00:43:05] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:44:00] [INFO] New incoming connection accepted.
+[2024-12-02 00:44:12] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:44:32] [INFO] New incoming connection accepted.
+[2024-12-02 00:44:46] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:45:53] [INFO] New incoming connection accepted.
+[2024-12-02 00:46:11] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:46:47] [INFO] New incoming connection accepted.
+[2024-12-02 00:47:06] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:47:42] [INFO] New incoming connection accepted.
+[2024-12-02 00:47:48] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:48:01] [INFO] New incoming connection accepted.
+[2024-12-02 00:51:30] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 00:51:45] [INFO] New incoming connection accepted.
+[2024-12-02 00:52:10] [INFO] New incoming connection accepted.
+[2024-12-02 00:52:55] [INFO] New incoming connection accepted.
+[2024-12-02 00:54:40] [INFO] Socket: 8. Msg: Client disconnected
+[2024-12-02 00:54:40] [INFO] Socket: 7. Msg: Client disconnected
+[2024-12-02 00:54:40] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:02:04] [INFO] New incoming connection accepted.
+[2024-12-02 01:02:17] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:02:24] [INFO] New incoming connection accepted.
+[2024-12-02 01:02:55] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:04:16] [INFO] New incoming connection accepted.
+[2024-12-02 01:04:42] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:05:33] [INFO] New incoming connection accepted.
+[2024-12-02 01:05:45] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:06:12] [INFO] New incoming connection accepted.
+[2024-12-02 01:06:27] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:08:01] [INFO] New incoming connection accepted.
+[2024-12-02 01:08:15] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:18:39] [INFO] New incoming connection accepted.
+[2024-12-02 01:18:41] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:18:53] [INFO] New incoming connection accepted.
+[2024-12-02 01:19:06] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:22:41] [INFO] New incoming connection accepted.
+[2024-12-02 01:23:03] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:25:00] [INFO] New incoming connection accepted.
+[2024-12-02 01:25:10] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:25:20] [INFO] New incoming connection accepted.
+[2024-12-02 01:25:27] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:27:04] [INFO] Logger initialized
+[2024-12-02 01:27:04] [DEBUG] Database file opened
+[2024-12-02 01:27:04] [DEBUG] SQL script read
+[2024-12-02 01:27:04] [DEBUG] SQL script executed
+[2024-12-02 01:27:04] [INFO] Database initialized
+[2024-12-02 01:27:04] [INFO] Server initialized
+[2024-12-02 01:27:04] [DEBUG] Server socket created
+[2024-12-02 01:27:04] [FATAL] attempt to bind server socket to the address failed
+[2024-12-02 01:27:04] [DEBUG] Address already in use
+[2024-12-02 01:27:43] [INFO] Logger initialized
+[2024-12-02 01:27:43] [DEBUG] Database file opened
+[2024-12-02 01:27:43] [DEBUG] SQL script read
+[2024-12-02 01:27:43] [DEBUG] SQL script executed
+[2024-12-02 01:27:43] [INFO] Database initialized
+[2024-12-02 01:27:43] [INFO] Server initialized
+[2024-12-02 01:27:43] [DEBUG] Server socket created
+[2024-12-02 01:27:43] [FATAL] attempt to bind server socket to the address failed
+[2024-12-02 01:27:43] [DEBUG] Address already in use
+[2024-12-02 01:27:51] [INFO] New incoming connection accepted.
+[2024-12-02 01:29:09] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:29:35] [INFO] New incoming connection accepted.
+[2024-12-02 01:29:37] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:30:43] [INFO] New incoming connection accepted.
+[2024-12-02 01:30:57] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:31:54] [INFO] New incoming connection accepted.
+[2024-12-02 01:32:19] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:33:20] [INFO] New incoming connection accepted.
+[2024-12-02 01:33:36] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:42:30] [INFO] Logger initialized
+[2024-12-02 01:42:30] [DEBUG] Database file opened
+[2024-12-02 01:42:30] [DEBUG] SQL script read
+[2024-12-02 01:42:30] [DEBUG] SQL script executed
+[2024-12-02 01:42:30] [INFO] Database initialized
+[2024-12-02 01:42:30] [INFO] Server initialized
+[2024-12-02 01:42:30] [DEBUG] Server socket created
+[2024-12-02 01:42:30] [DEBUG] Server socket bound to address
+[2024-12-02 01:42:30] [DEBUG] Server listening to incoming connections
+[2024-12-02 01:42:30] [INFO] connection channel opened
+[2024-12-02 01:42:30] [INFO] Server starting receiving connections
+[2024-12-02 01:44:09] [INFO] New incoming connection accepted.
+[2024-12-02 01:49:24] [INFO] Logger initialized
+[2024-12-02 01:49:24] [DEBUG] Database file opened
+[2024-12-02 01:49:24] [DEBUG] SQL script read
+[2024-12-02 01:49:24] [DEBUG] SQL script executed
+[2024-12-02 01:49:24] [INFO] Database initialized
+[2024-12-02 01:49:24] [INFO] Server initialized
+[2024-12-02 01:49:24] [DEBUG] Server socket created
+[2024-12-02 01:49:24] [FATAL] attempt to bind server socket to the address failed
+[2024-12-02 01:49:24] [DEBUG] Address already in use
+[2024-12-02 01:49:30] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:49:33] [INFO] New incoming connection accepted.
+[2024-12-02 01:49:41] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:50:42] [INFO] New incoming connection accepted.
+[2024-12-02 01:50:59] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:53:37] [INFO] Logger initialized
+[2024-12-02 01:53:37] [DEBUG] Database file opened
+[2024-12-02 01:53:37] [DEBUG] SQL script read
+[2024-12-02 01:53:37] [DEBUG] SQL script executed
+[2024-12-02 01:53:37] [INFO] Database initialized
+[2024-12-02 01:53:37] [INFO] Server initialized
+[2024-12-02 01:53:37] [DEBUG] Server socket created
+[2024-12-02 01:53:37] [FATAL] attempt to bind server socket to the address failed
+[2024-12-02 01:53:37] [DEBUG] Address already in use
+[2024-12-02 01:53:46] [INFO] New incoming connection accepted.
+[2024-12-02 01:54:04] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 01:56:52] [INFO] New incoming connection accepted.
+[2024-12-02 01:57:24] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 02:01:54] [INFO] New incoming connection accepted.
+[2024-12-02 02:08:22] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 02:10:21] [INFO] New incoming connection accepted.
+[2024-12-02 02:11:07] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 02:11:39] [INFO] New incoming connection accepted.
+[2024-12-02 02:16:57] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 02:18:30] [INFO] New incoming connection accepted.
+[2024-12-02 02:19:48] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 02:19:56] [INFO] New incoming connection accepted.
+[2024-12-02 02:20:18] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 02:23:06] [INFO] New incoming connection accepted.
+[2024-12-02 02:23:23] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 02:24:10] [INFO] New incoming connection accepted.
+[2024-12-02 02:24:23] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 02:25:42] [INFO] New incoming connection accepted.
+[2024-12-02 02:26:16] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 02:26:24] [INFO] New incoming connection accepted.
+[2024-12-02 02:27:48] [INFO] Socket: 6. Msg: Client disconnected
+[2024-12-02 02:27:51] [INFO] New incoming connection accepted.
+[2024-12-02 02:28:05] [INFO] Socket: 6. Msg: Client disconnected

@@ -71,7 +71,23 @@ static int write_msg(char *msg, t_LVL lvl) {
         return -2;
     }
 
+    int len = mx_strlen(timestamped_msg);
+    if (len == 0 || timestamped_msg[len - 1] != '\n') {
+        char *adjusted_msg = malloc(len + 2); // +1 для '\n' и +1 для '\0'
+        if (!adjusted_msg) {
+            free(timestamped_msg);
+            pthread_mutex_unlock(&config.lock);
+            return -3;
+        }
+        mx_strcpy(adjusted_msg, timestamped_msg);
+        adjusted_msg[len] = '\n';
+        adjusted_msg[len + 1] = '\0';
+        free(timestamped_msg);
+        timestamped_msg = adjusted_msg;
+    }
+
     write(config.log_file, timestamped_msg, mx_strlen(timestamped_msg));
+    free(timestamped_msg);
     pthread_mutex_unlock(&config.lock);
     return 0;
 }
@@ -171,6 +187,7 @@ int logger_init(char *config_path) {
 }
 
 int logger_debug(char *msg) {
+    if (config.level > DEBUG) return -2;
     char *full_msg = mx_strjoin("[DEBUG] ", msg);
     if (write_msg(full_msg, DEBUG) < 0) {
         free(full_msg);
@@ -181,6 +198,7 @@ int logger_debug(char *msg) {
 }
 
 int logger_info(char *msg) {
+    if (config.level > INFO) return -2;
     char *full_msg = mx_strjoin("[INFO] ", msg);
     if (write_msg(full_msg, INFO) < 0) {
         free(full_msg);
@@ -191,6 +209,7 @@ int logger_info(char *msg) {
 }
 
 int logger_warn(char *msg) {
+    if (config.level > WARN) return -2;
     char *full_msg = mx_strjoin("[WARN] ", msg);
     if (write_msg(full_msg, WARN) < 0)  {
         free(full_msg);
@@ -201,6 +220,7 @@ int logger_warn(char *msg) {
 }
 
 int logger_error(char *msg) {
+    if (config.level > ERROR) return -2;
     char *full_msg = mx_strjoin("[ERROR] ", msg);
     if (write_msg(full_msg, ERROR) < 0)  {
         free(full_msg);

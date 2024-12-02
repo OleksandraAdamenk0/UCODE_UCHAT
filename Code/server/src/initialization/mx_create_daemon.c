@@ -27,9 +27,8 @@ int mx_create_daemon() {
     mx_printint(daemon_pid);
     mx_printchar('\n');
 
-    // close standart outputs
-    close(STDIN_FILENO);
-    close(STDOUT_FILENO);
-    close(STDERR_FILENO);
+//    close(STDIN_FILENO);
+//    close(STDOUT_FILENO);
+//    close(STDERR_FILENO);
     return 0;
 }

@@ -24,11 +24,11 @@
                 
                 <form id="form-container">
                     <div class="form-group">
-                        <label for="username">Username</label>
+                        <label id="username_label" for="username">Username</label>
                         <input type="text" id="username" name="username" placeholder="Enter username">
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
+                        <label id="password_label" for="password">Password</label>
                         <input type="password" id="password" name="password" placeholder="Enter password">
                     </div>
                 </form>
@@ -61,11 +61,24 @@
             }
         };
 
+        function invalidData(newText) {
+            const usernameLabel = document.getElementById("username_label");
+            const passwordLabel = document.getElementById("password_label");
+
+            if (usernameLabel && passwordLabel) {
+                usernameLabel.textContent = newText;
+                usernameLabel.classList.add("error-label");
+                passwordLabel.textContent = newText;
+                passwordLabel.classList.add("error-label");
+            }
+        }
+
+
         const goToRegister = () => {
             if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.goToRegister) {
                 window.webkit.messageHandlers.goToRegister.postMessage(null);
             } else {
-                alert('Handler "submitForm" is not registered in WebKit!');
+                alert('Handler "submitLoginForm" is not registered in WebKit!');
             }
         };
 
@@ -75,11 +88,11 @@
                 password: password.value.trim(),
             };
 
-            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.submitForm) {
+            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.submitLoginForm) {
                 const jsonData = JSON.stringify(data);
-                window.webkit.messageHandlers.submitForm.postMessage(jsonData);
+                window.webkit.messageHandlers.submitLoginForm.postMessage(jsonData);
             } else {
-                alert('Handler "submitForm" is not registered in WebKit!');
+                alert('Handler "submitLoginForm" is not registered in WebKit!');
             }
         };
 

@@ -51,7 +51,7 @@ cJSON *mx_registration_logic(const cJSON *request, int *status) {
 
     if ((*status = mx_register_user(data)) == 0) {
         logger_debug("user was registered successfully\n");
-        int id = mx_get_user_id_by_username(data->username);
+        int id = mx_get_user_id(data->username, USERNAME);
         if (id < 1) *status = -9;
         else {
             char *access_token = mx_itoa(id);

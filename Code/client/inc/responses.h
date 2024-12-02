@@ -13,4 +13,18 @@ typedef struct {
     char *tokens[2];
 } t_login_response;
 
+typedef enum {
+    REGISTRATION,
+    LOGIN,
+    GET_CONTACTS,
+    GET_CHATS
+} t_action;
+
+typedef struct {
+    t_action action;
+    int status;
+    char *msg;
+    void *data;
+} t_response;
+
 #endif //UCODE_UCHAT_MAIN_RESPONSES_H

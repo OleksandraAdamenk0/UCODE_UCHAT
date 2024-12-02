@@ -7,27 +7,10 @@
 
 #include "libmx.h"
 #include "logger.h"
+#include "responses.h"
 
 extern int mode;
-
-typedef enum {
-    REGISTRATION,
-    LOGIN,
-    GET_CONTACTS,
-    GET_CHATS
-} t_api_type;
-
-typedef struct {
-    t_api_type action;
-    void *data;
-} t_request;
-
-typedef struct {
-    t_api_type action;
-    int status;
-    char *msg;
-    void *data;
-} t_response;
+extern long long int id;
 
 // INIT SECTION
 int mx_init(int argc, const char *argv[]);
@@ -42,13 +25,13 @@ bool mx_isdb_valid();
 void *mx_connection_thread(void *arg);
 void mx_close_connection();
 
-int mx_send_data(int fd, char *data);
-int mx_receive_data(int fd, char **response);
+int mx_send_data(char *data);
+int mx_receive_data(char **response);
 
 // GUI SECTION
 int mx_run_app(int argc, const char *argv[]);
 
 // DATA EXCHANGE SECTION
-char *mx_create_request(t_request *data);
+int mx_handle_request(char *data, t_action action, t_response **response);
 
 #endif //UCODE_UCHAT_MAIN_CLIENT_H

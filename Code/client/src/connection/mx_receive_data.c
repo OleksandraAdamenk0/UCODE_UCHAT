@@ -12,8 +12,6 @@ static int receive_amount(int fd) {
 
     int bytes_received = recv(fd, buffer, BUFFER_SIZE, 0);
 
-    printf("amount of data chunks: %s\n", buffer);
-
     if (bytes_received == 0) return -1;
     else if (bytes_received < 0) return -2;
     if (!mx_is_numeric(buffer)) return -3;
@@ -32,7 +30,6 @@ static int receive_content(int fd, int amount, char **result) {
         mx_memset(buffer, '\0', BUFFER_SIZE);
 
         int bytes_received = recv(fd, buffer, BUFFER_SIZE - 1, 0);
-        printf("Received chunk %d/%d: '%s'\n", i + 1, amount, buffer);
         if (bytes_received == 0) return -1;
         else if (bytes_received < 0) return -2;
 
@@ -40,15 +37,13 @@ static int receive_content(int fd, int amount, char **result) {
         free(*result);
         *result = temp;
 
-        printf("Received chunk %d/%d: %s\n", i + 1, amount, buffer);
     }
 
     return 0;
 }
 
-int mx_receive_data(int fd, char **data) {
+int mx_receive_data(char **data) {
     int amount = receive_amount(fd);
-    printf("amount of data chunks in main: %d\n", amount);
     if (amount < 0) {
         perror("error");
         return amount;
@@ -57,6 +52,5 @@ int mx_receive_data(int fd, char **data) {
     int status = receive_content(fd, amount, data);
     if (status < 0) return status;
 
-    printf("All data received: %s\n", *data);
     return 0;
 }

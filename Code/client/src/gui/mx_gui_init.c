@@ -15,7 +15,9 @@ static int init_webview() {
 
     WebKitSettings *settings = webkit_web_view_get_settings(webview);
     if (settings == NULL) return -2;
+    webkit_settings_set_enable_developer_extras(settings, TRUE);
     webkit_settings_set_enable_javascript(settings, TRUE);
+    g_object_set(settings, "enable-page-cache", FALSE, NULL);
 
     manager = webkit_web_view_get_user_content_manager(webview);
     if (manager == NULL) return -1;

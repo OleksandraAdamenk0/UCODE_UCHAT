@@ -28,6 +28,7 @@ extern WebKitUserContentManager *manager;
 
 // UTILS
 char *mx_get_cur_dir();
+char *mx_create_js_func_call(char *name, char *argument);
 
 void mx_gui_init(GtkApplication *app, gpointer user_data);
 
@@ -36,5 +37,7 @@ int mx_load_load_page();
 int mx_load_registration_page();
 int mx_load_login_page();
 int mx_load_error_page();
+int mx_load_chat_page();
+
 
 #endif //UCODE_UCHAT_MAIN_GRAPHICAL_INTERFACE_H

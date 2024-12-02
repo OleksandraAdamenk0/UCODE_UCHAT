@@ -60,15 +60,13 @@ static int send_content( int fd, int amount, char *data) {
         mx_strncpy(buffer, data, len);
         data += len;
 
-        // printf("Sending chunk %d/%d: '%s'\n", i + 1, amount, buffer);
         if (send(fd, buffer, 1024, 0) < 0)
             return -1;
-        // printf("Sending chunk %d/%d: %s\n", i + 1, amount, buffer);
     }
     return 0;
 }
 
-int mx_send_data(int fd, char *data) {
+int mx_send_data(char *data) {
     if (!data) {
         null_data(fd);
         return -1;  // no data to send

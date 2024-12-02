@@ -18,15 +18,16 @@ int mx_get_tokens(cJSON *response, cJSON **access,
 int mx_base64_encode(const char *input_str, char **encoded_str);
 int mx_base64_decode(const char *encoded_str, char **decoded_str);
 
+int mx_registration(char *data, t_response **response);
+int mx_login(char *data, t_response **response);
+
 // REQUESTS
 char *mx_get_chats_request(t_get_chats_request *data);
 char *mx_get_contacts_request(t_get_contacts_request *data);
-char *mx_registration_request(t_registration_request *data);
 char *mx_login_request(t_login_request *data);
 
 // RESPONSES
-t_registration_response *mx_registration_response(char *str, int *status_ptr,
-                                                  char **msg_ptr);
+
 t_login_response *mx_login_response(char *str, int *status_ptr, char **msg_ptr);
 
 #endif //UCODE_UCHAT_MAIN_DATA_EXCHANGE_H

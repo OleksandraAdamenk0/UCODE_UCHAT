@@ -16,9 +16,6 @@ static void connect(WebKitUserContentManager *manager,
     pthread_t conn_thread;
     pthread_create(&conn_thread, NULL, mx_connection_thread, NULL);
     pthread_detach(conn_thread);
-//    clear_handlers();
-//    if (mode == -2) mx_load_error_page();
-//    else mx_load_login_page();
 }
 
 static void go_to_login(WebKitUserContentManager *manager,

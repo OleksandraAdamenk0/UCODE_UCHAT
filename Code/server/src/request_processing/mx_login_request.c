@@ -8,17 +8,11 @@ int mx_login_request(const cJSON *request) {
     cJSON *username = cJSON_GetObjectItemCaseSensitive(request, "username");
     cJSON *password = cJSON_GetObjectItemCaseSensitive(request, "password");
 
-    if ((!cJSON_IsString(username) || username->valuestring == NULL)
-        || (!cJSON_IsString(password) || password->valuestring == NULL) ){
+    if ((!cJSON_IsString(username) || username->valuestring == NULL) ||
+    (!cJSON_IsString(password) || password->valuestring == NULL) ||
+    mx_strlen(username->valuestring) == 0 ||
+    mx_strlen(password->valuestring) == 0){
         return -1;
     }
-
-    // if (username doesn't exist in DB) {
-    //    return -1;
-    // }
-
-    // if (password provided by client doesn't match password from the DB') {
-    //    return -1;
-    //}
     return 0;
 }

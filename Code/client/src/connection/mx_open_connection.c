@@ -147,7 +147,6 @@ static int open_connection() {
     } else logger_info("socket was created successfully\n");
 
     int status = connection(fd);
-    printf("%d\n", status);
     if (status < 0){
         mx_close_connection();
         return status;
@@ -159,17 +158,17 @@ void *mx_connection_thread(void *arg) {
     fd = open_connection();
 
     if (fd > 0) {
-        mode = 0;  // Успешное подключение
+        mode = 0;
         logger_info("Connection succeeded. Running online mode\n");
         if (mx_db_init() < 0) {
             logger_error("DB initialization failed.\n");
             mode = -2;
         }
     } else if (mx_isdb_valid()) {
-        mode = -1; // Оффлайн режим
+        mode = -1;
         logger_error("Connection failed. Running offline mode\n");
     } else {
-        mode = -2; // Локальная БД недоступна
+        mode = -2;
         logger_error("Connection failed. Local DB unavailable.\n");
     }
 

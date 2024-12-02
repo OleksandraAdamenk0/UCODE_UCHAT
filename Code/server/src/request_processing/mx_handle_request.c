@@ -44,6 +44,7 @@ static char *handler(cJSON *request, t_request_func request_func,
     }
     str_response = response_func(status, response);
     if (!str_response) log_response_error(action);
+    logger_debug(mx_itoa(status));
     return str_response;
 }
 
@@ -99,5 +100,6 @@ char *mx_handle_request(const char *request_str) {
         response = mx_unknown_action_response(NULL);
     }
     cJSON_Delete(request);
+    logger_debug("got response to send");
     return response;
 }

@@ -1,10 +1,12 @@
 #include "client.h"
 #include "initialization.h"
+#include "connection.h"
 #include "logger.h"
 #include "gui.h"
 
 int port;
 char *ip;
+long long int id = -1;
 GtkApplication *app;
 
 int main(int argc, const char *argv[]) {

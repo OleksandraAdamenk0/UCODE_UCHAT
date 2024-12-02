@@ -13,12 +13,15 @@
 #define INIT_SCRIPT SCRIPTS "/init.sql"
 #define DB_NAME DB_DIR "/server.db"
 
+typedef enum e_users_fields {
+    USERNAME, PASSWORD, EMAIL, PHONE, PHOTO
+} t_users_field;
+
 extern sqlite3 *db;
 
 int mx_create_dir();
 //int mx_init_tables();
 
 int mx_register_user(t_registration *data);
-int mx_get_user_id_by_username(const char *username);
-
+int mx_get_user_id(const char *value, t_users_field field);
 #endif

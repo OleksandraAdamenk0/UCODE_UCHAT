@@ -13,7 +13,6 @@ int mx_register_user(t_registration *data) {
         sqlite3_close(db);
         return -9;
     }
-    printf("data:\nname: %s\npasswort: %s\nemail: %s\nphone: %s\nphoto: %s\n",data->username, data->password, data->email, data->phone, data->photo);
 
     // Bind username
     if (sqlite3_bind_text(stmt, 1, data->username, -1, SQLITE_STATIC) != SQLITE_OK) {
