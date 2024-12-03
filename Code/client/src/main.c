@@ -1,7 +1,8 @@
 #include "client.h"
+#include "data_caching.h"
+#include "../inc/data_caching.h"
 
 int main(int argc, char *argv[]) {
-
     if (mx_init(argc, argv) < 0) {
         mx_printerr("Usage: ./uchat <ip_address> <port>\n");
         return -1;
