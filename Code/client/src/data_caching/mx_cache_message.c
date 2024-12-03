@@ -19,19 +19,9 @@ int mx_cache_message(sqlite3 *db, t_get_msgs msg) {
     sqlite3_bind_text(stmt, 6, msg.message, -1, SQLITE_STATIC);
 
     if (msg.binary != NULL) {
-        size_t binary_size = sizeof(msg.binary);
-        unsigned char *photo_data = base64_decode(msg.binary, binary_size, &binary_size);
-
-        if (photo_data != NULL) {
-            sqlite3_bind_blob(stmt, 5, photo_data, binary_size, SQLITE_STATIC);
-            free(photo_data);
-        } else {
-            logger_error("Failed to decode photo data.\n");
-            sqlite3_finalize(stmt);
-            return -1;
-        }
+        int binary_size = sizeof(msg.binary);
+        sqlite3_bind_blob(stmt, 5, msg.binary, binary_size, SQLITE_STATIC);
     } else {
-        // Bind NULL if no photo is provided
         sqlite3_bind_null(stmt, 5);
     }
 

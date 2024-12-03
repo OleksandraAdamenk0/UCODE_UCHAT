@@ -14,7 +14,6 @@ int mx_update_chat_photo(sqlite3 *db, char *new_chat_photo, int photo_size, int 
     if (new_chat_photo != NULL) {
             sqlite3_bind_blob(stmt, 1, new_chat_photo, photo_size, SQLITE_STATIC);
     } else {
-        // Bind NULL if no photo is provided
         sqlite3_bind_null(stmt, 1);
     }
     sqlite3_bind_int(stmt, 2, chat_id);

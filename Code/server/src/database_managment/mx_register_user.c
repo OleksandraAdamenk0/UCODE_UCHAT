@@ -17,19 +17,9 @@ int mx_register_user(sqlite3 *db, t_get_user user) {
     sqlite3_bind_text(stmt, 4, user.phone, -1, SQLITE_STATIC);
 
     if (user.photo != NULL) {
-        size_t photo_size = sizeof(user.photo);
-        unsigned char *photo_data = base64_decode(user.photo, photo_size, &photo_size); // Implement this function
-
-        if (photo_data != NULL) {
-            sqlite3_bind_blob(stmt, 5, photo_data, photo_size, SQLITE_STATIC);
-            free(photo_data);
-        } else {
-            logger_error("Failed to decode photo data\n");
-            sqlite3_finalize(stmt);
-            return -1;
-        }
+        int photo_size = sizeof(user.photo);
+        sqlite3_bind_blob(stmt, 5, user.photo, photo_size, SQLITE_STATIC);
     } else {
-        // Bind NULL if no photo is provided
         sqlite3_bind_null(stmt, 5);
     }
 

@@ -1,6 +1,6 @@
 #include "data_caching.h"
 
-t_get_settings *mx_get_cached_settings(sqlite3 *db) {
+t_get_settings mx_get_cached_settings(sqlite3 *db) {
     sqlite3_stmt *stmt;
     char *sql = "SELECT * FROM settings";
 
@@ -11,11 +11,11 @@ t_get_settings *mx_get_cached_settings(sqlite3 *db) {
         return NULL;
     }
 
-    t_get_settings *settings = NULL;
-    settings->email = (char*)sqlite3_column_text(stmt, 0);
-    settings->phone = (char*)sqlite3_column_text(stmt, 1);
-    settings->photo = (char*)sqlite3_column_blob(stmt, 2);
-    settings->theme = (char*)sqlite3_column_text(stmt, 3);
+    t_get_settings settings;
+    settings.email = (char*)sqlite3_column_text(stmt, 0);
+    settings.phone = (char*)sqlite3_column_text(stmt, 1);
+    settings.photo = (char*)sqlite3_column_blob(stmt, 2);
+    settings.theme = (char*)sqlite3_column_text(stmt, 3);
 
     if (sqlite3_step(stmt) != SQLITE_DONE) {
         char err_msg[256];
