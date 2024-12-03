@@ -16,7 +16,7 @@ int mx_update_message_text(sqlite3 *db, char *new_message_text, int id) {
 
     if (sqlite3_step(stmt) != SQLITE_DONE) {
         char err_msg[256];
-        snprintf(err_msg, sizeof(err_msg), "Execution failed: %s\n", sqlite3_errmsg(db));
+        snprintf(err_msg, sizeof(err_msg), "Updating message text failed: %s\n", sqlite3_errmsg(db));
         logger_error(err_msg);
         sqlite3_finalize(stmt);
         return -1;

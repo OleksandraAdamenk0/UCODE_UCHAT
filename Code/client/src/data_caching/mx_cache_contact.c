@@ -23,7 +23,7 @@ int mx_cache_contact(sqlite3 *db, t_get_contacts contact) {
 
     if (sqlite3_step(stmt) != SQLITE_DONE) {
         char error[128];
-        snprintf(error, sizeof(error), "Execution failed: %s\n", sqlite3_errmsg(db));
+        snprintf(error, sizeof(error), "Contact caching failed: %s\n", sqlite3_errmsg(db));
         logger_error(error);
         sqlite3_finalize(stmt);
         return -1;

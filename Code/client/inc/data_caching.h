@@ -22,5 +22,9 @@ t_list *mx_get_cached_contacts(sqlite3 *db);
 t_list *mx_get_cached_messages(sqlite3 *db);
 t_get_settings *mx_get_cached_settings(sqlite3 *db);
 int mx_update_settings_email(sqlite3 *db, char *new_email, char *old_email);
+int mx_delete_cached_message(sqlite3 *db, int message_id);
+int mx_delete_cached_contact(sqlite3 *db, char *username);
+int mx_delete_cached_chat(sqlite3 *db, int chat_id);
+t_list *mx_get_cached_messages(sqlite3 *db, int chat_id);
 
 #endif //DATA_CACHING_H

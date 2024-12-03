@@ -25,7 +25,7 @@ int mx_update_settings_photo(sqlite3 *db, char *new_photo, int new_photo_size, c
 
     if (sqlite3_step(stmt) != SQLITE_DONE) {
         char err_msg[256];
-        snprintf(err_msg, sizeof(err_msg), "Execution failed: %s\n", sqlite3_errmsg(db));
+        snprintf(err_msg, sizeof(err_msg), "Updating settings photo failed: %s\n", sqlite3_errmsg(db));
         logger_error(err_msg);
         sqlite3_finalize(stmt);
         return -1;

@@ -25,7 +25,7 @@ int mx_cache_chat(sqlite3 *db, t_get_chats chat) {
 
     if (sqlite3_step(stmt) != SQLITE_DONE) {
         char error[128];
-        snprintf(error, sizeof(error), "Execution failed: %s\n", sqlite3_errmsg(db));
+        snprintf(error, sizeof(error), "Chat caching failed: %s\n", sqlite3_errmsg(db));
         logger_error(error);
         sqlite3_finalize(stmt);
         return -1;

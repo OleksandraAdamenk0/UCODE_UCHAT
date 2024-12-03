@@ -16,7 +16,7 @@ int mx_update_settings_theme(sqlite3 *db, char *new_theme, char *old_theme) {
 
     if (sqlite3_step(stmt) != SQLITE_DONE) {
         char err_msg[256];
-        snprintf(err_msg, sizeof(err_msg), "Execution failed: %s\n", sqlite3_errmsg(db));
+        snprintf(err_msg, sizeof(err_msg), "Updating settings theme failed: %s\n", sqlite3_errmsg(db));
         logger_error(err_msg);
         sqlite3_finalize(stmt);
         return -1;
