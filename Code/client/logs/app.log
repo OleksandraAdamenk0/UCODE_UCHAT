@@ -1,57 +1,361 @@
-[2024-11-21 00:54:56] [INFO] logger initialized
-[2024-11-21 00:54:56] [INFO] socket was created successfully
-[2024-11-21 00:54:56] [INFO] connection opened
-[2024-11-21 00:54:56] [INFO] connection closed
-[2024-11-21 11:10:52] [INFO] logger initialized
-[2024-11-21 11:10:53] [INFO] socket was created successfully
-[2024-11-21 11:10:53] [INFO] connection opened
-[2024-11-21 11:17:13] [INFO] logger initialized
-[2024-11-21 11:17:13] [INFO] socket was created successfully
-[2024-11-21 11:17:13] [INFO] connection opened
-[2024-11-21 11:17:13] [ERROR] error sending message
-[2024-11-21 11:22:20] [INFO] logger initialized
-[2024-11-21 11:22:20] [INFO] socket was created successfully
-[2024-11-21 11:22:20] [INFO] connection opened
-[2024-11-21 11:33:54] [INFO] logger initialized
-[2024-11-21 11:33:54] [INFO] socket was created successfully
-[2024-11-21 11:33:54] [INFO] connection opened
-[2024-11-21 11:33:54] [FATAL] application window was not created before trying to show screen
-[2024-11-21 11:33:54] [INFO] connection closed
-[2024-11-21 11:34:34] [INFO] logger initialized
-[2024-11-21 11:34:34] [INFO] socket was created successfully
-[2024-11-21 11:34:34] [INFO] connection opened
-[2024-11-21 11:34:34] [FATAL] application window was not created before trying to show screen
-[2024-11-21 11:34:34] [INFO] connection closed
-[2024-11-21 11:34:41] [INFO] logger initialized
-[2024-11-21 11:34:41] [INFO] socket was created successfully
-[2024-11-21 11:34:41] [INFO] connection opened
-[2024-11-21 11:34:41] [FATAL] application window was not created before trying to show screen
-[2024-11-21 11:34:41] [INFO] connection closed
-[2024-11-21 11:34:49] [INFO] logger initialized
-[2024-11-21 11:34:49] [INFO] socket was created successfully
-[2024-11-21 11:34:49] [INFO] connection opened
-[2024-11-21 11:34:49] [FATAL] application window was not created before trying to show screen
-[2024-11-21 11:34:49] [INFO] connection closed
-[2024-11-21 11:39:01] [INFO] logger initialized
-[2024-11-21 11:39:01] [INFO] socket was created successfully
-[2024-11-21 11:39:01] [INFO] connection opened
-[2024-11-21 11:39:28] [INFO] connection closed
-[2024-11-21 11:53:52] [INFO] logger initialized
-[2024-11-21 11:53:52] [INFO] socket was created successfully
-[2024-11-21 11:53:52] [INFO] connection opened
-[2024-11-21 11:55:19] [INFO] logger initialized
-[2024-11-21 11:55:20] [INFO] socket was created successfully
-[2024-11-21 11:55:20] [INFO] connection opened
-[2024-11-21 11:55:23] [INFO] connection closed
-[2024-11-21 12:23:38] [INFO] logger initialized
-[2024-11-21 12:23:38] [INFO] socket was created successfully
-[2024-11-21 12:23:38] [INFO] connection opened
-[2024-11-21 12:23:51] [INFO] connection closed
-[2024-11-21 12:24:09] [INFO] logger initialized
-[2024-11-21 12:24:09] [INFO] socket was created successfully
-[2024-11-21 12:24:09] [INFO] connection opened
-[2024-11-21 12:24:13] [INFO] connection closed
-[2024-11-21 12:24:35] [INFO] logger initialized
-[2024-11-21 12:24:35] [INFO] socket was created successfully
-[2024-11-21 12:24:35] [INFO] connection opened
-[2024-11-21 12:29:11] [INFO] connection closed
+[2024-11-29 15:23:25] [INFO] Gui initialization
+[2024-11-29 15:23:25] [DEBUG] GTK initialized
+[2024-11-29 15:23:25] [DEBUG] Window created
+[2024-11-29 15:23:25] [DEBUG] Destroy signal connected
+[2024-11-29 15:23:25] [INFO] Loading login page
+[2024-11-29 15:23:25] [DEBUG] Handlers set for load page.
+[2024-11-29 15:23:26] [INFO] socket was created successfully
+[2024-11-29 15:23:26] [DEBUG] Socket is set to blocking mode
+[2024-11-29 15:23:26] [INFO] Connection succeed. Running online mode
+[2024-11-29 15:23:26] [INFO] Database was opened/created
+[2024-11-29 15:23:26] [DEBUG] All handlers cleared.
+[2024-11-29 15:23:26] [INFO] Loading login page
+[2024-11-29 15:23:26] [DEBUG] Handlers set for login page.
+[2024-11-29 15:23:28] [INFO] App ended with status 465372640
+[2024-11-29 15:28:15] [INFO] Logger initialized
+[2024-11-29 15:28:15] [INFO] Gui initialization
+[2024-11-29 15:28:15] [DEBUG] GTK initialized
+[2024-11-29 15:28:15] [DEBUG] Window created
+[2024-11-29 15:28:15] [DEBUG] Destroy signal connected
+[2024-11-29 15:28:15] [INFO] Loading login page
+[2024-11-29 15:28:15] [DEBUG] Handlers set for load page.
+[2024-11-29 15:28:16] [INFO] socket was created successfully
+[2024-11-29 15:28:16] [DEBUG] Socket is set to blocking mode
+[2024-11-29 15:28:16] [FATAL] Connection failed with error: Connection refused
+[2024-11-29 15:28:16] [INFO] connection closed
+[2024-11-29 15:28:16] [INFO] Database was opened/created
+[2024-11-29 15:28:16] [DEBUG] database is NOT valid
+[2024-11-29 15:28:16] [ERROR] Connection failed. Local db unavailable.
+[2024-11-29 15:28:16] [DEBUG] All handlers cleared.
+[2024-11-29 15:29:21] [INFO] Logger initialized
+[2024-11-29 15:29:21] [INFO] Gui initialization
+[2024-11-29 15:29:21] [DEBUG] GTK initialized
+[2024-11-29 15:29:21] [DEBUG] Window created
+[2024-11-29 15:29:21] [DEBUG] Destroy signal connected
+[2024-11-29 15:29:21] [INFO] Loading login page
+[2024-11-29 15:29:21] [DEBUG] Handlers set for load page.
+[2024-11-29 15:29:21] [INFO] socket was created successfully
+[2024-11-29 15:29:21] [DEBUG] Socket is set to blocking mode
+[2024-11-29 15:29:21] [FATAL] Connection failed with error: Connection refused
+[2024-11-29 15:29:21] [INFO] connection closed
+[2024-11-29 15:29:21] [INFO] Database was opened/created
+[2024-11-29 15:29:21] [DEBUG] database is NOT valid
+[2024-11-29 15:29:21] [ERROR] Connection failed. Local db unavailable.
+[2024-11-29 15:29:21] [DEBUG] All handlers cleared.
+[2024-11-29 15:43:57] [INFO] Logger initialized
+[2024-11-29 15:43:57] [INFO] Gui initialization
+[2024-11-29 15:43:57] [DEBUG] GTK initialized
+[2024-11-29 15:43:57] [DEBUG] Window created
+[2024-11-29 15:43:57] [DEBUG] Destroy signal connected
+[2024-11-29 15:43:57] [INFO] Loading login page
+[2024-11-29 15:43:57] [DEBUG] Handlers set for load page.
+[2024-11-29 15:43:57] [INFO] socket was created successfully
+[2024-11-29 15:43:57] [WARN] Connection failed during select: Operation now in progress[2024-11-29 15:43:58] [FATAL] Unexpected connection error: Software caused connection abort[2024-11-29 15:43:58] [DEBUG] Socket is set to blocking mode
+[2024-11-29 15:43:58] [INFO] connection closed
+[2024-11-29 15:43:58] [INFO] Database was opened/created
+[2024-11-29 15:43:58] [DEBUG] database is NOT valid
+[2024-11-29 15:43:58] [ERROR] Connection failed. Local db unavailable.
+[2024-11-29 15:43:58] [DEBUG] All handlers cleared.
+[2024-11-29 15:44:07] [INFO] Logger initialized
+[2024-11-29 15:44:07] [INFO] Gui initialization
+[2024-11-29 15:44:07] [DEBUG] GTK initialized
+[2024-11-29 15:44:07] [DEBUG] Window created
+[2024-11-29 15:44:07] [DEBUG] Destroy signal connected
+[2024-11-29 15:44:07] [INFO] Loading login page
+[2024-11-29 15:44:07] [DEBUG] Handlers set for load page.
+[2024-11-29 15:44:08] [INFO] socket was created successfully
+[2024-11-29 15:44:08] [WARN] Connection failed during select: Operation now in progress[2024-11-29 15:44:08] [FATAL] Unexpected connection error: Software caused connection abort[2024-11-29 15:44:08] [DEBUG] Socket is set to blocking mode
+[2024-11-29 15:44:08] [INFO] connection closed
+[2024-11-29 15:44:08] [INFO] Database was opened/created
+[2024-11-29 15:44:08] [DEBUG] database is NOT valid
+[2024-11-29 15:44:08] [ERROR] Connection failed. Local db unavailable.
+[2024-11-29 15:44:08] [DEBUG] All handlers cleared.
+[2024-11-29 15:46:43] [INFO] Logger initialized
+[2024-11-29 15:46:43] [INFO] Gui initialization
+[2024-11-29 15:46:43] [DEBUG] GTK initialized
+[2024-11-29 15:46:43] [DEBUG] Window created
+[2024-11-29 15:46:43] [DEBUG] Destroy signal connected
+[2024-11-29 15:46:43] [INFO] Loading login page
+[2024-11-29 15:46:43] [DEBUG] Handlers set for load page.
+[2024-11-29 15:48:08] [INFO] Logger initialized
+[2024-11-29 15:48:08] [INFO] Gui initialization
+[2024-11-29 15:48:08] [DEBUG] GTK initialized
+[2024-11-29 15:48:08] [DEBUG] Window created
+[2024-11-29 15:48:08] [DEBUG] Destroy signal connected
+[2024-11-29 15:48:08] [INFO] Loading login page
+[2024-11-29 15:48:08] [DEBUG] Handlers set for load page.
+[2024-11-29 15:48:39] [INFO] App ended with status -1997261344
+[2024-11-29 15:50:51] [INFO] Logger initialized
+[2024-11-29 15:50:51] [INFO] Gui initialization
+[2024-11-29 15:50:51] [DEBUG] GTK initialized
+[2024-11-29 15:50:51] [DEBUG] Window created
+[2024-11-29 15:50:51] [DEBUG] Destroy signal connected
+[2024-11-29 15:50:51] [INFO] Loading login page
+[2024-11-29 15:50:51] [DEBUG] Handlers set for load page.
+[2024-11-29 15:51:35] [INFO] Logger initialized
+[2024-11-29 15:51:35] [INFO] Gui initialization
+[2024-11-29 15:51:35] [DEBUG] GTK initialized
+[2024-11-29 15:51:35] [DEBUG] Window created
+[2024-11-29 15:51:35] [DEBUG] Destroy signal connected
+[2024-11-29 15:51:35] [INFO] Loading login page
+[2024-11-29 15:51:35] [DEBUG] Handlers set for load page.
+[2024-11-29 15:51:36] [INFO] socket was created successfully
+[2024-11-29 15:51:36] [WARN] Connection failed during select: Operation now in progress[2024-11-29 15:51:36] [FATAL] Unexpected connection error: Software caused connection abort[2024-11-29 15:51:36] [DEBUG] Socket is set to blocking mode
+[2024-11-29 15:51:36] [INFO] connection closed
+[2024-11-29 15:51:36] [INFO] Database was opened/created
+[2024-11-29 15:51:36] [DEBUG] database is NOT valid
+[2024-11-29 15:51:36] [ERROR] Connection failed. Local db unavailable.
+[2024-11-29 15:51:36] [DEBUG] All handlers cleared.
+[2024-11-29 15:51:36] [DEBUG] load error page
+[2024-11-29 15:51:51] [INFO] App ended with status -112237088
+[2024-11-29 15:53:27] [INFO] Logger initialized
+[2024-11-29 15:53:27] [INFO] Gui initialization
+[2024-11-29 15:53:27] [DEBUG] GTK initialized
+[2024-11-29 15:53:27] [DEBUG] Window created
+[2024-11-29 15:53:27] [DEBUG] Destroy signal connected
+[2024-11-29 15:53:27] [INFO] Loading login page
+[2024-11-29 15:53:27] [DEBUG] Handlers set for load page.
+[2024-11-29 15:53:28] [INFO] socket was created successfully
+[2024-11-29 15:53:28] [WARN] Connection failed during select: Operation now in progress[2024-11-29 15:53:28] [FATAL] Unexpected connection error: Software caused connection abort[2024-11-29 15:53:28] [DEBUG] Socket is set to blocking mode
+[2024-11-29 15:53:28] [INFO] connection closed
+[2024-11-29 15:53:28] [INFO] Database was opened/created
+[2024-11-29 15:53:28] [DEBUG] database is NOT valid
+[2024-11-29 15:53:28] [ERROR] Connection failed. Local db unavailable.
+[2024-11-29 15:53:28] [DEBUG] All handlers cleared.
+[2024-11-29 15:53:28] [DEBUG] load error page
+[2024-11-29 15:53:31] [INFO] App ended with status -1898408480
+[2024-11-29 16:02:40] [INFO] Logger initialized
+[2024-11-29 16:02:40] [INFO] Gui initialization
+[2024-11-29 16:02:40] [DEBUG] GTK initialized
+[2024-11-29 16:02:40] [DEBUG] Window created
+[2024-11-29 16:02:40] [DEBUG] Destroy signal connected
+[2024-11-29 16:02:40] [INFO] Loading login page
+[2024-11-29 16:02:40] [DEBUG] Handlers set for load page.
+[2024-11-29 16:02:40] [INFO] socket was created successfully
+[2024-11-29 16:02:40] [WARN] Connection failed during select: Operation now in progress[2024-11-29 16:02:41] [FATAL] Unexpected connection error: Software caused connection abort[2024-11-29 16:02:41] [DEBUG] Socket is set to blocking mode
+[2024-11-29 16:02:41] [INFO] connection closed
+[2024-11-29 16:02:41] [INFO] Database was opened/created
+[2024-11-29 16:02:41] [DEBUG] database is NOT valid
+[2024-11-29 16:02:41] [ERROR] Connection failed. Local DB unavailable.
+[2024-11-29 16:02:41] [DEBUG] All handlers cleared.
+[2024-11-29 16:02:41] [DEBUG] load error page
+[2024-11-29 16:02:45] [INFO] App ended with status -1966098976
+[2024-11-29 16:05:05] [INFO] Logger initialized
+[2024-11-29 16:05:05] [INFO] Gui initialization
+[2024-11-29 16:05:05] [DEBUG] GTK initialized
+[2024-11-29 16:05:05] [DEBUG] Window created
+[2024-11-29 16:05:05] [DEBUG] Destroy signal connected
+[2024-11-29 16:05:05] [INFO] Loading login page
+[2024-11-29 16:05:05] [DEBUG] Handlers set for load page.
+[2024-11-29 16:05:06] [INFO] socket was created successfully
+[2024-11-29 16:05:06] [WARN] Connection failed during select: Operation now in progress[2024-11-29 16:05:06] [FATAL] Unexpected connection error: Software caused connection abort[2024-11-29 16:05:06] [DEBUG] Socket is set to blocking mode
+[2024-11-29 16:05:06] [INFO] connection closed
+[2024-11-29 16:05:06] [INFO] Database was opened/created
+[2024-11-29 16:05:06] [DEBUG] database is NOT valid
+[2024-11-29 16:05:06] [ERROR] Connection failed. Local DB unavailable.
+[2024-11-29 16:05:06] [DEBUG] All handlers cleared.
+[2024-11-29 16:05:06] [DEBUG] load error page
+[2024-11-29 16:05:15] [INFO] App ended with status -612559392
+[2024-11-29 16:05:16] [INFO] Logger initialized
+[2024-11-29 16:05:16] [INFO] Gui initialization
+[2024-11-29 16:05:16] [DEBUG] GTK initialized
+[2024-11-29 16:05:16] [DEBUG] Window created
+[2024-11-29 16:05:16] [DEBUG] Destroy signal connected
+[2024-11-29 16:05:16] [INFO] Loading login page
+[2024-11-29 16:05:16] [DEBUG] Handlers set for load page.
+[2024-11-29 16:05:17] [INFO] socket was created successfully
+[2024-11-29 16:05:17] [WARN] Connection failed during select: Operation now in progress[2024-11-29 16:05:18] [FATAL] Unexpected connection error: Software caused connection abort[2024-11-29 16:05:18] [DEBUG] Socket is set to blocking mode
+[2024-11-29 16:05:18] [INFO] connection closed
+[2024-11-29 16:05:18] [INFO] Database was opened/created
+[2024-11-29 16:05:18] [DEBUG] database is NOT valid
+[2024-11-29 16:05:18] [ERROR] Connection failed. Local DB unavailable.
+[2024-11-29 16:05:18] [DEBUG] All handlers cleared.
+[2024-11-29 16:05:18] [DEBUG] load error page
+[2024-11-29 16:05:20] [INFO] App ended with status 1594090976
+[2024-11-29 16:05:23] [INFO] Logger initialized
+[2024-11-29 16:05:23] [INFO] Gui initialization
+[2024-11-29 16:05:23] [DEBUG] GTK initialized
+[2024-11-29 16:05:23] [DEBUG] Window created
+[2024-11-29 16:05:23] [DEBUG] Destroy signal connected
+[2024-11-29 16:05:23] [INFO] Loading login page
+[2024-11-29 16:05:23] [DEBUG] Handlers set for load page.
+[2024-11-29 16:05:24] [INFO] socket was created successfully
+[2024-11-29 16:05:24] [WARN] Connection failed during select: Operation now in progress[2024-11-29 16:05:24] [FATAL] Unexpected connection error: Software caused connection abort[2024-11-29 16:05:24] [DEBUG] Socket is set to blocking mode
+[2024-11-29 16:05:24] [INFO] connection closed
+[2024-11-29 16:05:24] [INFO] Database was opened/created
+[2024-11-29 16:05:24] [DEBUG] database is NOT valid
+[2024-11-29 16:05:24] [ERROR] Connection failed. Local DB unavailable.
+[2024-11-29 16:05:24] [DEBUG] All handlers cleared.
+[2024-11-29 16:05:24] [DEBUG] load error page
+[2024-11-29 16:05:27] [INFO] App ended with status -98109984
+[2024-11-29 16:14:11] [INFO] Logger initialized
+[2024-11-29 16:14:11] [INFO] Gui initialization
+[2024-11-29 16:14:11] [DEBUG] GTK initialized
+[2024-11-29 16:14:11] [DEBUG] Window created
+[2024-11-29 16:14:11] [DEBUG] Destroy signal connected
+[2024-11-29 16:14:11] [INFO] Loading login page
+[2024-11-29 16:14:11] [DEBUG] Handlers set for load page.
+[2024-11-29 16:14:12] [INFO] socket was created successfully
+[2024-11-29 16:14:12] [WARN] Connection failed during select: Operation now in progress[2024-11-29 16:14:12] [FATAL] Unexpected connection error: Software caused connection abort[2024-11-29 16:14:12] [DEBUG] Socket is set to blocking mode
+[2024-11-29 16:14:12] [INFO] connection closed
+[2024-11-29 16:14:12] [INFO] Database was opened/created
+[2024-11-29 16:14:12] [DEBUG] database is NOT valid
+[2024-11-29 16:14:12] [ERROR] Connection failed. Local DB unavailable.
+[2024-11-29 16:14:12] [DEBUG] All handlers cleared.
+[2024-11-29 16:14:12] [DEBUG] load error page
+[2024-11-29 16:14:15] [INFO] App ended with status 334845408
+[2024-11-29 16:14:44] [INFO] Logger initialized
+[2024-11-29 16:14:44] [INFO] Gui initialization
+[2024-11-29 16:14:44] [DEBUG] GTK initialized
+[2024-11-29 16:14:44] [DEBUG] Window created
+[2024-11-29 16:14:44] [DEBUG] Destroy signal connected
+[2024-11-29 16:14:44] [INFO] Loading login page
+[2024-11-29 16:14:44] [DEBUG] Handlers set for load page.
+[2024-11-29 16:14:45] [INFO] socket was created successfully
+[2024-11-29 16:14:45] [WARN] Connection failed during select: Operation now in progress[2024-11-29 16:14:45] [FATAL] Unexpected connection error: Software caused connection abort[2024-11-29 16:14:45] [DEBUG] Socket is set to blocking mode
+[2024-11-29 16:14:45] [INFO] connection closed
+[2024-11-29 16:14:45] [INFO] Database was opened/created
+[2024-11-29 16:14:45] [DEBUG] database is NOT valid
+[2024-11-29 16:14:45] [ERROR] Connection failed. Local DB unavailable.
+[2024-11-29 16:14:45] [DEBUG] All handlers cleared.
+[2024-11-29 16:14:45] [DEBUG] load error page
+[2024-11-29 16:14:48] [INFO] App ended with status 492598752
+[2024-11-29 16:17:14] [INFO] Logger initialized
+[2024-11-29 16:17:14] [INFO] Gui initialization
+[2024-11-29 16:17:14] [DEBUG] GTK initialized
+[2024-11-29 16:17:15] [DEBUG] Window created
+[2024-11-29 16:17:15] [DEBUG] Destroy signal connected
+[2024-11-29 16:17:15] [INFO] Loading login page
+[2024-11-29 16:17:15] [DEBUG] Handlers set for load page.
+[2024-11-29 16:17:15] [INFO] socket was created successfully
+[2024-11-29 16:17:15] [WARN] Connection failed during select: Operation now in progress[2024-11-29 16:17:16] [FATAL] Unexpected connection error: Software caused connection abort[2024-11-29 16:17:16] [DEBUG] Socket is set to blocking mode
+[2024-11-29 16:17:16] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:17] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:17] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:18] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:18] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:19] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:19] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:20] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:20] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:21] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:21] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:22] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:22] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:23] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:23] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:24] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:24] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:25] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:25] [WARN] Connection refused, retrying...
+[2024-11-29 16:17:25] [WARN] Connection attempt timed out
+[2024-11-29 16:17:25] [DEBUG] Socket is set to blocking mode
+[2024-11-29 16:17:25] [INFO] connection closed
+[2024-11-29 16:17:25] [INFO] Database was opened/created
+[2024-11-29 16:17:25] [DEBUG] database is NOT valid
+[2024-11-29 16:17:25] [ERROR] Connection failed. Local DB unavailable.
+[2024-11-29 16:17:25] [DEBUG] All handlers cleared.
+[2024-11-29 16:17:25] [DEBUG] load error page
+[2024-11-29 16:17:33] [INFO] App ended with status 366818784
+[2024-11-29 16:46:01] [INFO] Logger initialized
+[2024-11-29 16:46:01] [INFO] Gui initialization
+[2024-11-29 16:46:01] [DEBUG] GTK initialized
+[2024-11-29 16:46:01] [DEBUG] Window created
+[2024-11-29 16:46:01] [DEBUG] Destroy signal connected
+[2024-11-29 16:46:01] [INFO] Loading login page
+[2024-11-29 16:46:01] [DEBUG] Handlers set for load page.
+[2024-11-29 16:46:02] [INFO] socket was created successfully
+[2024-11-29 16:46:02] [WARN] Connection failed during select: Operation now in progress[2024-11-29 16:46:03] [FATAL] Unexpected connection error: Software caused connection abort[2024-11-29 16:46:03] [DEBUG] Socket is set to blocking mode
+[2024-11-29 16:46:03] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:04] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:04] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:05] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:05] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:06] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:06] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:07] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:07] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:08] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:08] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:09] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:09] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:10] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:10] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:11] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:11] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:12] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:12] [WARN] Connection refused, retrying...
+[2024-11-29 16:46:12] [WARN] Connection attempt timed out
+[2024-11-29 16:46:12] [DEBUG] Socket is set to blocking mode
+[2024-11-29 16:46:12] [INFO] connection closed
+[2024-11-29 16:46:12] [INFO] Database was opened/created
+[2024-11-29 16:46:12] [DEBUG] database is NOT valid
+[2024-11-29 16:46:12] [ERROR] Connection failed. Local DB unavailable.
+[2024-11-29 16:46:12] [DEBUG] All handlers cleared.
+[2024-11-29 16:46:12] [DEBUG] load error page
+[2024-11-29 16:46:55] [INFO] App ended with status 1494402528
+[2024-11-29 16:47:07] [INFO] Logger initialized
+[2024-11-29 16:47:07] [INFO] Gui initialization
+[2024-11-29 16:47:07] [DEBUG] GTK initialized
+[2024-11-29 16:47:07] [DEBUG] Window created
+[2024-11-29 16:47:07] [DEBUG] Destroy signal connected
+[2024-11-29 16:47:07] [INFO] Loading login page
+[2024-11-29 16:47:07] [DEBUG] Handlers set for load page.
+[2024-11-29 16:47:08] [INFO] socket was created successfully
+[2024-11-29 16:47:08] [WARN] Connection failed during select: Operation now in progress[2024-11-29 16:47:08] [FATAL] Unexpected connection error: Software caused connection abort[2024-11-29 16:47:08] [DEBUG] Socket is set to blocking mode
+[2024-11-29 16:47:09] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:09] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:10] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:10] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:11] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:11] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:12] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:12] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:13] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:13] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:14] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:14] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:15] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:15] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:16] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:16] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:17] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:17] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:18] [WARN] Connection refused, retrying...
+[2024-11-29 16:47:18] [WARN] Connection attempt timed out
+[2024-11-29 16:47:18] [DEBUG] Socket is set to blocking mode
+[2024-11-29 16:47:18] [INFO] connection closed
+[2024-11-29 16:47:18] [INFO] Database was opened/created
+[2024-11-29 16:47:18] [DEBUG] database is NOT valid
+[2024-11-29 16:47:18] [ERROR] Connection failed. Local DB unavailable.
+[2024-11-29 16:47:18] [DEBUG] All handlers cleared.
+[2024-11-29 16:47:18] [DEBUG] load error page
+[2024-11-29 16:47:21] [INFO] App ended with status -1615227424
+[2024-11-29 16:47:29] [INFO] Logger initialized
+[2024-11-29 16:47:29] [INFO] Gui initialization
+[2024-11-29 16:47:29] [DEBUG] GTK initialized
+[2024-11-29 16:47:29] [DEBUG] Window created
+[2024-11-29 16:47:29] [DEBUG] Destroy signal connected
+[2024-11-29 16:47:29] [INFO] Loading login page
+[2024-11-29 16:47:29] [DEBUG] Handlers set for load page.
+[2024-11-29 16:47:30] [INFO] socket was created successfully
+[2024-11-29 16:47:30] [INFO] Connected successfully
+[2024-11-29 16:47:30] [DEBUG] Socket is set to blocking mode
+[2024-11-29 16:47:30] [INFO] Connection succeeded. Running online mode
+[2024-11-29 16:47:30] [INFO] Database was opened/created
+[2024-11-29 16:47:30] [DEBUG] All handlers cleared.
+[2024-11-29 16:47:30] [INFO] Loading login page
+[2024-11-29 16:47:30] [DEBUG] Handlers set for login page.
+[2024-11-29 16:47:39] [INFO] Login form submitted
+[2024-11-29 16:47:39] [DEBUG] Received JSON for login
+[2024-11-29 16:47:39] [DEBUG] All handlers cleared.
+[2024-11-29 16:47:39] [INFO] Loading registration page
+[2024-11-29 16:47:39] [DEBUG] Handlers set for registration page.
+[2024-11-29 16:47:45] [DEBUG] All handlers cleared.
+[2024-11-29 16:47:45] [INFO] Loading login page
+[2024-11-29 16:47:45] [DEBUG] Handlers set for login page.
+[2024-11-29 16:47:45] [INFO] Login link pressed
+[2024-11-29 16:47:45] [DEBUG] All handlers cleared.
+[2024-11-29 16:47:45] [INFO] Loading login page
+[2024-11-29 16:47:45] [DEBUG] Handlers set for login page.
+[2024-11-29 16:50:06] [INFO] App ended with status -844810784

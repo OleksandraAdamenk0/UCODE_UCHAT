@@ -4,7 +4,7 @@
 
 #include "request_processing.h"
 
-cJSON *mx_get_msgs_logic(const cJSON *request) {
+cJSON *mx_get_msgs_logic(const cJSON *request, int *status) {
     cJSON *result = cJSON_CreateObject();
 
     cJSON *user_id_json = cJSON_GetObjectItem(request, "user_id");

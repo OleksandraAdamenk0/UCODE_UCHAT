@@ -5,6 +5,7 @@
 #include "request_processing.h"
 
 char *mx_registration_response(const int status, cJSON *response) {
+    if (!response) response = cJSON_CreateObject();
     cJSON_AddStringToObject(response, "status", mx_itoa(status));
 
     if (status == 0) {

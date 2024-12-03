@@ -3,21 +3,22 @@
 
 #include "sqlite3.h"
 #include "cJSON.h"
-#include <stdio.h>
 #include "libmx.h"
-#include "cdecode.h"
-#include "cencode.h"
-#include "logger.h"
+#include "requests.h"
 
-typedef struct {
-    char *username;
-    char *password;
-    char *phone;
-    char *email;
-    char *photo;
-}       t_get_user;
+#include <stdio.h>
 
-void mx_create_server_tables(sqlite3 *db);
-int mx_register_user(sqlite3 *db, const cJSON *request);
+#define DB_DIR "server/db"
+#define SCRIPTS DB_DIR "/scripts"
+#define INIT_SCRIPT SCRIPTS "/init.sql"
+#define DB_NAME DB_DIR "/server.db"
+
+extern sqlite3 *db;
+
+int mx_create_dir();
+//int mx_init_tables();
+
+int mx_register_user(t_registration *data);
+int mx_get_user_id_by_username(const char *username);
 
 #endif

@@ -4,7 +4,7 @@
 
 #include "request_processing.h"
 
-cJSON *mx_get_all_chats_logic(const cJSON *request) {
+cJSON *mx_get_all_chats_logic(const cJSON *request, int *status) {
     cJSON *result = cJSON_CreateObject();
 
     cJSON *user_id_json = cJSON_GetObjectItem(request, "user_id");
@@ -49,7 +49,8 @@ cJSON *mx_get_all_chats_logic(const cJSON *request) {
         }
 
         // photo
-        char *base64_photo = base64_encode(photo_data, photo_size);
+        char *base64_photo;
+        mx_base64_encode(photo_data, &base64_photo);
         if (!base64_photo) {
             // log decoding error
             cJSON_AddStringToObject(chat, "photo", "");

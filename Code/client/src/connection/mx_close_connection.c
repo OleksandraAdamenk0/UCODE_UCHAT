@@ -5,6 +5,7 @@
 #include "client.h"
 #include "connection.h"
 
-void mx_close_connection(int sockfd) {
-    close(sockfd);
+void mx_close_connection() {
+    close(fd);
+    logger_info("connection closed\n");
 }

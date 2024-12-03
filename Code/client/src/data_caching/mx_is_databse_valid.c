@@ -1,16 +1,22 @@
+#include "client.h"
 #include "data_caching.h"
 
-bool file_exists(const char *filename) {
-    FILE *file = fopen(filename, "r");
-    if (file) {
-        fclose(file);
-        return true; // File exists
+static bool dir_exists(const char *dirname) {
+    struct stat buffer;
+    if (stat(dirname, &buffer) == 0) {
+        if (S_ISDIR(buffer.st_mode)) return true;
+        else return false;
     }
-    return false; // File does not exist
+    return false;
+}
+
+static bool file_exists() {
+    if (access(DB_NAME, F_OK) == 0) return true;
+    return false;
 }
 
 // Function to check if any of the specified tables have data
-bool has_data_in_tables(sqlite3 *db, const char *tables[], int num_tables) {
+bool has_data_in_tables(const char *tables[], int num_tables) {
     for (int i = 0; i < num_tables; i++) {
         const char *sql = "SELECT * FROM ";
         char query[256]; // Buffer for the SQL query
@@ -41,28 +47,24 @@ bool has_data_in_tables(sqlite3 *db, const char *tables[], int num_tables) {
 }
 
 // Function to check if the SQLite database is valid (exists and not empty)
-bool mx_is_database_valid(const char *db_path) {
-    sqlite3 *db;
-    int rc;
-
+bool mx_isdb_valid() {
     // Check if the database file exists
-    if (!file_exists(db_path)) {
-        return false;
-    }
+    if (!dir_exists(DB_DIR)) return false;
+    // Check if the database file exists
+    if (!file_exists()) return false;
 
-    rc = sqlite3_open(db_path, &db);
-    if (rc != SQLITE_OK) {
-        // Error opening the database
-        sqlite3_close(db);
-        return false;
-    }
+    if (mx_db_init() < 0) return false;
 
     const char *tables[] = {"chats", "contacts", "messages", "settings"};
     int num_tables = 4;
 
-    bool has_data = has_data_in_tables(db, tables, num_tables);
-
+    if (has_data_in_tables(tables, num_tables)) {
+        logger_debug("database is valid\n");
+        sqlite3_close(db);
+        return true;
+    }
+    logger_debug("database is NOT valid\n");
     sqlite3_close(db);
-    return has_data;
+    return false;
 }
 

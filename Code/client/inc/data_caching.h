@@ -1,41 +1,15 @@
 #ifndef DATA_CACHING_H
 #define DATA_CACHING_H
 
-#include "sqlite3.h"
+#include <sqlite3.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include "libmx.h"
-#include "logger.h"
-#include "cdecode.h"
-#include "cencode.h"
+#include <sys/stat.h>
 
-typedef struct {
-    int id;
-    int receiver;
-    char *sender;
-    char *timestamp;
-    char *binary;
-    char *message;
-}       t_get_msgs;
+#define DB_DIR "client/db"
+#define DB_NAME DB_DIR "/app.db"
 
-typedef struct {
-    char *username;
-    char *photo;
-}       t_get_contacts;
-
-typedef struct {
-    int chat_id;
-    char *chat_name;
-    char *last_message;
-    char *photo;
-}       t_get_chats;
-
-typedef struct {
-    char *email;
-    char *phone;
-    char *photo;
-    char *theme;
-}       t_get_settings;
+extern sqlite3 *db;
 
 void mx_create_client_tables(sqlite3 *db);
 bool mx_is_database_valid(const char *db_path);

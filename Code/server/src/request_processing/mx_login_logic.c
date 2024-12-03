@@ -4,7 +4,7 @@
 
 #include "request_processing.h"
 
-cJSON *mx_login_logic(const cJSON *request) {
+cJSON *mx_login_logic(const cJSON *request, int *status) {
     cJSON *result = cJSON_CreateObject();
 
     cJSON *tokens = cJSON_CreateObject();
