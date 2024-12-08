@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <div class="container-parent">
+        <div class="contacts">
+            <div class="container-child">
+                <div class="contacts-header">
+                    <img src="contacts_header_icon.png" height="54px">
+                    <div class="contacts-search">
+                        <img src="search.png" height="26px">
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>
+                <h2>Chats</h2>
+                <div class="contacts-list">
+                    <div class="container-child">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="container-child">
+                <div class="chat-header">
+                    <img src="unknown_chat.png" height="54px">
+                    <h3>Chose chat</h3>
+                </div>
+                <div class="chat-message-area">
+                    
+                </div>
+                <div class="chat-footer">
+                    <input type="text" id="typeMessage" name="typeMessage" placeholder="Type your message here...">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactsList = document.querySelector('.contacts-list .container-child');
+            const chatHeader = document.querySelector('.chat-header');
+            const chatArea = document.querySelector('.chat-message-area');
+            const messageInput = document.querySelector('.chat-footer input');
+    
+            const backendContacts = [
+                { name: 'Vasya', lastMessage: 'Hello!', time: '14:35' },
+                { name: 'Petya', lastMessage: 'See you soon', time: '13:25' },
+                { name: 'Masha', lastMessage: 'Good morning!', time: '08:15' },
+                { name: 'Yegor', lastMessage: 'Good morninsdfsdfg!', time: '08:15' },
+                { name: 'Jora', lastMessage: '(nothing)', time: '08:15' },
+                { name: 'Eva', lastMessage: 'a!', time: '08:15' },
+                { name: 'Ibrahim', lastMessage: 'haram', time: '08:15' }
+            ];
+    
+            const chatHistory = {
+                Vasya: [
+                    { from: 'message-to', text: 'Hey Vasya! Have you ever thought about how vast space is?', time: '14:36' },
+                    { from: 'message-from', text: 'Oh, absolutely! It’s mind-blowing. Just thinking about how tiny we are compared to the universe is humbling. What got you thinking about space today?', time: '14:37' },
+                    { from: 'message-to', text: 'I was watching a documentary about black holes. They’re so mysterious and fascinating. Can you imagine something that dense, warping space and time around it?', time: '14:38' },
+                    { from: 'message-from', text: 'Black holes are wild! The fact that time slows down near them really gets me. It’s like something out of science fiction, but it’s real. Did they mention anything about the event horizon?', time: '14:39' },
+                    { from: 'message-to', text: 'Yeah! It’s the point of no return. Once something crosses it, not even light can escape. What would you do if you could visit a black hole?', time: '14:40' },
+                    { from: 'message-from', text: 'Hmm, I’d love to take a look from a safe distance—emphasis on safe! But seriously, if I could somehow survive the trip and come back, it would be amazing to study what happens inside. What about you? Would you dare to get close?', time: '14:41' },
+                    { from: 'message-to', text: 'Only if I had some kind of sci-fi shield to protect me! Otherwise, I’d stick to admiring it from afar. But I’m more curious about exploring exoplanets. Imagine finding one with life!', time: '14:42' },
+                    { from: 'message-from', text: 'That would be incredible. There are so many Earth-like planets out there. I think it’s only a matter of time before we find something. What kind of life do you think we’d discover—simple bacteria or something more advanced?', time: '14:43' },
+                    { from: 'message-to', text: 'Probably bacteria first. But who knows? Maybe intelligent life is out there waiting for us to discover it—or for them to discover us. Would you join a mission to another planet?', time: '14:44' },
+                    { from: 'message-from', text: 'Oh, without a doubt! The chance to see another world up close? Count me in. I just hope I’d have decent Wi-Fi for the trip! 😄 What about you—space pioneer or Earth-bound dreamer?', time: '14:45' },
+                    { from: 'message-to', text: 'I’d definitely be tempted to go, but I think I’d miss home too much. Maybe I’d be a part of the mission control team instead.', time: '14:46' },
+                    { from: 'message-from', text: 'That’s fair. Someone’s gotta keep us explorers in check! Imagine all the teamwork involved in making something like that happen. The future is exciting, isn’t it?', time: '14:47' },
+                    { from: 'message-to', text: 'Totally! Space travel, new discoveries—there’s so much to look forward to. Maybe one day, we’ll be having this conversation from Mars.', time: '14:48' },
+                    { from: 'message-from', text: 'Mars, huh? I’ll bring the snacks! 🚀', time: '14:49' }
+                ],
+                Petya: [
+                    { from: 'message-from', text: 'Are we meeting today?', time: '13:20' },
+                    { from: 'message-to', text: 'Yes, at 5 PM.', time: '13:25' },
+                    { from: 'message-from', text: 'Where are you?', time: '17:01' },
+                    { from: 'message-to', text: 'Almost There!', time: '17:01' }
+                ],
+                Masha: [
+                    { from: 'message-from', text: 'Happy b-day!', time: '08:00' },
+                    { from: 'message-to', text: 'tysm!', time: '08:15' }
+                ],
+                Yegor: [
+                    { from: 'message-from', text: 'Good morning!', time: '08:15' },
+                    { from: 'message-to', text: 'Good morning!', time: '08:15' }
+                ],
+                Eva: [
+                    { from: 'message-to', text: 'Hi how are you?', time: '10:00' },
+                    { from: 'message-to', text: 'Please, answer...', time: '15:00' }
+                ],
+                Ibrahim: [
+                    { from: 'message-from', text: 'What is the meaning of life?', time: '4:44' },
+                    { from: 'message-from', text: 'READ KORAN!!!!!!!', time: '4:44' }
+                ]
+            };
+
+            let currentChat = null;
+    
+            backendContacts.forEach(contact => {
+                const contactDiv = document.createElement('div');
+                contactDiv.className = 'contact';
+                contactDiv.innerHTML = `
+                    <div class="contact-area">
+                        <img src="${contact.name}.png" height="64px">
+                        <div>
+                            <h3>${contact.name}</h3>
+                            <p>${contact.lastMessage}</p>
+                        </div>
+                    </div>
+                `;
+                contactDiv.addEventListener('click', () => loadChat(contact.name));
+                contactsList.appendChild(contactDiv);
+            });
+    
+            function loadChat(contactName) {
+                document.querySelectorAll('.contact').forEach(contact => {
+                    contact.classList.remove('selected');
+                });
+    
+                const selectedContact = Array.from(contactsList.children).find(contact =>
+                    contact.querySelector('h3').innerText === contactName
+                );
+                if (selectedContact) {
+                    selectedContact.classList.add('selected');
+                }
+                
+                chatHeader.innerHTML = `
+                    <img src="${contactName}.png" height="54px">
+                    <h3>${contactName}</h3>
+                `;
+                chatArea.innerHTML = '';
+                currentChat = contactName;
+
+                if (chatHistory[contactName]) {
+                    chatHistory[contactName].forEach(message => {
+                        const messageDiv = document.createElement('div');
+                        messageDiv.className = message.from;
+    
+                        if (message.from === 'message-from') {
+                            messageDiv.innerHTML = `
+                                <div class="decoration"></div>
+                                <div class="cloud">
+                                    <p>${message.text}</p>
+                                    <div class="time">${message.time}</div>
+                                </div>
+                            `;
+                        } else {
+                            messageDiv.innerHTML = `
+                                <div class="cloud">
+                                    <p>${message.text}</p>
+                                    <div class="time">${message.time}</div>
+                                </div>
+                                <div class="decoration"></div>
+                            `;
+                        }
+                        chatArea.appendChild(messageDiv);
+                    });
+    
+                    chatArea.scrollTop = chatArea.scrollHeight;
+                }
+            }
+
+            messageInput.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' && messageInput.value.trim() !== '' && currentChat) {
+                    const text = messageInput.value.trim();
+                    const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+                    if (!chatHistory[currentChat]) {
+                        chatHistory[currentChat] = [];
+                    }
+                    chatHistory[currentChat].push({ from: 'message-to', text, time });
+
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = 'message-to';
+                    messageDiv.innerHTML = `
+                        <div class="cloud">
+                            <p>${text}</p>
+                            <div class="time">${time}</div>
+                        </div>
+                        <div class="decoration"></div>
+                    `;
+                    chatArea.appendChild(messageDiv);
+
+                    chatArea.scrollTop = chatArea.scrollHeight;
+
+                    messageInput.value = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
