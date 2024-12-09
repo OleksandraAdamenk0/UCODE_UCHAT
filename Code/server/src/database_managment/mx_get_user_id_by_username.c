@@ -1,7 +1,7 @@
 //
 // Created by oleksandra on 26/11/24.
 //
-
+#include "server.h"
 #include "database_managment.h"
 
 //int mx_get_user_id(t_login *data, char **user_id) {
@@ -26,7 +26,6 @@
 //    return 0;
 //}
 
-
 int mx_get_user_id_by_username(const char *username) {
     const char *query = "SELECT id FROM users WHERE username = ?;";
     sqlite3_stmt *stmt;
@@ -40,7 +39,7 @@ int mx_get_user_id_by_username(const char *username) {
     }
     // Execute the query and retrieve the user ID
     if (sqlite3_step(stmt) == SQLITE_ROW) id = sqlite3_column_int(stmt, 0);
-    // Finalize the statement to avoid memory leaks
+    
     sqlite3_finalize(stmt);
     return id;
 }

@@ -20,25 +20,25 @@ CREATE TABLE IF NOT EXISTS chats (
 );
 
 CREATE TABLE IF NOT EXISTS messages (
-                                        id INTEGER PRIMARY KEY AUTOINCREMENT,
-                                        chat_id INTEGER NOT NULL,
-                                        sender_id INTEGER NOT NULL,
-                                        reply_to_id INTEGER,
-                                        timestamp DATETIME NOT NULL,
-                                        binary BLOB,
-                                        message TEXT,
-                                        FOREIGN KEY(chat_id) REFERENCES chats(id),
-    FOREIGN KEY(sender_id) REFERENCES users(id),
-    FOREIGN KEY(reply_to_id) REFERENCES messages(id)
-    );
+                                     id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                     chat_id INTEGER NOT NULL,
+                                     sender_id INTEGER NOT NULL,
+                                     reply_to_id INTEGER,
+                                     timestamp DATETIME NOT NULL,
+                                     binary BLOB,
+                                     message TEXT,
+                                     FOREIGN KEY(chat_id) REFERENCES chats(id),
+                                     FOREIGN KEY(sender_id) REFERENCES users(id),
+                                     FOREIGN KEY(reply_to_id) REFERENCES messages(id)
+);
 
 CREATE TABLE IF NOT EXISTS chats_users (
-                                           chat_id INTEGER NOT NULL,
-                                           user_id INTEGER NOT NULL,
-                                           FOREIGN KEY(chat_id) REFERENCES chats(id),
-    FOREIGN KEY(user_id) REFERENCES users(id),
-    UNIQUE(chat_id, user_id)
-    );
+                                         chat_id INTEGER NOT NULL,
+                                         user_id INTEGER NOT NULL,
+                                         FOREIGN KEY(chat_id) REFERENCES chats(id),
+                                         FOREIGN KEY(user_id) REFERENCES users(id),
+                                         UNIQUE(chat_id, user_id)
+);
 
 CREATE TRIGGER delete_user_from_chats_users
     AFTER DELETE ON users
@@ -55,13 +55,13 @@ BEGIN
 END;
 
 CREATE TABLE IF NOT EXISTS settings (
-                                        id INTEGER NOT NULL,
-                                        email TEXT,
-                                        phone TEXT,
-                                        photo BLOB,
-                                        theme TEXT,
-                                        FOREIGN KEY(id) REFERENCES users(id)
-    );
+                                     id INTEGER NOT NULL,
+                                     email TEXT,
+                                     phone TEXT,
+                                     photo BLOB,
+                                     theme TEXT,
+                                     FOREIGN KEY(id) REFERENCES users(id)
+);
 
 CREATE TRIGGER sync_settings_on_insert
     AFTER INSERT ON users

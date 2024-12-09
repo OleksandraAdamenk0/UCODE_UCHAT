@@ -1,13 +1,46 @@
+#include "server.h"
 #include "database_managment.h"
 
-#define UNIQUE_USERNAME "UNIQUE constraint failed: users.username"
-#define UNIQUE_PHONE "UNIQUE constraint failed: users.phone"
-#define UNIQUE_EMAIL "UNIQUE constraint failed: users.email"
+static int validate_password(const char *password) {
+    int has_upper = 0, has_lower = 0, has_digit = 0, has_special = 0;
+    int length = 0;
+    char special[] = {'!','@','#','$','*','-','_','?','.'};
+    for (int i = 0; password[i] != '\0'; i++) {
+        if (password[i] >= 'A' && password[i] <= 'Z') has_upper = 1;
+        else if (password[i] >= 'a' && password[i] <= 'z') has_lower = 1;
+        else if (password[i] >= '0' && password[i] <= '9') has_digit = 1;
+        for (int j = 0; j < 9; j++) { 
+            if (password[i] == special[j]) has_special = 1;
+        }
+        length++;
+    }
+    if (length < 8) return 0; 
 
+    return has_upper && has_lower && has_digit && has_special;    
+}
+
+static int validate_number(const char *phone_number) {
+    if (phone_number[0] != '+' || mx_strlen(phone_number) > 15) return 0;
+    return 1;
+}
 
 int mx_register_user(t_registration *data) {
     sqlite3_stmt *stmt;
     char *sql = "INSERT INTO users (username, password, email, phone, photo) VALUES (?, ?, ?, ?, ?)";
+
+    //validation
+    if (!validate_password(data->password)) {
+        fprintf(stderr, "Password does not meet criteria.\n");
+        return -3;
+    }
+    if (mx_strcmp(data->email, "") == 0 && mx_strcmp(data->phone, "") == 0) {
+        fprintf(stderr, "Either email or phone must be provided.\n");
+        return -4;
+    }
+    if (!validate_number(data->phone)) {
+        fprintf(stderr, "Invalid phone format.\n");
+        return -5;
+    }
 
     if (sqlite3_prepare_v2(db, sql, -1, &stmt, NULL) != SQLITE_OK) {
         sqlite3_close(db);
