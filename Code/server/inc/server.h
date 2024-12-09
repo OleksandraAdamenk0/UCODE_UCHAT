@@ -11,6 +11,7 @@
 #include "libmx.h"
 #include "logger.h"
 #include "connection.h"
+#include "notifications.h"
 
 extern int port;
 extern char *ip;

@@ -5333,3 +5333,52 @@
 [2024-11-29 16:50:25] [DEBUG] kill signal received
 [2024-11-29 16:50:25] [INFO] Server stopped receiving connections
 [2024-11-29 16:50:25] [INFO] database closed
+[2024-12-09 14:51:34] [INFO] Logger initialized
+[2024-12-09 14:51:34] [DEBUG] Database file opened
+[2024-12-09 14:51:34] [DEBUG] SQL script read
+[2024-12-09 14:51:34] [DEBUG] SQL script executed
+[2024-12-09 14:51:34] [INFO] Database initialized
+[2024-12-09 14:51:34] [INFO] Server initialized
+[2024-12-09 14:51:34] [DEBUG] Server socket created
+[2024-12-09 14:51:34] [DEBUG] Server socket bound to address
+[2024-12-09 14:51:34] [DEBUG] Server listening to incoming connections
+[2024-12-09 14:51:34] [INFO] connection channel opened
+[2024-12-09 14:51:34] [INFO] Server starting receiving connections
+[2024-12-09 14:52:58] [INFO] Logger initialized
+[2024-12-09 14:52:58] [DEBUG] Database file opened
+[2024-12-09 14:52:58] [DEBUG] SQL script read
+[2024-12-09 14:52:58] [DEBUG] SQL script executed
+[2024-12-09 14:52:58] [INFO] Database initialized
+[2024-12-09 14:52:58] [INFO] Server initialized
+[2024-12-09 14:52:58] [DEBUG] Server socket created
+[2024-12-09 14:52:58] [FATAL] attempt to bind server socket to the address failed
+[2024-12-09 14:52:58] [DEBUG] Address already in use[2024-12-09 14:52:58] [INFO] database closed
+[2024-12-09 14:58:58] [INFO] Logger initialized
+[2024-12-09 14:58:58] [DEBUG] Database file opened
+[2024-12-09 14:58:58] [DEBUG] SQL script read
+[2024-12-09 14:58:58] [DEBUG] SQL script executed
+[2024-12-09 14:58:58] [INFO] Database initialized
+[2024-12-09 14:58:58] [INFO] Server initialized
+[2024-12-09 14:58:58] [DEBUG] Server socket created
+[2024-12-09 14:58:58] [FATAL] attempt to bind server socket to the address failed
+[2024-12-09 14:58:58] [DEBUG] Address already in use[2024-12-09 14:58:58] [INFO] database closed
+[2024-12-09 15:28:51] [INFO] Logger initialized
+[2024-12-09 15:28:51] [DEBUG] Database file opened
+[2024-12-09 15:28:51] [DEBUG] SQL script read
+[2024-12-09 15:28:51] [DEBUG] SQL script executed
+[2024-12-09 15:28:51] [INFO] Database initialized
+[2024-12-09 15:28:51] [INFO] Server initialized
+[2024-12-09 15:28:51] [DEBUG] Server socket created
+[2024-12-09 15:28:51] [DEBUG] Server socket bound to address
+[2024-12-09 15:28:51] [DEBUG] Server listening to incoming connections
+[2024-12-09 15:28:51] [INFO] connection channel opened
+[2024-12-09 15:28:51] [INFO] Server starting receiving connections
+[2024-12-09 15:29:41] [INFO] Logger initialized
+[2024-12-09 15:29:41] [DEBUG] Database file opened
+[2024-12-09 15:29:41] [DEBUG] SQL script read
+[2024-12-09 15:29:42] [DEBUG] SQL script executed
+[2024-12-09 15:29:42] [INFO] Database initialized
+[2024-12-09 15:29:42] [INFO] Server initialized
+[2024-12-09 15:29:42] [DEBUG] Server socket created
+[2024-12-09 15:29:42] [FATAL] attempt to bind server socket to the address failed
+[2024-12-09 15:29:42] [DEBUG] Address already in use[2024-12-09 15:29:42] [INFO] database closed
