@@ -9,7 +9,7 @@ t_list *get_all_contacts(sqlite3 *db) {
     if (sqlite3_prepare_v2(db, sql, -1, &stmt, NULL) != SQLITE_OK) {
         char err_msg[256];
         printf(err_msg, "Failed to prepare statement: %s\n", sqlite3_errmsg(db));
-        //logger_error(err_msg);
+        logger_error(err_msg);
         return NULL;
     }
 
