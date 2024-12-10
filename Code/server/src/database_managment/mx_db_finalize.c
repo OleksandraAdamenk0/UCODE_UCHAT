@@ -3,8 +3,7 @@
 //
 
 #include "server.h"
-#include "logger.h"
-#include "database.h"
+#include "database_managment.h"
 
 void mx_db_finalize() {
     if (db) sqlite3_close(db);
