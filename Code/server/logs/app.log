@@ -2240,3 +2240,10 @@
 [2024-12-10 11:24:33] [ERROR] Wrong data size format from socket 5
 [2024-12-10 11:26:14] [ERROR] Error receiving data from socket 5
 [2024-12-10 11:26:14] [INFO] Client from socket 5 disconnected
+[2024-12-10 14:20:22] [INFO] Logger initialized
+[2024-12-10 14:20:22] [DEBUG] Database file opened
+[2024-12-10 14:20:22] [DEBUG] Database file already exists. Skipping initialization script.
+[2024-12-10 14:20:22] [INFO] Database initialized
+[2024-12-10 14:20:22] [INFO] Server initialized
+[2024-12-10 14:20:22] [INFO] Server socket created
+[2024-12-10 14:20:22] [FATAL] Failed to bind socket to the address
