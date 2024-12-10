@@ -1,7 +1,7 @@
 #include "server.h"
 #include "database_managment.h"
 
-int create_new_chat(sqlite3 *db, t_chat_req *chat_data) {
+int save_new_chat(sqlite3 *db, t_chat_req *chat_data) {
     sqlite3_stmt *stmt;
     char *sql = "INSERT INTO chat (chat_id, chat_name) VALUES (?, ?)";
     
