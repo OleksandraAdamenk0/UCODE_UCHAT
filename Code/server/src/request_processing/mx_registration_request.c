@@ -5,6 +5,7 @@
 #include "request_processing.h"
 #include "database.h"
 #include "libmx.h"
+#include "server.h"
 
 static const char *valid_country_codes[] = {
         "1", "20", "27", "30", "31", "32", "33", "34", "36", "39",
@@ -130,7 +131,7 @@ static int validate_phone(const char *phone) {
     free(sanitized_phone);
     return 0;
 }
-
+/*
 int mx_registration_request(const cJSON *request) {
     cJSON *username = cJSON_GetObjectItemCaseSensitive(request, "username");
     cJSON *password = cJSON_GetObjectItemCaseSensitive(request, "password");
@@ -145,38 +146,152 @@ int mx_registration_request(const cJSON *request) {
           validate_password(password->valuestring) < 0) {
         return -3;
     }
-//
-//    // check if username already exists in DB, if so do not proceed further
-//    int result = mx_get_user_id(username->valuestring, USERNAME);
-//    if (result == -2)  return -9;
-//    if (result > 0) return -2;
-//
-//    // check existence of email or phone
-//    cJSON *email = cJSON_GetObjectItemCaseSensitive(request, "email");
-//    cJSON *phone = cJSON_GetObjectItemCaseSensitive(request, "phone");
-//
-//    if (!cJSON_IsString(email) || email->valuestring == NULL ||
-//        mx_strlen(email->valuestring) == 0)
-//        email = NULL;
-//    if (!cJSON_IsString(phone) || phone->valuestring == NULL ||
-//        mx_strlen(phone->valuestring) == 0)
-//        phone = NULL;
-//    if (!email && !phone) return -4;
-//
-//    // check email format
-//    if (email) {
-//        if (validate_email(email->valuestring) < 0) return -6;
-//        // check if email already was registered in app (check DB)
-//        result = mx_get_user_id(email->valuestring, EMAIL);
-//        if (result == -2)  return -9;
-//        if (result > 0) return -7;
-//    }
-//
-//    if (phone) {
-//        if (validate_phone(phone->valuestring) < 0) return -5;
-//        result = mx_get_user_id(phone->valuestring, PHONE);
-//        if (result == -2)  return -9;
-//        if (result > 0) return -8;
-//    }
+
+   // check if username already exists in DB, if so do not proceed further
+   int result = mx_get_user_id(username->valuestring, USERNAME);
+   if (result == -2)  return -9;
+   if (result > 0) return -2;
+
+   // check existence of email or phone
+   cJSON *email = cJSON_GetObjectItemCaseSensitive(request, "email");
+   cJSON *phone = cJSON_GetObjectItemCaseSensitive(request, "phone");
+
+   if (!cJSON_IsString(email) || email->valuestring == NULL ||
+       mx_strlen(email->valuestring) == 0)
+       email = NULL;
+   if (!cJSON_IsString(phone) || phone->valuestring == NULL ||
+       mx_strlen(phone->valuestring) == 0)
+       phone = NULL;
+   if (!email && !phone) return -4;
+
+   // check email format
+   if (email) {
+       if (validate_email(email->valuestring) < 0) return -6;
+       // check if email already was registered in app (check DB)
+       result = mx_get_user_id(email->valuestring, EMAIL);
+       if (result == -2)  return -9;
+       if (result > 0) return -7;
+   }
+
+   if (phone) {
+       if (validate_phone(phone->valuestring) < 0) return -5;
+       result = mx_get_user_id(phone->valuestring, PHONE);
+       if (result == -2)  return -9;
+       if (result > 0) return -8;
+   }
+
+    cJSON *photo = cJSON_GetObjectItemCaseSensitive(request, "photo");
+
+    const char *photo_data = NULL;
+    int photo_size = 0;
+    if (photo && cJSON_IsString(photo)) {
+        photo_data = photo->valuestring;
+        photo_size = mx_strlen(photo_data); // Adjust based on encoding if needed
+    }
+   t_registration data = {
+        .username = username->valuestring,
+        .password = password->valuestring,
+        .email = email,
+        .phone = phone,
+        .photo = photo,
+        .photo_size = photo_size
+    };
+
+    // Register user
+    int reg_result = mx_register_user(&data);
+
+    // Map `mx_register_user` return values to meaningful response codes
+    switch (reg_result) {
+        case 0:
+            return 0;  // Registration successful
+        case -2:
+            return -2; // Username already exists
+        case -7:
+            return -7; // Email already exists
+        case -8:
+            return -8; // Phone already exists
+        default:
+            return -9; // General error
+    }
     return 0;
+}
+*/
+
+int mx_registration_request(const cJSON *request) {
+    // Extract required fields
+    cJSON *username = cJSON_GetObjectItemCaseSensitive(request, "username");
+    cJSON *password = cJSON_GetObjectItemCaseSensitive(request, "password");
+    cJSON *email = cJSON_GetObjectItemCaseSensitive(request, "email");
+    cJSON *phone = cJSON_GetObjectItemCaseSensitive(request, "phone");
+    cJSON *photo = cJSON_GetObjectItemCaseSensitive(request, "photo");
+
+    // Validate username
+    if (!cJSON_IsString(username) || username->valuestring == NULL ||
+        mx_strlen(username->valuestring) == 0) {
+        return -1; // Invalid username
+    }
+
+    // Validate password
+    if (!cJSON_IsString(password) || password->valuestring == NULL ||
+        validate_password(password->valuestring) < 0) {
+        return -3; // Invalid password
+    }
+
+    // Validate email (optional)
+    const char *email_str = NULL;
+    if (email && cJSON_IsString(email) && mx_strlen(email->valuestring) > 0) {
+        email_str = email->valuestring;
+        if (validate_email(email_str) < 0) {
+            return -6; // Invalid email format
+        }
+    }
+
+    // Validate phone (optional)
+    const char *phone_str = NULL;
+    if (phone && cJSON_IsString(phone) && mx_strlen(phone->valuestring) > 0) {
+        phone_str = phone->valuestring;
+        if (validate_phone(phone_str) < 0) {
+            return -5; // Invalid phone format
+        }
+    }
+
+    // Ensure at least one contact method (email or phone) is provided
+    if (!email_str && !phone_str) {
+        return -4; // Email or phone required
+    }
+
+    // Handle photo (optional)
+    const char *photo_data = NULL;
+    int photo_size = 0;
+    if (photo && cJSON_IsString(photo)) {
+        photo_data = photo->valuestring;
+        photo_size = mx_strlen(photo_data); // Adjust based on encoding if needed
+    }
+
+    // Prepare registration data
+    t_registration data = {
+        .username = username->valuestring,
+        .password = password->valuestring,
+        .email = email_str,
+        .phone = phone_str,
+        .photo = photo_data,
+        .photo_size = photo_size
+    };
+
+    // Register user
+    int reg_result = mx_register_user(&data);
+
+    // Map `mx_register_user` return values to meaningful response codes
+    switch (reg_result) {
+        case 0:
+            return 0;  // Registration successful
+        case -2:
+            return -2; // Username already exists
+        case -7:
+            return -7; // Email already exists
+        case -8:
+            return -8; // Phone already exists
+        default:
+            return -9; // General error
+    }
 }

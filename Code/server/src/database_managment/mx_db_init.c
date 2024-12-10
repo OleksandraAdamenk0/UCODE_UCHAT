@@ -18,6 +18,7 @@ static int execute_sql_script(const char *script) {
 }
 
 int mx_db_init() {
+    sqlite3 *db;
     if (sqlite3_open_v2(DB_NAME, &db,
                         SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE |
                         SQLITE_OPEN_FULLMUTEX, NULL) != SQLITE_OK) {
