@@ -1,6 +1,6 @@
 #include "data_caching.h"
 
-t_list *mx_get_cached_messages(sqlite3 *db, int chat_id) {
+t_list *mx_get_cached_messages_from_chat(sqlite3 *db, int chat_id) {
     sqlite3_stmt *stmt;
     t_list *messages_list = NULL;
     char *sql = "SELECT * FROM messages WHERE chat_id = ?;";
