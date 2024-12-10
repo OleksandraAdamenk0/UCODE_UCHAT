@@ -2,17 +2,12 @@
 // Created by oleksandra on 17/11/24.
 //
 
-#ifndef UCODE_UCHAT_MAIN_INITIALIZATION_H
-#define UCODE_UCHAT_MAIN_INITIALIZATION_H
+#ifndef CLIENT_INITIALIZATION_H
+#define CLIENT_INITIALIZATION_H
 
 #define LOGGER_CONFIG "client/logger.conf"
 
-typedef struct s_arguments {
-    int port;
-    char *ip;
-} t_arguments;
+int mx_parse_args(int argc, const char *argv[], int *port, char **ip);
+int mx_init_gtk();
 
-t_arguments *mx_parse_args(int argc, const char *argv[]);
-
-
-#endif //UCODE_UCHAT_MAIN_INITIALIZATION_H
+#endif //CLIENT_INITIALIZATION_H

@@ -2,8 +2,11 @@
 // Created by oleksandra on 01/12/24.
 //
 #include "data_exchange.h"
-#include "responses.h"
+#include "connection.h"
+#include "libmx.h"
 #include "logger.h"
+#include "client.h"
+#include "utils.h"
 
 static void internal_error_handling(int status, t_response **response) {
     if (status >= 0) {
@@ -66,7 +69,7 @@ static int get_tokens(t_response **result, cJSON *tokens) {
     return 0;
 }
 
-static t_response *login_response(char *responsestr, int *status) {
+static t_response *parse_response(char *responsestr, int *status) {
     *status = 0;
     cJSON *json = cJSON_Parse(responsestr);
     if (!json) {
@@ -92,7 +95,7 @@ static t_response *login_response(char *responsestr, int *status) {
     }
 
     result->action = LOGIN;
-    result->status = jstatus->valueint;
+    result->status = mx_atoi(cJSON_GetStringValue(jstatus));
     result->msg = mx_strdup(jmsg->valuestring);
     result->data = NULL;
     if (!tokens) {
@@ -111,28 +114,23 @@ static t_response *login_response(char *responsestr, int *status) {
 }
 
 int mx_login(char *data, t_response **response) {
-    char *request;
+    int status;
+    if (mode == 0) {  // online
+        status = mx_send_data(data);
+        if (status < 0) return status;
+        char *responsestr = NULL;
+        status = mx_receive_data(&responsestr);
+        if (status < 0) {
+            if (responsestr) free(responsestr);
+            return status;
+        }
+        *response = parse_response(responsestr, &status);
+    } else if (mode == -1) {  // offline
 
-    int status = login_request(data, &request);
-    internal_error_handling(status, response);
-    (*response)->status = status;
-    (*response)->action = LOGIN;
-
-    if (status < 0) return status;
-
-    status = mx_send_data(request);
-    free(request);
-    if (status < 0) return -100;
-
-    char *responsestr = NULL;
-    status = mx_receive_data(&responsestr);
-    if (status < 0) {
-        if (responsestr) free(responsestr);
-        return -100;
+    } else {
+        char *msg = mx_sprintf("App is running in unknown mode %d\n", mode);
+        logger_warn(msg);
+        free(msg);
     }
-
-    *response = login_response(responsestr, &status);
-
-    if (status < 0) return -100;
     return 0;
 }

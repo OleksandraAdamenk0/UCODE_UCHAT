@@ -3,16 +3,14 @@
 //
 
 #include "client.h"
+#include "logger.h"
+#include "utils.h"
 #include "gui.h"
 
-int mx_run_app(int argc, const char *argv[]) {
+int mx_run_app(int argc, char *argv[]) {
     int status = g_application_run(G_APPLICATION(app), argc, argv);
-    g_object_unref(app);
-    char *msg = "App ended with status ";
-    char *msg1 = mx_strjoin(msg, mx_itoa(status));
-    msg = mx_strjoin(msg1, "\n");
+    char *msg = mx_sprintf("mx_run_app: App ended with status %d", status);
     logger_info(msg);
-    free(msg);
-    free(msg1);
+    mx_strdel(&msg);
     return status;
 }

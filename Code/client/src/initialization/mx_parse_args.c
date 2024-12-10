@@ -2,7 +2,10 @@
 // Created by oleksandra on 17/11/24.
 //
 
-#include "initialization.h"
+#define ARGS_AMOUNT 3
+
+#include "client.h"
+#include "connection.h"
 #include "libmx.h"
 
 static int is_ip(const char *str) {
@@ -11,7 +14,7 @@ static int is_ip(const char *str) {
 
     char **parts = mx_strsplit(str, '.');
     for (int i = 0; i < 4; ++i) {
-        if (mx_is_numeric(parts[i]) == false) {
+        if (mx_is_numeric(parts[i]) == 0) {
             for (int j = i; j < 4; ++j) free(parts[i]);
             free(parts);
             return -1;
@@ -35,24 +38,17 @@ static int is_port(const char *str) {
     return 0;
 }
 
-t_arguments *mx_parse_args(int argc, const char *argv[]) {
-    // program name, ip_address, port
-    if (argc != 3) return NULL;
+#include "logger.h"
 
-    t_arguments *result = malloc(sizeof(t_arguments));
-    result->port = -1;
-    result->ip = NULL;
+int mx_parse_args(int argc, const char *argv[], int *port, char **ip) {
+    *port = -1;
+    *ip = NULL;
 
-    for (int i = 1; i < 3; ++i) {
-        if (!result->ip && is_ip(argv[i]) == 0)
-            result->ip = mx_strdup(argv[i]);
-        else if (result->port < 0 && is_port(argv[i]) == 0)
-            result->port = mx_atoi(argv[i]);
-        else {
-            free(result);
-            return NULL;
-        }
+    if (argc != ARGS_AMOUNT) return -1;
+    for (int i = 1; i < ARGS_AMOUNT; ++i) {
+        if (is_port(argv[i]) == 0 && *port == -1) *port = mx_atoi(argv[i]);
+        else if (is_ip(argv[i]) == 0 && *ip == NULL) *ip = mx_strdup(argv[i]);
+        else return -1;
     }
-
-    return result;
+    return 0;
 }

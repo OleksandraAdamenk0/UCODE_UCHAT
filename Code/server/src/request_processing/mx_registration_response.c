@@ -3,6 +3,7 @@
 //
 
 #include "request_processing.h"
+#include "libmx.h"
 
 char *mx_registration_response(const int status, cJSON *response) {
     if (!response) response = cJSON_CreateObject();

@@ -4,7 +4,10 @@
 
 #include "client.h"
 #include "data_exchange.h"
-#include "responses.h"
+#include "logger.h"
+#include "libmx.h"
+
+#include <stdlib.h>
 
 int mx_handle_request(char *data, t_action action, t_response **response) {
     if (!data) return -100;
@@ -14,5 +17,5 @@ int mx_handle_request(char *data, t_action action, t_response **response) {
     // ...
 
     logger_error("unknown type of request was tried to form\n");
-    return NULL;
+    return 0;
 }

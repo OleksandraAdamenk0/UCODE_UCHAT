@@ -2,20 +2,17 @@
 // Created by oleksandra on 17/11/24.
 //
 
-#ifndef UCODE_UCHAT_MAIN_CONNECTION_H
-#define UCODE_UCHAT_MAIN_CONNECTION_H
+#ifndef SERVER_CONNECTION_H
+#define SERVER_CONNECTION_H
 
-#include <stdlib.h>
-#include <arpa/inet.h>
-#include <pthread.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <signal.h>
-#include <sys/socket.h>
+#define MIN_DELAY 10000
+#define MAX_DELAY 500000
+
 #include <netinet/in.h>
+#include <signal.h>
 
 typedef struct s_client_info {
-    int *fd;
+    int fd;
     struct sockaddr_in addr;
 } t_client_info;
 
@@ -24,10 +21,9 @@ extern struct sockaddr_in svr_addr;
 extern volatile sig_atomic_t server_running;
 
 void mx_handle_signal(int sig);
-void *mx_handle_connection(void *p_client_info);
-void mx_finalize_client(t_client_info *info);
+void *mx_handle_connection(void *data);
 
-int mx_send_data(int fd, char *response);
-int mx_receive_data(int fd, char **request);
+int mx_receive_data(int fd, char **data);
+int mx_send_data(int fd, char *data);
 
-#endif //UCODE_UCHAT_MAIN_CONNECTION_H
+#endif //SERVER_CONNECTION_H

@@ -1,9 +1,16 @@
 //
-// Created by oleksandra on 24/11/24.
+// Created by oleksandra on 17/11/24.
 //
 
 #include "connection.h"
 #include "libmx.h"
+#include "utils.h"
+
+#include <sys/socket.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
 #define BUFFER_SIZE 1024
 
 static int receive_amount(int fd) {

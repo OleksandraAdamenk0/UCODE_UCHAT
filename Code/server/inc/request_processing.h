@@ -1,20 +1,17 @@
 //
-// Created by oleksandra on 10/11/24.
+// Created by oleksandra on 06/12/24.
 //
 
-#ifndef UCODE_UCHAT_REQUEST_PROCESSING_H
-#define UCODE_UCHAT_REQUEST_PROCESSING_H
+#ifndef SERVER_REQUEST_PROCESSING_H
+#define SERVER_REQUEST_PROCESSING_H
 
-
-#include "libmx.h"
 #include "cJSON.h"
-#include "sqlite3.h"
 
-char *mx_unknown_action_response(cJSON *response);
+typedef int (*t_request_func)(const cJSON *);
+typedef cJSON *(*t_logic_func)(const cJSON *, int *status);
+typedef char *(*t_response_func)(int, cJSON *);
 
-// UTILS
-int mx_base64_decode(const char *encoded_str, char **decoded_str);
-int mx_base64_encode(const char *input_str, char **encoded_str);
+char *mx_handle_request(const char *request_str);
 
 int mx_registration_request(const cJSON *request);
 cJSON *mx_registration_logic(const cJSON *request, int *status);
@@ -36,4 +33,6 @@ int mx_get_msgs_request(const cJSON *request);
 cJSON *mx_get_msgs_logic(const cJSON *request, int *status);
 char *mx_get_msgs_response(const int status, cJSON *response);
 
-#endif //UCODE_UCHAT_REQUEST_PROCESSING_H
+char *mx_unknown_action_response(cJSON *response);
+
+#endif //SERVER_REQUEST_PROCESSING_H

@@ -3,7 +3,8 @@
 //
 
 #include "request_processing.h"
-#include "database_managment.h"
+#include "database.h"
+#include "libmx.h"
 
 static const char *valid_country_codes[] = {
         "1", "20", "27", "30", "31", "32", "33", "34", "36", "39",
@@ -136,22 +137,19 @@ int mx_registration_request(const cJSON *request) {
 
     // check required fields
     // return values are assigned according to API Documentation
-    if (!cJSON_IsString(username) || username->valuestring == NULL || mx_strlen(username->valuestring) == 0) {
-        return -1;}
-//    } if (!cJSON_IsString(password) || password->valuestring == NULL ||
-//          mx_strlen(password->valuestring) == 0) {
-//        return -3;
-//    }
+    if (!cJSON_IsString(username) || username->valuestring == NULL ||
+    mx_strlen(username->valuestring) == 0) {
+        return -1;
+    }
+    if (!cJSON_IsString(password) || password->valuestring == NULL ||
+          validate_password(password->valuestring) < 0) {
+        return -3;
+    }
 //
 //    // check if username already exists in DB, if so do not proceed further
 //    int result = mx_get_user_id(username->valuestring, USERNAME);
 //    if (result == -2)  return -9;
 //    if (result > 0) return -2;
-//
-//    // check password (security requirements)
-//    if (validate_password(password->valuestring) < 0) {
-//        return -3;
-//    }
 //
 //    // check existence of email or phone
 //    cJSON *email = cJSON_GetObjectItemCaseSensitive(request, "email");

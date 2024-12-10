@@ -3,64 +3,57 @@
 //
 
 #include "request_processing.h"
+#include "database.h"
+#include "responses.h"
+#include "logger.h"
+#include "libmx.h"
+#include "utils.h"
 
 cJSON *mx_get_all_chats_logic(const cJSON *request, int *status) {
     cJSON *result = cJSON_CreateObject();
+    const int user_id = (const int)(cJSON_GetNumberValue(cJSON_GetObjectItem(request, "user_id")));
 
-    cJSON *user_id_json = cJSON_GetObjectItem(request, "user_id");
-    if (!user_id_json || !user_id_json->valuestring) {
-        // [add] log error
-        cJSON_Delete(result);
-        return NULL;
+    t_list *chats_list = mx_get_all_chats(user_id);
+    if (!chats_list) {
+        char *msg = mx_sprintf("No chats found for user %d\n", user_id);
+        logger_error(msg);
+        free(msg);
     }
 
-    const char *user_id = user_id_json->valuestring;
-
-    // GET FRON DB
-    char *binary_data_1 = "photo";
-    char *size_of_data_1 = mx_itoa(mx_strlen(binary_data_1));
-
-    char *binary_data_2 = "photo";
-    char *size_of_data_2 = mx_itoa(mx_strlen(binary_data_2));
-
-    const char *db_chats[][4] = {
-            {"12345", "Project Team", (const char *)binary_data_1, (const char *)size_of_data_1},
-            {"67890", "John Doe", (const char *)binary_data_2, (const char *)size_of_data_2}
-    };
-
-    // GET FROM DB
-    int chats_count = 2;
-
+    int chats_count = mx_list_size(chats_list);
     cJSON_AddNumberToObject(result, "count", chats_count);
 
+    t_list *copy = chats_list;
+
     cJSON *chats = cJSON_CreateArray();
-    for (int i = 0; i < chats_count; ++i) {
+    for (int i = 0; i < chats_count && copy; ++i) {
         cJSON *chat = cJSON_CreateObject();
-        cJSON_AddStringToObject(chat, "id", db_chats[i][0]);
-        cJSON_AddStringToObject(chat, "name", db_chats[i][1]);
+        cJSON_AddStringToObject(chat, "id", mx_itoa(((t_chat *)copy->data)->id));
+        cJSON_AddStringToObject(chat, "name", ((t_chat *)copy->data)->name);
 
-        unsigned char *photo_data = (unsigned char *)db_chats[i][2];
-        size_t photo_size = (size_t)db_chats[i][3];
-
-        if (!photo_data || photo_size == 0) {
-            cJSON_AddStringToObject(chat, "photo", "");
-            cJSON_AddItemToArray(chats, chat);
-            continue;
-        }
-
-        // photo
-        char *base64_photo;
-        mx_base64_encode(photo_data, &base64_photo);
-        if (!base64_photo) {
-            // log decoding error
-            cJSON_AddStringToObject(chat, "photo", "");
-            cJSON_AddItemToArray(chats, chat);
-            continue;
-        }
-        cJSON_AddStringToObject(chat, "photo", base64_photo);
-        free(base64_photo);
+//        unsigned char *photo_data = (unsigned char *)db_chats[i][2];
+//        size_t photo_size = (size_t)db_chats[i][3];
+//
+//        if (!photo_data || photo_size == 0) {
+//            cJSON_AddStringToObject(chat, "photo", "");
+//            cJSON_AddItemToArray(chats, chat);
+//            continue;
+//        }
+//
+//        // photo
+//        char *base64_photo;
+//        mx_base64_encode(photo_data, &base64_photo);
+//        if (!base64_photo) {
+//            // log decoding error
+//            cJSON_AddStringToObject(chat, "photo", "");
+//            cJSON_AddItemToArray(chats, chat);
+//            continue;
+//        }
+//        cJSON_AddStringToObject(chat, "photo", base64_photo);
+//        free(base64_photo);
 
         cJSON_AddItemToArray(chats, chat);
+        copy = copy->next;
     }
     cJSON_AddItemToObject(result, "chats", chats);
     return result;

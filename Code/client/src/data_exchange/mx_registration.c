@@ -2,6 +2,7 @@
 // Created by oleksandra on 01/12/24.
 //
 #include "data_exchange.h"
+#include "connection.h"
 #include "responses.h"
 #include "logger.h"
 
@@ -84,6 +85,7 @@ static int get_tokens(t_response **result, cJSON *tokens) {
 
 static t_response *registration_response(char *responsestr, int *status) {
     *status = 0;
+    printf("%s\n", responsestr);
     cJSON *json = cJSON_Parse(responsestr);
     if (!json) {
         *status = -100;
@@ -92,7 +94,6 @@ static t_response *registration_response(char *responsestr, int *status) {
 
     cJSON *jstatus = cJSON_GetObjectItemCaseSensitive(json, "status");
     cJSON *jmsg = cJSON_GetObjectItemCaseSensitive(json, "message");
-    cJSON *tokens = cJSON_GetObjectItem(json, "tokens");
 
     if (!jstatus || !jmsg) {
         *status = -100;
@@ -108,20 +109,21 @@ static t_response *registration_response(char *responsestr, int *status) {
     }
 
     result->action = REGISTRATION;
-    result->status = jstatus->valueint;
+    result->status = mx_atoi(jstatus->valuestring);
     result->msg = mx_strdup(jmsg->valuestring);
     result->data = NULL;
-    if (!tokens) {
-        cJSON_Delete(json);
-        return result;
+    printf("status = %d\n", result->status);
+
+    if (result->status == 0) {
+        cJSON *tokens = cJSON_GetObjectItem(json, "tokens");
+        if (get_tokens(&result, tokens) < 0) {
+            *status = -100;
+            cJSON_Delete(json);
+            free(result);
+            return NULL;
+        }
     }
 
-    if (get_tokens(&result, tokens) < 0) {
-        *status = -100;
-        cJSON_Delete(json);
-        free(result);
-        return NULL;
-    }
     cJSON_Delete(json);
     return result;
 }
@@ -149,7 +151,9 @@ int mx_registration(char *data, t_response **response) {
     }
 
     *response = registration_response(responsestr, &status);
+    printf("execution status = %d\n", status);
 
+    printf("status = %d\n", (*response)->status);
     if (status < 0) return -100;
     return 0;
 }

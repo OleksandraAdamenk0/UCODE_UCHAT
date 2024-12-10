@@ -3,11 +3,10 @@
 //
 
 #include "cJSON.h"
-
 #include "request_processing.h"
-#include "database_managment.h"
-#include "requests.h"
+#include "database.h"
 #include "logger.h"
+#include "utils.h"
 
 
 static t_registration *json_to_struct(const cJSON *request) {

@@ -4,7 +4,7 @@ CC := clang
 FLAGS := -std=c11 -Wall -Wextra -Werror -Wpedantic
 
 SRCDIR := src
-INCDIR = inc
+INCDIR := inc
 OBJDIR := obj
 
 # LIBS

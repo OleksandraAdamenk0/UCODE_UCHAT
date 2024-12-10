@@ -4,28 +4,22 @@
 
 #include "request_processing.h"
 #include "server.h"
+#include "logger.h"
+#include "utils.h"
+
+#include <stdlib.h>
 
 static void log_logic_error(char *action) {
-    char *msg = "Internal server error during processing the \"";
-    char *msg1 = mx_strjoin(msg, action);
-    msg = mx_strjoin(msg1, "\" request.\n");
+    char *msg = mx_sprintf("Internal server error during processing the \"%s\" request.\n", action);
     logger_error(msg);
     free(msg);
-    free(msg1);
 }
 
 static void log_response_error(char *action) {
-    char *msg = "Error during forming a response to the ";
-    char *msg1 = mx_strjoin(msg, action);
-    msg = mx_strjoin(msg1, " request.\n");
+    char *msg = mx_sprintf("Error during forming a response to the \"%s\" request.\n", action);
     logger_error(msg);
     free(msg);
-    free(msg1);
 }
-
-typedef int (*t_request_func)(const cJSON *);
-typedef cJSON *(*t_logic_func)(const cJSON *, int *status);
-typedef char *(*t_response_func)(int, cJSON *);
 
 static char *handler(cJSON *request, t_request_func request_func,
                      t_logic_func logic_func, t_response_func response_func,
@@ -34,16 +28,19 @@ static char *handler(cJSON *request, t_request_func request_func,
 
     int status = request_func(request);
     char *str_response = NULL;
-    cJSON *response = NULL;
+    cJSON *response;
 
     if (status == 0) {
-        if (!(response = logic_func(request, &status))) {
+        response = logic_func(request, &status);
+        if (!response) {
             log_logic_error(action);
             status = -9;
         }
     }
     str_response = response_func(status, response);
+    logger_debug("check 3");
     if (!str_response) log_response_error(action);
+    logger_debug("check 4");
     logger_debug(mx_itoa(status));
     return str_response;
 }
@@ -100,6 +97,7 @@ char *mx_handle_request(const char *request_str) {
         response = mx_unknown_action_response(NULL);
     }
     cJSON_Delete(request);
-    logger_debug("got response to send");
+    char *msg = mx_sprintf("got response to send:\n%s", response);
+    logger_debug(msg);
     return response;
 }

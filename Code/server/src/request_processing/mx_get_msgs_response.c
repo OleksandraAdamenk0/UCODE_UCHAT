@@ -3,6 +3,7 @@
 //
 
 #include "request_processing.h"
+#include "libmx.h"
 
 char *mx_get_msgs_response(const int status, cJSON *response) {
     cJSON_AddStringToObject(response, "status", mx_itoa(status));

@@ -2,23 +2,13 @@
 // Created by aleksa on 11/2/24.
 //
 
-#ifndef INITIALIZATION_H
-#define INITIALIZATION_H
+#ifndef SERVER_INITIALIZATION_H
+#define SERVER_INITIALIZATION_H
 
 #define LOGGER_CONFIG "server/logger.conf"
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/stat.h>
+int mx_parse_args(int argc, const char *argv[], int *port);
+int mx_init_daemon();
+int mx_init_db();
 
-#include "libmx.h"
-
-typedef struct s_arguments {
-    int port;
-    char *ip;
-} t_arguments;
-
-t_arguments *mx_parse_args(int argc, const char *argv[]);
-int mx_create_daemon();
-
-#endif //INITIALIZATION_H
+#endif //SERVER_INITIALIZATION_H

@@ -3,6 +3,8 @@
 //
 
 #include "request_processing.h"
+#include "libmx.h"
+#include "utils.h"
 
 cJSON *mx_get_all_contacts_logic(const cJSON *request, int *status) {
     cJSON *result = cJSON_CreateObject();
@@ -38,7 +40,7 @@ cJSON *mx_get_all_contacts_logic(const cJSON *request, int *status) {
         cJSON_AddStringToObject(contact, "id", db_contacts[i][0]);
         cJSON_AddStringToObject(contact, "name", db_contacts[i][1]);
 
-        unsigned char *photo_data = (unsigned char *)db_contacts[i][2];
+        const char *photo_data = db_contacts[i][2];
         size_t photo_size = (size_t)db_contacts[i][3];
 
         if (!photo_data || photo_size == 0) {
@@ -48,7 +50,8 @@ cJSON *mx_get_all_contacts_logic(const cJSON *request, int *status) {
         }
 
         // photo
-        char *base64_photo = base64_encode(photo_data, photo_size);
+        char *base64_photo;
+        photo_size = mx_base64_encode(photo_data, &base64_photo);
         if (!base64_photo) {
             // log decoding error
             cJSON_AddStringToObject(contact, "photo", "");

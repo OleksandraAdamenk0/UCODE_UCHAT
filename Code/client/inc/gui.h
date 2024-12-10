@@ -2,8 +2,8 @@
 // Created by oleksandra on 21/11/24.
 //
 
-#ifndef UCODE_UCHAT_MAIN_GRAPHICAL_INTERFACE_H
-#define UCODE_UCHAT_MAIN_GRAPHICAL_INTERFACE_H
+#ifndef CLIENT_GUI_H
+#define CLIENT_GUI_H
 
 #include <gtk/gtk.h>
 #include <glib.h>
@@ -11,33 +11,37 @@
 
 #define WIDTH 800
 #define HEIGHT 600
-
 #define APP_NAME "TAZIK"
-
-#define RSC "/client/rsc"
-#define HTML RSC "/html"
-#define REGISTRATION_HTML HTML "/registration.html"
-#define LOGIN_HTML HTML "/login.html"
-#define NETWORK_ERROR_HTML HTML "/network_error.html"
-#define LOAD_HTML HTML "/load.html"
 
 extern GtkApplication *app;
 extern GtkWidget *window;
 extern WebKitWebView *webview;
 extern WebKitUserContentManager *manager;
 
-// UTILS
-char *mx_get_cur_dir();
-char *mx_create_js_func_call(char *name, char *argument);
+#define RSC "/client/rsc"
 
-void mx_gui_init(GtkApplication *app, gpointer user_data);
-
-// PAGES
-int mx_load_load_page();
-int mx_load_registration_page();
-int mx_load_login_page();
-int mx_load_error_page();
-int mx_load_chat_page();
+// HTML
+#define HTML RSC "/html"
+#define LOAD_HTML HTML "/load.html"
+#define LOGIN_HTML HTML "/login.html"
+#define ERROR_HTML HTML "/error.html"
+#define REGISTRATION_HTML HTML "/registration.html"
+#define CHATS_HTML HTML "/chats.html"
 
 
-#endif //UCODE_UCHAT_MAIN_GRAPHICAL_INTERFACE_H
+typedef int (*set_handlers_ptr)();
+
+typedef enum e_pages {
+    LOAD_PAGE, LOGIN_PAGE, ERROR_PAGE, CHATS_PAGE, REGISTRATION_PAGE
+} t_pages;
+
+void mx_init_gui(GtkApplication *app, gpointer user_data);
+
+int mx_load_page(t_pages page);
+int mx_load_handlers();
+int mx_login_handlers();
+int mx_error_handlers();
+int mx_registration_handlers();
+int mx_chats_handlers();
+
+#endif //CLIENT_GUI_H
