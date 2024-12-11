@@ -15,5 +15,7 @@ int mx_registration(char *data, t_response **response);
 
 int mx_get_chats(long long int id, t_response **response);
 char *mx_get_last_message(long long int id);
+int mx_get_contacts(long long int id, t_response **response);
+
 
 #endif //CLIENT_DATA_EXCHANGE_H
