@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat</title>
+    <title>Chats</title>
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/chats.css">
 </head>
@@ -12,13 +12,18 @@
         <div class="contacts">
             <div class="container-child">
                 <div class="contacts-header">
-                    <img src="contacts_header_icon.png" height="54px">
+                    <img src="../img/contacts_header_icon.png" height="54px">
                     <div class="contacts-search">
-                        <img src="search.png" height="26px">
+                        <img src="../img/search.png" height="26px">
                         <input type="text" placeholder="Search">
                     </div>
                 </div>
-                <h2>Chats</h2>
+                <div class="contacts-between">
+                    <h2>Chats</h2>
+                    <div class="button-add">
+                        <img src="../img/add.png" height="54px">
+                    </div>
+                </div>
                 <div class="contacts-list">
                     <div class="container-child">
                         
@@ -29,84 +34,166 @@
         <div class="chat">
             <div class="container-child">
                 <div class="chat-header">
-                    <img src="unknown_chat.png" height="54px">
-                    <h3>Chose chat</h3>
+                    <img src="../img/unknown_chat.png" height="54px">
+                    <h3>Choose chat</h3>
                 </div>
                 <div class="chat-message-area">
                     
                 </div>
                 <div class="chat-footer">
                     <input type="text" id="typeMessage" name="typeMessage" placeholder="Type your message here...">
-                    <!-- <img src="" alt=""> -->
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h3>Add Contact</h3>
+            <input type="text" id="newContactName" placeholder="Enter contact name">
+            <button id="addContactButton">Add Contact</button>
+        </div>
+    </div>
+
     <script>
-
         document.addEventListener('DOMContentLoaded', () => {
-            // Load chats list from C
-            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.loadChats) {
-                const chatsData = window.externalInterface.loadChats();
-                alert(chatsData);
-                //renderChats(JSON.parse(chatsData));
-            } else {
-                alert('Handler "loadChats" is not registered in WebKit!');
-            }
-        });
-
-        function renderChats(chats) {
             const contactsList = document.querySelector('.contacts-list .container-child');
-            contactsList.innerHTML = ''; // Очищаем список
-            chats.forEach(chat => {
-                const contactDiv = document.createElement('div');
-                contactDiv.className = 'contact';
-                contactDiv.innerHTML = `
-                <div class="contact-area">
-                    <img src="${chat.avatar}" height="64px">
-                    <div>
-                        <h3>${chat.name}</h3>
-                        <p>${chat.lastMessage}</p>
-                    </div>
-                </div>
-            `;
-                contactDiv.addEventListener('click', () => loadChat(chat.name));
-                contactsList.appendChild(contactDiv);
-            });
-        }
-
-        function loadChat(chatName) {
-            // Загружаем историю сообщений из C
-            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.loadChatHistory) {
-                const chatData = window.externalInterface.loadChatHistory(chatName);
-                renderChatHistory(chatName, JSON.parse(chatData));
-            }
-        }
-
-
-        function renderChatHistory(chatName, messages) {
             const chatHeader = document.querySelector('.chat-header');
             const chatArea = document.querySelector('.chat-message-area');
+            const messageInput = document.querySelector('.chat-footer input');
+            const buttonAdd = document.querySelector('.button-add');
+            const popup = document.getElementById('popup');
+            const addContactButton = document.getElementById('addContactButton');
+            const newContactNameInput = document.getElementById('newContactName');
 
-            chatHeader.innerHTML = `
-            <img src="${chatName}.png" height="54px">
-            <h3>${chatName}</h3>
-        `;
-            chatArea.innerHTML = ''; // Очищаем историю сообщений
-            messages.forEach(message => {
-                const messageDiv = document.createElement('div');
-                messageDiv.className = message.from;
-                messageDiv.innerHTML = `
-                <div class="cloud">
-                    <p>${message.text}</p>
-                    <div class="time">${message.time}</div>
-                </div>
-            `;
-                chatArea.appendChild(messageDiv);
+            popup.style.display = 'none';
+
+            const backendContacts = [
+                
+            ];
+
+            const chatHistory = {};
+
+            let currentChat = null;
+
+            function renderContacts() {
+                contactsList.innerHTML = '';
+                backendContacts.forEach(contact => {
+                    const contactDiv = document.createElement('div');
+                    contactDiv.className = 'contact';
+                    contactDiv.innerHTML = `
+                        <div class="contact-area">
+                            <img src="../img/unknown_chat.png" height="64px">
+                            <div>
+                                <h3>${contact.name}</h3>
+                                <p>${contact.lastMessage}</p>
+                            </div>
+                        </div>
+                    `;
+                    contactDiv.addEventListener('click', () => loadChat(contact.name));
+                    contactsList.appendChild(contactDiv);
+                });
+            }
+
+            function loadChat(contactName) {
+                document.querySelectorAll('.contact').forEach(contact => {
+                    contact.classList.remove('selected');
+                });
+
+                const selectedContact = Array.from(contactsList.children).find(contact =>
+                    contact.querySelector('h3').innerText === contactName
+                );
+                if (selectedContact) {
+                    selectedContact.classList.add('selected');
+                }
+                
+                chatHeader.innerHTML = `
+                    <img src="../img/unknown_chat.png" height="54px">
+                    <h3>${contactName}</h3>
+                `;
+                chatArea.innerHTML = '';
+                currentChat = contactName;
+
+                if (chatHistory[contactName]) {
+                    chatHistory[contactName].forEach(message => {
+                        const messageDiv = document.createElement('div');
+                        messageDiv.className = message.from;
+
+                        if (message.from === 'message-from') {
+                            messageDiv.innerHTML = `
+                                <div class="decoration"></div>
+                                <div class="cloud">
+                                    <p>${message.text}</p>
+                                    <div class="time">${message.time}</div>
+                                </div>
+                            `;
+                        } else {
+                            messageDiv.innerHTML = `
+                                <div class="cloud">
+                                    <p>${message.text}</p>
+                                    <div class="time">${message.time}</div>
+                                </div>
+                                <div class="decoration"></div>
+                            `;
+                        }
+                        chatArea.appendChild(messageDiv);
+                    });
+
+                    chatArea.scrollTop = chatArea.scrollHeight;
+                }
+            }
+
+            buttonAdd.addEventListener('click', () => {
+                popup.style.display = 'block';
             });
-            chatArea.scrollTop = chatArea.scrollHeight;
-        }
+
+            addContactButton.addEventListener('click', () => {
+                const newContactName = newContactNameInput.value.trim();
+                if (newContactName) {
+                    backendContacts.push({ name: newContactName, lastMessage: '(no messages yet)', time: '' });
+                    chatHistory[newContactName] = [];
+                    renderContacts();
+                    popup.style.display = 'none';
+                    newContactNameInput.value = '';
+                }
+            });
+
+            popup.addEventListener('click', (e) => {
+                if (e.target === popup) {
+                    popup.style.display = 'none';
+                }
+            });
+
+            messageInput.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' && messageInput.value.trim() !== '' && currentChat) {
+                    const text = messageInput.value.trim();
+                    const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+                    if (!chatHistory[currentChat]) {
+                        chatHistory[currentChat] = [];
+                    }
+                    chatHistory[currentChat].push({ from: 'message-to', text, time });
+
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = 'message-to';
+                    messageDiv.innerHTML = `
+                        <div class="cloud">
+                            <p>${text}</p>
+                            <div class="time">${time}</div>
+                        </div>
+                        <div class="decoration"></div>
+                    `;
+                    chatArea.appendChild(messageDiv);
+
+                    chatArea.scrollTop = chatArea.scrollHeight;
+
+                    messageInput.value = '';
+                }
+            });
+
+            renderContacts();
+        });
     </script>
 </body>
 </html>

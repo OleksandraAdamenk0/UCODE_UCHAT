@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', serif;
+    font-family: 'Roboto';
 }
 
 .container-parent {
@@ -55,16 +55,16 @@ body {
     align-items: center;
 
     background: #F6F6F8;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
 }
 
 .contacts-search img {
-    margin: 0 14px;
+    margin: 0px 14px;
 }
 
 .contacts-search input {
-    font-family: 'Roboto', serif;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
@@ -76,8 +76,15 @@ body {
     color: #303030;
 }
 
+.contacts-between {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .contacts h2 {
-    font-family: 'Roboto', serif;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
@@ -97,12 +104,62 @@ body {
     flex-direction: column;
     align-items: center;
 
+    position: relative;
+
     border-radius: 16px;
     background-color: #FFFFFF;
 }
 
 .contacts-list .container-child {
     width: 95%;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.popup-content h3 {
+    margin-bottom: 15px;
+}
+
+.popup-content input {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.popup-content button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #57AD99;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #57AD88;
 }
 
 .contact {
@@ -146,7 +203,7 @@ body {
 }
 
 .contact-area h3 {
-    font-family: 'Roboto', serif;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -157,7 +214,7 @@ body {
 }
 
 .contact-area p {
-    font-family: 'Roboto', serif;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -202,7 +259,7 @@ body {
 .chat-header h3 {
     margin-left: 24px;
 
-    font-family: 'Roboto', serif;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -268,7 +325,7 @@ body {
 
     word-break: break-word;
 
-    font-family: 'Roboto', serif;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -284,7 +341,7 @@ body {
     right: 3px;
     bottom: -20px;
 
-    font-family: 'Roboto', serif;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
@@ -338,7 +395,7 @@ body {
 
     word-break: break-word;
 
-    font-family: 'Roboto', serif;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -354,7 +411,7 @@ body {
     left: 3px;
     bottom: -20px;
 
-    font-family: 'Roboto', serif;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
@@ -381,10 +438,10 @@ body {
 
     border: 0;
     background: #E2F2FB;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
 
-    font-family: 'Roboto', serif;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
