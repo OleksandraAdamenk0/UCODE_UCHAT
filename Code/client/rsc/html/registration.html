@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/fonts.css">
     <title>Registration Page</title>
     <link rel="stylesheet" href="../css/unauthorized.css">
 </head>
@@ -24,19 +22,24 @@
                 
                 <form id="form-container">
                     <div class="form-group">
+                        <p class="error non-visible"></p>
                         <label for="username">Username</label>
                         <input type="text" id="username" name="username" placeholder="Enter username">
                     </div>
                     <div class="form-group">
+                        <p class="error non-visible"></p>
                         <label for="password">Password</label>
                         <input type="password" id="password" name="password" placeholder="Enter password">
                     </div>
+
                     <div class="form-group">
-                        <label for="contact">Email</label>
+                        <p class="error non-visible"></p>
+                        <label for="contactEmail">Email</label>
                         <input type="text" id="contactEmail" name="contact" placeholder="Enter email">
                     </div>
                     <div class="form-group">
-                        <label for="contact">Phone</label>
+                        <p class="error non-visible"></p>
+                        <label for="contactPhone">Phone</label>
                         <input type="text" id="contactPhone" name="contact" placeholder="Enter phone">
                     </div>
                 </form>
@@ -48,7 +51,7 @@
                     </p>
                 </div>
             </div>
-            <div class="button" id="signUpButton">Confirm</div>
+            <div class="button active" id="signUpButton">Confirm</div>
         </div>
     </div>
 
@@ -60,16 +63,109 @@
         const signUpButton = document.getElementById('signUpButton');
         const loginBtn = document.getElementById('loginBtn');
 
-        const validateForm = () => {
-            const isUsernameValid = username.value.trim() !== '';
-            const isPasswordValid = password.value.trim() !== '';
-            const isContactEmailValid = contactEmail.value.trim() !== '';
-            const isContactPhoneValid = contactPhone.value.trim() !== '';
+        const emptyUsername = (newText) => {
+            const input = document.getElementById("username");
 
-            if (isUsernameValid && isPasswordValid && (isContactEmailValid || isContactPhoneValid)) {
-                signUpButton.classList.add('active');
-            } else {
-                signUpButton.classList.remove('active');
+            if (input) {
+                const errorElement = input.closest(".form-group")?.querySelector("p.error");
+
+                if (errorElement) {
+                    errorElement.textContent = newText;
+                    errorElement.classList.remove("non-visible");
+                }
+            }
+        };
+
+        const registeredUsername = (newText) => {
+            const input = document.getElementById("username");
+
+            if (input) {
+                const errorElement = input.closest(".form-group")?.querySelector("p.error");
+
+                if (errorElement) {
+                    errorElement.textContent = newText;
+                    errorElement.classList.remove("non-visible");
+                }
+            }
+        };
+
+        const cleanErrors = () => {
+            const elements = document.querySelectorAll('.error');
+
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].classList.add("non-visible");
+            }
+        };
+
+        const wrongPasswordFormat = (newText) => {
+            const input = document.getElementById("password");
+            if (input) {
+                const errorElement = input.closest(".form-group")?.querySelector("p.error");
+                if (errorElement) {
+                    errorElement.innerHTML = newText;
+                    errorElement.classList.remove("non-visible");
+                }
+            }
+        };
+
+        const emptyContacts = (newText) => {
+            const input1 = document.getElementById("contactEmail");
+            const input2 = document.getElementById("contactPhone");
+
+            if (input1 && input2) {
+                const errorElement1 = input1.closest(".form-group")?.querySelector("p.error");
+                const errorElement2 = input2.closest(".form-group")?.querySelector("p.error");
+
+                if (errorElement1 && errorElement2) {
+                    errorElement1.textContent = newText;
+                    errorElement1.classList.remove("non-visible");
+                    errorElement2.textContent = newText;
+                    errorElement2.classList.remove("non-visible");
+                }
+            }
+        };
+
+        const wrongPhoneFormat = (newText) => {
+            const input = document.getElementById("contactPhone");
+            if (input) {
+                const errorElement = input.closest(".form-group")?.querySelector("p.error");
+                if (errorElement) {
+                    errorElement.textContent = newText;
+                    errorElement.classList.remove("non-visible");
+                }
+            }
+        };
+
+        const wrongEmailFormat = (newText) => {
+            const input = document.getElementById("contactEmail");
+            if (input) {
+                const errorElement = input.closest(".form-group")?.querySelector("p.error");
+                if (errorElement) {
+                    errorElement.textContent = newText;
+                    errorElement.classList.remove("non-visible");
+                }
+            }
+        };
+
+        const registeredEmail = (newText) => {
+            const input = document.getElementById("contactEmail");
+            if (input) {
+                const errorElement = input.closest(".form-group")?.querySelector("p.error");
+                if (errorElement) {
+                    errorElement.textContent = newText;
+                    errorElement.classList.remove("non-visible");
+                }
+            }
+        };
+
+        const registeredPhone = (newText) => {
+            const input = document.getElementById("contactPhone");
+            if (input) {
+                const errorElement = input.closest(".form-group")?.querySelector("p.error");
+                if (errorElement) {
+                    errorElement.textContent = newText;
+                    errorElement.classList.remove("non-visible");
+                }
             }
         };
 
@@ -83,24 +179,20 @@
 
         const sendDataToC = () => {
             const data = {
+                action: "register",
                 username: username.value.trim(),
                 password: password.value.trim(),
                 email: contactEmail.value.trim(),
                 phone: contactPhone.value.trim(),
             };
 
-            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.submitForm) {
+            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.submitRegistrationForm) {
                 const jsonData = JSON.stringify(data);
-                window.webkit.messageHandlers.submitForm.postMessage(jsonData);
+                window.webkit.messageHandlers.submitRegistrationForm.postMessage(jsonData);
             } else {
                 alert('Handler "submitForm" is not registered in WebKit!');
             }
         };
-
-        username.addEventListener('input', validateForm);
-        password.addEventListener('input', validateForm);
-        contactEmail.addEventListener('input', validateForm);
-        contactPhone.addEventListener('input', validateForm);
 
         signUpButton.addEventListener('click', () => {
             if (signUpButton.classList.contains('active')) {

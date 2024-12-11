@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/fonts.css">
     <title>Loading...</title>
     <link rel="stylesheet" href="../css/load.css">
 </head>
@@ -15,16 +16,24 @@
 </div>
 
 <script>
-    const connect = () => {
-        if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.connect) {
-            window.webkit.messageHandlers.connect.postMessage(null);
+    const connectToServer = () => {
+        if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.connectToServer) {
+            window.webkit.messageHandlers.connectToServer.postMessage(null);
         } else {
             alert('Handler "connect" is not registered in WebKit!');
         }
     };
     window.addEventListener('load', () => {
-        setTimeout(connect, 500);
+        setTimeout(connectToServer, 500);
     });
+
+    const chooseMode = () => {
+        if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.chooseMode) {
+            window.webkit.messageHandlers.chooseMode.postMessage(null);
+        } else {
+            alert('Handler "chooseMode" is not registered in WebKit!');
+        }
+    };
 
     const goToLogin = () => {
         if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.goToLogin) {

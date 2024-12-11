@@ -1,24 +1,23 @@
 //
-// Created by oleksandra on 17/11/24.
+// Created by oleksandra on 04/12/24.
 //
 
-#ifndef UCODE_UCHAT_MAIN_CONNECTION_H
-#define UCODE_UCHAT_MAIN_CONNECTION_H
+#ifndef CLIENT_CONNECTION_H
+#define CLIENT_CONNECTION_H
 
-#include <stdio.h>
-#include <sys/socket.h>
 #include <netinet/in.h>
-#include <arpa/inet.h>
 #include <pthread.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <errno.h>
-#include <sys/select.h>
 
 extern int fd;
 extern int port;
 extern char *ip;
 
-#endif //UCODE_UCHAT_MAIN_CONNECTION_H
+void *mx_connection_thread(void *arg);
+int mx_open_connection();
+int mx_blocking_mode(int sockfd, struct sockaddr_in svr_addr);
+int mx_non_blocking_mode(int sockfd, struct sockaddr_in svr_addr);
+
+int mx_send_data(char *data);
+int mx_receive_data(char **data);
+
+#endif //CLIENT_CONNECTION_H

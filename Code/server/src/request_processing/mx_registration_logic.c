@@ -3,11 +3,10 @@
 //
 
 #include "cJSON.h"
-
 #include "request_processing.h"
-#include "database_managment.h"
-#include "requests.h"
+#include "database.h"
 #include "logger.h"
+#include "utils.h"
 
 
 static t_registration *json_to_struct(const cJSON *request) {
@@ -51,7 +50,7 @@ cJSON *mx_registration_logic(const cJSON *request, int *status) {
 
     if ((*status = mx_register_user(data)) == 0) {
         logger_debug("user was registered successfully\n");
-        int id = mx_get_user_id_by_username(data->username);
+        int id = mx_get_user_id(data->username, USERNAME);
         if (id < 1) *status = -9;
         else {
             char *access_token = mx_itoa(id);

@@ -3,87 +3,85 @@
 //
 
 #include "connection.h"
-#include "server.h"
+#include "request_processing.h"
+#include "logger.h"
+#include "utils.h"
 
-static char *msg_with_fd(char *msg, int fd) {
-    char *msg1 = "Socket: ";
-    char *msg2 = mx_itoa(fd);
-    char *msg3 = mx_strjoin(msg1, msg2);
-    char *msg4 = mx_strjoin(msg3, ". Msg: ");
-    char *msg5 = mx_strjoin(msg4, msg);
-    free(msg2);
-    free(msg3);
-    free(msg4);
-    if (msg5[mx_strlen(msg5) - 1] != '\n') {
-        char *msg6 = mx_strjoin(msg5, "\n");
-        free(msg5);
-        return msg6;
+#include <stdlib.h>
+#include <unistd.h>
+#include <pthread.h>
+
+static void finalize_client(t_client_info *info) {
+    if (info) {
+        if (info->fd) close(info->fd);
+        free(info);
     }
-    return msg5;
 }
 
-static void handle_recv_error(int status, int fd) {
+static void log_recv_error(int status, int fd) {
     if (status == -1) {
-        char *msg = msg_with_fd("Client disconnected\n", fd);
+        char *msg = mx_sprintf("Client from socket %d disconnected\n", fd);
         logger_info(msg);
         free(msg);
     } else if (status == -2) {
-        char *msg = msg_with_fd("Error receiving data\n", fd);
+        char *msg = mx_sprintf("Error receiving data from socket %d\n", fd);
         logger_error(msg);
         free(msg);
     } else if (status == -3){
-        char *msg = msg_with_fd("Wrong data size format\n", fd);
+        char *msg = mx_sprintf("Wrong data size format from socket %d\n", fd);
         logger_error(msg);
         free(msg);
     } else {
-        char *msg = msg_with_fd("Unknown error\n", fd);
+        char *msg = mx_sprintf("Unknown error on socket %d\n", fd);
         logger_error(msg);
         free(msg);
     }
 }
 
-static void handle_send_error(int status, int fd) {
-    if (status == -1) {
-        char *msg = msg_with_fd("Trying to send NULL data\n", fd);
-        logger_debug(msg);
-        free(msg);
-    } else if (status == -2) {
-        char *msg = msg_with_fd("Error sending chunk amount\n", fd);
-        logger_debug(msg);
-        free(msg);
-    } else if (status == -3) {
-        char *msg = msg_with_fd("Error sending data content\n", fd);
-        logger_debug(msg);
-        free(msg);
-    } else {
-        char *msg = msg_with_fd("Unknown error\n", fd);
-        logger_debug(msg);
-        free(msg);
+static int receive_request(int fd, char **request) {
+    int status = mx_receive_data(fd, request);
+    if (status < 0) {
+        log_recv_error(status, fd);
+        if (*request) {
+            free(*request);
+            *request = NULL;
+        }
     }
+    return status;
 }
 
-static void handle_request(char *request, int fd) {
-    char *msg = msg_with_fd("Received data from connection\n", fd);
+static char *process_request(char *request, int fd) {
+    char *msg = mx_sprintf("Received data from socket %d\n", fd);
     logger_error(msg);
     free(msg);
 
     char *response = mx_handle_request(request);
     if (!response) {
-        msg = msg_with_fd("Can not send the response because of the"
-                                " request handling error\n", fd);
+        msg = mx_sprintf("Socket %d: request handling error\n", fd);
         logger_debug(msg);
         free(msg);
-        return;
+        return NULL;
     }
-    int status = mx_send_data(fd, response);
+    msg = mx_sprintf("Can send response to the socket %d", fd);
+    logger_debug(msg);
+    free(msg);
+    return response;
+}
 
-    free(response);
+static int send_response(char *response, int fd) {
+    logger_debug("mx_handle_connection: send_response");
+    logger_debug(response);
+    int status = mx_send_data(fd, response);
     if (status < 0) {
-        msg = msg_with_fd("Error sending data\n", fd);
+        char *msg = mx_sprintf("Error sending data to the socket %d\n", fd);
         logger_error(msg);
         free(msg);
-        handle_send_error(status, fd);
+    } else {
+        char *msg = mx_sprintf("Response sent to the socket %d", fd);
+        logger_info(msg);
+        free(msg);
     }
+    return status;
 }
 
 void *mx_handle_connection(void *data) {
@@ -91,19 +89,16 @@ void *mx_handle_connection(void *data) {
 
     while (1) {
         char *request = NULL;
-        int status = mx_receive_data(*(info->fd), &request);
-        if (status < 0) {
-            handle_recv_error(status, *(info->fd));
-            if (request) {
-                free(request);
-                request = NULL;
-            }
-            if (status == -1) break;
-            continue;
-        }
-        handle_request(request, *(info->fd));
-        free(request);
+        int status = receive_request(info->fd, &request);
+        if (status < 0) if (request) free(request);
+        if (status == -1) break;
+        if (status < 0) continue;
+        char *response = process_request(request, info->fd);
+        if (request) free(request);
+        status = send_response(response, info->fd);
+        free(response);
+        if (status < 0) break;
     }
-    mx_finalize_client(info);
+    finalize_client(info);
     pthread_exit(NULL);
 }

@@ -3,6 +3,8 @@
 //
 
 #include "request_processing.h"
+#include "database.h"
+#include "libmx.h"
 
 static const char *valid_country_codes[] = {
         "1", "20", "27", "30", "31", "32", "33", "34", "36", "39",
@@ -129,57 +131,52 @@ static int validate_phone(const char *phone) {
     return 0;
 }
 
-static int validate_request(const cJSON *request) {
+int mx_registration_request(const cJSON *request) {
     cJSON *username = cJSON_GetObjectItemCaseSensitive(request, "username");
     cJSON *password = cJSON_GetObjectItemCaseSensitive(request, "password");
 
     // check required fields
     // return values are assigned according to API Documentation
-    if (!cJSON_IsString(username) || username->valuestring == NULL) {
+    if (!cJSON_IsString(username) || username->valuestring == NULL ||
+    mx_strlen(username->valuestring) == 0) {
         return -1;
-    } if (!cJSON_IsString(password) || password->valuestring == NULL) {
+    }
+    if (!cJSON_IsString(password) || password->valuestring == NULL ||
+          validate_password(password->valuestring) < 0) {
         return -3;
     }
-
-    // check if username already exists in DB, if so do not proceed further
-
-    // check password (security requirements)
-    if (validate_password(password->valuestring) < 0) {
-        return -3;
-    }
-
-    // check existence of email or phone
-    cJSON *email = cJSON_GetObjectItemCaseSensitive(request, "email");
-    cJSON *phone = cJSON_GetObjectItemCaseSensitive(request, "phone");
-
-    if ((!cJSON_IsString(email) || email->valuestring == NULL)
-        && (!cJSON_IsString(phone) || phone->valuestring == NULL)) {
-        return -4;
-    }
-
-    // check email format
-    if (cJSON_IsString(email) && email->valuestring != NULL) {
-        if (validate_email(email->valuestring) < 0) {
-            return -6;
-        }
-    }
-
-    // check if email already was registered in app (check DB)
-
-    // check phone number format
-    if (cJSON_IsString(email) && email->valuestring != NULL) {
-        if (validate_email(email->valuestring) < 0) {
-            return -5;
-        }
-    }
-
-    // check if phone number already was registered in app (check DB)
-
-    return 0;
-}
-
-int mx_registration_request(const cJSON *request) {
-    int validation_result = validate_request(request);
-    if (validation_result < 0) return validation_result;
+//
+//    // check if username already exists in DB, if so do not proceed further
+//    int result = mx_get_user_id(username->valuestring, USERNAME);
+//    if (result == -2)  return -9;
+//    if (result > 0) return -2;
+//
+//    // check existence of email or phone
+//    cJSON *email = cJSON_GetObjectItemCaseSensitive(request, "email");
+//    cJSON *phone = cJSON_GetObjectItemCaseSensitive(request, "phone");
+//
+//    if (!cJSON_IsString(email) || email->valuestring == NULL ||
+//        mx_strlen(email->valuestring) == 0)
+//        email = NULL;
+//    if (!cJSON_IsString(phone) || phone->valuestring == NULL ||
+//        mx_strlen(phone->valuestring) == 0)
+//        phone = NULL;
+//    if (!email && !phone) return -4;
+//
+//    // check email format
+//    if (email) {
+//        if (validate_email(email->valuestring) < 0) return -6;
+//        // check if email already was registered in app (check DB)
+//        result = mx_get_user_id(email->valuestring, EMAIL);
+//        if (result == -2)  return -9;
+//        if (result > 0) return -7;
+//    }
+//
+//    if (phone) {
+//        if (validate_phone(phone->valuestring) < 0) return -5;
+//        result = mx_get_user_id(phone->valuestring, PHONE);
+//        if (result == -2)  return -9;
+//        if (result > 0) return -8;
+//    }
     return 0;
 }

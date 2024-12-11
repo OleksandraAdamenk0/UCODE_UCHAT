@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/chats.css">
+</head>
+<body>
+    <div class="container-parent">
+        <div class="contacts">
+            <div class="container-child">
+                <div class="contacts-header">
+                    <img src="contacts_header_icon.png" height="54px">
+                    <div class="contacts-search">
+                        <img src="search.png" height="26px">
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>
+                <h2>Chats</h2>
+                <div class="contacts-list">
+                    <div class="container-child">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="container-child">
+                <div class="chat-header">
+                    <img src="unknown_chat.png" height="54px">
+                    <h3>Chose chat</h3>
+                </div>
+                <div class="chat-message-area">
+                    
+                </div>
+                <div class="chat-footer">
+                    <input type="text" id="typeMessage" name="typeMessage" placeholder="Type your message here...">
+                    <!-- <img src="" alt=""> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load chats list from C
+            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.loadChats) {
+                const chatsData = window.externalInterface.loadChats();
+                alert(chatsData);
+                //renderChats(JSON.parse(chatsData));
+            } else {
+                alert('Handler "loadChats" is not registered in WebKit!');
+            }
+        });
+
+        function renderChats(chats) {
+            const contactsList = document.querySelector('.contacts-list .container-child');
+            contactsList.innerHTML = ''; // Очищаем список
+            chats.forEach(chat => {
+                const contactDiv = document.createElement('div');
+                contactDiv.className = 'contact';
+                contactDiv.innerHTML = `
+                <div class="contact-area">
+                    <img src="${chat.avatar}" height="64px">
+                    <div>
+                        <h3>${chat.name}</h3>
+                        <p>${chat.lastMessage}</p>
+                    </div>
+                </div>
+            `;
+                contactDiv.addEventListener('click', () => loadChat(chat.name));
+                contactsList.appendChild(contactDiv);
+            });
+        }
+
+        function loadChat(chatName) {
+            // Загружаем историю сообщений из C
+            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.loadChatHistory) {
+                const chatData = window.externalInterface.loadChatHistory(chatName);
+                renderChatHistory(chatName, JSON.parse(chatData));
+            }
+        }
+
+
+        function renderChatHistory(chatName, messages) {
+            const chatHeader = document.querySelector('.chat-header');
+            const chatArea = document.querySelector('.chat-message-area');
+
+            chatHeader.innerHTML = `
+            <img src="${chatName}.png" height="54px">
+            <h3>${chatName}</h3>
+        `;
+            chatArea.innerHTML = ''; // Очищаем историю сообщений
+            messages.forEach(message => {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = message.from;
+                messageDiv.innerHTML = `
+                <div class="cloud">
+                    <p>${message.text}</p>
+                    <div class="time">${message.time}</div>
+                </div>
+            `;
+                chatArea.appendChild(messageDiv);
+            });
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+    </script>
+</body>
+</html>

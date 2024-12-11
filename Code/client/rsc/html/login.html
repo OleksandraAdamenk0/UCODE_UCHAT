@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *;">
+    <link rel="stylesheet" href="../css/fonts.css">
     <title>Login Page</title>
     <link rel="stylesheet" href="../css/unauthorized.css">
 </head>
@@ -24,11 +23,13 @@
                 
                 <form id="form-container">
                     <div class="form-group">
-                        <label for="username">Username</label>
+                        <p class="error non-visible"></p>
+                        <label id="username_label" for="username">Username</label>
                         <input type="text" id="username" name="username" placeholder="Enter username">
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
+                        <p class="error non-visible"></p>
+                        <label id="password_label" for="password">Password</label>
                         <input type="password" id="password" name="password" placeholder="Enter password">
                     </div>
                 </form>
@@ -61,25 +62,45 @@
             }
         };
 
+        function invalidData(newText) {
+            alert("yeay");
+            const username = document.getElementById("username");
+            const password = document.getElementById("password");
+
+            if (username && password) {
+                const usernameErrorElement = username.closest(".form-group")?.querySelector("p.error");
+                const passwordErrorElement = password.closest(".form-group")?.querySelector("p.error");
+
+                usernameErrorElement.textContent = newText;
+                usernameErrorElement.classList.remove("non-visible");
+                passwordErrorElement.textContent = newText;
+                passwordErrorElement.classList.remove("non-visible");
+            }
+        }
+
+
         const goToRegister = () => {
             if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.goToRegister) {
                 window.webkit.messageHandlers.goToRegister.postMessage(null);
             } else {
-                alert('Handler "submitForm" is not registered in WebKit!');
+                alert('Handler "submitLoginForm" is not registered in WebKit!');
             }
         };
 
         const sendDataToC = () => {
             const data = {
+                action: "login",
                 username: username.value.trim(),
                 password: password.value.trim(),
             };
 
-            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.submitForm) {
+            alert(data.password);
+
+            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.submitLoginForm) {
                 const jsonData = JSON.stringify(data);
-                window.webkit.messageHandlers.submitForm.postMessage(jsonData);
+                window.webkit.messageHandlers.submitLoginForm.postMessage(jsonData);
             } else {
-                alert('Handler "submitForm" is not registered in WebKit!');
+                alert('Handler "submitLoginForm" is not registered in WebKit!');
             }
         };
 
