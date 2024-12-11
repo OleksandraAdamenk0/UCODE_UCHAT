@@ -26,7 +26,7 @@ char *mx_get_password(int id) {
     if (sqlite3_step(stmt) == SQLITE_ROW) {
         const unsigned char *data = sqlite3_column_text(stmt, 0);
         logger_debug("query executed");
-        logger_debug(data);
+        logger_debug((char*)data);
         password = mx_strdup((char *)(data));
     }
     // Finalize the statement to avoid memory leaks

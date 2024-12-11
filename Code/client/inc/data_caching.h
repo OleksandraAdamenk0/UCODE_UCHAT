@@ -18,6 +18,7 @@ void mx_create_client_tables(sqlite3 *db);
 int mx_update_db();
 int mx_update_chats();
 int mx_update_contacts();
+int mx_is_db_valid();
 int mx_create_tables();
 
 #endif //CLIENT_DATABASE_H

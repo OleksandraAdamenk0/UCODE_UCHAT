@@ -9,5 +9,6 @@
 
 int mx_parse_args(int argc, const char *argv[], int *port, char **ip);
 int mx_init_gtk();
+int mx_init_db();
 
 #endif //CLIENT_INITIALIZATION_H

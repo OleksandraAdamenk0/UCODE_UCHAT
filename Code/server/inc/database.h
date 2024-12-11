@@ -22,5 +22,6 @@ char *mx_get_password(int id);
 
 t_list *mx_get_all_chats(int id);
 
+int mx_init_db();
 
 #endif //SERVER_DATABASE_H

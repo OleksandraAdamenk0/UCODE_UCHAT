@@ -17,7 +17,7 @@ static char *get_contacts_request(long long int id) {
     }
 
     cJSON_AddStringToObject(json, "action", "get_contacts");
-    cJSON_AddNumberToObject(json, "user_id", id);
+    cJmakeSON_AddNumberToObject(json, "user_id", id);
 
     char *json_str = cJSON_PrintUnformatted(json);
     cJSON_Delete(json);
