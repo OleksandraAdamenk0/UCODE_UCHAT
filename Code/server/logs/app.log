@@ -2247,3 +2247,715 @@
 [2024-12-10 14:20:22] [INFO] Server initialized
 [2024-12-10 14:20:22] [INFO] Server socket created
 [2024-12-10 14:20:22] [FATAL] Failed to bind socket to the address
+[2024-12-10 17:16:50] [INFO] Logger initialized
+[2024-12-10 17:16:50] [DEBUG] Database file opened
+[2024-12-10 17:16:50] [DEBUG] Database file already exists. Skipping initialization script.
+[2024-12-10 17:16:50] [INFO] Database initialized
+[2024-12-10 17:16:50] [INFO] Server initialized
+[2024-12-10 17:16:50] [INFO] Server socket created
+[2024-12-10 17:16:50] [FATAL] Failed to bind socket to the address
+[2024-12-10 18:34:11] [INFO] Logger initialized
+[2024-12-10 18:34:11] [DEBUG] Database file opened
+[2024-12-10 18:34:11] [DEBUG] Database file already exists. Skipping initialization script.
+[2024-12-10 18:34:11] [INFO] Database initialized
+[2024-12-10 18:34:11] [INFO] Server initialized
+[2024-12-10 18:34:11] [INFO] Server socket created
+[2024-12-10 18:34:11] [DEBUG] Socket bound to address
+[2024-12-10 18:34:11] [DEBUG] Server listening to incoming connections
+[2024-12-10 18:34:11] [INFO] connection channel opened
+[2024-12-10 18:34:11] [INFO] Connection initialized
+[2024-12-10 18:34:11] [INFO] Successfully set up non-blocking mode for socket
+[2024-12-10 18:34:11] [INFO] Server starting receiving connections
+[2024-12-10 18:34:18] [INFO] New incoming connection accepted.
+[2024-12-10 18:35:22] [ERROR] Received data from socket 5
+[2024-12-10 18:35:22] [DEBUG] Handling request
+[2024-12-10 18:35:22] [DEBUG] Handler specified
+[2024-12-10 18:35:22] [DEBUG] mx_login_logic check
+[2024-12-10 18:35:22] [DEBUG] Created cJSON structure
+[2024-12-10 18:35:22] [DEBUG] stmt created
+[2024-12-10 18:35:22] [DEBUG] value bound
+[2024-12-10 18:35:22] [DEBUG] query executed
+[2024-12-10 18:35:22] [ERROR] Got error code from mx_get_user_id: -1
+[2024-12-10 18:35:22] [DEBUG] check 3
+[2024-12-10 18:35:22] [DEBUG] check 4
+[2024-12-10 18:35:22] [DEBUG] -1
+[2024-12-10 18:35:22] [DEBUG] got response to send:
+{
+	"status":	"-1",
+	"message":	"Invalid username or password."
+}
+[2024-12-10 18:35:22] [DEBUG] Can send response to the socket 5
+[2024-12-10 18:35:22] [DEBUG] mx_handle_connection: send_response
+[2024-12-10 18:35:22] [DEBUG] {
+	"status":	"-1",
+	"message":	"Invalid username or password."
+}
+[2024-12-10 18:35:22] [DEBUG] mx_send_data
+[2024-12-10 18:35:22] [DEBUG] 1
+[2024-12-10 18:35:22] [DEBUG] amount sent
+[2024-12-10 18:35:22] [DEBUG] {
+	"status":	"-1",
+	"message":	"Invalid username or password."
+}
+[2024-12-10 18:35:22] [DEBUG] content sent
+[2024-12-10 18:35:22] [INFO] Response sent to the socket 5
+[2024-12-10 18:35:22] [ERROR] Wrong data size format from socket 5
+[2024-12-10 18:35:22] [ERROR] Received data from socket 5
+[2024-12-10 18:35:22] [DEBUG] Handling request
+[2024-12-10 18:35:22] [DEBUG] Handler specified
+[2024-12-10 18:35:22] [DEBUG] mx_login_logic check
+[2024-12-10 18:35:22] [DEBUG] Created cJSON structure
+[2024-12-10 18:35:22] [DEBUG] stmt created
+[2024-12-10 18:35:22] [DEBUG] value bound
+[2024-12-10 18:35:22] [DEBUG] query executed
+[2024-12-10 18:35:22] [ERROR] Got error code from mx_get_user_id: -1
+[2024-12-10 18:35:22] [DEBUG] check 3
+[2024-12-10 18:35:22] [DEBUG] check 4
+[2024-12-10 18:35:22] [DEBUG] -1
+[2024-12-10 18:35:22] [DEBUG] got response to send:
+{
+	"status":	"-1",
+	"message":	"Invalid username or password."
+}
+[2024-12-10 18:35:22] [DEBUG] Can send response to the socket 5
+[2024-12-10 18:35:22] [DEBUG] mx_handle_connection: send_response
+[2024-12-10 18:35:22] [DEBUG] {
+	"status":	"-1",
+	"message":	"Invalid username or password."
+}
+[2024-12-10 18:35:22] [DEBUG] mx_send_data
+[2024-12-10 18:35:22] [DEBUG] 1
+[2024-12-10 18:35:22] [DEBUG] amount sent
+[2024-12-10 18:35:22] [DEBUG] {
+	"status":	"-1",
+	"message":	"Invalid username or password."
+}
+[2024-12-10 18:35:22] [DEBUG] content sent
+[2024-12-10 18:35:22] [INFO] Response sent to the socket 5
+[2024-12-10 18:35:22] [ERROR] Wrong data size format from socket 5
+[2024-12-10 18:35:31] [ERROR] Error receiving data from socket 5
+[2024-12-10 18:35:31] [INFO] Client from socket 5 disconnected
+[2024-12-10 18:39:42] [INFO] Logger initialized
+[2024-12-10 18:39:42] [DEBUG] Database file opened
+[2024-12-10 18:39:42] [DEBUG] Database file already exists. Skipping initialization script.
+[2024-12-10 18:39:42] [INFO] Database initialized
+[2024-12-10 18:39:42] [INFO] Server initialized
+[2024-12-10 18:39:42] [INFO] Server socket created
+[2024-12-10 18:39:42] [FATAL] Failed to bind socket to the address
+[2024-12-10 18:39:46] [INFO] New incoming connection accepted.
+[2024-12-10 18:40:18] [INFO] Client from socket 5 disconnected
+[2024-12-10 19:03:32] [INFO] Logger initialized
+[2024-12-10 19:03:32] [DEBUG] Database file opened
+[2024-12-10 19:03:32] [DEBUG] Database file already exists. Skipping initialization script.
+[2024-12-10 19:03:32] [INFO] Database initialized
+[2024-12-10 19:03:32] [INFO] Server initialized
+[2024-12-10 19:03:32] [INFO] Server socket created
+[2024-12-10 19:03:32] [FATAL] Failed to bind socket to the address
+[2024-12-10 19:03:36] [INFO] New incoming connection accepted.
+[2024-12-10 19:04:17] [INFO] Client from socket 5 disconnected
+[2024-12-10 19:05:35] [INFO] New incoming connection accepted.
+[2024-12-10 19:05:53] [INFO] Client from socket 5 disconnected
+[2024-12-10 19:06:29] [INFO] New incoming connection accepted.
+[2024-12-10 19:07:26] [ERROR] Received data from socket 5
+[2024-12-10 19:07:26] [DEBUG] Handling request
+[2024-12-10 19:07:26] [DEBUG] Handler specified
+[2024-12-10 19:07:26] [DEBUG] mx_login_logic check
+[2024-12-10 19:07:26] [DEBUG] Created cJSON structure
+[2024-12-10 19:07:26] [DEBUG] stmt created
+[2024-12-10 19:07:26] [DEBUG] value bound
+[2024-12-10 19:07:26] [DEBUG] query executed
+[2024-12-10 19:07:26] [ERROR] Got error code from mx_get_user_id: -1
+[2024-12-10 19:07:26] [DEBUG] check 3
+[2024-12-10 19:07:26] [DEBUG] check 4
+[2024-12-10 19:07:26] [DEBUG] -1
+[2024-12-10 19:07:26] [DEBUG] got response to send:
+{
+	"status":	"-1",
+	"message":	"Invalid username or password."
+}
+[2024-12-10 19:07:26] [DEBUG] Can send response to the socket 5
+[2024-12-10 19:07:26] [DEBUG] mx_handle_connection: send_response
+[2024-12-10 19:07:26] [DEBUG] {
+	"status":	"-1",
+	"message":	"Invalid username or password."
+}
+[2024-12-10 19:07:26] [DEBUG] mx_send_data
+[2024-12-10 19:07:26] [DEBUG] 1
+[2024-12-10 19:07:26] [DEBUG] amount sent
+[2024-12-10 19:07:26] [DEBUG] {
+	"status":	"-1",
+	"message":	"Invalid username or password."
+}
+[2024-12-10 19:07:26] [DEBUG] content sent
+[2024-12-10 19:07:26] [INFO] Response sent to the socket 5
+[2024-12-10 19:07:26] [ERROR] Wrong data size format from socket 5
+[2024-12-10 19:07:26] [ERROR] Wrong data size format from socket 5
+[2024-12-10 19:07:26] [ERROR] Wrong data size format from socket 5
+[2024-12-10 19:07:52] [INFO] Client from socket 5 disconnected
+[2024-12-10 19:32:06] [INFO] Logger initialized
+[2024-12-10 19:32:06] [DEBUG] Database file opened
+[2024-12-10 19:32:06] [DEBUG] Database file already exists. Skipping initialization script.
+[2024-12-10 19:32:06] [INFO] Database initialized
+[2024-12-10 19:32:06] [INFO] Server initialized
+[2024-12-10 19:32:06] [INFO] Server socket created
+[2024-12-10 19:32:06] [FATAL] Failed to bind socket to the address
+[2024-12-10 19:32:25] [INFO] New incoming connection accepted.
+[2024-12-10 19:32:32] [INFO] Client from socket 5 disconnected
+[2024-12-10 21:11:30] [DEBUG] kill signal received
+[2024-12-10 21:11:30] [INFO] Server stopped receiving connections
+[2024-12-10 21:43:27] [INFO] Logger initialized
+[2024-12-10 21:43:27] [DEBUG] Database file opened
+[2024-12-10 21:43:27] [DEBUG] Database file already exists. Skipping initialization script.
+[2024-12-10 21:43:27] [INFO] Database initialized
+[2024-12-10 21:43:27] [INFO] Server initialized
+[2024-12-10 21:43:27] [INFO] Server socket created
+[2024-12-10 21:43:27] [DEBUG] Socket bound to address
+[2024-12-10 21:43:27] [DEBUG] Server listening to incoming connections
+[2024-12-10 21:43:27] [INFO] connection channel opened
+[2024-12-10 21:43:27] [INFO] Connection initialized
+[2024-12-10 21:43:27] [INFO] Successfully set up non-blocking mode for socket
+[2024-12-10 21:43:27] [INFO] Server starting receiving connections
+[2024-12-10 21:43:32] [INFO] New incoming connection accepted.
+[2024-12-10 21:44:57] [INFO] Client from socket 5 disconnected
+[2024-12-10 21:58:40] [INFO] New incoming connection accepted.
+[2024-12-10 21:58:58] [ERROR] Received data from socket 5
+[2024-12-10 21:58:58] [DEBUG] Handling request
+[2024-12-10 21:58:58] [DEBUG] Handler specified
+[2024-12-10 21:58:58] [DEBUG] mx_login_logic check
+[2024-12-10 21:58:58] [DEBUG] Created cJSON structure
+[2024-12-10 21:58:58] [DEBUG] stmt created
+[2024-12-10 21:58:58] [DEBUG] value bound
+[2024-12-10 21:58:58] [DEBUG] query executed
+[2024-12-10 21:58:58] [DEBUG] got user id
+[2024-12-10 21:58:58] [DEBUG] 1
+[2024-12-10 21:58:58] [DEBUG] stmt created
+[2024-12-10 21:58:58] [DEBUG] id bound
+[2024-12-10 21:58:58] [DEBUG] query executed
+[2024-12-10 21:58:58] [DEBUG] testpassword
+[2024-12-10 21:58:58] [DEBUG] testpassword
+[2024-12-10 21:58:58] [DEBUG] testpassword
+[2024-12-10 21:58:58] [DEBUG] check 3
+[2024-12-10 21:58:58] [DEBUG] check 4
+[2024-12-10 21:58:58] [DEBUG] 0
+[2024-12-10 21:58:58] [DEBUG] got response to send:
+{
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 21:58:58] [DEBUG] Can send response to the socket 5
+[2024-12-10 21:58:58] [DEBUG] mx_handle_connection: send_response
+[2024-12-10 21:58:58] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 21:58:58] [DEBUG] mx_send_data
+[2024-12-10 21:58:58] [DEBUG] 1
+[2024-12-10 21:58:58] [DEBUG] amount sent
+[2024-12-10 21:58:58] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 21:58:58] [DEBUG] content sent
+[2024-12-10 21:58:58] [INFO] Response sent to the socket 5
+[2024-12-10 21:58:58] [ERROR] Wrong data size format from socket 5
+[2024-12-10 21:58:58] [ERROR] Received data from socket 5
+[2024-12-10 21:58:58] [DEBUG] Handling request
+[2024-12-10 21:58:58] [DEBUG] Handler specified
+[2024-12-10 21:58:58] [ERROR] Execution failed: another row available
+[2024-12-10 21:58:58] [ERROR] No chats found for user 1
+[2024-12-10 21:58:58] [DEBUG] check 3
+[2024-12-10 21:58:58] [DEBUG] check 4
+[2024-12-10 21:58:58] [DEBUG] 0
+[2024-12-10 21:58:58] [DEBUG] got response to send:
+{
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 21:58:58] [DEBUG] Can send response to the socket 5
+[2024-12-10 21:58:58] [DEBUG] mx_handle_connection: send_response
+[2024-12-10 21:58:58] [DEBUG] {
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 21:58:58] [DEBUG] mx_send_data
+[2024-12-10 21:58:58] [DEBUG] 1
+[2024-12-10 21:58:58] [DEBUG] amount sent
+[2024-12-10 21:58:58] [DEBUG] {
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 21:58:58] [DEBUG] content sent
+[2024-12-10 21:58:58] [INFO] Response sent to the socket 5
+[2024-12-10 21:58:58] [ERROR] Wrong data size format from socket 5
+[2024-12-10 22:07:34] [ERROR] Error receiving data from socket 5
+[2024-12-10 22:07:34] [INFO] Client from socket 5 disconnected
+[2024-12-10 22:07:38] [INFO] New incoming connection accepted.
+[2024-12-10 22:08:02] [ERROR] Received data from socket 5
+[2024-12-10 22:08:02] [DEBUG] Handling request
+[2024-12-10 22:08:02] [DEBUG] Handler specified
+[2024-12-10 22:08:02] [DEBUG] mx_login_logic check
+[2024-12-10 22:08:02] [DEBUG] Created cJSON structure
+[2024-12-10 22:08:02] [DEBUG] stmt created
+[2024-12-10 22:08:02] [DEBUG] value bound
+[2024-12-10 22:08:02] [DEBUG] query executed
+[2024-12-10 22:08:02] [DEBUG] got user id
+[2024-12-10 22:08:02] [DEBUG] 1
+[2024-12-10 22:08:02] [DEBUG] stmt created
+[2024-12-10 22:08:02] [DEBUG] id bound
+[2024-12-10 22:08:02] [DEBUG] query executed
+[2024-12-10 22:08:02] [DEBUG] testpassword
+[2024-12-10 22:08:02] [DEBUG] testpassword
+[2024-12-10 22:08:02] [DEBUG] testpassword
+[2024-12-10 22:08:02] [DEBUG] check 3
+[2024-12-10 22:08:02] [DEBUG] check 4
+[2024-12-10 22:08:02] [DEBUG] 0
+[2024-12-10 22:08:02] [DEBUG] got response to send:
+{
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:08:02] [DEBUG] Can send response to the socket 5
+[2024-12-10 22:08:02] [DEBUG] mx_handle_connection: send_response
+[2024-12-10 22:08:02] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:08:02] [DEBUG] mx_send_data
+[2024-12-10 22:08:02] [DEBUG] 1
+[2024-12-10 22:08:02] [DEBUG] amount sent
+[2024-12-10 22:08:02] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:08:02] [DEBUG] content sent
+[2024-12-10 22:08:02] [INFO] Response sent to the socket 5
+[2024-12-10 22:08:02] [ERROR] Wrong data size format from socket 5
+[2024-12-10 22:08:02] [ERROR] Received data from socket 5
+[2024-12-10 22:08:02] [DEBUG] Handling request
+[2024-12-10 22:08:02] [DEBUG] Handler specified
+[2024-12-10 22:08:02] [ERROR] Execution failed: another row available
+[2024-12-10 22:08:02] [ERROR] No chats found for user 1
+[2024-12-10 22:08:02] [DEBUG] check 3
+[2024-12-10 22:08:02] [DEBUG] check 4
+[2024-12-10 22:08:02] [DEBUG] 0
+[2024-12-10 22:08:02] [DEBUG] got response to send:
+{
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 22:08:02] [DEBUG] Can send response to the socket 5
+[2024-12-10 22:08:02] [DEBUG] mx_handle_connection: send_response
+[2024-12-10 22:08:02] [DEBUG] {
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 22:08:02] [DEBUG] mx_send_data
+[2024-12-10 22:08:02] [DEBUG] 1
+[2024-12-10 22:08:02] [DEBUG] amount sent
+[2024-12-10 22:08:02] [DEBUG] {
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 22:08:02] [DEBUG] content sent
+[2024-12-10 22:08:02] [INFO] Response sent to the socket 5
+[2024-12-10 22:08:02] [ERROR] Wrong data size format from socket 5
+[2024-12-10 22:08:07] [ERROR] Error receiving data from socket 5
+[2024-12-10 22:08:07] [INFO] Client from socket 5 disconnected
+[2024-12-10 22:08:23] [INFO] New incoming connection accepted.
+[2024-12-10 22:09:24] [ERROR] Received data from socket 5
+[2024-12-10 22:09:24] [DEBUG] Handling request
+[2024-12-10 22:09:24] [DEBUG] Handler specified
+[2024-12-10 22:09:24] [DEBUG] mx_login_logic check
+[2024-12-10 22:09:24] [DEBUG] Created cJSON structure
+[2024-12-10 22:09:24] [DEBUG] stmt created
+[2024-12-10 22:09:24] [DEBUG] value bound
+[2024-12-10 22:09:24] [DEBUG] query executed
+[2024-12-10 22:09:24] [DEBUG] got user id
+[2024-12-10 22:09:24] [DEBUG] 1
+[2024-12-10 22:09:24] [DEBUG] stmt created
+[2024-12-10 22:09:24] [DEBUG] id bound
+[2024-12-10 22:09:24] [DEBUG] query executed
+[2024-12-10 22:09:24] [DEBUG] testpassword
+[2024-12-10 22:09:24] [DEBUG] testpassword
+[2024-12-10 22:09:24] [DEBUG] testpassword
+[2024-12-10 22:09:24] [DEBUG] check 3
+[2024-12-10 22:09:24] [DEBUG] check 4
+[2024-12-10 22:09:24] [DEBUG] 0
+[2024-12-10 22:09:24] [DEBUG] got response to send:
+{
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:09:24] [DEBUG] Can send response to the socket 5
+[2024-12-10 22:09:24] [DEBUG] mx_handle_connection: send_response
+[2024-12-10 22:09:24] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:09:24] [DEBUG] mx_send_data
+[2024-12-10 22:09:24] [DEBUG] 1
+[2024-12-10 22:09:24] [DEBUG] amount sent
+[2024-12-10 22:09:24] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:09:24] [DEBUG] content sent
+[2024-12-10 22:09:24] [INFO] Response sent to the socket 5
+[2024-12-10 22:09:24] [ERROR] Wrong data size format from socket 5
+[2024-12-10 22:09:24] [ERROR] Received data from socket 5
+[2024-12-10 22:09:24] [DEBUG] Handling request
+[2024-12-10 22:09:24] [DEBUG] Handler specified
+[2024-12-10 22:09:24] [ERROR] Execution failed: another row available
+[2024-12-10 22:09:24] [ERROR] No chats found for user 1
+[2024-12-10 22:09:24] [DEBUG] check 3
+[2024-12-10 22:09:24] [DEBUG] check 4
+[2024-12-10 22:09:24] [DEBUG] 0
+[2024-12-10 22:09:24] [DEBUG] got response to send:
+{
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 22:09:24] [DEBUG] Can send response to the socket 5
+[2024-12-10 22:09:24] [DEBUG] mx_handle_connection: send_response
+[2024-12-10 22:09:24] [DEBUG] {
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 22:09:24] [DEBUG] mx_send_data
+[2024-12-10 22:09:24] [DEBUG] 1
+[2024-12-10 22:09:24] [DEBUG] amount sent
+[2024-12-10 22:09:24] [DEBUG] {
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 22:09:24] [DEBUG] content sent
+[2024-12-10 22:09:24] [INFO] Response sent to the socket 5
+[2024-12-10 22:09:24] [ERROR] Wrong data size format from socket 5
+[2024-12-10 22:09:24] [ERROR] Wrong data size format from socket 5
+[2024-12-10 22:09:24] [ERROR] Wrong data size format from socket 5
+[2024-12-10 22:09:25] [ERROR] Error receiving data from socket 5
+[2024-12-10 22:09:25] [INFO] Client from socket 5 disconnected
+[2024-12-10 22:09:47] [INFO] New incoming connection accepted.
+[2024-12-10 22:10:00] [ERROR] Received data from socket 5
+[2024-12-10 22:10:00] [DEBUG] Handling request
+[2024-12-10 22:10:00] [DEBUG] Handler specified
+[2024-12-10 22:10:00] [DEBUG] mx_login_logic check
+[2024-12-10 22:10:00] [DEBUG] Created cJSON structure
+[2024-12-10 22:10:00] [DEBUG] stmt created
+[2024-12-10 22:10:00] [DEBUG] value bound
+[2024-12-10 22:10:00] [DEBUG] query executed
+[2024-12-10 22:10:00] [ERROR] Got error code from mx_get_user_id: -1
+[2024-12-10 22:10:00] [DEBUG] check 3
+[2024-12-10 22:10:00] [DEBUG] check 4
+[2024-12-10 22:10:00] [DEBUG] -1
+[2024-12-10 22:10:00] [DEBUG] got response to send:
+{
+	"status":	"-1",
+	"message":	"Invalid username or password."
+}
+[2024-12-10 22:10:00] [DEBUG] Can send response to the socket 5
+[2024-12-10 22:10:00] [DEBUG] mx_handle_connection: send_response
+[2024-12-10 22:10:00] [DEBUG] {
+	"status":	"-1",
+	"message":	"Invalid username or password."
+}
+[2024-12-10 22:10:00] [DEBUG] mx_send_data
+[2024-12-10 22:10:00] [DEBUG] 1
+[2024-12-10 22:10:00] [DEBUG] amount sent
+[2024-12-10 22:10:00] [DEBUG] {
+	"status":	"-1",
+	"message":	"Invalid username or password."
+}
+[2024-12-10 22:10:00] [DEBUG] content sent
+[2024-12-10 22:10:00] [INFO] Response sent to the socket 5
+[2024-12-10 22:10:00] [ERROR] Wrong data size format from socket 5
+[2024-12-10 22:10:16] [ERROR] Received data from socket 5
+[2024-12-10 22:10:16] [DEBUG] Handling request
+[2024-12-10 22:10:16] [DEBUG] Handler specified
+[2024-12-10 22:10:16] [DEBUG] mx_login_logic check
+[2024-12-10 22:10:16] [DEBUG] Created cJSON structure
+[2024-12-10 22:10:16] [DEBUG] stmt created
+[2024-12-10 22:10:16] [DEBUG] value bound
+[2024-12-10 22:10:16] [DEBUG] query executed
+[2024-12-10 22:10:16] [DEBUG] got user id
+[2024-12-10 22:10:16] [DEBUG] 1
+[2024-12-10 22:10:16] [DEBUG] stmt created
+[2024-12-10 22:10:16] [DEBUG] id bound
+[2024-12-10 22:10:16] [DEBUG] query executed
+[2024-12-10 22:10:16] [DEBUG] testpassword
+[2024-12-10 22:10:16] [DEBUG] testpassword
+[2024-12-10 22:10:16] [DEBUG] testpassword
+[2024-12-10 22:10:16] [DEBUG] check 3
+[2024-12-10 22:10:16] [DEBUG] check 4
+[2024-12-10 22:10:16] [DEBUG] 0
+[2024-12-10 22:10:16] [DEBUG] got response to send:
+{
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:10:16] [DEBUG] Can send response to the socket 5
+[2024-12-10 22:10:16] [DEBUG] mx_handle_connection: send_response
+[2024-12-10 22:10:16] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:10:16] [DEBUG] mx_send_data
+[2024-12-10 22:10:16] [DEBUG] 1
+[2024-12-10 22:10:16] [DEBUG] amount sent
+[2024-12-10 22:10:16] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:10:16] [DEBUG] content sent
+[2024-12-10 22:10:16] [INFO] Response sent to the socket 5
+[2024-12-10 22:10:16] [ERROR] Wrong data size format from socket 5
+[2024-12-10 22:10:19] [ERROR] Error receiving data from socket 5
+[2024-12-10 22:10:19] [INFO] Client from socket 5 disconnected
+[2024-12-10 22:10:25] [INFO] New incoming connection accepted.
+[2024-12-10 22:10:35] [ERROR] Received data from socket 5
+[2024-12-10 22:10:35] [DEBUG] Handling request
+[2024-12-10 22:10:35] [DEBUG] Handler specified
+[2024-12-10 22:10:35] [DEBUG] mx_login_logic check
+[2024-12-10 22:10:35] [DEBUG] Created cJSON structure
+[2024-12-10 22:10:35] [DEBUG] stmt created
+[2024-12-10 22:10:35] [DEBUG] value bound
+[2024-12-10 22:10:35] [DEBUG] query executed
+[2024-12-10 22:10:35] [DEBUG] got user id
+[2024-12-10 22:10:35] [DEBUG] 1
+[2024-12-10 22:10:35] [DEBUG] stmt created
+[2024-12-10 22:10:35] [DEBUG] id bound
+[2024-12-10 22:10:35] [DEBUG] query executed
+[2024-12-10 22:10:35] [DEBUG] testpassword
+[2024-12-10 22:10:35] [DEBUG] testpassword
+[2024-12-10 22:10:35] [DEBUG] testpassword
+[2024-12-10 22:10:35] [DEBUG] check 3
+[2024-12-10 22:10:35] [DEBUG] check 4
+[2024-12-10 22:10:35] [DEBUG] 0
+[2024-12-10 22:10:35] [DEBUG] got response to send:
+{
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:10:35] [DEBUG] Can send response to the socket 5
+[2024-12-10 22:10:35] [DEBUG] mx_handle_connection: send_response
+[2024-12-10 22:10:35] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:10:35] [DEBUG] mx_send_data
+[2024-12-10 22:10:35] [DEBUG] 1
+[2024-12-10 22:10:35] [DEBUG] amount sent
+[2024-12-10 22:10:35] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:10:35] [DEBUG] content sent
+[2024-12-10 22:10:35] [INFO] Response sent to the socket 5
+[2024-12-10 22:10:35] [ERROR] Wrong data size format from socket 5
+[2024-12-10 22:10:35] [ERROR] Received data from socket 5
+[2024-12-10 22:10:35] [DEBUG] Handling request
+[2024-12-10 22:10:35] [DEBUG] Handler specified
+[2024-12-10 22:10:35] [ERROR] Execution failed: another row available
+[2024-12-10 22:10:35] [ERROR] No chats found for user 1
+[2024-12-10 22:10:35] [DEBUG] check 3
+[2024-12-10 22:10:35] [DEBUG] check 4
+[2024-12-10 22:10:35] [DEBUG] 0
+[2024-12-10 22:10:35] [DEBUG] got response to send:
+{
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 22:10:35] [DEBUG] Can send response to the socket 5
+[2024-12-10 22:10:35] [DEBUG] mx_handle_connection: send_response
+[2024-12-10 22:10:35] [DEBUG] {
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 22:10:35] [DEBUG] mx_send_data
+[2024-12-10 22:10:35] [DEBUG] 1
+[2024-12-10 22:10:35] [DEBUG] amount sent
+[2024-12-10 22:10:35] [DEBUG] {
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 22:10:35] [DEBUG] content sent
+[2024-12-10 22:10:35] [INFO] Response sent to the socket 5
+[2024-12-10 22:10:35] [ERROR] Wrong data size format from socket 5
+[2024-12-10 22:10:47] [ERROR] Error receiving data from socket 5
+[2024-12-10 22:10:47] [INFO] Client from socket 5 disconnected
+[2024-12-10 22:16:25] [INFO] New incoming connection accepted.
+[2024-12-10 22:16:54] [ERROR] Received data from socket 5
+[2024-12-10 22:16:54] [DEBUG] Handling request
+[2024-12-10 22:16:54] [DEBUG] Handler specified
+[2024-12-10 22:16:54] [DEBUG] mx_login_logic check
+[2024-12-10 22:16:54] [DEBUG] Created cJSON structure
+[2024-12-10 22:16:54] [DEBUG] stmt created
+[2024-12-10 22:16:54] [DEBUG] value bound
+[2024-12-10 22:16:54] [DEBUG] query executed
+[2024-12-10 22:16:54] [DEBUG] got user id
+[2024-12-10 22:16:54] [DEBUG] 1
+[2024-12-10 22:16:54] [DEBUG] stmt created
+[2024-12-10 22:16:54] [DEBUG] id bound
+[2024-12-10 22:16:54] [DEBUG] query executed
+[2024-12-10 22:16:54] [DEBUG] testpassword
+[2024-12-10 22:16:54] [DEBUG] testpassword
+[2024-12-10 22:16:54] [DEBUG] testpassword
+[2024-12-10 22:16:54] [DEBUG] check 3
+[2024-12-10 22:16:54] [DEBUG] check 4
+[2024-12-10 22:16:54] [DEBUG] 0
+[2024-12-10 22:16:54] [DEBUG] got response to send:
+{
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:16:54] [DEBUG] Can send response to the socket 5
+[2024-12-10 22:16:54] [DEBUG] mx_handle_connection: send_response
+[2024-12-10 22:16:54] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:16:54] [DEBUG] mx_send_data
+[2024-12-10 22:16:54] [DEBUG] 1
+[2024-12-10 22:16:54] [DEBUG] amount sent
+[2024-12-10 22:16:54] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:16:54] [DEBUG] content sent
+[2024-12-10 22:16:54] [INFO] Response sent to the socket 5
+[2024-12-10 22:16:54] [ERROR] Wrong data size format from socket 5
+[2024-12-10 22:16:54] [ERROR] Received data from socket 5
+[2024-12-10 22:16:54] [DEBUG] Handling request
+[2024-12-10 22:16:54] [DEBUG] Handler specified
+[2024-12-10 22:16:54] [ERROR] Execution failed: another row available
+[2024-12-10 22:16:54] [ERROR] No chats found for user 1
+[2024-12-10 22:16:54] [DEBUG] check 3
+[2024-12-10 22:16:54] [DEBUG] check 4
+[2024-12-10 22:16:54] [DEBUG] 0
+[2024-12-10 22:16:54] [DEBUG] got response to send:
+{
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 22:16:54] [DEBUG] Can send response to the socket 5
+[2024-12-10 22:16:54] [DEBUG] mx_handle_connection: send_response
+[2024-12-10 22:16:54] [DEBUG] {
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 22:16:54] [DEBUG] mx_send_data
+[2024-12-10 22:16:54] [DEBUG] 1
+[2024-12-10 22:16:54] [DEBUG] amount sent
+[2024-12-10 22:16:54] [DEBUG] {
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 22:16:54] [DEBUG] content sent
+[2024-12-10 22:16:54] [INFO] Response sent to the socket 5
+[2024-12-10 22:16:54] [ERROR] Wrong data size format from socket 5
+[2024-12-10 22:16:54] [ERROR] Wrong data size format from socket 5
+[2024-12-10 22:16:54] [ERROR] Wrong data size format from socket 5
+[2024-12-10 22:16:54] [ERROR] Error receiving data from socket 5
+[2024-12-10 22:16:54] [INFO] Client from socket 5 disconnected

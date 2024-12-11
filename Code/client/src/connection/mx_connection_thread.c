@@ -37,6 +37,6 @@ void *mx_connection_thread(void *arg) {
     if (fd > 0) set_online_mode();
     else set_offline_mode();
 
-    webkit_web_view_evaluate_javascript(webview, "chooseMode();", -1, NULL, NULL, NULL, NULL, NULL);
+    webkit_web_view_run_javascript(webview, "chooseMode();", NULL, NULL, NULL);
     return NULL;
 }

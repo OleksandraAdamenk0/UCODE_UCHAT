@@ -3400,3 +3400,759 @@
 [2024-12-10 14:20:26] [DEBUG] SQL script read
 [2024-12-10 14:20:26] [DEBUG] SQL script executed
 [2024-12-10 14:21:00] [INFO] mx_run_app: App ended with status 802384848
+[2024-12-10 17:17:04] [INFO] mx_init: Logger initialized
+[2024-12-10 17:17:04] [INFO] mx_init_gtk: success
+[2024-12-10 17:17:04] [INFO] Database was opened/created
+[2024-12-10 17:17:04] [DEBUG] mx_init_gui: GTK was initialized
+[2024-12-10 17:17:04] [DEBUG] mx_init_gui: webview was initialized
+[2024-12-10 17:17:04] [DEBUG] mx_init_gui: window was initialized
+[2024-12-10 17:17:04] [DEBUG] mx_load_load_page: Handlers set for the page
+[2024-12-10 17:17:04] [DEBUG] mx_init_gui: init page was initialized
+[2024-12-10 17:17:04] [INFO] mx_init_gui: Going to the gtk_main()
+[2024-12-10 17:17:07] [DEBUG] connect_to_server: The function entered
+[2024-12-10 17:17:07] [DEBUG] connect_to_server: The function created
+[2024-12-10 17:17:07] [DEBUG] mx_open_connection: Socket was created successfully
+[2024-12-10 17:17:07] [DEBUG] 127.0.0.1
+[2024-12-10 17:17:07] [INFO] mx_non_blocking_mode: Trying to connect
+[2024-12-10 17:17:07] [INFO] Connected successfully
+[2024-12-10 17:17:07] [DEBUG] Socket is set to blocking mode
+[2024-12-10 17:17:07] [INFO] Connection succeeded. Running online mode
+[2024-12-10 17:17:07] [DEBUG] Database file opened
+[2024-12-10 17:17:07] [DEBUG] SQL script read
+[2024-12-10 17:17:07] [DEBUG] SQL script executed
+[2024-12-10 17:17:07] [DEBUG] All handlers cleared.
+[2024-12-10 17:17:07] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 17:17:26] [INFO] Register link pressed
+[2024-12-10 17:17:26] [DEBUG] All handlers cleared.
+[2024-12-10 17:17:26] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 17:17:43] [INFO] Registration form submitted
+[2024-12-10 17:17:45] [INFO] Registration form submitted
+[2024-12-10 17:17:46] [INFO] Registration form submitted
+[2024-12-10 17:17:46] [INFO] Registration form submitted
+[2024-12-10 17:17:46] [INFO] Registration form submitted
+[2024-12-10 17:17:46] [INFO] Registration form submitted
+[2024-12-10 17:17:47] [INFO] Registration form submitted
+[2024-12-10 17:17:47] [INFO] Registration form submitted
+[2024-12-10 17:17:47] [INFO] Registration form submitted
+[2024-12-10 17:17:47] [INFO] Registration form submitted
+[2024-12-10 17:17:47] [INFO] Registration form submitted
+[2024-12-10 17:17:48] [INFO] Registration form submitted
+[2024-12-10 17:18:06] [INFO] Login link pressed
+[2024-12-10 17:18:06] [DEBUG] All handlers cleared.
+[2024-12-10 17:18:06] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 17:18:33] [INFO] Login form submitted
+[2024-12-10 17:18:33] [DEBUG] Received JSON for login
+[2024-12-10 17:18:33] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 17:18:33] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 17:18:33] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 17:18:33] [ERROR] "Amount received: 1
+[2024-12-10 17:18:33] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 17:18:33] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 17:18:33] [INFO] All chunks successfully received
+[2024-12-10 17:18:33] [INFO] Data received
+[2024-12-10 17:18:33] [DEBUG] {
+	"tokens":	{
+		"access_token":	"get user id from db",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 17:18:33] [DEBUG] 0
+[2024-12-10 17:18:33] [INFO] Login successful.
+[2024-12-10 17:18:33] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 17:18:33] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 17:18:33] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 17:18:33] [ERROR] "Invalid amount received: 0
+[2024-12-10 17:18:33] [DEBUG] 
+[2024-12-10 17:18:33] [ERROR] Error receiving data
+[2024-12-10 17:18:33] [WARN] mx_get_chats: Failed receiving response
+[2024-12-10 17:18:33] [WARN] Failed to update db
+[2024-12-10 17:18:33] [DEBUG] All handlers cleared.
+[2024-12-10 17:18:33] [INFO] Login form submitted
+[2024-12-10 17:18:33] [DEBUG] Received JSON for login
+[2024-12-10 17:18:33] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 17:18:33] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 17:18:38] [ERROR] Timeout waiting for data on socket 28
+[2024-12-10 17:18:38] [ERROR] Timeout or error while waiting for the amount on socket 28
+[2024-12-10 17:18:38] [ERROR] Error receiving data
+[2024-12-10 17:18:38] [DEBUG] 0
+[2024-12-10 17:18:38] [ERROR] Error processing request or empty response
+[2024-12-10 17:18:38] [DEBUG] All handlers cleared.
+[2024-12-10 17:18:57] [INFO] mx_run_app: App ended with status 802761680
+[2024-12-10 18:34:14] [INFO] mx_init: Logger initialized
+[2024-12-10 18:34:14] [INFO] mx_init_gtk: success
+[2024-12-10 18:34:14] [INFO] Database was opened/created
+[2024-12-10 18:34:14] [DEBUG] mx_init_gui: GTK was initialized
+[2024-12-10 18:34:14] [DEBUG] mx_init_gui: webview was initialized
+[2024-12-10 18:34:14] [DEBUG] mx_init_gui: window was initialized
+[2024-12-10 18:34:14] [DEBUG] mx_load_load_page: Handlers set for the page
+[2024-12-10 18:34:14] [DEBUG] mx_init_gui: init page was initialized
+[2024-12-10 18:34:14] [INFO] mx_init_gui: Going to the gtk_main()
+[2024-12-10 18:34:18] [DEBUG] connect_to_server: The function entered
+[2024-12-10 18:34:18] [DEBUG] connect_to_server: The function created
+[2024-12-10 18:34:18] [DEBUG] mx_open_connection: Socket was created successfully
+[2024-12-10 18:34:18] [DEBUG] 127.0.0.1
+[2024-12-10 18:34:18] [INFO] mx_non_blocking_mode: Trying to connect
+[2024-12-10 18:34:18] [INFO] Connected successfully
+[2024-12-10 18:34:18] [DEBUG] Socket is set to blocking mode
+[2024-12-10 18:34:18] [INFO] Connection succeeded. Running online mode
+[2024-12-10 18:34:18] [DEBUG] Database file opened
+[2024-12-10 18:34:18] [DEBUG] SQL script read
+[2024-12-10 18:34:18] [DEBUG] SQL script executed
+[2024-12-10 18:34:18] [DEBUG] All handlers cleared.
+[2024-12-10 18:34:18] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 18:34:20] [INFO] Register link pressed
+[2024-12-10 18:34:20] [DEBUG] All handlers cleared.
+[2024-12-10 18:34:20] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 18:34:31] [INFO] Registration form submitted
+[2024-12-10 18:34:51] [INFO] Login link pressed
+[2024-12-10 18:34:51] [DEBUG] All handlers cleared.
+[2024-12-10 18:34:51] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 18:35:22] [INFO] Login form submitted
+[2024-12-10 18:35:22] [DEBUG] Received JSON for login
+[2024-12-10 18:35:22] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 18:35:22] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 18:35:22] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 18:35:22] [ERROR] "Amount received: 1
+[2024-12-10 18:35:22] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 18:35:22] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 18:35:22] [INFO] All chunks successfully received
+[2024-12-10 18:35:22] [INFO] Data received
+[2024-12-10 18:35:22] [DEBUG] {
+	"status":	"-1",
+	"message":	"Invalid username or password."
+}
+[2024-12-10 18:35:22] [DEBUG] -1
+[2024-12-10 18:35:22] [INFO] Invalid username or password.
+[2024-12-10 18:35:22] [DEBUG] Trying to call function invalidData from js
+[2024-12-10 18:35:22] [ERROR] set_handlers: Failed to register 'goToRegister' handler
+[2024-12-10 18:35:22] [FATAL] mx_load_load_page: Failed to set handlers
+[2024-12-10 18:35:22] [DEBUG] Function invalidData from js was executed
+[2024-12-10 18:35:22] [INFO] Login form submitted
+[2024-12-10 18:35:22] [DEBUG] Received JSON for login
+[2024-12-10 18:35:22] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 18:35:22] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 18:35:22] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 18:35:22] [ERROR] "Invalid amount received: 0
+[2024-12-10 18:35:22] [DEBUG] 
+[2024-12-10 18:35:22] [ERROR] Error receiving data
+[2024-12-10 18:35:22] [DEBUG] 0
+[2024-12-10 18:35:22] [ERROR] Error processing request or empty response
+[2024-12-10 18:35:22] [DEBUG] All handlers cleared.
+[2024-12-10 18:35:31] [INFO] mx_run_app: App ended with status 179633104
+[2024-12-10 18:39:44] [INFO] mx_init: Logger initialized
+[2024-12-10 18:39:44] [INFO] mx_init_gtk: success
+[2024-12-10 18:39:44] [INFO] Database was opened/created
+[2024-12-10 18:39:44] [DEBUG] mx_init_gui: GTK was initialized
+[2024-12-10 18:39:44] [DEBUG] mx_init_gui: webview was initialized
+[2024-12-10 18:39:44] [DEBUG] mx_init_gui: window was initialized
+[2024-12-10 18:39:44] [DEBUG] mx_load_load_page: Handlers set for the page
+[2024-12-10 18:39:44] [DEBUG] mx_init_gui: init page was initialized
+[2024-12-10 18:39:44] [INFO] mx_init_gui: Going to the gtk_main()
+[2024-12-10 18:39:46] [DEBUG] connect_to_server: The function entered
+[2024-12-10 18:39:46] [DEBUG] connect_to_server: The function created
+[2024-12-10 18:39:46] [DEBUG] mx_open_connection: Socket was created successfully
+[2024-12-10 18:39:46] [DEBUG] 127.0.0.1
+[2024-12-10 18:39:46] [INFO] mx_non_blocking_mode: Trying to connect
+[2024-12-10 18:39:46] [INFO] Connected successfully
+[2024-12-10 18:39:46] [DEBUG] Socket is set to blocking mode
+[2024-12-10 18:39:46] [INFO] Connection succeeded. Running online mode
+[2024-12-10 18:39:46] [DEBUG] Database file opened
+[2024-12-10 18:39:46] [DEBUG] SQL script read
+[2024-12-10 18:39:46] [DEBUG] SQL script executed
+[2024-12-10 18:39:46] [DEBUG] All handlers cleared.
+[2024-12-10 18:39:46] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 18:39:48] [INFO] Register link pressed
+[2024-12-10 18:39:48] [DEBUG] All handlers cleared.
+[2024-12-10 18:39:48] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 18:39:58] [INFO] Registration form submitted
+[2024-12-10 18:39:59] [INFO] Registration form submitted
+[2024-12-10 18:40:04] [INFO] Registration form submitted
+[2024-12-10 18:40:04] [INFO] Registration form submitted
+[2024-12-10 18:40:04] [INFO] Registration form submitted
+[2024-12-10 18:40:05] [INFO] Registration form submitted
+[2024-12-10 18:40:10] [INFO] Registration form submitted
+[2024-12-10 18:40:16] [INFO] Registration form submitted
+[2024-12-10 18:40:18] [INFO] mx_run_app: App ended with status 466238416
+[2024-12-10 19:03:34] [INFO] mx_init: Logger initialized
+[2024-12-10 19:03:34] [INFO] mx_init_gtk: success
+[2024-12-10 19:03:34] [INFO] Database was opened/created
+[2024-12-10 19:03:34] [DEBUG] mx_init_gui: GTK was initialized
+[2024-12-10 19:03:34] [DEBUG] mx_init_gui: webview was initialized
+[2024-12-10 19:03:34] [DEBUG] mx_init_gui: window was initialized
+[2024-12-10 19:03:34] [DEBUG] mx_load_load_page: Handlers set for the page
+[2024-12-10 19:03:34] [DEBUG] mx_init_gui: init page was initialized
+[2024-12-10 19:03:34] [INFO] mx_init_gui: Going to the gtk_main()
+[2024-12-10 19:03:36] [DEBUG] connect_to_server: The function entered
+[2024-12-10 19:03:36] [DEBUG] connect_to_server: The function created
+[2024-12-10 19:03:36] [DEBUG] mx_open_connection: Socket was created successfully
+[2024-12-10 19:03:36] [DEBUG] 127.0.0.1
+[2024-12-10 19:03:36] [INFO] mx_non_blocking_mode: Trying to connect
+[2024-12-10 19:03:36] [INFO] Connected successfully
+[2024-12-10 19:03:36] [DEBUG] Socket is set to blocking mode
+[2024-12-10 19:03:36] [INFO] Connection succeeded. Running online mode
+[2024-12-10 19:03:36] [DEBUG] Database file opened
+[2024-12-10 19:03:36] [DEBUG] SQL script read
+[2024-12-10 19:03:36] [DEBUG] SQL script executed
+[2024-12-10 19:03:36] [DEBUG] All handlers cleared.
+[2024-12-10 19:03:36] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 19:03:38] [INFO] Register link pressed
+[2024-12-10 19:03:38] [DEBUG] All handlers cleared.
+[2024-12-10 19:03:38] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 19:03:48] [INFO] Registration form submitted
+[2024-12-10 19:03:50] [INFO] Registration form submitted
+[2024-12-10 19:03:51] [INFO] Registration form submitted
+[2024-12-10 19:03:52] [INFO] Registration form submitted
+[2024-12-10 19:03:52] [INFO] Registration form submitted
+[2024-12-10 19:03:53] [INFO] Registration form submitted
+[2024-12-10 19:03:58] [INFO] Registration form submitted
+[2024-12-10 19:03:58] [INFO] Registration form submitted
+[2024-12-10 19:03:59] [INFO] Registration form submitted
+[2024-12-10 19:03:59] [INFO] Registration form submitted
+[2024-12-10 19:04:00] [INFO] Registration form submitted
+[2024-12-10 19:04:00] [INFO] Registration form submitted
+[2024-12-10 19:04:00] [INFO] Registration form submitted
+[2024-12-10 19:04:00] [INFO] Registration form submitted
+[2024-12-10 19:04:01] [INFO] Registration form submitted
+[2024-12-10 19:04:01] [INFO] Registration form submitted
+[2024-12-10 19:04:04] [INFO] Registration form submitted
+[2024-12-10 19:04:04] [INFO] Registration form submitted
+[2024-12-10 19:04:05] [INFO] Registration form submitted
+[2024-12-10 19:04:05] [INFO] Registration form submitted
+[2024-12-10 19:04:05] [INFO] Registration form submitted
+[2024-12-10 19:04:06] [INFO] Registration form submitted
+[2024-12-10 19:04:07] [INFO] Registration form submitted
+[2024-12-10 19:04:11] [INFO] Registration form submitted
+[2024-12-10 19:04:11] [INFO] Registration form submitted
+[2024-12-10 19:04:11] [INFO] Registration form submitted
+[2024-12-10 19:04:11] [INFO] Registration form submitted
+[2024-12-10 19:04:11] [INFO] Registration form submitted
+[2024-12-10 19:04:12] [INFO] Registration form submitted
+[2024-12-10 19:04:12] [INFO] Registration form submitted
+[2024-12-10 19:04:12] [INFO] Registration form submitted
+[2024-12-10 19:04:13] [INFO] Registration form submitted
+[2024-12-10 19:04:15] [INFO] Registration form submitted
+[2024-12-10 19:04:15] [INFO] Registration form submitted
+[2024-12-10 19:04:17] [INFO] mx_run_app: App ended with status 821656528
+[2024-12-10 19:05:33] [INFO] mx_init: Logger initialized
+[2024-12-10 19:05:33] [INFO] mx_init_gtk: success
+[2024-12-10 19:05:33] [INFO] Database was opened/created
+[2024-12-10 19:05:33] [DEBUG] mx_init_gui: GTK was initialized
+[2024-12-10 19:05:33] [DEBUG] mx_init_gui: webview was initialized
+[2024-12-10 19:05:33] [DEBUG] mx_init_gui: window was initialized
+[2024-12-10 19:05:33] [DEBUG] mx_load_load_page: Handlers set for the page
+[2024-12-10 19:05:34] [DEBUG] mx_init_gui: init page was initialized
+[2024-12-10 19:05:34] [INFO] mx_init_gui: Going to the gtk_main()
+[2024-12-10 19:05:35] [DEBUG] connect_to_server: The function entered
+[2024-12-10 19:05:35] [DEBUG] connect_to_server: The function created
+[2024-12-10 19:05:35] [DEBUG] mx_open_connection: Socket was created successfully
+[2024-12-10 19:05:35] [DEBUG] 127.0.0.1
+[2024-12-10 19:05:35] [INFO] mx_non_blocking_mode: Trying to connect
+[2024-12-10 19:05:35] [INFO] Connected successfully
+[2024-12-10 19:05:35] [DEBUG] Socket is set to blocking mode
+[2024-12-10 19:05:35] [INFO] Connection succeeded. Running online mode
+[2024-12-10 19:05:35] [DEBUG] Database file opened
+[2024-12-10 19:05:35] [DEBUG] SQL script read
+[2024-12-10 19:05:35] [DEBUG] SQL script executed
+[2024-12-10 19:05:35] [DEBUG] All handlers cleared.
+[2024-12-10 19:05:35] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 19:05:38] [INFO] Register link pressed
+[2024-12-10 19:05:38] [DEBUG] All handlers cleared.
+[2024-12-10 19:05:38] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 19:05:47] [INFO] Registration form submitted
+[2024-12-10 19:05:48] [INFO] Registration form submitted
+[2024-12-10 19:05:48] [INFO] Registration form submitted
+[2024-12-10 19:05:48] [INFO] Registration form submitted
+[2024-12-10 19:05:49] [INFO] Registration form submitted
+[2024-12-10 19:05:49] [INFO] Registration form submitted
+[2024-12-10 19:05:51] [INFO] Registration form submitted
+[2024-12-10 19:05:53] [INFO] mx_run_app: App ended with status 841251792
+[2024-12-10 19:06:28] [INFO] mx_init: Logger initialized
+[2024-12-10 19:06:28] [INFO] mx_init_gtk: success
+[2024-12-10 19:06:28] [INFO] Database was opened/created
+[2024-12-10 19:06:28] [DEBUG] mx_init_gui: GTK was initialized
+[2024-12-10 19:06:28] [DEBUG] mx_init_gui: webview was initialized
+[2024-12-10 19:06:28] [DEBUG] mx_init_gui: window was initialized
+[2024-12-10 19:06:28] [DEBUG] mx_load_load_page: Handlers set for the page
+[2024-12-10 19:06:28] [DEBUG] mx_init_gui: init page was initialized
+[2024-12-10 19:06:28] [INFO] mx_init_gui: Going to the gtk_main()
+[2024-12-10 19:06:29] [DEBUG] connect_to_server: The function entered
+[2024-12-10 19:06:29] [DEBUG] connect_to_server: The function created
+[2024-12-10 19:06:29] [DEBUG] mx_open_connection: Socket was created successfully
+[2024-12-10 19:06:29] [DEBUG] 127.0.0.1
+[2024-12-10 19:06:29] [INFO] mx_non_blocking_mode: Trying to connect
+[2024-12-10 19:06:29] [INFO] Connected successfully
+[2024-12-10 19:06:29] [DEBUG] Socket is set to blocking mode
+[2024-12-10 19:06:29] [INFO] Connection succeeded. Running online mode
+[2024-12-10 19:06:29] [DEBUG] Database file opened
+[2024-12-10 19:06:29] [DEBUG] SQL script read
+[2024-12-10 19:06:29] [DEBUG] SQL script executed
+[2024-12-10 19:06:29] [DEBUG] All handlers cleared.
+[2024-12-10 19:06:29] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 19:06:32] [INFO] Register link pressed
+[2024-12-10 19:06:32] [DEBUG] All handlers cleared.
+[2024-12-10 19:06:32] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 19:06:58] [INFO] Registration form submitted
+[2024-12-10 19:06:59] [INFO] Registration form submitted
+[2024-12-10 19:07:00] [INFO] Registration form submitted
+[2024-12-10 19:07:01] [INFO] Registration form submitted
+[2024-12-10 19:07:10] [INFO] Login link pressed
+[2024-12-10 19:07:10] [DEBUG] All handlers cleared.
+[2024-12-10 19:07:10] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 19:07:26] [INFO] Login form submitted
+[2024-12-10 19:07:26] [DEBUG] Received JSON for login
+[2024-12-10 19:07:26] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 19:07:26] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 19:07:26] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 19:07:26] [ERROR] "Amount received: 1
+[2024-12-10 19:07:26] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 19:07:26] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 19:07:26] [INFO] All chunks successfully received
+[2024-12-10 19:07:26] [INFO] Data received
+[2024-12-10 19:07:26] [DEBUG] {
+	"status":	"-1",
+	"message":	"Invalid username or password."
+}
+[2024-12-10 19:07:26] [DEBUG] -1
+[2024-12-10 19:07:26] [INFO] Invalid username or password.
+[2024-12-10 19:07:26] [DEBUG] Trying to call function invalidData from js
+[2024-12-10 19:07:26] [ERROR] set_handlers: Failed to register 'goToRegister' handler
+[2024-12-10 19:07:26] [FATAL] mx_load_load_page: Failed to set handlers
+[2024-12-10 19:07:26] [DEBUG] Function invalidData from js was executed
+[2024-12-10 19:07:26] [INFO] Login form submitted
+[2024-12-10 19:07:26] [DEBUG] Received JSON for login
+[2024-12-10 19:07:26] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 19:07:26] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 19:07:26] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 19:07:26] [ERROR] "Invalid amount received: 0
+[2024-12-10 19:07:26] [DEBUG] 
+[2024-12-10 19:07:26] [ERROR] Error receiving data
+[2024-12-10 19:07:26] [DEBUG] 0
+[2024-12-10 19:07:26] [ERROR] Error processing request or empty response
+[2024-12-10 19:07:26] [DEBUG] All handlers cleared.
+[2024-12-10 19:07:52] [INFO] mx_run_app: App ended with status 465603536
+[2024-12-10 19:32:23] [INFO] mx_init: Logger initialized
+[2024-12-10 19:32:23] [INFO] mx_init_gtk: success
+[2024-12-10 19:32:23] [INFO] Database was opened/created
+[2024-12-10 19:32:23] [DEBUG] mx_init_gui: GTK was initialized
+[2024-12-10 19:32:23] [DEBUG] mx_init_gui: webview was initialized
+[2024-12-10 19:32:23] [DEBUG] mx_init_gui: window was initialized
+[2024-12-10 19:32:23] [DEBUG] mx_load_load_page: Handlers set for the page
+[2024-12-10 19:32:23] [DEBUG] mx_init_gui: init page was initialized
+[2024-12-10 19:32:23] [INFO] mx_init_gui: Going to the gtk_main()
+[2024-12-10 19:32:25] [DEBUG] connect_to_server: The function entered
+[2024-12-10 19:32:25] [DEBUG] connect_to_server: The function created
+[2024-12-10 19:32:25] [DEBUG] mx_open_connection: Socket was created successfully
+[2024-12-10 19:32:25] [DEBUG] 127.0.0.1
+[2024-12-10 19:32:25] [INFO] mx_non_blocking_mode: Trying to connect
+[2024-12-10 19:32:25] [INFO] Connected successfully
+[2024-12-10 19:32:25] [DEBUG] Socket is set to blocking mode
+[2024-12-10 19:32:25] [INFO] Connection succeeded. Running online mode
+[2024-12-10 19:32:25] [DEBUG] Database file opened
+[2024-12-10 19:32:25] [DEBUG] SQL script read
+[2024-12-10 19:32:25] [DEBUG] SQL script executed
+[2024-12-10 19:32:25] [DEBUG] All handlers cleared.
+[2024-12-10 19:32:25] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 19:32:32] [INFO] mx_run_app: App ended with status 687578064
+[2024-12-10 21:43:29] [INFO] mx_init: Logger initialized
+[2024-12-10 21:43:29] [INFO] mx_init_gtk: success
+[2024-12-10 21:43:29] [INFO] Database was opened/created
+[2024-12-10 21:43:29] [DEBUG] mx_init_gui: GTK was initialized
+[2024-12-10 21:43:29] [DEBUG] mx_init_gui: webview was initialized
+[2024-12-10 21:43:29] [DEBUG] mx_init_gui: window was initialized
+[2024-12-10 21:43:29] [DEBUG] mx_load_load_page: Handlers set for the page
+[2024-12-10 21:43:29] [DEBUG] mx_init_gui: init page was initialized
+[2024-12-10 21:43:29] [INFO] mx_init_gui: Going to the gtk_main()
+[2024-12-10 21:43:32] [DEBUG] connect_to_server: The function entered
+[2024-12-10 21:43:32] [DEBUG] connect_to_server: The function created
+[2024-12-10 21:43:32] [DEBUG] mx_open_connection: Socket was created successfully
+[2024-12-10 21:43:32] [DEBUG] 127.0.0.1
+[2024-12-10 21:43:32] [INFO] mx_non_blocking_mode: Trying to connect
+[2024-12-10 21:43:32] [INFO] Connected successfully
+[2024-12-10 21:43:32] [DEBUG] Socket is set to blocking mode
+[2024-12-10 21:43:32] [INFO] Connection succeeded. Running online mode
+[2024-12-10 21:43:32] [DEBUG] Database file opened
+[2024-12-10 21:43:32] [DEBUG] SQL script read
+[2024-12-10 21:43:32] [DEBUG] SQL script executed
+[2024-12-10 21:43:32] [DEBUG] All handlers cleared.
+[2024-12-10 21:43:32] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 21:58:37] [INFO] mx_init: Logger initialized
+[2024-12-10 21:58:37] [INFO] mx_init_gtk: success
+[2024-12-10 21:58:37] [INFO] Database was opened/created
+[2024-12-10 21:58:37] [DEBUG] mx_init_gui: GTK was initialized
+[2024-12-10 21:58:38] [DEBUG] mx_init_gui: webview was initialized
+[2024-12-10 21:58:38] [DEBUG] mx_init_gui: window was initialized
+[2024-12-10 21:58:38] [DEBUG] mx_load_load_page: Handlers set for the page
+[2024-12-10 21:58:38] [DEBUG] mx_init_gui: init page was initialized
+[2024-12-10 21:58:38] [INFO] mx_init_gui: Going to the gtk_main()
+[2024-12-10 21:58:40] [DEBUG] connect_to_server: The function entered
+[2024-12-10 21:58:40] [DEBUG] connect_to_server: The function created
+[2024-12-10 21:58:40] [DEBUG] mx_open_connection: Socket was created successfully
+[2024-12-10 21:58:40] [DEBUG] 127.0.0.1
+[2024-12-10 21:58:40] [INFO] mx_non_blocking_mode: Trying to connect
+[2024-12-10 21:58:40] [INFO] Connected successfully
+[2024-12-10 21:58:40] [DEBUG] Socket is set to blocking mode
+[2024-12-10 21:58:40] [INFO] Connection succeeded. Running online mode
+[2024-12-10 21:58:40] [DEBUG] Database file opened
+[2024-12-10 21:58:40] [DEBUG] SQL script read
+[2024-12-10 21:58:40] [DEBUG] SQL script executed
+[2024-12-10 21:58:40] [DEBUG] All handlers cleared.
+[2024-12-10 21:58:40] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 21:58:58] [INFO] Login form submitted
+[2024-12-10 21:58:58] [DEBUG] Received JSON for login
+[2024-12-10 21:58:58] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 21:58:58] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 21:58:58] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 21:58:58] [ERROR] "Amount received: 1
+[2024-12-10 21:58:58] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 21:58:58] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 21:58:58] [INFO] All chunks successfully received
+[2024-12-10 21:58:58] [INFO] Data received
+[2024-12-10 21:58:58] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 21:58:58] [DEBUG] 0
+[2024-12-10 21:58:58] [INFO] Login successful.
+[2024-12-10 21:58:58] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 21:58:58] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 21:58:58] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 21:58:58] [ERROR] "Invalid amount received: 0
+[2024-12-10 21:58:58] [DEBUG] 
+[2024-12-10 21:58:58] [ERROR] Error receiving data
+[2024-12-10 21:58:58] [WARN] mx_get_chats: Failed receiving response
+[2024-12-10 21:58:58] [WARN] Failed to update db
+[2024-12-10 21:58:58] [DEBUG] All handlers cleared.
+[2024-12-10 22:07:34] [INFO] mx_run_app: App ended with status 899480528
+[2024-12-10 22:07:37] [INFO] mx_init: Logger initialized
+[2024-12-10 22:07:37] [INFO] mx_init_gtk: success
+[2024-12-10 22:07:37] [INFO] Database was opened/created
+[2024-12-10 22:07:37] [DEBUG] mx_init_gui: GTK was initialized
+[2024-12-10 22:07:37] [DEBUG] mx_init_gui: webview was initialized
+[2024-12-10 22:07:37] [DEBUG] mx_init_gui: window was initialized
+[2024-12-10 22:07:37] [DEBUG] mx_load_load_page: Handlers set for the page
+[2024-12-10 22:07:37] [DEBUG] mx_init_gui: init page was initialized
+[2024-12-10 22:07:37] [INFO] mx_init_gui: Going to the gtk_main()
+[2024-12-10 22:07:38] [DEBUG] connect_to_server: The function entered
+[2024-12-10 22:07:38] [DEBUG] connect_to_server: The function created
+[2024-12-10 22:07:38] [DEBUG] mx_open_connection: Socket was created successfully
+[2024-12-10 22:07:38] [DEBUG] 127.0.0.1
+[2024-12-10 22:07:38] [INFO] mx_non_blocking_mode: Trying to connect
+[2024-12-10 22:07:38] [INFO] Connected successfully
+[2024-12-10 22:07:38] [DEBUG] Socket is set to blocking mode
+[2024-12-10 22:07:38] [INFO] Connection succeeded. Running online mode
+[2024-12-10 22:07:38] [DEBUG] Database file opened
+[2024-12-10 22:07:38] [DEBUG] SQL script read
+[2024-12-10 22:07:38] [DEBUG] SQL script executed
+[2024-12-10 22:07:38] [DEBUG] All handlers cleared.
+[2024-12-10 22:07:38] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 22:08:02] [INFO] Login form submitted
+[2024-12-10 22:08:02] [DEBUG] Received JSON for login
+[2024-12-10 22:08:02] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 22:08:02] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:08:02] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:08:02] [ERROR] "Amount received: 1
+[2024-12-10 22:08:02] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:08:02] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:08:02] [INFO] All chunks successfully received
+[2024-12-10 22:08:02] [INFO] Data received
+[2024-12-10 22:08:02] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:08:02] [DEBUG] 0
+[2024-12-10 22:08:02] [INFO] Login successful.
+[2024-12-10 22:08:02] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 22:08:02] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:08:02] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:08:02] [ERROR] "Invalid amount received: 0
+[2024-12-10 22:08:02] [DEBUG] 
+[2024-12-10 22:08:02] [ERROR] Error receiving data
+[2024-12-10 22:08:02] [WARN] mx_get_chats: Failed receiving response
+[2024-12-10 22:08:02] [WARN] Failed to update db
+[2024-12-10 22:08:02] [DEBUG] All handlers cleared.
+[2024-12-10 22:08:07] [INFO] mx_run_app: App ended with status 918485968
+[2024-12-10 22:08:21] [INFO] mx_init: Logger initialized
+[2024-12-10 22:08:21] [INFO] mx_init_gtk: success
+[2024-12-10 22:08:21] [INFO] Database was opened/created
+[2024-12-10 22:08:21] [DEBUG] mx_init_gui: GTK was initialized
+[2024-12-10 22:08:21] [DEBUG] mx_init_gui: webview was initialized
+[2024-12-10 22:08:21] [DEBUG] mx_init_gui: window was initialized
+[2024-12-10 22:08:21] [DEBUG] mx_load_load_page: Handlers set for the page
+[2024-12-10 22:08:21] [DEBUG] mx_init_gui: init page was initialized
+[2024-12-10 22:08:21] [INFO] mx_init_gui: Going to the gtk_main()
+[2024-12-10 22:08:23] [DEBUG] connect_to_server: The function entered
+[2024-12-10 22:08:23] [DEBUG] connect_to_server: The function created
+[2024-12-10 22:08:23] [DEBUG] mx_open_connection: Socket was created successfully
+[2024-12-10 22:08:23] [DEBUG] 127.0.0.1
+[2024-12-10 22:08:23] [INFO] mx_non_blocking_mode: Trying to connect
+[2024-12-10 22:08:23] [INFO] Connected successfully
+[2024-12-10 22:08:23] [DEBUG] Socket is set to blocking mode
+[2024-12-10 22:08:23] [INFO] Connection succeeded. Running online mode
+[2024-12-10 22:08:23] [DEBUG] Database file opened
+[2024-12-10 22:08:23] [DEBUG] SQL script read
+[2024-12-10 22:08:23] [DEBUG] SQL script executed
+[2024-12-10 22:08:23] [DEBUG] All handlers cleared.
+[2024-12-10 22:08:23] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 22:08:24] [INFO] Register link pressed
+[2024-12-10 22:08:24] [DEBUG] All handlers cleared.
+[2024-12-10 22:08:24] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 22:08:31] [INFO] Login link pressed
+[2024-12-10 22:08:31] [DEBUG] All handlers cleared.
+[2024-12-10 22:08:31] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 22:08:38] [INFO] Register link pressed
+[2024-12-10 22:08:38] [DEBUG] All handlers cleared.
+[2024-12-10 22:08:38] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 22:08:38] [INFO] Register link pressed
+[2024-12-10 22:08:38] [DEBUG] All handlers cleared.
+[2024-12-10 22:08:38] [ERROR] set_handlers: Failed to register 'goToLogin' handler
+[2024-12-10 22:08:38] [FATAL] mx_load_load_page: Failed to set handlers
+[2024-12-10 22:09:08] [INFO] Registration form submitted
+[2024-12-10 22:09:08] [INFO] Registration form submitted
+[2024-12-10 22:09:11] [INFO] Registration form submitted
+[2024-12-10 22:09:11] [INFO] Registration form submitted
+[2024-12-10 22:09:13] [INFO] Login link pressed
+[2024-12-10 22:09:13] [DEBUG] All handlers cleared.
+[2024-12-10 22:09:13] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 22:09:13] [INFO] Login link pressed
+[2024-12-10 22:09:13] [DEBUG] All handlers cleared.
+[2024-12-10 22:09:13] [ERROR] set_handlers: Failed to register 'goToRegister' handler
+[2024-12-10 22:09:13] [FATAL] mx_load_load_page: Failed to set handlers
+[2024-12-10 22:09:24] [INFO] Login form submitted
+[2024-12-10 22:09:24] [DEBUG] Received JSON for login
+[2024-12-10 22:09:24] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 22:09:24] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:09:24] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:09:24] [ERROR] "Amount received: 1
+[2024-12-10 22:09:24] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:09:24] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:09:24] [INFO] All chunks successfully received
+[2024-12-10 22:09:24] [INFO] Data received
+[2024-12-10 22:09:24] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:09:24] [DEBUG] 0
+[2024-12-10 22:09:24] [INFO] Login successful.
+[2024-12-10 22:09:24] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 22:09:24] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:09:24] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:09:24] [ERROR] "Invalid amount received: 0
+[2024-12-10 22:09:24] [DEBUG] 
+[2024-12-10 22:09:24] [ERROR] Error receiving data
+[2024-12-10 22:09:24] [WARN] mx_get_chats: Failed receiving response
+[2024-12-10 22:09:24] [WARN] Failed to update db
+[2024-12-10 22:09:24] [DEBUG] All handlers cleared.
+[2024-12-10 22:09:24] [INFO] Login form submitted
+[2024-12-10 22:09:24] [DEBUG] Received JSON for login
+[2024-12-10 22:09:24] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 22:09:24] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:09:24] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:09:24] [ERROR] "Amount received: 1
+[2024-12-10 22:09:24] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:09:24] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:09:24] [INFO] All chunks successfully received
+[2024-12-10 22:09:24] [INFO] Data received
+[2024-12-10 22:09:24] [DEBUG] {
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 22:09:24] [DEBUG] 0
+[2024-12-10 22:09:24] [INFO] Contacts retrieved successfully.
+[2024-12-10 22:09:45] [INFO] mx_init: Logger initialized
+[2024-12-10 22:09:45] [INFO] mx_init_gtk: success
+[2024-12-10 22:09:45] [INFO] Database was opened/created
+[2024-12-10 22:09:45] [DEBUG] mx_init_gui: GTK was initialized
+[2024-12-10 22:09:45] [DEBUG] mx_init_gui: webview was initialized
+[2024-12-10 22:09:45] [DEBUG] mx_init_gui: window was initialized
+[2024-12-10 22:09:45] [DEBUG] mx_load_load_page: Handlers set for the page
+[2024-12-10 22:09:45] [DEBUG] mx_init_gui: init page was initialized
+[2024-12-10 22:09:45] [INFO] mx_init_gui: Going to the gtk_main()
+[2024-12-10 22:09:46] [DEBUG] connect_to_server: The function entered
+[2024-12-10 22:09:46] [DEBUG] connect_to_server: The function created
+[2024-12-10 22:09:46] [DEBUG] mx_open_connection: Socket was created successfully
+[2024-12-10 22:09:46] [DEBUG] 127.0.0.1
+[2024-12-10 22:09:46] [INFO] mx_non_blocking_mode: Trying to connect
+[2024-12-10 22:09:46] [INFO] Connected successfully
+[2024-12-10 22:09:46] [DEBUG] Socket is set to blocking mode
+[2024-12-10 22:09:46] [INFO] Connection succeeded. Running online mode
+[2024-12-10 22:09:46] [DEBUG] Database file opened
+[2024-12-10 22:09:46] [DEBUG] SQL script read
+[2024-12-10 22:09:46] [DEBUG] SQL script executed
+[2024-12-10 22:09:46] [DEBUG] All handlers cleared.
+[2024-12-10 22:09:46] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 22:10:00] [INFO] Login form submitted
+[2024-12-10 22:10:00] [DEBUG] Received JSON for login
+[2024-12-10 22:10:00] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 22:10:00] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:10:00] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:10:00] [ERROR] "Amount received: 1
+[2024-12-10 22:10:00] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:10:00] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:10:00] [INFO] All chunks successfully received
+[2024-12-10 22:10:00] [INFO] Data received
+[2024-12-10 22:10:00] [DEBUG] {
+	"status":	"-1",
+	"message":	"Invalid username or password."
+}
+[2024-12-10 22:10:00] [DEBUG] -1
+[2024-12-10 22:10:00] [INFO] Invalid username or password.
+[2024-12-10 22:10:00] [DEBUG] Trying to call function invalidData from js
+[2024-12-10 22:10:00] [ERROR] set_handlers: Failed to register 'goToRegister' handler
+[2024-12-10 22:10:00] [FATAL] mx_load_load_page: Failed to set handlers
+[2024-12-10 22:10:00] [DEBUG] Function invalidData from js was executed
+[2024-12-10 22:10:16] [INFO] Login form submitted
+[2024-12-10 22:10:16] [DEBUG] Received JSON for login
+[2024-12-10 22:10:16] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 22:10:16] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:10:16] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:10:16] [ERROR] "Invalid amount received: 0
+[2024-12-10 22:10:16] [DEBUG] 
+[2024-12-10 22:10:16] [ERROR] Error receiving data
+[2024-12-10 22:10:16] [DEBUG] 0
+[2024-12-10 22:10:16] [ERROR] Error processing request or empty response
+[2024-12-10 22:10:16] [DEBUG] All handlers cleared.
+[2024-12-10 22:10:19] [INFO] mx_run_app: App ended with status 629578704
+[2024-12-10 22:10:23] [INFO] mx_init: Logger initialized
+[2024-12-10 22:10:23] [INFO] mx_init_gtk: success
+[2024-12-10 22:10:23] [INFO] Database was opened/created
+[2024-12-10 22:10:23] [DEBUG] mx_init_gui: GTK was initialized
+[2024-12-10 22:10:23] [DEBUG] mx_init_gui: webview was initialized
+[2024-12-10 22:10:23] [DEBUG] mx_init_gui: window was initialized
+[2024-12-10 22:10:23] [DEBUG] mx_load_load_page: Handlers set for the page
+[2024-12-10 22:10:23] [DEBUG] mx_init_gui: init page was initialized
+[2024-12-10 22:10:23] [INFO] mx_init_gui: Going to the gtk_main()
+[2024-12-10 22:10:24] [DEBUG] connect_to_server: The function entered
+[2024-12-10 22:10:24] [DEBUG] connect_to_server: The function created
+[2024-12-10 22:10:24] [DEBUG] mx_open_connection: Socket was created successfully
+[2024-12-10 22:10:24] [DEBUG] 127.0.0.1
+[2024-12-10 22:10:24] [INFO] mx_non_blocking_mode: Trying to connect
+[2024-12-10 22:10:24] [INFO] Connected successfully
+[2024-12-10 22:10:24] [DEBUG] Socket is set to blocking mode
+[2024-12-10 22:10:24] [INFO] Connection succeeded. Running online mode
+[2024-12-10 22:10:24] [DEBUG] Database file opened
+[2024-12-10 22:10:24] [DEBUG] SQL script read
+[2024-12-10 22:10:24] [DEBUG] SQL script executed
+[2024-12-10 22:10:24] [DEBUG] All handlers cleared.
+[2024-12-10 22:10:24] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 22:10:35] [INFO] Login form submitted
+[2024-12-10 22:10:35] [DEBUG] Received JSON for login
+[2024-12-10 22:10:35] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 22:10:35] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:10:35] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:10:35] [ERROR] "Amount received: 1
+[2024-12-10 22:10:35] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:10:35] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:10:35] [INFO] All chunks successfully received
+[2024-12-10 22:10:35] [INFO] Data received
+[2024-12-10 22:10:35] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:10:35] [DEBUG] 0
+[2024-12-10 22:10:35] [INFO] Login successful.
+[2024-12-10 22:10:35] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 22:10:35] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:10:35] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:10:35] [ERROR] "Invalid amount received: 0
+[2024-12-10 22:10:35] [DEBUG] 
+[2024-12-10 22:10:35] [ERROR] Error receiving data
+[2024-12-10 22:10:35] [WARN] mx_get_chats: Failed receiving response
+[2024-12-10 22:10:35] [WARN] Failed to update db
+[2024-12-10 22:10:35] [DEBUG] All handlers cleared.
+[2024-12-10 22:10:47] [INFO] mx_run_app: App ended with status 524975056
+[2024-12-10 22:16:23] [INFO] mx_init: Logger initialized
+[2024-12-10 22:16:23] [INFO] mx_init_gtk: success
+[2024-12-10 22:16:23] [INFO] Database was opened/created
+[2024-12-10 22:16:23] [DEBUG] mx_init_gui: GTK was initialized
+[2024-12-10 22:16:23] [DEBUG] mx_init_gui: webview was initialized
+[2024-12-10 22:16:23] [DEBUG] mx_init_gui: window was initialized
+[2024-12-10 22:16:23] [DEBUG] mx_load_load_page: Handlers set for the page
+[2024-12-10 22:16:23] [DEBUG] mx_init_gui: init page was initialized
+[2024-12-10 22:16:23] [INFO] mx_init_gui: Going to the gtk_main()
+[2024-12-10 22:16:24] [DEBUG] connect_to_server: The function entered
+[2024-12-10 22:16:24] [DEBUG] connect_to_server: The function created
+[2024-12-10 22:16:24] [DEBUG] mx_open_connection: Socket was created successfully
+[2024-12-10 22:16:24] [DEBUG] 127.0.0.1
+[2024-12-10 22:16:24] [INFO] mx_non_blocking_mode: Trying to connect
+[2024-12-10 22:16:24] [INFO] Connected successfully
+[2024-12-10 22:16:24] [DEBUG] Socket is set to blocking mode
+[2024-12-10 22:16:24] [INFO] Connection succeeded. Running online mode
+[2024-12-10 22:16:24] [DEBUG] Database file opened
+[2024-12-10 22:16:24] [DEBUG] SQL script read
+[2024-12-10 22:16:24] [DEBUG] SQL script executed
+[2024-12-10 22:16:24] [DEBUG] All handlers cleared.
+[2024-12-10 22:16:24] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 22:16:27] [INFO] Register link pressed
+[2024-12-10 22:16:27] [DEBUG] All handlers cleared.
+[2024-12-10 22:16:27] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 22:16:41] [INFO] Registration form submitted
+[2024-12-10 22:16:43] [INFO] Login link pressed
+[2024-12-10 22:16:43] [DEBUG] All handlers cleared.
+[2024-12-10 22:16:43] [DEBUG] mx_load_login_page: Handlers set for the page
+[2024-12-10 22:16:54] [INFO] Login form submitted
+[2024-12-10 22:16:54] [DEBUG] Received JSON for login
+[2024-12-10 22:16:54] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 22:16:54] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:16:54] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:16:54] [ERROR] "Amount received: 1
+[2024-12-10 22:16:54] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:16:54] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:16:54] [INFO] All chunks successfully received
+[2024-12-10 22:16:54] [INFO] Data received
+[2024-12-10 22:16:54] [DEBUG] {
+	"tokens":	{
+		"access_token":	"1",
+		"refresh_token":	"0"
+	},
+	"status":	"0",
+	"message":	"Login successful."
+}
+[2024-12-10 22:16:54] [DEBUG] 0
+[2024-12-10 22:16:54] [INFO] Login successful.
+[2024-12-10 22:16:54] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 22:16:54] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:16:54] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:16:54] [ERROR] "Invalid amount received: 0
+[2024-12-10 22:16:54] [DEBUG] 
+[2024-12-10 22:16:54] [ERROR] Error receiving data
+[2024-12-10 22:16:54] [WARN] mx_get_chats: Failed receiving response
+[2024-12-10 22:16:54] [WARN] Failed to update db
+[2024-12-10 22:16:54] [DEBUG] All handlers cleared.
+[2024-12-10 22:16:54] [INFO] Login form submitted
+[2024-12-10 22:16:54] [DEBUG] Received JSON for login
+[2024-12-10 22:16:54] [DEBUG] Attempting to receive the amount of chunks...
+[2024-12-10 22:16:54] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:16:54] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:16:54] [ERROR] "Amount received: 1
+[2024-12-10 22:16:54] [DEBUG] Waiting for data on socket 28...
+[2024-12-10 22:16:54] [DEBUG] Data is ready to read on socket 28
+[2024-12-10 22:16:54] [INFO] All chunks successfully received
+[2024-12-10 22:16:54] [INFO] Data received
+[2024-12-10 22:16:54] [DEBUG] {
+	"count":	0,
+	"chats":	[],
+	"status":	"0",
+	"message":	"Contacts retrieved successfully."
+}
+[2024-12-10 22:16:54] [DEBUG] 0
+[2024-12-10 22:16:54] [INFO] Contacts retrieved successfully.
